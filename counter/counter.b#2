@@ -5602,6 +5602,21 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21796H.pdf</description>
 <rectangle x1="-0.575" y1="1.525" x2="-0.075" y2="2.6" layer="29" rot="R180"/>
 <rectangle x1="-1.225" y1="1.525" x2="-0.725" y2="2.6" layer="29" rot="R180"/>
 </package>
+<package name="DC_BARREL">
+<pad name="P$1" x="0" y="13.7" drill="3.6" diameter="4.5" shape="octagon"/>
+<pad name="P$2" x="0" y="7.7" drill="3.2" diameter="4.064" shape="octagon" rot="R180" thermals="no"/>
+<pad name="P$3" x="4.7" y="10.7" drill="3.2" diameter="4.064" shape="octagon" rot="R270"/>
+<wire x1="4.7" y1="7.62" x2="4.7" y2="0" width="0.6096" layer="21"/>
+<wire x1="4.7" y1="0" x2="-4.7" y2="0" width="0.6096" layer="21"/>
+<wire x1="-5.08" y1="0" x2="-5.08" y2="15.24" width="0.6096" layer="21"/>
+<wire x1="-5.08" y1="15.24" x2="-2.54" y2="15.24" width="0.6096" layer="21"/>
+<wire x1="2.54" y1="15.24" x2="4.7" y2="15.24" width="0.6096" layer="21"/>
+<wire x1="4.7" y1="15.24" x2="4.7" y2="13.462" width="0.6096" layer="21"/>
+<rectangle x1="-6.35" y1="-1.27" x2="6.35" y2="16.51" layer="43"/>
+<text x="-1.905" y="3.81" size="1.27" layer="21">GND</text>
+<text x="8.255" y="8.89" size="1.27" layer="21" rot="R90">GND</text>
+<text x="-4.445" y="10.795" size="1.27" layer="21">V+</text>
+</package>
 </packages>
 </library>
 <library name="rcl">
@@ -6605,6 +6620,7 @@ design rules under a new name.</description>
 <element name="RK5" library="resistor" package="M0805" value="1k" x="1.61963125" y="-63.26709375"/>
 <element name="RK8" library="resistor" package="M0805" value="220" x="-3.040296875" y="-69.278425"/>
 <element name="C4" library="rcl" package="C0805" value="10n" x="-3.040296875" y="-63.26709375"/>
+<element name="CON1" library="lpatiny" package="DC_BARREL" value="JACK_DC_BARREL" x="19.05" y="-109.22"/>
 </elements>
 <signals>
 <signal name="GND" class="1">
@@ -6650,6 +6666,7 @@ design rules under a new name.</description>
 <contactref element="IC3" pad="12"/>
 <contactref element="U$1" pad="4"/>
 <contactref element="U$3" pad="4"/>
+<contactref element="CON1" pad="P$2"/>
 <wire x1="37.925203125" y1="75.755628125" x2="37.499946875" y2="78.02086875" width="0" layer="19" extent="16-16"/>
 <wire x1="27.396371875" y1="75.30198125" x2="37.499946875" y2="78.02086875" width="0" layer="19" extent="1-16"/>
 <wire x1="21.943421875" y1="70.92270625" x2="27.396371875" y2="75.30198125" width="0" layer="19" extent="1-1"/>
@@ -6682,6 +6699,7 @@ design rules under a new name.</description>
 <wire x1="82.537696875" y1="6.075434375" x2="71.4032625" y2="12.054334375" width="0" layer="19" extent="1-1"/>
 <wire x1="96.60115" y1="13.5973875" x2="82.537696875" y2="6.075434375" width="0" layer="19" extent="1-1"/>
 <wire x1="11.767634375" y1="-38.96776875" x2="8.199190625" y2="12.947228125" width="0" layer="19" extent="1-16"/>
+<wire x1="19.05" y1="-101.52" x2="11.767634375" y2="-38.96776875" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SCK">
 <contactref element="CON_ISP" pad="SCK"/>
@@ -6775,10 +6793,12 @@ design rules under a new name.</description>
 <contactref element="CU4" pad="1"/>
 <contactref element="C2" pad="1"/>
 <contactref element="D1" pad="A"/>
+<contactref element="CON1" pad="P$1"/>
 <wire x1="68.91995" y1="5.54983125" x2="67.004075" y2="18.090325" width="0" layer="19" extent="1-1"/>
 <wire x1="39.781634375" y1="13.7080625" x2="67.004075" y2="18.090325" width="0" layer="19" extent="1-1"/>
 <wire x1="37.421265625" y1="12.679928125" x2="39.781634375" y2="13.7080625" width="0" layer="19" extent="1-1"/>
 <wire x1="10.35254375" y1="10.442784375" x2="37.421265625" y2="12.679928125" width="0" layer="19" extent="1-16"/>
+<wire x1="19.05" y1="-95.52" x2="10.35254375" y2="10.442784375" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="3.3V" class="1">
 <contactref element="CU8" pad="1"/>
