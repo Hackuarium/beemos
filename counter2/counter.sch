@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.2.2">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -152,7 +152,7 @@
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
-<library name="supply1" urn="urn:adsk.eagle:library:371">
+<library name="supply1">
 <packages>
 </packages>
 <symbols>
@@ -226,7 +226,7 @@
 </deviceset>
 </devicesets>
 </library>
-<library name="rcl" urn="urn:adsk.eagle:library:334">
+<library name="rcl">
 <packages>
 <package name="0207/10">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
@@ -5807,7 +5807,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 </deviceset>
 </devicesets>
 </library>
-<library name="adafruit" urn="urn:adsk.eagle:library:420">
+<library name="adafruit">
 <packages>
 <package name="CHIP-LED0805">
 <description>&lt;b&gt;Hyper CHIPLED Hyper-Bright LED&lt;/b&gt;&lt;p&gt;
@@ -7243,7 +7243,7 @@ Source: http://www.osram.convergy.de/</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="resistor" urn="urn:adsk.eagle:library:348">
+<library name="resistor">
 <packages>
 <package name="R0805">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;</description>
@@ -9602,7 +9602,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="con-cypressindustries" urn="urn:adsk.eagle:library:138">
+<library name="con-cypressindustries">
 <description>&lt;b&gt;Connectors from Cypress Industries&lt;/b&gt;&lt;p&gt;
 www.cypressindustries.com&lt;br&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
@@ -9926,7 +9926,7 @@ Source: www.cypressindustries.com</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="linear" urn="urn:adsk.eagle:library:262">
+<library name="linear">
 <description>&lt;b&gt;Linear Devices&lt;/b&gt;&lt;p&gt;
 Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
@@ -10028,7 +10028,7 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="supply2" urn="urn:adsk.eagle:library:372">
+<library name="supply2">
 <description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
 GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
 Please keep in mind, that these devices are necessary for the
@@ -10061,7 +10061,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </deviceset>
 </devicesets>
 </library>
-<library name="40xx" urn="urn:adsk.eagle:library:80">
+<library name="40xx">
 <description>&lt;b&gt;CMOS Logic Devices, 4000 Series&lt;/b&gt;&lt;p&gt;
 Based on the following sources:
 &lt;ul&gt;
@@ -10310,7 +10310,7 @@ Based on the following sources:
 </deviceset>
 </devicesets>
 </library>
-<library name="74xx-eu" urn="urn:adsk.eagle:library:85">
+<library name="74xx-eu">
 <description>&lt;b&gt;TTL Devices, 74xx Series with European Symbols&lt;/b&gt;&lt;p&gt;
 Based on the following sources:
 &lt;ul&gt;
@@ -10887,82 +10887,82 @@ Based on the following sources:
 </class>
 </classes>
 <parts>
-<part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" value="10k"/>
+<part name="R12" library="rcl" deviceset="R-EU_" device="R0805" value="10k"/>
 <part name="CON_ISP" library="lpatiny" deviceset="TINYISP" device="T" value="SPI"/>
-<part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="CU4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" value="10u"/>
+<part name="GND14" library="supply1" deviceset="GND" device=""/>
+<part name="CU4" library="rcl" deviceset="C-EU" device="C0805" value="10u"/>
 <part name="D2" library="lpatiny" deviceset="1N581*" device="D1206" value="1N581D1206"/>
 <part name="U$7" library="MyPOW" deviceset="VUSB" device=""/>
 <part name="D4" library="lpatiny" deviceset="1N581*" device="D1206" value="1N581D1206"/>
-<part name="X4" library="con-cypressindustries" library_urn="urn:adsk.eagle:library:138" deviceset="MINI-USB-SCHIELD-" device="32005-201" value="MINI-USB"/>
-<part name="RUSB2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="M0805" value="22"/>
-<part name="RUSB1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="M0805" value="22"/>
-<part name="CU9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" value="10uF"/>
-<part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND27" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" value="1k"/>
-<part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="X4" library="con-cypressindustries" deviceset="MINI-USB-SCHIELD-" device="32005-201" value="MINI-USB"/>
+<part name="RUSB2" library="resistor" deviceset="R-EU_" device="M0805" value="22"/>
+<part name="RUSB1" library="resistor" deviceset="R-EU_" device="M0805" value="22"/>
+<part name="CU9" library="rcl" deviceset="C-EU" device="C0805" value="10uF"/>
+<part name="GND8" library="supply1" deviceset="GND" device=""/>
+<part name="GND27" library="supply1" deviceset="GND" device=""/>
+<part name="R2" library="rcl" deviceset="R-EU_" device="R0805" value="1k"/>
+<part name="GND21" library="supply1" deviceset="GND" device=""/>
 <part name="J1" library="lpatiny" deviceset="RJ12" device="RIGHTANGLE-I2C"/>
-<part name="C10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" value="100n"/>
-<part name="32U4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="ATMEGA32U4" device="-AU" value="ATMEGA32U4"/>
-<part name="CX2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" value="22pF"/>
-<part name="CX1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" value="22pF"/>
+<part name="C10" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="32U4" library="adafruit" deviceset="ATMEGA32U4" device="-AU" value="ATMEGA32U4"/>
+<part name="CX2" library="rcl" deviceset="C-EU" device="C0805" value="22pF"/>
+<part name="CX1" library="rcl" deviceset="C-EU" device="C0805" value="22pF"/>
 <part name="U$10" library="MyPOW" deviceset="VUSB" device=""/>
-<part name="RK7" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="M0805" value="10k"/>
-<part name="RK6" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="M0805" value="10k"/>
-<part name="C13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="RK7" library="resistor" deviceset="R-EU_" device="M0805" value="10k"/>
+<part name="RK6" library="resistor" deviceset="R-EU_" device="M0805" value="10k"/>
+<part name="C13" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="X2" library="lpatiny" deviceset="XTAL" device="NX6035" value="8MHz"/>
-<part name="C12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" value="100n"/>
-<part name="LDPW12" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="CHIP-LED0805" value="RED"/>
-<part name="BKLD" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="CHIP-LED0805" value="BLK"/>
-<part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R14" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0805" value="1k"/>
-<part name="LDPW3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="CHIP-LED0805" value="RED"/>
-<part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="CU7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" value="10u"/>
-<part name="GND19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="CU8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" value="10u"/>
-<part name="IC1" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="MCP1703" device="DB"/>
+<part name="C12" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="LDPW12" library="adafruit" deviceset="LED" device="CHIP-LED0805" value="RED"/>
+<part name="BKLD" library="adafruit" deviceset="LED" device="CHIP-LED0805" value="BLK"/>
+<part name="GND4" library="supply1" deviceset="GND" device=""/>
+<part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="R14" library="resistor" deviceset="R-EU_" device="R0805" value="1k"/>
+<part name="LDPW3" library="adafruit" deviceset="LED" device="CHIP-LED0805" value="RED"/>
+<part name="GND7" library="supply1" deviceset="GND" device=""/>
+<part name="CU7" library="rcl" deviceset="C-EU" device="C0805" value="10u"/>
+<part name="GND19" library="supply1" deviceset="GND" device=""/>
+<part name="CU8" library="rcl" deviceset="C-EU" device="C0805" value="10u"/>
+<part name="IC1" library="linear" deviceset="MCP1703" device="DB"/>
 <part name="P+15" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="P+8" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="GND32" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND38" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND39" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND42" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND45" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND54" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND55" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="P+11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
-<part name="RXT" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" value="1M"/>
-<part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" value="100n"/>
-<part name="CU3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" value="10u"/>
-<part name="GND50" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" value="100n"/>
-<part name="RK15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" value="1k"/>
-<part name="TX" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="CHIP-LED0805" value="TX"/>
-<part name="RK16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" value="1k"/>
-<part name="RXLD" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="CHIP-LED0805" value="RX"/>
+<part name="GND32" library="supply1" deviceset="GND" device=""/>
+<part name="GND38" library="supply1" deviceset="GND" device=""/>
+<part name="GND39" library="supply1" deviceset="GND" device=""/>
+<part name="GND42" library="supply1" deviceset="GND" device=""/>
+<part name="GND45" library="supply1" deviceset="GND" device=""/>
+<part name="GND54" library="supply1" deviceset="GND" device=""/>
+<part name="GND55" library="supply1" deviceset="GND" device=""/>
+<part name="P+11" library="supply1" deviceset="+12V" device=""/>
+<part name="RXT" library="rcl" deviceset="R-EU_" device="R0805" value="1M"/>
+<part name="C2" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="CU3" library="rcl" deviceset="C-EU" device="C0805" value="10u"/>
+<part name="GND50" library="supply1" deviceset="GND" device=""/>
+<part name="C1" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="RK15" library="rcl" deviceset="R-EU_" device="R0805" value="1k"/>
+<part name="TX" library="adafruit" deviceset="LED" device="CHIP-LED0805" value="TX"/>
+<part name="RK16" library="rcl" deviceset="R-EU_" device="R0805" value="1k"/>
+<part name="RXLD" library="adafruit" deviceset="LED" device="CHIP-LED0805" value="RX"/>
 <part name="P+18" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="P+20" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="P+28" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="P+39" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="P+40" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="P+43" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
+<part name="P+43" library="supply1" deviceset="+12V" device=""/>
 <part name="D1" library="lpatiny" deviceset="1N581*" device="D1206" value="1N581D1206"/>
-<part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="VDD" device=""/>
-<part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="VDD" device=""/>
-<part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="VDD" device=""/>
-<part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="VDD" device=""/>
-<part name="IC2" library="40xx" library_urn="urn:adsk.eagle:library:80" deviceset="4067" device="D"/>
-<part name="IC3" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*154" device="DW" technology="HC"/>
+<part name="SUPPLY1" library="supply2" deviceset="VDD" device=""/>
+<part name="SUPPLY2" library="supply2" deviceset="VDD" device=""/>
+<part name="SUPPLY3" library="supply2" deviceset="VDD" device=""/>
+<part name="SUPPLY5" library="supply2" deviceset="VDD" device=""/>
+<part name="IC2" library="40xx" deviceset="4067" device="D"/>
+<part name="IC3" library="74xx-eu" deviceset="74*154" device="DW" technology="HC"/>
 <part name="P+9" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND20" library="supply1" deviceset="GND" device=""/>
+<part name="GND25" library="supply1" deviceset="GND" device=""/>
 <part name="P+21" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="U$1" library="custom-library" deviceset="GATE" device=""/>
 <part name="P+24" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="GND26" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND26" library="supply1" deviceset="GND" device=""/>
 <part name="U$2" library="custom-library" deviceset="GATE" device=""/>
 <part name="U$3" library="custom-library" deviceset="GATE" device=""/>
 <part name="U$4" library="custom-library" deviceset="GATE" device=""/>
@@ -10977,13 +10977,14 @@ Based on the following sources:
 <part name="P+5" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="P+6" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="P+7" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND1" library="supply1" deviceset="GND" device=""/>
+<part name="GND2" library="supply1" deviceset="GND" device=""/>
+<part name="GND5" library="supply1" deviceset="GND" device=""/>
+<part name="GND6" library="supply1" deviceset="GND" device=""/>
+<part name="GND9" library="supply1" deviceset="GND" device=""/>
+<part name="GND10" library="supply1" deviceset="GND" device=""/>
+<part name="GND11" library="supply1" deviceset="GND" device=""/>
+<part name="GND12" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11150,6 +11151,7 @@ Based on the following sources:
 <instance part="GND9" gate="1" x="215.9" y="137.16"/>
 <instance part="GND10" gate="1" x="215.9" y="88.9"/>
 <instance part="GND11" gate="1" x="160.02" y="88.9"/>
+<instance part="GND12" gate="1" x="78.74" y="182.88"/>
 </instances>
 <busses>
 </busses>
@@ -11321,6 +11323,15 @@ Based on the following sources:
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="U$5" gate="G$1" pin="GND"/>
 <wire x1="215.9" y1="236.22" x2="218.44" y2="236.22" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC3" gate="A" pin="G1"/>
+<pinref part="IC3" gate="A" pin="G2"/>
+<wire x1="78.74" y1="190.5" x2="78.74" y2="187.96" width="0.1524" layer="91"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+<wire x1="78.74" y1="185.42" x2="78.74" y2="187.96" width="0.1524" layer="91"/>
+<junction x="78.74" y="187.96"/>
+<junction x="78.74" y="190.5"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -12185,26 +12196,26 @@ Based on the following sources:
 </net>
 <net name="DMUX9" class="0">
 <segment>
-<pinref part="IC3" gate="A" pin="8"/>
-<wire x1="104.14" y1="205.74" x2="114.3" y2="205.74" width="0.1524" layer="91"/>
-<label x="106.68" y="205.74" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$5" gate="G$1" pin="DMUX1"/>
 <wire x1="203.2" y1="259.08" x2="195.58" y2="259.08" width="0.1524" layer="91"/>
 <label x="195.58" y="259.08" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="DMUX10" class="0">
 <segment>
 <pinref part="IC3" gate="A" pin="9"/>
 <wire x1="104.14" y1="203.2" x2="114.3" y2="203.2" width="0.1524" layer="91"/>
 <label x="106.68" y="203.2" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="DMUX10" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="DMUX2"/>
 <wire x1="203.2" y1="243.84" x2="195.58" y2="243.84" width="0.1524" layer="91"/>
 <label x="195.58" y="243.84" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC3" gate="A" pin="8"/>
+<wire x1="104.14" y1="205.74" x2="114.3" y2="205.74" width="0.1524" layer="91"/>
+<label x="106.68" y="205.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DMUX11" class="0">
@@ -12290,11 +12301,4 @@ Based on the following sources:
 </sheets>
 </schematic>
 </drawing>
-<compatibility>
-<note version="8.2" severity="warning">
-Since Version 8.2, Eagle supports online libraries. The ids
-of those online libraries will not be understood (or retained)
-with this version.
-</note>
-</compatibility>
 </eagle>

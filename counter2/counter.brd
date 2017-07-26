@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.2.2">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -289,7 +289,7 @@
 </package>
 </packages>
 </library>
-<library name="rcl" urn="urn:adsk.eagle:library:334">
+<library name="rcl">
 <packages>
 <package name="R0805">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;</description>
@@ -325,7 +325,7 @@
 </package>
 </packages>
 </library>
-<library name="resistor" urn="urn:adsk.eagle:library:348">
+<library name="resistor">
 <packages>
 <package name="R0805">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;</description>
@@ -362,7 +362,7 @@ MELF 0.10 W</description>
 </package>
 </packages>
 </library>
-<library name="adafruit" urn="urn:adsk.eagle:library:420">
+<library name="adafruit">
 <packages>
 <package name="TQFP44">
 <wire x1="-4.8" y1="4.4" x2="-4.4" y2="4.8" width="0.2032" layer="21"/>
@@ -484,7 +484,7 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 </package>
 </packages>
 </library>
-<library name="con-cypressindustries" urn="urn:adsk.eagle:library:138">
+<library name="con-cypressindustries">
 <description>&lt;b&gt;Connectors from Cypress Industries&lt;/b&gt;&lt;p&gt;
 www.cypressindustries.com&lt;br&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
@@ -608,7 +608,7 @@ Source: http://www.cypressindustries.com/pdf/32005-201.pdf</description>
 </package>
 </packages>
 </library>
-<library name="linear" urn="urn:adsk.eagle:library:262">
+<library name="linear">
 <description>&lt;b&gt;Linear Devices&lt;/b&gt;&lt;p&gt;
 Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
@@ -640,7 +640,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 </package>
 </packages>
 </library>
-<library name="40xx" urn="urn:adsk.eagle:library:80">
+<library name="40xx">
 <description>&lt;b&gt;CMOS Logic Devices, 4000 Series&lt;/b&gt;&lt;p&gt;
 Based on the following sources:
 &lt;ul&gt;
@@ -742,7 +742,7 @@ Based on the following sources:
 </package>
 </packages>
 </library>
-<library name="74xx-eu" urn="urn:adsk.eagle:library:85">
+<library name="74xx-eu">
 <description>&lt;b&gt;TTL Devices, 74xx Series with European Symbols&lt;/b&gt;&lt;p&gt;
 Based on the following sources:
 &lt;ul&gt;
@@ -1177,13 +1177,13 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" value="10k" x="109.113028125" y="8.014090625" smashed="yes">
+<element name="R12" library="rcl" package="R0805" value="10k" x="109.113028125" y="8.014090625" smashed="yes">
 <attribute name="VALUE" x="112.731371875" y="7.03598125" size="0.8128" layer="27" rot="R90"/>
 </element>
 <element name="CON_ISP" library="lpatiny" package="TC2030-MCP-NL" value="SPI" x="94.46998125" y="23.708628125" smashed="yes">
 <attribute name="NAME" x="95.06358125" y="25.75868125" size="1.27" layer="25"/>
 </element>
-<element name="CU4" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" value="10u" x="111.223265625" y="17.611928125" smashed="yes" rot="R90">
+<element name="CU4" library="rcl" package="C0805" value="10u" x="111.223265625" y="17.611928125" smashed="yes" rot="R90">
 <attribute name="NAME" x="111.688590625" y="20.218715625" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="111.590321875" y="13.021096875" size="0.8128" layer="27" rot="R90"/>
 </element>
@@ -1193,7 +1193,7 @@ design rules under a new name.</description>
 <element name="D4" library="lpatiny" package="LED-1206" value="1N581D1206" x="100.434715625" y="29.849890625" smashed="yes" rot="MR180">
 <attribute name="NAME" x="99.545715625" y="28.452890625" size="0.4064" layer="26" rot="MR180"/>
 </element>
-<element name="X4" library="con-cypressindustries" library_urn="urn:adsk.eagle:library:138" package="32005-201" value="MINI-USB" x="121" y="24" smashed="yes" rot="R180">
+<element name="X4" library="con-cypressindustries" package="32005-201" value="MINI-USB" x="121" y="24" smashed="yes" rot="R180">
 <attribute name="MF" value="" x="90.52" y="90.04" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="90.52" y="90.04" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="114.9873125" y="29.231378125" size="1.27" layer="25" rot="R180"/>
@@ -1201,48 +1201,48 @@ design rules under a new name.</description>
 <attribute name="OC_NEWARK" value="unknown" x="90.52" y="90.04" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="125.445" y="30.985" size="0.8128" layer="27" rot="R180"/>
 </element>
-<element name="RUSB2" library="resistor" library_urn="urn:adsk.eagle:library:348" package="M0805" value="22" x="113.03" y="24.892" smashed="yes">
+<element name="RUSB2" library="resistor" package="M0805" value="22" x="113.03" y="24.892" smashed="yes">
 <attribute name="NAME" x="104.2338375" y="24.46250625" size="1.27" layer="25"/>
 <attribute name="VALUE" x="112.52921875" y="26.517909375" size="0.8128" layer="27"/>
 </element>
-<element name="RUSB1" library="resistor" library_urn="urn:adsk.eagle:library:348" package="M0805" value="22" x="113.016" y="22.734" smashed="yes">
+<element name="RUSB1" library="resistor" package="M0805" value="22" x="113.016" y="22.734" smashed="yes">
 <attribute name="NAME" x="104.074171875" y="21.96460625" size="1.27" layer="25"/>
 <attribute name="VALUE" x="114.810153125" y="19.442321875" size="0.8128" layer="27" rot="R90"/>
 </element>
-<element name="CU9" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" value="10uF" x="113.7012625" y="27.358334375" smashed="yes">
+<element name="CU9" library="rcl" package="C0805" value="10uF" x="113.7012625" y="27.358334375" smashed="yes">
 <attribute name="NAME" x="111.85815625" y="29.13390625" size="1.27" layer="25"/>
 <attribute name="VALUE" x="112.4312625" y="29.408209375" size="0.8128" layer="27"/>
 </element>
-<element name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" value="1k" x="106.054" y="29.716" smashed="yes">
+<element name="R2" library="rcl" package="R0805" value="1k" x="106.054" y="29.716" smashed="yes">
 <attribute name="NAME" x="103.90851875" y="28.16551875" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="104.23348125" y="21.648921875" size="0.8128" layer="27"/>
 </element>
 <element name="J1" library="lpatiny" package="RJ12-RIGHTANGLE-I2C" value="RJ12RIGHTANGLE-I2C" x="121.43983125" y="8.28995" smashed="yes" rot="R90">
 <attribute name="NAME" x="123.92080625" y="7.198709375" size="1.27" layer="25" rot="R90"/>
 </element>
-<element name="C10" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" value="100n" x="76.450103125" y="22.232284375" smashed="yes" rot="R180">
+<element name="C10" library="rcl" package="C0805" value="100n" x="76.450103125" y="22.232284375" smashed="yes" rot="R180">
 <attribute name="NAME" x="82.410253125" y="22.900365625" size="1.27" layer="25" rot="R180"/>
 <attribute name="VALUE" x="77.887021875" y="24.00663125" size="0.8128" layer="27" rot="R180"/>
 </element>
-<element name="32U4" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="TQFP44" value="ATMEGA32U4" x="84.3736125" y="23.6372875" smashed="yes" rot="R180">
+<element name="32U4" library="adafruit" package="TQFP44" value="ATMEGA32U4" x="84.3736125" y="23.6372875" smashed="yes" rot="R180">
 <attribute name="NAME" x="79.971075" y="26.2489875" size="1.778" layer="25" rot="R270"/>
 <attribute name="VALUE" x="80.2682875" y="27.444984375" size="0.8128" layer="27" rot="R270"/>
 </element>
-<element name="CX2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" value="22pF" x="103.21504375" y="10.68525625" smashed="yes" rot="MR90">
+<element name="CX2" library="rcl" package="C0805" value="22pF" x="103.21504375" y="10.68525625" smashed="yes" rot="MR90">
 <attribute name="NAME" x="104.48504375" y="9.41525625" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="101.097275" y="9.0194" size="0.8128" layer="28" rot="MR90"/>
 </element>
-<element name="CX1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" value="22pF" x="73.0613625" y="20.1019625" smashed="yes">
+<element name="CX1" library="rcl" package="C0805" value="22pF" x="73.0613625" y="20.1019625" smashed="yes">
 <attribute name="NAME" x="71.7913625" y="17.46195625" size="1.27" layer="25"/>
 <attribute name="VALUE" x="71.615665625" y="21.286915625" size="0.8128" layer="27"/>
 </element>
-<element name="RK7" library="resistor" library_urn="urn:adsk.eagle:library:348" package="M0805" value="10k" x="75.296" y="18.008" smashed="yes" rot="R209.2">
+<element name="RK7" library="resistor" package="M0805" value="10k" x="75.296" y="18.008" smashed="yes" rot="R209.2">
 <attribute name="VALUE" x="84.4060625" y="19.15033125" size="0.8128" layer="27" rot="R209.2"/>
 </element>
-<element name="RK6" library="resistor" library_urn="urn:adsk.eagle:library:348" package="M0805" value="10k" x="87.291496875" y="25.675884375" smashed="yes" rot="MR0">
+<element name="RK6" library="resistor" package="M0805" value="10k" x="87.291496875" y="25.675884375" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="88.597571875" y="23.612934375" size="0.8128" layer="28" rot="MR0"/>
 </element>
-<element name="C13" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" value="100n" x="106.08929375" y="2.679421875" smashed="yes" rot="R180">
+<element name="C13" library="rcl" package="C0805" value="100n" x="106.08929375" y="2.679421875" smashed="yes" rot="R180">
 <attribute name="NAME" x="112.3138875" y="1.915059375" size="1.27" layer="25" rot="R180"/>
 <attribute name="VALUE" x="107.73726875" y="1.218528125" size="0.8128" layer="27" rot="R180"/>
 </element>
@@ -1250,60 +1250,60 @@ design rules under a new name.</description>
 <attribute name="NAME" x="83.18085625" y="26.191375" size="1.27" layer="26" font="vector" rot="MR270"/>
 <attribute name="VALUE" x="80.8257" y="24.611584375" size="0.8128" layer="28" font="vector" rot="MR180"/>
 </element>
-<element name="C12" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" value="100n" x="70.994534375" y="25.5302375" smashed="yes" rot="MR0">
+<element name="C12" library="rcl" package="C0805" value="100n" x="70.994534375" y="25.5302375" smashed="yes" rot="MR0">
 <attribute name="NAME" x="72.770059375" y="22.755553125" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="72.264534375" y="22.9902375" size="0.8128" layer="28" rot="MR0"/>
 </element>
-<element name="LDPW12" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="CHIP-LED0805" value="RED" x="109.16261875" y="4.989378125" smashed="yes" rot="R100.1"/>
-<element name="BKLD" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="CHIP-LED0805" value="BLK" x="113.732" y="29.556" smashed="yes" rot="R270"/>
-<element name="R14" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="1k" x="78.871271875" y="33.072190625" smashed="yes" rot="MR90">
+<element name="LDPW12" library="adafruit" package="CHIP-LED0805" value="RED" x="109.16261875" y="4.989378125" smashed="yes" rot="R100.1"/>
+<element name="BKLD" library="adafruit" package="CHIP-LED0805" value="BLK" x="113.732" y="29.556" smashed="yes" rot="R270"/>
+<element name="R14" library="resistor" package="R0805" value="1k" x="78.871271875" y="33.072190625" smashed="yes" rot="MR90">
 <attribute name="VALUE" x="76.46293125" y="32.82303125" size="0.8128" layer="28" rot="MR180"/>
 </element>
-<element name="LDPW3" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="CHIP-LED0805" value="RED" x="83.829709375" y="33.10564375" smashed="yes" rot="MR180"/>
-<element name="CU7" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" value="10u" x="72.892" y="24.084" smashed="yes" rot="MR90">
+<element name="LDPW3" library="adafruit" package="CHIP-LED0805" value="RED" x="83.829709375" y="33.10564375" smashed="yes" rot="MR180"/>
+<element name="CU7" library="rcl" package="C0805" value="10u" x="72.892" y="24.084" smashed="yes" rot="MR90">
 <attribute name="NAME" x="72.3926625" y="18.095584375" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="72.53301875" y="26.959359375" size="0.8128" layer="28" rot="MR90"/>
 </element>
-<element name="CU8" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" value="10u" x="73.055" y="29.8195" smashed="yes" rot="MR90">
+<element name="CU8" library="rcl" package="C0805" value="10u" x="73.055" y="29.8195" smashed="yes" rot="MR90">
 <attribute name="NAME" x="74.207978125" y="27.847328125" size="1.27" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="74.534815625" y="29.062771875" size="0.8128" layer="28" rot="MR90"/>
 </element>
-<element name="IC1" library="linear" library_urn="urn:adsk.eagle:library:262" package="SOT223" value="MCP1703DB" x="104.531165625" y="17.443634375" smashed="yes" rot="MR270">
+<element name="IC1" library="linear" package="SOT223" value="MCP1703DB" x="104.531165625" y="17.443634375" smashed="yes" rot="MR270">
 <attribute name="NAME" x="104.480365625" y="19.983634375" size="1.27" layer="26" rot="MR270"/>
 </element>
-<element name="RXT" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" value="1M" x="82.737921875" y="26.167290625" smashed="yes" rot="MR0">
+<element name="RXT" library="rcl" package="R0805" value="1M" x="82.737921875" y="26.167290625" smashed="yes" rot="MR0">
 <attribute name="NAME" x="84.822228125" y="23.392190625" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="83.581021875" y="23.968009375" size="0.8128" layer="28" rot="MR0"/>
 </element>
-<element name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" value="100n" x="114.269634375" y="17.6100625" smashed="yes" rot="R90">
+<element name="C2" library="rcl" package="C0805" value="100n" x="114.269634375" y="17.6100625" smashed="yes" rot="R90">
 <attribute name="NAME" x="114.9231" y="20.6814125" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="113.78728125" y="20.003415625" size="0.8128" layer="27" rot="R90"/>
 </element>
-<element name="CU3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" value="10u" x="79.623" y="33.1265" smashed="yes" rot="MR180">
+<element name="CU3" library="rcl" package="C0805" value="10u" x="79.623" y="33.1265" smashed="yes" rot="MR180">
 <attribute name="NAME" x="78.353" y="31.8565" size="1.27" layer="26" rot="MR180"/>
 <attribute name="VALUE" x="81.7889875" y="33.703175" size="0.8128" layer="28" rot="MR180"/>
 </element>
-<element name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" value="100n" x="69.572" y="27.766" smashed="yes" rot="MR0">
+<element name="C1" library="rcl" package="C0805" value="100n" x="69.572" y="27.766" smashed="yes" rot="MR0">
 <attribute name="NAME" x="66.40408125" y="27.238575" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="67.620759375" y="27.09729375" size="0.8128" layer="28" rot="MR0"/>
 </element>
-<element name="RK15" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" value="1k" x="71.167" y="30.197" smashed="yes" rot="MR90">
+<element name="RK15" library="rcl" package="R0805" value="1k" x="71.167" y="30.197" smashed="yes" rot="MR90">
 <attribute name="VALUE" x="72.290490625" y="27.83683125" size="0.8128" layer="28" rot="MR90"/>
 </element>
-<element name="TX" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="CHIP-LED0805" value="TX" x="75.08699375" y="27.602090625" smashed="yes" rot="R270">
+<element name="TX" library="adafruit" package="CHIP-LED0805" value="TX" x="75.08699375" y="27.602090625" smashed="yes" rot="R270">
 <attribute name="VALUE" x="75.323815625" y="28.609" size="0.8128" layer="27"/>
 </element>
-<element name="RK16" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" value="1k" x="94.628865625" y="27.225771875" smashed="yes" rot="R80.9">
+<element name="RK16" library="rcl" package="R0805" value="1k" x="94.628865625" y="27.225771875" smashed="yes" rot="R80.9">
 <attribute name="VALUE" x="92.326215625" y="28.4722125" size="0.8128" layer="27" rot="R260.9"/>
 </element>
-<element name="RXLD" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="CHIP-LED0805" value="RX" x="92.94500625" y="30.6896375" smashed="yes" rot="R90">
+<element name="RXLD" library="adafruit" package="CHIP-LED0805" value="RX" x="92.94500625" y="30.6896375" smashed="yes" rot="R90">
 <attribute name="VALUE" x="94.808596875" y="32.866878125" size="0.8128" layer="27" rot="R180"/>
 </element>
 <element name="D1" library="lpatiny" package="LED-1206" value="1N581D1206" x="107.25" y="11.934" smashed="yes" rot="MR0">
 <attribute name="NAME" x="108.139" y="13.331" size="0.4064" layer="26" rot="MR0"/>
 </element>
-<element name="IC2" library="40xx" library_urn="urn:adsk.eagle:library:80" package="SO24W" value="4067D" x="25.56896875" y="24.065134375" rot="R270"/>
-<element name="IC3" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" package="SO24W" value="74HC154DW" x="50.92" y="24.3625" rot="R270"/>
+<element name="IC2" library="40xx" package="SO24W" value="4067D" x="25.56896875" y="24.065134375" rot="R270"/>
+<element name="IC3" library="74xx-eu" package="SO24W" value="74HC154DW" x="50.92" y="24.3625" rot="R270"/>
 <element name="U$1" library="custom-library" package="GATE" value="GATE" x="3.81" y="6.35"/>
 <element name="U$2" library="custom-library" package="GATE" value="GATE" x="16.51" y="6.35"/>
 <element name="U$3" library="custom-library" package="GATE" value="GATE" x="29.21" y="6.35"/>
@@ -1384,6 +1384,8 @@ design rules under a new name.</description>
 <wire x1="86.6775" y1="4.7625" x2="86.6775" y2="0.635" width="0.3048" layer="16"/>
 <wire x1="97.4725" y1="4.7625" x2="99.3775" y2="4.7625" width="0.3048" layer="16"/>
 <wire x1="99.3775" y1="4.7625" x2="99.3775" y2="0.635" width="0.3048" layer="16"/>
+<contactref element="IC3" pad="18"/>
+<contactref element="IC3" pad="19"/>
 <wire x1="114.782" y1="29.556" x2="118" y2="25.6" width="0" layer="19" extent="1-1"/>
 <wire x1="112.7512625" y1="27.358334375" x2="114.782" y2="29.556" width="0" layer="19" extent="1-1"/>
 <wire x1="114.269634375" y1="18.5600625" x2="118" y2="25.6" width="0" layer="19" extent="1-1"/>
@@ -1428,6 +1430,8 @@ design rules under a new name.</description>
 <wire x1="98.27998125" y1="24.343628125" x2="90.1736125" y2="22.8372875" width="0" layer="19" extent="1-1"/>
 <wire x1="119.13983125" y1="5.74995" x2="108.1288875" y2="4.805240625" width="0" layer="19" extent="1-1"/>
 <wire x1="119.13983125" y1="7.78995" x2="119.13983125" y2="5.74995" width="0" layer="19" extent="1-1"/>
+<wire x1="55.9492" y1="23.7275" x2="45.8908" y2="17.3775" width="0" layer="19" extent="1-1"/>
+<wire x1="55.9492" y1="24.9975" x2="55.9492" y2="23.7275" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SCK">
 <contactref element="CON_ISP" pad="SCK"/>
@@ -2009,16 +2013,15 @@ design rules under a new name.</description>
 <wire x1="40.745" y1="2.91" x2="45.8908" y2="31.3475" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="DMUX9">
-<contactref element="IC3" pad="9"/>
 <contactref element="U$5" pad="2-DMUX1"/>
 <wire x1="57.68" y1="13.6" x2="57.785" y2="13.6" width="0.2032" layer="16"/>
 <wire x1="57.785" y1="13.6" x2="57.785" y2="15.5575" width="0.2032" layer="16"/>
 <wire x1="57.785" y1="15.5575" x2="60.6425" y2="15.5575" width="0.2032" layer="16"/>
 <wire x1="60.6425" y1="15.5575" x2="60.6425" y2="20.32" width="0.2032" layer="16"/>
-<wire x1="45.8908" y1="21.1875" x2="57.785" y2="15.5575" width="0" layer="19" extent="1-16"/>
+<contactref element="IC3" pad="10"/>
+<wire x1="45.8908" y1="19.9175" x2="57.785" y2="15.5575" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="DMUX10">
-<contactref element="IC3" pad="10"/>
 <contactref element="U$5" pad="2-DMUX2"/>
 <wire x1="54.08" y1="2.91" x2="50.4825" y2="2.91" width="0.2032" layer="16"/>
 <wire x1="50.4825" y1="10.16" x2="50.4825" y2="2.91" width="0.2032" layer="1"/>
@@ -2027,7 +2030,8 @@ design rules under a new name.</description>
 <via x="53.0225" y="10.16" extent="1-16" drill="0.25" shape="square"/>
 <wire x1="53.0225" y1="10.16" x2="50.4825" y2="10.16" width="0.2032" layer="1"/>
 <wire x1="61.2775" y1="10.16" x2="61.2775" y2="20.32" width="0.2032" layer="16"/>
-<wire x1="50.4825" y1="10.16" x2="45.8908" y2="19.9175" width="0" layer="19" extent="1-1"/>
+<contactref element="IC3" pad="9"/>
+<wire x1="50.4825" y1="10.16" x2="45.8908" y2="21.1875" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DMUX11">
 <contactref element="IC3" pad="11"/>
@@ -2120,11 +2124,4 @@ design rules under a new name.</description>
 </errors>
 </board>
 </drawing>
-<compatibility>
-<note version="8.2" severity="warning">
-Since Version 8.2, Eagle supports online libraries. The ids
-of those online libraries will not be understood (or retained)
-with this version.
-</note>
-</compatibility>
 </eagle>
