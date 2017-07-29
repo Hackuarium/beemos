@@ -154,10 +154,10 @@
 <rectangle x1="0.9465" y1="6.3918" x2="1.5965" y2="7.7918" layer="51" rot="R270"/>
 <wire x1="-1.27" y1="7.3025" x2="-1.27" y2="8.5725" width="0.4064" layer="16"/>
 <wire x1="-1.27" y1="8.5725" x2="-1.27" y2="7.3025" width="0.4064" layer="1"/>
-<pad name="P$1" x="-1.27" y="8.89" drill="0.6" shape="square"/>
+<pad name="P$1" x="-1.27" y="8.89" drill="0.6" shape="square" stop="no"/>
 <wire x1="0.9525" y1="5.3975" x2="3.4925" y2="5.3975" width="0.4064" layer="1"/>
 <wire x1="3.4925" y1="5.3975" x2="1.5875" y2="5.3975" width="0.4064" layer="16"/>
-<pad name="P$2" x="3.175" y="5.715" drill="0.6" shape="square"/>
+<pad name="P$2" x="3.175" y="5.715" drill="0.6" shape="square" stop="no"/>
 <wire x1="-0.9525" y1="5.3975" x2="-0.9525" y2="3.175" width="0.4064" layer="1"/>
 <wire x1="0.9525" y1="5.3975" x2="0.9525" y2="2.8575" width="0.4064" layer="1"/>
 <wire x1="-1.35" y1="-0.84" x2="1.35" y2="-0.84" width="0.127" layer="52"/>
@@ -209,10 +209,10 @@
 <rectangle x1="-1.5965" y1="-3.9818" x2="-0.9465" y2="-2.5818" layer="51" rot="R90"/>
 <wire x1="2.2225" y1="-3.4925" x2="3.4925" y2="-3.4925" width="0.4064" layer="16"/>
 <wire x1="3.4925" y1="-3.4925" x2="1.27" y2="-3.4925" width="0.4064" layer="1"/>
-<pad name="P$3" x="3.175" y="-3.175" drill="0.6" shape="square" rot="R180"/>
+<pad name="P$3" x="3.175" y="-3.175" drill="0.6" shape="square" rot="R180" stop="no"/>
 <wire x1="-0.9525" y1="-1.5875" x2="-3.4925" y2="-1.5875" width="0.4064" layer="1"/>
 <wire x1="-3.4925" y1="-1.5875" x2="-1.5875" y2="-1.5875" width="0.4064" layer="16"/>
-<pad name="P$4" x="-3.175" y="-1.905" drill="0.6" shape="square" rot="R180"/>
+<pad name="P$4" x="-3.175" y="-1.905" drill="0.6" shape="square" rot="R180" stop="no"/>
 <wire x1="1.27" y1="-1.5875" x2="0.9525" y2="-1.5875" width="0.4064" layer="1"/>
 <wire x1="0.9525" y1="-1.5875" x2="0.9525" y2="0.635" width="0.4064" layer="1"/>
 <wire x1="-0.9525" y1="-1.5875" x2="-0.9525" y2="0.9525" width="0.4064" layer="1"/>
@@ -222,11 +222,14 @@
 <wire x1="-2.2225" y1="5.3975" x2="-1.5875" y2="5.3975" width="0.3048" layer="16"/>
 <wire x1="-1.5875" y1="5.3975" x2="-1.5875" y2="4.7625" width="0.3048" layer="16"/>
 <wire x1="-1.5875" y1="4.7625" x2="4.1275" y2="4.7625" width="0.3048" layer="16"/>
-<pad name="P$5" x="3.4925" y="7.3025" drill="0.6" shape="square"/>
-<pad name="P$6" x="3.4925" y="-1.5875" drill="0.6" shape="square"/>
+<pad name="P$5" x="3.4925" y="7.3025" drill="0.6" shape="square" stop="no"/>
+<pad name="P$6" x="3.4925" y="-1.5875" drill="0.6" shape="square" stop="no"/>
 <wire x1="4.1275" y1="4.7625" x2="4.1275" y2="6.985" width="0.3048" layer="16"/>
 <wire x1="2.2225" y1="-1.5875" x2="4.1275" y2="-1.5875" width="0.3048" layer="16"/>
 <wire x1="4.1275" y1="6.985" x2="4.1275" y2="-1.5875" width="0.3048" layer="1"/>
+<wire x1="4.1275" y1="-1.5875" x2="3.4925" y2="-1.5875" width="0.3048" layer="1"/>
+<wire x1="4.1275" y1="6.985" x2="3.4925" y2="6.985" width="0.3048" layer="1"/>
+<wire x1="4.1275" y1="6.985" x2="3.4925" y2="6.985" width="0.3048" layer="16"/>
 </package>
 <package name="QRE1113">
 <wire x1="1.35" y1="1.7" x2="-1.35" y2="1.7" width="0.127" layer="51"/>

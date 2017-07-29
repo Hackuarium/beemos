@@ -10616,10 +10616,10 @@ Based on the following sources:
 <rectangle x1="0.9465" y1="6.3918" x2="1.5965" y2="7.7918" layer="51" rot="R270"/>
 <wire x1="-1.27" y1="7.3025" x2="-1.27" y2="8.5725" width="0.4064" layer="16"/>
 <wire x1="-1.27" y1="8.5725" x2="-1.27" y2="7.3025" width="0.4064" layer="1"/>
-<pad name="P$1" x="-1.27" y="8.89" drill="0.6" shape="square"/>
+<pad name="P$1" x="-1.27" y="8.89" drill="0.6" shape="square" stop="no"/>
 <wire x1="0.9525" y1="5.3975" x2="3.4925" y2="5.3975" width="0.4064" layer="1"/>
 <wire x1="3.4925" y1="5.3975" x2="1.5875" y2="5.3975" width="0.4064" layer="16"/>
-<pad name="P$2" x="3.175" y="5.715" drill="0.6" shape="square"/>
+<pad name="P$2" x="3.175" y="5.715" drill="0.6" shape="square" stop="no"/>
 <wire x1="-0.9525" y1="5.3975" x2="-0.9525" y2="3.175" width="0.4064" layer="1"/>
 <wire x1="0.9525" y1="5.3975" x2="0.9525" y2="2.8575" width="0.4064" layer="1"/>
 <wire x1="-1.35" y1="-0.84" x2="1.35" y2="-0.84" width="0.127" layer="52"/>
@@ -10635,7 +10635,7 @@ Based on the following sources:
 <smd name="1-RD2" x="1.8" y="-3.44" dx="1.2" dy="0.6" layer="16" rot="R180"/>
 <smd name="2-DMUX2" x="-1.8" y="-3.44" dx="1.2" dy="0.6" layer="16" rot="R180"/>
 <smd name="3-Y2" x="-1.8" y="-1.64" dx="1.2" dy="0.6" layer="16" rot="R180"/>
-<smd name="4-GND2" x="1.8" y="-1.64" dx="1.2" dy="0.6" layer="16" rot="R180"/>
+<smd name="4-GND2" x="1.8" y="-1.64" dx="1.2" dy="0.6" layer="16" rot="R180" stop="no"/>
 <wire x1="1.973" y1="-0.348" x2="-1.973" y2="-0.348" width="0.0508" layer="39"/>
 <wire x1="-1.973" y1="1.618" x2="1.973" y2="1.618" width="0.0508" layer="39"/>
 <wire x1="1.973" y1="1.618" x2="1.973" y2="-0.348" width="0.0508" layer="39"/>
@@ -10671,10 +10671,10 @@ Based on the following sources:
 <rectangle x1="-1.5965" y1="-3.9818" x2="-0.9465" y2="-2.5818" layer="51" rot="R90"/>
 <wire x1="2.2225" y1="-3.4925" x2="3.4925" y2="-3.4925" width="0.4064" layer="16"/>
 <wire x1="3.4925" y1="-3.4925" x2="1.27" y2="-3.4925" width="0.4064" layer="1"/>
-<pad name="P$3" x="3.175" y="-3.175" drill="0.6" shape="square" rot="R180"/>
+<pad name="P$3" x="3.175" y="-3.175" drill="0.6" shape="square" rot="R180" stop="no"/>
 <wire x1="-0.9525" y1="-1.5875" x2="-3.4925" y2="-1.5875" width="0.4064" layer="1"/>
 <wire x1="-3.4925" y1="-1.5875" x2="-1.5875" y2="-1.5875" width="0.4064" layer="16"/>
-<pad name="P$4" x="-3.175" y="-1.905" drill="0.6" shape="square" rot="R180"/>
+<pad name="P$4" x="-3.175" y="-1.905" drill="0.6" shape="square" rot="R180" stop="no"/>
 <wire x1="1.27" y1="-1.5875" x2="0.9525" y2="-1.5875" width="0.4064" layer="1"/>
 <wire x1="0.9525" y1="-1.5875" x2="0.9525" y2="0.635" width="0.4064" layer="1"/>
 <wire x1="-0.9525" y1="-1.5875" x2="-0.9525" y2="0.9525" width="0.4064" layer="1"/>
@@ -10684,11 +10684,14 @@ Based on the following sources:
 <wire x1="-2.2225" y1="5.3975" x2="-1.5875" y2="5.3975" width="0.3048" layer="16"/>
 <wire x1="-1.5875" y1="5.3975" x2="-1.5875" y2="4.7625" width="0.3048" layer="16"/>
 <wire x1="-1.5875" y1="4.7625" x2="4.1275" y2="4.7625" width="0.3048" layer="16"/>
-<pad name="P$5" x="3.4925" y="7.3025" drill="0.6" shape="square"/>
-<pad name="P$6" x="3.4925" y="-1.5875" drill="0.6" shape="square"/>
+<pad name="P$5" x="3.4925" y="7.3025" drill="0.6" shape="square" stop="no"/>
+<pad name="P$6" x="3.4925" y="-1.5875" drill="0.6" shape="square" stop="no"/>
 <wire x1="4.1275" y1="4.7625" x2="4.1275" y2="6.985" width="0.3048" layer="16"/>
 <wire x1="2.2225" y1="-1.5875" x2="4.1275" y2="-1.5875" width="0.3048" layer="16"/>
 <wire x1="4.1275" y1="6.985" x2="4.1275" y2="-1.5875" width="0.3048" layer="1"/>
+<wire x1="4.1275" y1="-1.5875" x2="3.4925" y2="-1.5875" width="0.3048" layer="1"/>
+<wire x1="4.1275" y1="6.985" x2="3.4925" y2="6.985" width="0.3048" layer="1"/>
+<wire x1="4.1275" y1="6.985" x2="3.4925" y2="6.985" width="0.3048" layer="16"/>
 </package>
 </packages>
 <symbols>
@@ -10984,6 +10987,7 @@ Based on the following sources:
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11123,7 +11127,7 @@ Based on the following sources:
 <instance part="IC2" gate="P" x="337.82" y="195.58"/>
 <instance part="IC3" gate="P" x="68.58" y="195.58"/>
 <instance part="P+9" gate="G$1" x="68.58" y="203.2"/>
-<instance part="GND20" gate="1" x="68.58" y="185.42"/>
+<instance part="GND20" gate="1" x="68.58" y="182.88"/>
 <instance part="GND25" gate="1" x="337.82" y="185.42"/>
 <instance part="P+21" gate="G$1" x="337.82" y="203.2"/>
 <instance part="U$1" gate="G$1" x="157.48" y="251.46"/>
@@ -11150,6 +11154,7 @@ Based on the following sources:
 <instance part="GND9" gate="1" x="215.9" y="137.16"/>
 <instance part="GND10" gate="1" x="215.9" y="88.9"/>
 <instance part="GND11" gate="1" x="160.02" y="88.9"/>
+<instance part="GND12" gate="1" x="78.74" y="180.34"/>
 </instances>
 <busses>
 </busses>
@@ -11277,6 +11282,7 @@ Based on the following sources:
 <segment>
 <pinref part="IC3" gate="P" pin="GND"/>
 <pinref part="GND20" gate="1" pin="GND"/>
+<wire x1="68.58" y1="185.42" x2="68.58" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="P" pin="VSS"/>
@@ -11321,6 +11327,13 @@ Based on the following sources:
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="U$5" gate="G$1" pin="GND"/>
 <wire x1="215.9" y1="236.22" x2="218.44" y2="236.22" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC3" gate="A" pin="G1"/>
+<pinref part="IC3" gate="A" pin="G2"/>
+<wire x1="78.74" y1="190.5" x2="78.74" y2="187.96" width="0.1524" layer="91"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+<wire x1="78.74" y1="182.88" x2="78.74" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCK" class="0">
