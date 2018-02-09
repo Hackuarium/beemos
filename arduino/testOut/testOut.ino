@@ -1,4 +1,8 @@
-
+/*
+     The purpose of this code is to test the beemos-counter board.
+     The board has 16 infrared emitters/receptors controlled by 4
+     analog pins via a multiplexer.
+*/
 
 byte out[] = {1, 0, 3, 5, 7, 6, 4, 2, 8, 9, 11, 13, 15, 14, 12, 10};
 #define OUT0 A0
@@ -18,7 +22,7 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-
+  // Iterating over infrared emitters
   for (byte i = 0; i < 16; i++) {
     setOutput(i);
     delay(10);
@@ -27,6 +31,7 @@ void loop() {
   switchBlink();
 }
 
+// blinking LED to ensure the loop is running
 boolean blinkHigh = false;
 void switchBlink() {
   if (blinkHigh) {
@@ -38,13 +43,15 @@ void switchBlink() {
   }
 }
 
+// Enable output pins based on binary value of input i.
+// This enables infrared emitter number i.
 void setOutput(byte i) {
   if (i & 0b0001) {
     digitalWrite(OUT0, HIGH);
   } else {
     digitalWrite(OUT0, LOW);
   }
-  if (i & 0b010) {
+  if (i & 0b0010) {
     digitalWrite(OUT1, HIGH);
   } else {
     digitalWrite(OUT1, LOW);
