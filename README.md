@@ -1,4 +1,4 @@
-## open-beehive-counter
+# Open beehive counter
 A component of the BeeMoS project, an open source bee hive monitoring system developed at the open science lab Hackuarium, Renens, Switrzerland. 
 
 # Objective: 
