@@ -1,4 +1,4 @@
-# Open beehive counter
+# Open beehive counter (under development)
 A component of the BeeMoS project, an open source bee hive monitoring system developed at the open science lab Hackuarium, Renens, Switzerland. 
 
 # Objective: 
@@ -12,3 +12,6 @@ Using an Arduino based microcontroller, infrared (= IR) reflectance sensors are 
 * x16 QRE1113 IR reflectance sensors (x2 per gate)
 * x1 74HC154W demultiplexer used to switch on the IR led of one of the 16 IR reflectance sensors
 * x1 74HC4067 multiplexer used to read the value from one of the IR reflectance sensors (the one which has the IR led on)
+
+# State of the project
+We have ordered PCBs and now need to solder all elements, program the board and - if all goes well - test them in the field. We are working on parallel on a laser cut enclosure which includes 8 individual gates that the bees will use to enter/exit the hive and an upper compartment for the hive.
