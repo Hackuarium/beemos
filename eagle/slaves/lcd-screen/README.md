@@ -23,8 +23,8 @@
 | D17 A3 | PC3(ADC3)     |          | ADC
 | D18 A4 | PC4(ADC4/SDA) | SDA      |
 | D19 A5 | PC5(ADC5/SCL) | SCL      |
-| D20 A6 | ADC6          |          | ADC only input
-| D21 A7 | ADC7          |          | ADC only input
+| D20 A6 | ADC6          | I2C A0   | ADC only input
+| D21 A7 | ADC7          | I2C A1   | ADC only input
 
 Remarks
 * RX, TX used for serial communication over USB (debug)
