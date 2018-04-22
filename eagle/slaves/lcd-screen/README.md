@@ -1,4 +1,4 @@
-
+# LCD 16x2 slave
 # ATmega328 pin map
 
 | Pin    | Map to        | Function | Remarks
