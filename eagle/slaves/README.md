@@ -1,4 +1,4 @@
-# smart slaves
+# Smart Slaves
 
 A smart slave is an I2C slave that can be connected to a master board.
 The slave will be usually be powered by the master board as well and may
@@ -12,6 +12,12 @@ may add repectively 1 or 2 by soldering A0 and A1.
 
 The I2C bus should be free of any other devices. If some companents
 are using the I2C bus a software I2C library should be installed.
+
+## Power consumption
+
+The slave should be able to reach in sleep mode less than 25 µA. This
+means that all the devices should be powered from the CPU in order to
+completely cut off the current.
 
 ## Debugging
 
