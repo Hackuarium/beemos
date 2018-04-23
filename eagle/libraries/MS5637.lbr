@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="9.0.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -89,6 +90,19 @@
 <pad name="SCL" x="1" y="-1" drill="0.6"/>
 <pad name="SDA" x="-1" y="-1" drill="0.6"/>
 </package>
+<package name="MS5637WIDE">
+<smd name="VDD" x="-1.254" y="1.254" dx="1.524" dy="1.524" layer="1"/>
+<smd name="GND" x="1.254" y="1.254" dx="1.524" dy="1.524" layer="1"/>
+<smd name="SCL" x="1.254" y="-1.254" dx="1.524" dy="1.524" layer="1"/>
+<smd name="SDA" x="-1.254" y="-1.254" dx="1.524" dy="1.524" layer="1"/>
+<text x="-1.27" y="-2.54" size="0.508" layer="21">MS5637</text>
+<wire x1="-1.7" y1="1.7" x2="1.8" y2="1.7" width="0.127" layer="21"/>
+<wire x1="1.8" y1="1.7" x2="1.8" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="1.8" y1="-1.7" x2="-1.7" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="-1.7" y1="-1.7" x2="-1.7" y2="1.7" width="0.127" layer="21"/>
+<circle x="-1.27" y="1.27" radius="0.254" width="0.127" layer="21"/>
+<text x="0" y="0" size="0.254" layer="21">MEAS</text>
+</package>
 </packages>
 <symbols>
 <symbol name="MS5637">
@@ -104,7 +118,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="MS5637">
+<deviceset name="MS5637" prefix="IC">
 <description>Le MS563702BA03-50 est un Micro Altimètre ultra compact optimisé pour des applications d'altimètre et de baromètre dans des téléphones portables et des tablettes.
 La résolution d'altitude au niveau de la mer est de 13cm d'air. Le module de capteur comprend un capteur de pression haute linéarité et un CAN &amp;Delta;Σ 24 bits ultra
 faible puissance avec des coefficients internes calibrés en usine. Il fournit une valeur numérique de pression et de température précise de 24 bits et différents modes
@@ -134,6 +148,17 @@ Aucun composant externe (oscillateur interne)</description>
 </technologies>
 </device>
 <device name="TH" package="MS5637TH">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="VDD" pad="VDD"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="WIDE" package="MS5637WIDE">
 <connects>
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="SCL" pad="SCL"/>
