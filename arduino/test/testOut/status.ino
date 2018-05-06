@@ -33,6 +33,23 @@ void updateStatus() {
   }
 }
 
+void printGateInfo() {
+  for (byte gate = 0; gate < 8; gate++) {
+    Serial.print(gate);
+    Serial.print(" ");
+    Serial.print(current[gate * 2]);
+    Serial.print(" ");
+    Serial.print(current[gate * 2 + 1]);
+
+  //  Serial.print(" ");
+  //  Serial.print(inside);
+  //  Serial.print(" ");
+  //  Serial.println(outside);
+  }
+}
+
+
+
 void printGateStatus() {
   for (byte i = 0; i < 8; i++) {
     Serial.print(i);

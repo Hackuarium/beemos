@@ -28,7 +28,7 @@ void loop() {
 
 
     counter++;
-    if (counter = 50) {
+    if (counter == 50) {
       printGateStatus();
       counter=0;
     }

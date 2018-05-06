@@ -22,7 +22,7 @@ void loggerInit() {
 
 void writeLog() {
   int firstAddress = getFirstAddress(getParameter(PARAM_LOGID));
-  setParameter(PARAM_LOGID, getParameter(PARAM_LOGID)+1);
+  setParameter(PARAM_LOGID, getParameter(PARAM_LOGID) + 1);
   for (byte i = 0; i < NUMBER_PARAMETERS_TO_LOG; i++) {
     eeprom_write_word((uint16_t*)  (firstAddress + i * 2), getParameter(i));
   }
@@ -35,24 +35,24 @@ void readLog(byte entryID) {
   }
 }
 
-int getFirstAddress(byte entryID) {
-  return FIRST_ADDRESS + LOG_ENTRY_LENGTH * (entryID % LOG_ENTRY_LENGTH);
+int getFirstAddress(int entryID) {
+  return FIRST_ADDRESS + LOG_ENTRY_LENGTH * (entryID % NUMBER_LOGS);
 }
 
-void formatLog(Print* output) {
+void formatLog() {
   for (int i = FIRST_ADDRESS; i <= LAST_ADDRESS; i++) {
     eeprom_write_byte(i, 0);
   }
-  output->println("Done");
 }
 
 void printLog(Print* output) {
   for (byte i = 0; i < NUMBER_LOGS; i++) {
     output->print(i);
     output->print(" ");
-     int firstAddress = getFirstAddress(i);
-    for (byte j = 0; j < 17; j++) {
-      output->print(eeprom_read_word((uint16_t*) (firstAddress + i * 2)));
+    int firstAddress = getFirstAddress(i);
+    for (byte j = 0; j < NUMBER_PARAMETERS_TO_LOG; j++) {
+      output->print((int)eeprom_read_word((uint16_t*) (firstAddress + j * 2)));
+      output->print(" ");
     }
     output->println("");
   }

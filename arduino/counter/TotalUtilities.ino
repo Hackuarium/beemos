@@ -18,12 +18,12 @@ void updateTotal() {
           gateStatus[gate] = 3;
         } else { // from inside to ouside
           gateStatus[gate] = 1;
-          countOut[gate]++;
+          countIn[gate]++;
         }
       } else {
         if (outside > THRESHOLD) { // from outside to inside
           gateStatus[gate] = 2;
-          countIn[gate]++;
+          countOut[gate]++;
         }
       }
     } else {
@@ -65,10 +65,10 @@ void printTotal(Print* output) {
           output->println("");
           break;
         case 1:
-          output->println("outside");
+          output->println("From outside");
           break;
         case 2:
-          output->println("inside");
+          output->println("From inside");
           break;
         case 3:
           output->println("both");

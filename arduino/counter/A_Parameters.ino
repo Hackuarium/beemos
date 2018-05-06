@@ -40,12 +40,12 @@
 #define INT_MAX_VALUE       32767
 #define LONG_MAX_VALUE      2147483647
 
-
 void resetParameters() { // turn all parameters to 0
 
   setAndSaveParameter(PARAM_DEBUG_REPEAT, 20);
   setAndSaveParameter(PARAM_DEBUG_DELAY, 500);
 
+  formatLog();
   setQualifier(32767);
 }
 

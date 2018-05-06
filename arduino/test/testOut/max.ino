@@ -1,4 +1,6 @@
 
+#define MIN_MAX_RESET 6 // every 6 s we change min/max
+
 byte currentMax[16] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 byte maxHistory[16][5];
 byte currentMaxSlot = 0;
@@ -14,7 +16,7 @@ void initMax() {
 
 
 void updateMax() {
-  byte newMaxSlot = millis() % (60000 * 5) / 60000;
+  byte newMaxSlot = millis() % (MIN_MAX_RESET * 1000 * 5) / (MIN_MAX_RESET * 1000);
   if (newMaxSlot != currentMaxSlot) {
     currentMaxSlot = newMaxSlot;
     for (byte i = 0; i < 16; i++) {

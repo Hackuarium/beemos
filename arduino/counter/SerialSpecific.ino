@@ -7,7 +7,9 @@ void processSpecificCommand(char* data, char* paramValue, Print* output) {
       printCounter(output);
       break;
     case 'f':
-      formatLog(output);
+      output->println("Formating");
+      formatLog();
+      output->println("Done");
       break;
     case 'l':
       printLog(output);
