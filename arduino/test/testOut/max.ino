@@ -1,5 +1,5 @@
 
-byte currentMax[16]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+byte currentMax[16] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 byte maxHistory[16][5];
 byte currentMaxSlot = 0;
 
@@ -22,7 +22,7 @@ void updateMax() {
     }
   }
   for (byte i = 0; i < 16; i++) {
-    byte value = current[i] << 2;
+    byte value = current[i];
     if (value > maxHistory[i][currentMaxSlot]) {
       maxHistory[i][currentMaxSlot] = value;
     }
@@ -39,11 +39,10 @@ void updateMax() {
 
 void printMax() {
   for (byte i = 0; i < 16; i++) {
-    currentMax[i] = 0;
     Serial.print(i);
     Serial.print(" ");
     for (byte j = 0; j < 5; j++) {
-      Serial.print(maxHistory[i][j]);
+      Serial.print(maxHistory[i][j],HEX);
       Serial.print(" ");
     }
     Serial.println(currentMax[i]);

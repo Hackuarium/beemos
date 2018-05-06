@@ -1,7 +1,8 @@
 int muxValue = 0;
 
 
-int current[16];
+byte current[16];
+byte gateStatus[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
 
 void setup() {
@@ -15,15 +16,22 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
   // Iterating over infrared emitters
+  byte counter = 0;
   while (true) {
 
 
     updateCounter();
-    printCounter();
+    //   printCounter();
     updateMax();
+    //   printMax();
+    updateStatus();
 
 
-    delay(500);
+    counter++;
+    if (counter = 50) {
+      printGateStatus();
+      counter=0;
+    }
   }
 
 

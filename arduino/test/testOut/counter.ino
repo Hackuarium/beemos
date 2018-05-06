@@ -32,16 +32,17 @@ void initCounter() {
 
 void updateCounter() {
   for (byte i = 0; i < sizeof(out); i++) {
-    setInput(in[i]);
     setOutput(out[i]);
-    current[i] = analogRead(MUX);
+    setInput(in[i]);
+    delay(1);
+    current[i] = analogRead(MUX) >> 2;
   }
 }
 
 
 void printCounter() {
   for (byte i = 0; i < sizeof(out); i++) {
-    Serial.print(current[i]);
+    Serial.print(current[i], HEX);
     Serial.print(" ");
   }
   Serial.println();
