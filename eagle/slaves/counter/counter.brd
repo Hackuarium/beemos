@@ -9,7 +9,7 @@
 </settings>
 <grid distance="6.25" unitdist="mil" unit="mil" style="lines" multiple="10" display="yes" altdistance="3.125" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -1194,7 +1194,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="1.27" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="1.42875" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="RK8" library="resistor" package="M0805" value="220" x="5.08" y="12.7" smashed="yes" rot="R270">
+<element name="RK8" library="resistor" package="M0805" value="1k" x="5.08" y="12.7" smashed="yes" rot="R270">
 <attribute name="NAME" x="6.35" y="13.97" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="6.19125" y="14.605" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1203,7 +1203,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="6.35" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="6.0325" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="RK10" library="resistor" package="M0805" value="220" x="2.54" y="3.81" smashed="yes" rot="R90">
+<element name="RK10" library="resistor" package="M0805" value="1k" x="2.54" y="3.81" smashed="yes" rot="R90">
 <attribute name="NAME" x="1.27" y="2.54" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="1.42875" y="2.54" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1212,7 +1212,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="13.97" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="14.12875" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="RK12" library="resistor" package="M0805" value="220" x="17.78" y="12.7" smashed="yes" rot="R270">
+<element name="RK12" library="resistor" package="M0805" value="1k" x="17.78" y="12.7" smashed="yes" rot="R270">
 <attribute name="NAME" x="19.05" y="13.97" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="18.89125" y="14.605" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1221,7 +1221,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="19.05" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="18.7325" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="RK14" library="resistor" package="M0805" value="220" x="15.24" y="3.81" smashed="yes" rot="R90">
+<element name="RK14" library="resistor" package="M0805" value="1k" x="15.24" y="3.81" smashed="yes" rot="R90">
 <attribute name="NAME" x="13.97" y="2.54" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="14.12875" y="2.54" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1230,7 +1230,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="26.67" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="26.82875" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="RK22" library="resistor" package="M0805" value="220" x="30.48" y="12.7" smashed="yes" rot="R270">
+<element name="RK22" library="resistor" package="M0805" value="1k" x="30.48" y="12.7" smashed="yes" rot="R270">
 <attribute name="NAME" x="31.75" y="13.97" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="31.59125" y="14.605" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1239,7 +1239,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="31.75" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="31.4325" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="RK24" library="resistor" package="M0805" value="220" x="27.94" y="3.81" smashed="yes" rot="R90">
+<element name="RK24" library="resistor" package="M0805" value="1k" x="27.94" y="3.81" smashed="yes" rot="R90">
 <attribute name="NAME" x="26.67" y="2.54" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="26.82875" y="2.54" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1248,7 +1248,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="40.005" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="40.16375" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="RK30" library="resistor" package="M0805" value="220" x="43.815" y="12.7" smashed="yes" rot="R270">
+<element name="RK30" library="resistor" package="M0805" value="1k" x="43.815" y="12.7" smashed="yes" rot="R270">
 <attribute name="NAME" x="45.085" y="13.97" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="44.92625" y="14.605" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1257,7 +1257,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="45.085" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="44.7675" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="RK32" library="resistor" package="M0805" value="220" x="41.275" y="3.81" smashed="yes" rot="R90">
+<element name="RK32" library="resistor" package="M0805" value="1k" x="41.275" y="3.81" smashed="yes" rot="R90">
 <attribute name="NAME" x="40.005" y="2.54" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="40.16375" y="2.54" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1266,7 +1266,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="53.34" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="53.49875" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="RK18" library="resistor" package="M0805" value="220" x="57.15" y="12.7" smashed="yes" rot="R270">
+<element name="RK18" library="resistor" package="M0805" value="1k" x="57.15" y="12.7" smashed="yes" rot="R270">
 <attribute name="NAME" x="58.42" y="13.97" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="58.26125" y="14.605" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1275,7 +1275,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="58.42" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="58.1025" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="RK20" library="resistor" package="M0805" value="220" x="54.61" y="3.81" smashed="yes" rot="R90">
+<element name="RK20" library="resistor" package="M0805" value="1k" x="54.61" y="3.81" smashed="yes" rot="R90">
 <attribute name="NAME" x="53.34" y="2.54" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="53.49875" y="2.54" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1284,7 +1284,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="66.675" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="66.83375" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="RK34" library="resistor" package="M0805" value="220" x="70.485" y="12.7" smashed="yes" rot="R270">
+<element name="RK34" library="resistor" package="M0805" value="1k" x="70.485" y="12.7" smashed="yes" rot="R270">
 <attribute name="NAME" x="71.755" y="13.97" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="71.59625" y="14.605" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1293,7 +1293,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="71.755" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="71.4375" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="RK36" library="resistor" package="M0805" value="220" x="67.945" y="3.81" smashed="yes" rot="R90">
+<element name="RK36" library="resistor" package="M0805" value="1k" x="67.945" y="3.81" smashed="yes" rot="R90">
 <attribute name="NAME" x="66.675" y="2.54" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="66.83375" y="2.54" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1302,7 +1302,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="80.01" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="80.16875" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="RK42" library="resistor" package="M0805" value="220" x="83.82" y="12.7" smashed="yes" rot="R270">
+<element name="RK42" library="resistor" package="M0805" value="1k" x="83.82" y="12.7" smashed="yes" rot="R270">
 <attribute name="NAME" x="85.09" y="13.97" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="84.93125" y="14.605" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1311,7 +1311,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="85.09" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="84.7725" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="RK44" library="resistor" package="M0805" value="220" x="81.28" y="3.81" smashed="yes" rot="R90">
+<element name="RK44" library="resistor" package="M0805" value="1k" x="81.28" y="3.81" smashed="yes" rot="R90">
 <attribute name="NAME" x="80.01" y="2.54" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="80.16875" y="2.54" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1320,7 +1320,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="92.71" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="92.86875" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="RK26" library="resistor" package="M0805" value="220" x="96.52" y="12.7" smashed="yes" rot="R270">
+<element name="RK26" library="resistor" package="M0805" value="1k" x="96.52" y="12.7" smashed="yes" rot="R270">
 <attribute name="NAME" x="97.79" y="13.97" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="97.63125" y="14.605" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1329,7 +1329,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="97.79" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="97.4725" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="RK28" library="resistor" package="M0805" value="220" x="93.98" y="3.81" smashed="yes" rot="R90">
+<element name="RK28" library="resistor" package="M0805" value="1k" x="93.98" y="3.81" smashed="yes" rot="R90">
 <attribute name="NAME" x="92.71" y="2.54" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="92.86875" y="2.54" size="1.27" layer="27" rot="R90"/>
 </element>

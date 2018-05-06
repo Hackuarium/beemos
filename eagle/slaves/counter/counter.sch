@@ -13078,82 +13078,82 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="RK5" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+13" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
-<part name="RK8" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK8" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O4" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK9" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+14" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
-<part name="RK10" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK10" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O5" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK11" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+7" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
-<part name="RK12" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK12" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O6" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK13" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+10" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
-<part name="RK14" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK14" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O9" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK21" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+17" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
-<part name="RK22" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK22" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O10" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK23" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+19" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND23" library="supply1" deviceset="GND" device=""/>
-<part name="RK24" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK24" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O13" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK29" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+24" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND28" library="supply1" deviceset="GND" device=""/>
-<part name="RK30" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK30" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O14" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK31" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+25" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND29" library="supply1" deviceset="GND" device=""/>
-<part name="RK32" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK32" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O7" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK17" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+3" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="RK18" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK18" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O8" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK19" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+4" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="RK20" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK20" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O15" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK33" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+16" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND24" library="supply1" deviceset="GND" device=""/>
-<part name="RK34" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK34" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O16" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK35" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+22" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND26" library="supply1" deviceset="GND" device=""/>
-<part name="RK36" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK36" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O19" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK41" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+27" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND33" library="supply1" deviceset="GND" device=""/>
-<part name="RK42" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK42" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O20" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK43" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+29" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND34" library="supply1" deviceset="GND" device=""/>
-<part name="RK44" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK44" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O11" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK25" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+5" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="RK26" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK26" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="O12" library="SparkFun" deviceset="QRE1113" device=""/>
 <part name="RK27" library="resistor" deviceset="R-EU_" device="M0805" value="100"/>
 <part name="P+6" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
-<part name="RK28" library="resistor" deviceset="R-EU_" device="M0805" value="220"/>
+<part name="RK28" library="resistor" deviceset="R-EU_" device="M0805" value="1k"/>
 </parts>
 <sheets>
 <sheet>
