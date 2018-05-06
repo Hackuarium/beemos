@@ -9,7 +9,7 @@
 </settings>
 <grid distance="6.25" unitdist="mil" unit="mil" style="lines" multiple="10" display="yes" altdistance="3.125" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -177,6 +177,38 @@
 <wire x1="85.88375" y1="-1.5875" x2="85.88375" y2="-6.35" width="0.2032" layer="51"/>
 <wire x1="90.96375" y1="-1.74625" x2="90.96375" y2="-6.50875" width="0.2032" layer="51"/>
 <wire x1="98.90125" y1="-1.5875" x2="98.90125" y2="-6.50875" width="0.2032" layer="51"/>
+<text x="4.60375" y="9.8425" size="1.016" layer="28" rot="MR0">1</text>
+<text x="4.60375" y="6.0325" size="1.016" layer="28" rot="MR0">2</text>
+<text x="17.30375" y="9.68375" size="1.016" layer="28" rot="MR0">3</text>
+<text x="17.30375" y="6.19125" size="1.016" layer="28" rot="MR0">4</text>
+<text x="30.00375" y="9.8425" size="1.016" layer="28" rot="MR0">5</text>
+<text x="29.845" y="6.0325" size="1.016" layer="28" rot="MR0">6</text>
+<text x="43.18" y="10.00125" size="1.016" layer="28" rot="MR0">7</text>
+<text x="43.33875" y="6.0325" size="1.016" layer="28" rot="MR0">8</text>
+<text x="56.8325" y="9.8425" size="1.016" layer="28" rot="MR0">9</text>
+<text x="56.99125" y="6.0325" size="1.016" layer="28" rot="MR0">10</text>
+<text x="70.1675" y="9.68375" size="1.016" layer="28" rot="MR0">11</text>
+<text x="70.00875" y="6.0325" size="1.016" layer="28" rot="MR0">12</text>
+<text x="83.5025" y="9.8425" size="1.016" layer="28" rot="MR0">13</text>
+<text x="83.66125" y="5.87375" size="1.016" layer="28" rot="MR0">14</text>
+<text x="96.2025" y="10.00125" size="1.016" layer="28" rot="MR0">15</text>
+<text x="96.36125" y="6.19125" size="1.016" layer="28" rot="MR0">16</text>
+<text x="3.175" y="9.8425" size="1.016" layer="27">1</text>
+<text x="3.175" y="6.0325" size="1.016" layer="27">2</text>
+<text x="15.875" y="9.68375" size="1.016" layer="27">3</text>
+<text x="15.875" y="6.19125" size="1.016" layer="27">4</text>
+<text x="28.575" y="9.8425" size="1.016" layer="27">5</text>
+<text x="28.41625" y="6.0325" size="1.016" layer="27">6</text>
+<text x="41.75125" y="10.00125" size="1.016" layer="27">7</text>
+<text x="41.91" y="6.0325" size="1.016" layer="27">8</text>
+<text x="55.40375" y="9.8425" size="1.016" layer="27">9</text>
+<text x="55.5625" y="6.0325" size="1.016" layer="27">10</text>
+<text x="68.73875" y="9.68375" size="1.016" layer="27">11</text>
+<text x="68.58" y="6.0325" size="1.016" layer="27">12</text>
+<text x="82.07375" y="9.8425" size="1.016" layer="27">13</text>
+<text x="82.2325" y="5.87375" size="1.016" layer="27">14</text>
+<text x="94.77375" y="10.00125" size="1.016" layer="27">15</text>
+<text x="94.9325" y="6.19125" size="1.016" layer="27">16</text>
 </plain>
 <libraries>
 <library name="lpatiny">
@@ -1192,7 +1224,7 @@ design rules under a new name.</description>
 <element name="O3" library="SparkFun" package="QRE1113" value="QRE1113" x="3.81" y="12.7" smashed="yes" rot="MR180"/>
 <element name="RK5" library="resistor" package="M0805" value="100" x="2.54" y="12.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="1.27" y="11.43" size="1.27" layer="25" rot="R90"/>
-<attribute name="VALUE" x="1.42875" y="11.7475" size="1.27" layer="27" rot="R90"/>
+<attribute name="VALUE" x="82.55" y="3.4925" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="RK8" library="resistor" package="M0805" value="1k" x="5.08" y="12.7" smashed="yes" rot="R270">
 <attribute name="NAME" x="6.35" y="13.97" size="1.27" layer="25" rot="R270"/>
