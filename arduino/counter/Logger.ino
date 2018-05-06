@@ -58,3 +58,18 @@ void printLog(Print* output) {
   }
 }
 
+NIL_WORKING_AREA(waThreadLogger, 0);
+NIL_THREAD(ThreadLogger, arg) {
+  nilThdSleepMilliseconds(1000);
+
+  while (TRUE) {
+    for (int i = 0; i < 3600; i++) { // sleep 1h
+
+      writeLog();
+    }
+    nilThdSleepMilliseconds(1000);
+  }
+}
+
+
+

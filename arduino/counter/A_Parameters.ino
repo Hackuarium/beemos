@@ -33,17 +33,22 @@
 #define PARAM_GATE8_IN      15
 #define PARAM_GATE8_OUT     16
 
-#define PARAM_DEBUG_REPEAT  20
-#define PARAM_DEBUG_DELAY   21
+#define PARAM_THRESHOLD       17
+#define PARAM_THRESHOLD_RESET 18
+#define PARAM_DEBUG_REPEAT    19
+#define PARAM_DEBUG_DELAY     20
 
 
 #define INT_MAX_VALUE       32767
 #define LONG_MAX_VALUE      2147483647
 
 void resetParameters() { // turn all parameters to 0
-
+  setAndSaveParameter(PARAM_THRESHOLD, 20);
+    setAndSaveParameter(PARAM_THRESHOLD_RESET, 10);
   setAndSaveParameter(PARAM_DEBUG_REPEAT, 20);
   setAndSaveParameter(PARAM_DEBUG_DELAY, 500);
+
+
 
   formatLog();
   setQualifier(32767);

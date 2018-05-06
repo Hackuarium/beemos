@@ -1,5 +1,4 @@
-#define THRESHOLD 20
-#define THRESHOLD_RESET 10
+
 
 long countIn[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 long countOut[8] = {0, 0, 0, 0, 0, 0, 0, 0};
@@ -13,21 +12,21 @@ void updateTotal() {
     int outside = (int) currentMax[gate * 2 + 1] - (int) current[gate * 2 + 1];
 
     if (gateStatus[gate] == 0) {
-      if (inside > THRESHOLD) {
-        if (outside > THRESHOLD) { // both at the same time
+      if (inside > getParameter(PARAM_THRESHOLD)) {
+        if (outside > getParameter(PARAM_THRESHOLD)) { // both at the same time
           gateStatus[gate] = 3;
         } else { // from inside to ouside
           gateStatus[gate] = 1;
           countIn[gate]++;
         }
       } else {
-        if (outside > THRESHOLD) { // from outside to inside
+        if (outside > getParameter(PARAM_THRESHOLD)) { // from outside to inside
           gateStatus[gate] = 2;
           countOut[gate]++;
         }
       }
     } else {
-      if ((inside < THRESHOLD_RESET) && (outside < THRESHOLD_RESET)) {
+      if ((inside < getParameter(PARAM_THRESHOLD_RESET)) && (outside < getParameter(PARAM_THRESHOLD_RESET))) {
         gateStatus[gate] = 0;
       }
     }
@@ -78,6 +77,5 @@ void printTotal(Print* output) {
     output->println("-");
     nilThdSleepMilliseconds(getParameter(PARAM_DEBUG_DELAY));
   }
-
 }
 
