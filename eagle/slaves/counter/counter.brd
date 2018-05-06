@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.0">
+<eagle version="9.0.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
@@ -1024,10 +1024,11 @@ design rules under a new name.</description>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="0"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -1209,7 +1210,7 @@ design rules under a new name.</description>
 <element name="IC2" library="40xx" library_urn="urn:adsk.eagle:library:80" package="SO24W" value="4067D" x="25.56896875" y="24.065134375" rot="R270"/>
 <element name="IC3" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" package="SO24W" value="74HC154DW" x="50.92" y="24.3625" rot="R270"/>
 <element name="O3" library="SparkFun" package="QRE1113" value="QRE1113" x="3.81" y="12.7" smashed="yes" rot="MR180"/>
-<element name="RK5" library="resistor" package="M0805" value="1k" x="2.54" y="12.7" smashed="yes" rot="R90">
+<element name="RK5" library="resistor" package="M0805" value="100" x="2.54" y="12.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="1.27" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="1.42875" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1222,7 +1223,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="8.73125" y="10.16" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="O4" library="SparkFun" package="QRE1113" value="QRE1113" x="3.81" y="3.81" smashed="yes" rot="MR0"/>
-<element name="RK9" library="resistor" package="M0805" value="1k" x="5.08" y="3.81" smashed="yes" rot="R270">
+<element name="RK9" library="resistor" package="M0805" value="100" x="5.08" y="3.81" smashed="yes" rot="R270">
 <attribute name="NAME" x="6.35" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="6.0325" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1235,7 +1236,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="5.715" y="6.50875" size="1.27" layer="27"/>
 </element>
 <element name="O5" library="SparkFun" package="QRE1113" value="QRE1113" x="16.51" y="12.7" smashed="yes" rot="MR180"/>
-<element name="RK11" library="resistor" package="M0805" value="1k" x="15.24" y="12.7" smashed="yes" rot="R90">
+<element name="RK11" library="resistor" package="M0805" value="100" x="15.24" y="12.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="13.97" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="14.12875" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1248,7 +1249,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="21.43125" y="10.16" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="O6" library="SparkFun" package="QRE1113" value="QRE1113" x="16.51" y="3.81" smashed="yes" rot="MR0"/>
-<element name="RK13" library="resistor" package="M0805" value="1k" x="17.78" y="3.81" smashed="yes" rot="R270">
+<element name="RK13" library="resistor" package="M0805" value="100" x="17.78" y="3.81" smashed="yes" rot="R270">
 <attribute name="NAME" x="19.05" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="18.7325" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1261,7 +1262,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="18.415" y="6.50875" size="1.27" layer="27"/>
 </element>
 <element name="O9" library="SparkFun" package="QRE1113" value="QRE1113" x="29.21" y="12.7" smashed="yes" rot="MR180"/>
-<element name="RK21" library="resistor" package="M0805" value="1k" x="27.94" y="12.7" smashed="yes" rot="R90">
+<element name="RK21" library="resistor" package="M0805" value="100" x="27.94" y="12.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="26.67" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="26.82875" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1274,7 +1275,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="34.13125" y="10.16" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="O10" library="SparkFun" package="QRE1113" value="QRE1113" x="29.21" y="3.81" smashed="yes" rot="MR0"/>
-<element name="RK23" library="resistor" package="M0805" value="1k" x="30.48" y="3.81" smashed="yes" rot="R270">
+<element name="RK23" library="resistor" package="M0805" value="100" x="30.48" y="3.81" smashed="yes" rot="R270">
 <attribute name="NAME" x="31.75" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="31.4325" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1287,7 +1288,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="31.115" y="6.50875" size="1.27" layer="27"/>
 </element>
 <element name="O13" library="SparkFun" package="QRE1113" value="QRE1113" x="42.545" y="12.7" smashed="yes" rot="MR180"/>
-<element name="RK29" library="resistor" package="M0805" value="1k" x="41.275" y="12.7" smashed="yes" rot="R90">
+<element name="RK29" library="resistor" package="M0805" value="100" x="41.275" y="12.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="40.005" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="40.16375" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1300,7 +1301,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="47.46625" y="10.16" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="O14" library="SparkFun" package="QRE1113" value="QRE1113" x="42.545" y="3.81" smashed="yes" rot="MR0"/>
-<element name="RK31" library="resistor" package="M0805" value="1k" x="43.815" y="3.81" smashed="yes" rot="R270">
+<element name="RK31" library="resistor" package="M0805" value="100" x="43.815" y="3.81" smashed="yes" rot="R270">
 <attribute name="NAME" x="45.085" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="44.7675" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1313,7 +1314,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="44.45" y="6.50875" size="1.27" layer="27"/>
 </element>
 <element name="O7" library="SparkFun" package="QRE1113" value="QRE1113" x="55.88" y="12.7" smashed="yes" rot="MR180"/>
-<element name="RK17" library="resistor" package="M0805" value="1k" x="54.61" y="12.7" smashed="yes" rot="R90">
+<element name="RK17" library="resistor" package="M0805" value="100" x="54.61" y="12.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="53.34" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="53.49875" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1326,7 +1327,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="60.80125" y="10.16" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="O8" library="SparkFun" package="QRE1113" value="QRE1113" x="55.88" y="3.81" smashed="yes" rot="MR0"/>
-<element name="RK19" library="resistor" package="M0805" value="1k" x="57.15" y="3.81" smashed="yes" rot="R270">
+<element name="RK19" library="resistor" package="M0805" value="100" x="57.15" y="3.81" smashed="yes" rot="R270">
 <attribute name="NAME" x="58.42" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="58.1025" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1339,7 +1340,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="57.785" y="6.50875" size="1.27" layer="27"/>
 </element>
 <element name="O15" library="SparkFun" package="QRE1113" value="QRE1113" x="69.215" y="12.7" smashed="yes" rot="MR180"/>
-<element name="RK33" library="resistor" package="M0805" value="1k" x="67.945" y="12.7" smashed="yes" rot="R90">
+<element name="RK33" library="resistor" package="M0805" value="100" x="67.945" y="12.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="66.675" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="66.83375" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1352,7 +1353,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="74.13625" y="10.16" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="O16" library="SparkFun" package="QRE1113" value="QRE1113" x="69.215" y="3.81" smashed="yes" rot="MR0"/>
-<element name="RK35" library="resistor" package="M0805" value="1k" x="70.485" y="3.81" smashed="yes" rot="R270">
+<element name="RK35" library="resistor" package="M0805" value="100" x="70.485" y="3.81" smashed="yes" rot="R270">
 <attribute name="NAME" x="71.755" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="71.4375" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1365,7 +1366,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="71.12" y="6.50875" size="1.27" layer="27"/>
 </element>
 <element name="O19" library="SparkFun" package="QRE1113" value="QRE1113" x="82.55" y="12.7" smashed="yes" rot="MR180"/>
-<element name="RK41" library="resistor" package="M0805" value="1k" x="81.28" y="12.7" smashed="yes" rot="R90">
+<element name="RK41" library="resistor" package="M0805" value="100" x="81.28" y="12.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="80.01" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="80.16875" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1378,7 +1379,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="87.47125" y="10.16" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="O20" library="SparkFun" package="QRE1113" value="QRE1113" x="82.55" y="3.81" smashed="yes" rot="MR0"/>
-<element name="RK43" library="resistor" package="M0805" value="1k" x="83.82" y="3.81" smashed="yes" rot="R270">
+<element name="RK43" library="resistor" package="M0805" value="100" x="83.82" y="3.81" smashed="yes" rot="R270">
 <attribute name="NAME" x="85.09" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="84.7725" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1391,7 +1392,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="84.455" y="6.50875" size="1.27" layer="27"/>
 </element>
 <element name="O11" library="SparkFun" package="QRE1113" value="QRE1113" x="95.25" y="12.7" smashed="yes" rot="MR180"/>
-<element name="RK25" library="resistor" package="M0805" value="1k" x="93.98" y="12.7" smashed="yes" rot="R90">
+<element name="RK25" library="resistor" package="M0805" value="100" x="93.98" y="12.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="92.71" y="11.43" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="92.86875" y="11.7475" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1404,7 +1405,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="100.17125" y="10.16" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="O12" library="SparkFun" package="QRE1113" value="QRE1113" x="95.25" y="3.81" smashed="yes" rot="MR0"/>
-<element name="RK27" library="resistor" package="M0805" value="1k" x="96.52" y="3.81" smashed="yes" rot="R270">
+<element name="RK27" library="resistor" package="M0805" value="100" x="96.52" y="3.81" smashed="yes" rot="R270">
 <attribute name="NAME" x="97.79" y="5.08" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="97.4725" y="4.1275" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -3144,17 +3145,6 @@ design rules under a new name.</description>
 <wire x1="109.724" y1="18.57375" x2="109.724" y2="18.71" width="0.6096" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="5,1,fbdb3c8000779916"/>
-<approved hash="5,1,2c42c0d7e0193bd3"/>
-<approved hash="5,1,fbda284965193f2e"/>
-<approved hash="5,1,179773894f88a8d6"/>
-<approved hash="5,16,8289aa95757c18e4"/>
-<approved hash="19,1,f54ab02103238357"/>
-<approved hash="19,1,8c19a81ab32b4799"/>
-<approved hash="19,1,76cd4ae6e6e81fdc"/>
-<approved hash="19,1,3ff339d4addc89b3"/>
-</errors>
 </board>
 </drawing>
 <compatibility>

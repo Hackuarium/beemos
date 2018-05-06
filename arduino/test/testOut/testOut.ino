@@ -4,8 +4,8 @@
      analog pins via a multiplexer.
 */
 
-// byte out[] = {1, 0, 3, 5, 7, 6, 4, 2, 8, 9, 11, 13, 15, 14, 12, 10};
 byte out[] = {1, 0, 7, 2, 6, 3, 5, 4, 8, 9, 15, 10, 14, 11, 13, 12};
+// byte out[] = {1, 0};
 #define OUT0 A0
 #define OUT1 A1
 #define OUT2 A2
@@ -17,8 +17,9 @@ byte in[] = {6, 7, 0, 5, 1, 4, 2, 3, 8, 9, 14, 15, 12, 13, 10, 11};
 #define IN1 9
 #define IN2 8
 #define IN3 6
+#define IN_EN 10
 #define MUX A4
-int muxValue=0;
+int muxValue = 0;
 
 void setup() {
   pinMode(IN0, OUTPUT);
@@ -29,30 +30,31 @@ void setup() {
   pinMode(OUT1, OUTPUT);
   pinMode(OUT2, OUTPUT);
   pinMode(OUT3, OUTPUT);
-  pinMode(MUX, INPUT);
+  pinMode(MUX, INPUT_PULLUP);
   Serial.begin(9600);
-  digitalWrite(10,LOW);
+  pinMode(IN_EN, OUTPUT);
+  digitalWrite(IN_EN, LOW);
 }
 
 
 // the loop function runs over and over again forever
 void loop() {
   // Iterating over infrared emitters
-  for (byte i = 0; i < 16; i++) {
-    setOutput(out[i]);
-    delay(20);
-    setInput(in[i]);
-   
-    muxValue = analogRead(MUX);
-    delay(10);
-    //Serial.println(muxValue);
-    Serial.print("i=");
-    Serial.print(i);
-    Serial.print(" Val=");
-    Serial.print(muxValue);
-    Serial.print("  ");
+  while (true) {
+    for (byte i = 0; i < sizeof(out); i++) {
+      setOutput(out[i]);
+      setInput(in[i]);
+      delay(1);
+      muxValue = analogRead(MUX);
+
+      Serial.print(muxValue);
+      Serial.print(" ");
+      delay(10);
+    }
+    delay(100);
+    Serial.println();
   }
-  Serial.println();
+
 
   switchBlink();
 }
