@@ -12,7 +12,7 @@ void processSpecificCommand(char* data, char* paramValue, Print* output) {
       output->println("Done");
       break;
     case 'l':
-      printLog(output);
+      processLoggerCommand(data[1], paramValue, output);
       break;
     case 'm':
       printMax(output);
@@ -28,6 +28,5 @@ void printSpecificHelp(Print * output) {
   output->println(F("(f)ormat"));
   output->println(F("(l)og"));
   output->println(F("(m)ax value"));
-  output->println(F("(t)otal"));
 }
 

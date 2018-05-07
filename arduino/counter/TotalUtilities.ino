@@ -1,13 +1,12 @@
 
 
-long countIn[8] = {0, 0, 0, 0, 0, 0, 0, 0};
-long countOut[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 byte gateStatus[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
 
 
 void updateTotal() {
   for (byte gate = 0; gate < 8; gate++) {
+    byte parameterID = gate * 2 + 1;
     int inside = (int)currentMax[gate * 2] - (int) current[gate * 2];
     int outside = (int) currentMax[gate * 2 + 1] - (int) current[gate * 2 + 1];
 
@@ -17,12 +16,12 @@ void updateTotal() {
           gateStatus[gate] = 3;
         } else { // from inside to ouside
           gateStatus[gate] = 1;
-          countIn[gate]++;
+          setParameter(parameterID, getParameter(parameterID) + 1);
         }
       } else {
         if (outside > getParameter(PARAM_THRESHOLD)) { // from outside to inside
           gateStatus[gate] = 2;
-          countOut[gate]++;
+          setParameter(parameterID + 1, getParameter(parameterID + 1) + 1);
         }
       }
     } else {
@@ -52,14 +51,15 @@ void printGateInfo() {
 
 void printTotal(Print* output) {
   for (byte k = 0; k < getParameter(PARAM_DEBUG_REPEAT); k++) {
-    for (byte i = 0; i < 8; i++) {
-      output->print(i);
-      output->print(" - out:");
-      output->print(countOut[i]);
+    for (byte gate = 0; gate < 8; gate++) {
+      byte parameterID = gate * 2 + 1;
+      output->print(gate);
       output->print(" - in:");
-      output->print(countIn[i]);
+      output->print(getParameter(parameterID));
+      output->print(" - out:");
+      output->print(getParameter(parameterID + 1));
       output->print(" - ");
-      switch (gateStatus[i]) {
+      switch (gateStatus[gate]) {
         case 0:
           output->println("");
           break;
