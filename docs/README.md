@@ -1,8 +1,8 @@
 ## Title
 
-### subtitle
+### Using the RJ12 for light / temperature / power
 
-[check](test.md)
+[RJ12 Hacking](rj12-hacking.md)
 
 
 
