@@ -2,11 +2,11 @@
 
 byte gateStatus[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
-
+#define FIRST_PARAM_FOR_GATE 2
 
 void updateTotal() {
   for (byte gate = 0; gate < 8; gate++) {
-    byte parameterID = gate * 2 + 1;
+    byte parameterID = gate * 2 + FIRST_PARAM_FOR_GATE;
     int inside = (int)currentMax[gate * 2] - (int) current[gate * 2];
     int outside = (int) currentMax[gate * 2 + 1] - (int) current[gate * 2 + 1];
 
@@ -52,7 +52,7 @@ void printGateInfo() {
 void printTotal(Print* output) {
   for (byte k = 0; k < getParameter(PARAM_DEBUG_REPEAT); k++) {
     for (byte gate = 0; gate < 8; gate++) {
-      byte parameterID = gate * 2 + 1;
+      byte parameterID = gate * 2 + FIRST_PARAM_FOR_GATE;
       output->print(gate);
       output->print(" - in:");
       output->print(getParameter(parameterID));

@@ -28,6 +28,8 @@ NIL_THREADS_TABLE_ENTRY(NULL, ThreadCounter, NULL, waThreadCounter, sizeof(waThr
 
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadLogger, NULL, waThreadLogger, sizeof(waThreadLogger))
 
+NIL_THREADS_TABLE_ENTRY(NULL, ThreadLuminosity, NULL, waThreadLuminosity, sizeof(waThreadLuminosity))
+
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadMonitoring, NULL, waThreadMonitoring, sizeof(waThreadMonitoring))
 
 

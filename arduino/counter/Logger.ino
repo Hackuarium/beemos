@@ -9,13 +9,14 @@
 // ID is a sequential number
 // We expect to add an entry every hour
 
-#define NUMBER_PARAMETERS_TO_LOG  17
+#define NUMBER_PARAMETERS_TO_LOG  20
 #define LOG_ENTRY_LENGTH          NUMBER_PARAMETERS_TO_LOG*2
-#define NUMBER_LOGS               28
+#define NUMBER_LOGS               24
 
 #define FIRST_ADDRESS   1024-LOG_ENTRY_LENGTH*NUMBER_LOGS
 #define LAST_ADDRESS   1023
 
+unsigned long lastLog = millis();
 
 void loggerInit() {
   // we need to reload the last ID
@@ -30,6 +31,7 @@ void loggerInit() {
     setParameter(i, 0);
   }
   setParameter(PARAM_LOGID, getParameter(PARAM_LOGID) + 1);
+  setParameter(PARAM_SECONDS, 0);
 }
 
 
@@ -40,6 +42,7 @@ void writeLog() {
     if (i > 0) setParameter(i, 0);
   }
   setParameter(PARAM_LOGID, getParameter(PARAM_LOGID) + 1);
+  lastLog = millis();
 }
 
 void readLog(byte entryID) {
@@ -77,10 +80,18 @@ NIL_WORKING_AREA(waThreadLogger, 0);
 NIL_THREAD(ThreadLogger, arg) {
   loggerInit();
   while (true) {
-    for (int i = 0; i < 3600; i++) { // sleep 1h
-      nilThdSleepMilliseconds(1000);
+    nilThdSleepMilliseconds(1000);
+    
+    // This should deal correctly with the overflow that happens after 49.7 days
+    setParameter(PARAM_SECONDS, (millis() - lastLog) / 1000);
+    
+
+    int delayBetweenLog = getParameter(PARAM_LOGGING_INTERVAL);
+    if (delayBetweenLog < 300) delayBetweenLog = 300;
+
+    if (getParameter(PARAM_SECONDS) >= delayBetweenLog) {
+      writeLog();
     }
-    writeLog();
   }
 }
 
