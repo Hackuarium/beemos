@@ -4477,13 +4477,12 @@ Metric Code Size 2012</description>
 </package>
 </packages>
 <packages3d>
-<package3d name="M1206" urn="urn:adsk.eagle:package:23566/1" type="box" library_version="2">
-<description>RESISTOR
-MELF 0.25 W</description>
-</package3d>
-<package3d name="C0805K" urn="urn:adsk.eagle:package:23681/2" type="model" library_version="2">
+<package3d name="C0805K" urn="urn:adsk.eagle:package:23681/2" type="model" library_version="3">
 <description>Ceramic Chip Capacitor KEMET 0805 reflow solder
 Metric Code Size 2012</description>
+<packageinstances>
+<packageinstance name="C0805K"/>
+</packageinstances>
 </package3d>
 </packages3d>
 </library>
@@ -4522,6 +4521,9 @@ reflow soldering</description>
 <package3d name="SOT23" urn="urn:adsk.eagle:package:16489/2" type="model" library_version="2">
 <description>SMALL OUTLINE TRANSISTOR
 reflow soldering</description>
+<packageinstances>
+<packageinstance name="SOT23"/>
+</packageinstances>
 </package3d>
 </packages3d>
 </library>
@@ -4668,6 +4670,9 @@ Based on the following sources:
 <packages3d>
 <package3d name="SOD123" urn="urn:adsk.eagle:package:43420/1" type="box" library_version="2">
 <description>Diode</description>
+<packageinstances>
+<packageinstance name="SOD123"/>
+</packageinstances>
 </package3d>
 </packages3d>
 </library>
@@ -5867,7 +5872,7 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 &lt;/table&gt;
 &lt;/BODY&gt;&lt;/HTML&gt;</description>
 <packages>
-<package name="R0805" library_version="1">
+<package name="R0805" urn="urn:adsk.eagle:footprint:25627/1" library_version="1">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;</description>
 <wire x1="-0.41" y1="0.635" x2="0.41" y2="0.635" width="0.1524" layer="51"/>
 <wire x1="-0.41" y1="-0.635" x2="0.41" y2="-0.635" width="0.1524" layer="51"/>
@@ -5884,6 +5889,14 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <rectangle x1="-0.1999" y1="-0.5001" x2="0.1999" y2="0.5001" layer="35"/>
 </package>
 </packages>
+<packages3d>
+<package3d name="R0805" urn="urn:adsk.eagle:package:26059/1" type="box" library_version="1">
+<description>RESISTOR</description>
+<packageinstances>
+<packageinstance name="R0805"/>
+</packageinstances>
+</package3d>
+</packages3d>
 </library>
 <library name="Ava">
 <packages>
@@ -5961,14 +5974,14 @@ Package for the RHT03 / DHT-22 relative humidity and temperature sensor.
 </package>
 </packages>
 </library>
-<library name="con-lumberg">
+<library name="con-lumberg" urn="urn:adsk.eagle:library:163">
 <description>&lt;b&gt;Lumberg Connectors&lt;/b&gt;&lt;p&gt;
 include con-mfs.lbr - 2001.03.22&lt;br&gt;
 Jack connectors - 2005.11.23&lt;p&gt;
 http://www.lumberg.de&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="1503_09">
+<package name="1503_09" urn="urn:adsk.eagle:footprint:8485/1" library_version="1">
 <description>&lt;b&gt;Jack connectors according to JISC 6560, 3.5 mm&lt;/b&gt;&lt;p&gt;
 Klinkeneinbaukupplung nach JISC 6560, 3,5 mm, 3-polig/&lt;br&gt;
 stereo, abgewinkelte Ausführung, mit 2 Öffnern und Lötaugen,&lt;br&gt;
@@ -6020,6 +6033,18 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <text x="0" y="-19.24" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
+<packages3d>
+<package3d name="1503_09" urn="urn:adsk.eagle:package:8555/1" type="box" library_version="1">
+<description>Jack connectors according to JISC 6560, 3.5 mm
+Klinkeneinbaukupplung nach JISC 6560, 3,5 mm, 3-polig/
+stereo, abgewinkelte Ausführung, mit 2 Öffnern und Lötaugen,
+für Leiterplatten Rückseitenmontage
+Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
+<packageinstances>
+<packageinstance name="1503_09"/>
+</packageinstances>
+</package3d>
+</packages3d>
 </library>
 </libraries>
 <attributes>
@@ -6234,6 +6259,7 @@ design rules under a new name.</description>
 <attribute name="LCSC" value="C15850" x="19.05" y="27.94" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="77-VJ1206V106ZXQTBC" x="19.05" y="27.94" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="17.78" y="29.21" size="1.27" layer="25"/>
+<attribute name="SPICEPREFIX" value="C" x="19.05" y="27.94" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="17.8181" y="28.93695" size="1.016" layer="27"/>
 </element>
 <element name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="10u" x="19.05" y="19.685" smashed="yes" rot="R180">
@@ -6241,6 +6267,7 @@ design rules under a new name.</description>
 <attribute name="LCSC" value="C15850" x="19.05" y="19.685" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="77-VJ1206V106ZXQTBC" x="19.05" y="19.685" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="20.32" y="18.415" size="1.27" layer="25" rot="R180"/>
+<attribute name="SPICEPREFIX" value="C" x="19.05" y="19.685" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="20.18665" y="21.52015" size="1.016" layer="27" rot="R180"/>
 </element>
 <element name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="100nF" x="19.05" y="17.145" smashed="yes" rot="R180">
@@ -6248,6 +6275,7 @@ design rules under a new name.</description>
 <attribute name="LCSC" value="C49678" x="19.05" y="17.145" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="80-C1206C104K5R" x="19.05" y="17.145" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="20.32" y="15.875" size="1.27" layer="25" rot="R180"/>
+<attribute name="SPICEPREFIX" value="C" x="19.05" y="17.145" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="21.16455" y="19.1516" size="1.016" layer="27" rot="R180"/>
 </element>
 <element name="IC1" library="linear" library_urn="urn:adsk.eagle:library:262" package="SOT23" package3d_urn="urn:adsk.eagle:package:16489/2" value="MCP1703CB" x="19.05" y="24.13" smashed="yes">
@@ -6270,6 +6298,7 @@ design rules under a new name.</description>
 <attribute name="LCSC" value="C49678" x="24.13" y="7.62" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="80-C1206C104K5R" x="24.13" y="7.62" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="25.13" y="6.745" size="1.016" layer="25" rot="R180"/>
+<attribute name="SPICEPREFIX" value="C" x="24.13" y="7.62" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="26.019" y="6.70695" size="1.016" layer="27" rot="R180"/>
 </element>
 <element name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="100nF" x="29.21" y="28.575" smashed="yes" rot="R180">
@@ -6277,6 +6306,7 @@ design rules under a new name.</description>
 <attribute name="LCSC" value="C49678" x="29.21" y="28.575" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="80-C1206C104K5R" x="29.21" y="28.575" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="30.21" y="27.7" size="1.016" layer="25" rot="R180"/>
+<attribute name="SPICEPREFIX" value="C" x="29.21" y="28.575" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="31.06725" y="30.8179" size="1.016" layer="27" rot="R180"/>
 </element>
 <element name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="100nF" x="27.305" y="12.7" smashed="yes" rot="R180">
@@ -6284,6 +6314,7 @@ design rules under a new name.</description>
 <attribute name="LCSC" value="C49678" x="27.305" y="12.7" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="80-C1206C104K5R" x="27.305" y="12.7" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="28.305" y="11.825" size="1.016" layer="25" rot="R180"/>
+<attribute name="SPICEPREFIX" value="C" x="27.305" y="12.7" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="29.2321" y="11.68535" size="1.016" layer="27" rot="R180"/>
 </element>
 <element name="R3" library="rcl" package="R0805" value="10k" x="17.78" y="31.75" smashed="yes">
@@ -6320,6 +6351,7 @@ design rules under a new name.</description>
 <attribute name="LCSC" value="C1797" x="50.165" y="15.875" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="77-VJ1206A180JXXPBC" x="50.165" y="15.875" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="40.88" y="11.795" size="1.016" layer="25" rot="R270"/>
+<attribute name="SPICEPREFIX" value="C" x="40.005" y="10.795" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="41.28" y="10.525" size="1.016" layer="27" rot="R270"/>
 </element>
 <element name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="18pF" x="40.005" y="14.605" smashed="yes" rot="R90">
@@ -6327,6 +6359,7 @@ design rules under a new name.</description>
 <attribute name="LCSC" value="C1797" x="29.845" y="14.605" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="77-VJ1206A180JXXPBC" x="29.845" y="14.605" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="39.13" y="13.605" size="1.016" layer="25" rot="R90"/>
+<attribute name="SPICEPREFIX" value="C" x="40.005" y="14.605" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="42.54" y="13.605" size="1.016" layer="27" rot="R90"/>
 </element>
 <element name="X1" library="lpatiny" package="NX6035" value="8MHz" x="36.83" y="12.7" smashed="yes" rot="R270">
@@ -6342,9 +6375,9 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="32.385" y="12.7" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="R1" library="SparkFun" package="PHOTOCELL" value="PHOTOCELLPTH" x="46.355" y="8.89" rot="R270"/>
-<element name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="10k" x="40.64" y="4.445" rot="R180"/>
+<element name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="10k" x="40.64" y="4.445" rot="R180"/>
 <element name="U$1" library="Ava" package="DS1820" value="DS1820TO92" x="46.99" y="40.64" rot="R270"/>
-<element name="R4" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="4.7k" x="45.72" y="33.02" smashed="yes">
+<element name="R4" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="4.7k" x="45.72" y="33.02" smashed="yes">
 <attribute name="NAME" x="45.085" y="34.29" size="1.27" layer="25"/>
 <attribute name="VALUE" x="43.815" y="30.48" size="1.27" layer="27"/>
 </element>
@@ -6360,7 +6393,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="12.065" y="40.64" size="1.27" layer="25"/>
 <attribute name="VALUE" x="11.43" y="36.83" size="1.27" layer="27"/>
 </element>
-<element name="X2" library="con-lumberg" package="1503_09" value="1503_09" x="20.32" y="48.26" smashed="yes">
+<element name="X2" library="con-lumberg" library_urn="urn:adsk.eagle:library:163" package="1503_09" package3d_urn="urn:adsk.eagle:package:8555/1" value="1503_09" x="20.32" y="48.26" smashed="yes">
 <attribute name="MF" value="" x="-1.905" y="64.77" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-1.905" y="64.77" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="20.32" y="55.5" size="1.27" layer="25"/>
@@ -6380,7 +6413,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="27.94" y="40.64" size="1.27" layer="25"/>
 <attribute name="VALUE" x="27.305" y="36.83" size="1.27" layer="27"/>
 </element>
-<element name="X3" library="con-lumberg" package="1503_09" value="1503_09" x="36.195" y="48.26" smashed="yes">
+<element name="X3" library="con-lumberg" library_urn="urn:adsk.eagle:library:163" package="1503_09" package3d_urn="urn:adsk.eagle:package:8555/1" value="1503_09" x="36.195" y="48.26" smashed="yes">
 <attribute name="MF" value="" x="13.335" y="66.04" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="13.335" y="66.04" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="36.195" y="55.5" size="1.27" layer="25"/>
