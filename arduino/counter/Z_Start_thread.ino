@@ -30,6 +30,10 @@ NIL_THREADS_TABLE_ENTRY(NULL, ThreadLogger, NULL, waThreadLogger, sizeof(waThrea
 
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadLuminosity, NULL, waThreadLuminosity, sizeof(waThreadLuminosity))
 
+#ifdef TEMPERATURE
+NIL_THREADS_TABLE_ENTRY(NULL, ThreadTemperature, NULL, waThreadTemperature, sizeof(waThreadTemperature))
+#endif
+
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadMonitoring, NULL, waThreadMonitoring, sizeof(waThreadMonitoring))
 
 

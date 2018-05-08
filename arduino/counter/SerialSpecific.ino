@@ -6,11 +6,6 @@ void processSpecificCommand(char* data, char* paramValue, Print* output) {
     case 'c':
       printCounter(output);
       break;
-    case 'f':
-      output->println("Formating");
-      formatLog();
-      output->println("Done");
-      break;
     case 'l':
       processLoggerCommand(data[1], paramValue, output);
       break;
@@ -25,7 +20,6 @@ void processSpecificCommand(char* data, char* paramValue, Print* output) {
 
 void printSpecificHelp(Print * output) {
   output->println(F("(c)ounter"));
-  output->println(F("(f)ormat"));
   output->println(F("(l)og"));
   output->println(F("(m)ax value"));
 }

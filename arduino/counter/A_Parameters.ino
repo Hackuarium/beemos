@@ -16,7 +16,7 @@
 #define MAX_PARAM 26   // If the MAX_PARAM change you need to change the pointer in the EEPROM
 
 #define PARAM_LOGID         0
-#define PARAM_SECONDS       1
+#define PARAM_SECONDS       1 // number of secodns since the last log
 #define PARAM_GATE1_IN      2
 #define PARAM_GATE1_OUT     3
 #define PARAM_GATE2_IN      4
@@ -34,7 +34,7 @@
 #define PARAM_GATE8_IN      16
 #define PARAM_GATE8_OUT     17
 #define PARAM_LUMINOSITY    18
-
+#define PARAM_TEMPERATURE   19
 
 #define PARAM_THRESHOLD           20
 #define PARAM_THRESHOLD_RESET     21
@@ -54,7 +54,7 @@ void resetParameters() { // turn all parameters to 0
   setAndSaveParameter(PARAM_THRESHOLD_RESET, 10);
   setAndSaveParameter(PARAM_DEBUG_REPEAT, 20);
   setAndSaveParameter(PARAM_DEBUG_DELAY, 500);
-setAndSaveParameter(PARAM_LOGGING_INTERVAL, 3600);
+  setAndSaveParameter(PARAM_LOGGING_INTERVAL, 3600);
 
 
   formatLog();
