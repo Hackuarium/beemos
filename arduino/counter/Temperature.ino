@@ -1,5 +1,5 @@
 
-#define TEMPERATURE   SCL
+
 
 #ifdef TEMPERATURE
 
@@ -8,6 +8,9 @@
 NIL_WORKING_AREA(waThreadTemperature, 128);
 
 NIL_THREAD(ThreadTemperature, arg) {
+
+  nilThdSleepMilliseconds(1000);
+
   OneWire  ds(TEMPERATURE);  // on pin 10 (a 4.7K resistor is necessary)
   byte i;
   byte present = 0;

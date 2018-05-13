@@ -6,8 +6,8 @@
 #include "lib/Utility.h"
 
 
-
-
+// #define WIRE_SLAVE 55  // specify the address of the i2c slave
+#define TEMPERATURE   SCL
 
 void setup() {
   delay(2000);
@@ -15,6 +15,9 @@ void setup() {
   setupParameters();
   checkParameters(); // setup automatically the default parameter after install boot loader
   nilSysBegin();
+#ifdef WIRE_SLAVE
+  startWireSlave();
+#endif
 }
 
 void loop() {}
