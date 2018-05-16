@@ -1,3 +1,5 @@
+View this project on [CADLAB.io](https://cadlab.io/project/1029). 
+
 # Open beehive (under development)
 The BeeMoS project is an open source bee hive monitoring system developed at the open science lab Hackuarium, Renens, Switzerland. 
 
@@ -5,7 +7,7 @@ The BeeMoS project is an open source bee hive monitoring system developed at the
 Build and program an open source bee monitoring system consisting of the following components:
 
 * Counter: count how many bees enter and exit from a hive during a given time. 
-* Balance: Tracks changes in the hive's weight over time.
+* Scale: Tracks changes in the hive's weight over time.
 * Meteo station: Measures environmental variables including temperature, humidity, light and atmospheric pressure.
 * Master board: Serves as an interface to communicate with other beemos components and sends the information.
 
@@ -16,11 +18,10 @@ Using an Arduino based microcontroller, infrared (= IR) reflectance sensors are 
 
 ### Results
 
-Scanning all the sensors: 3ms
+Scanning all 16 IR sensors: 3ms
+Current consumption: 27 mA
 
-
-
-## Balance:
+## Scale:
 
 ## Meteo station:
 
@@ -34,4 +35,4 @@ Communicates with all other devices over I2C and sends the data to a remote serv
 * x1 74HC4067 multiplexer used to read the value from one of the IR reflectance sensors (the one which has the IR led on)
 
 # State of the project
-We have ordered PCBs and now need to solder all elements, program the board and - if all goes well - test them in the field. We are working on parallel on a laser cut enclosure which includes 8 individual gates that the bees will use to enter/exit the hive and an upper compartment for the hive.
+We have ordered PCBs, all elements of one board were soldered and a Arduino code was written to count entering/exiting bees and make logs for all gates using multithreading. We are working on parallel on a laser cut enclosure which includes 8 individual gates that the bees will use to enter/exit the hive and an upper compartment for the board. We are getting close to test our first prototype in the field.

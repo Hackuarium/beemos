@@ -19143,6 +19143,110 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="MS5637">
+<packages>
+<package name="MS5637">
+<smd name="VDD" x="-1" y="1" dx="1" dy="1" layer="1"/>
+<smd name="GND" x="1" y="1" dx="1" dy="1" layer="1"/>
+<smd name="SCL" x="1" y="-1" dx="1" dy="1" layer="1"/>
+<smd name="SDA" x="-1" y="-1" dx="1" dy="1" layer="1"/>
+<text x="-1.27" y="-2.54" size="0.508" layer="21">MS5637</text>
+<wire x1="-1.7" y1="1.7" x2="1.8" y2="1.7" width="0.127" layer="21"/>
+<wire x1="1.8" y1="1.7" x2="1.8" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="1.8" y1="-1.7" x2="-1.7" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="-1.7" y1="-1.7" x2="-1.7" y2="1.7" width="0.127" layer="21"/>
+<circle x="-1.27" y="1.27" radius="0.254" width="0.127" layer="21"/>
+<text x="0" y="0" size="0.254" layer="21">MEAS</text>
+</package>
+<package name="MS5637TH">
+<pad name="VDD" x="-1" y="1" drill="0.6"/>
+<pad name="GND" x="1" y="1" drill="0.6"/>
+<pad name="SCL" x="1" y="-1" drill="0.6"/>
+<pad name="SDA" x="-1" y="-1" drill="0.6"/>
+</package>
+<package name="MS5637WIDE">
+<smd name="VDD" x="-1.254" y="1.254" dx="1.524" dy="1.524" layer="1"/>
+<smd name="GND" x="1.254" y="1.254" dx="1.524" dy="1.524" layer="1"/>
+<smd name="SCL" x="1.254" y="-1.254" dx="1.524" dy="1.524" layer="1"/>
+<smd name="SDA" x="-1.254" y="-1.254" dx="1.524" dy="1.524" layer="1"/>
+<text x="-1.27" y="-2.54" size="0.508" layer="21">MS5637</text>
+<wire x1="-1.7" y1="1.7" x2="1.8" y2="1.7" width="0.127" layer="21"/>
+<wire x1="1.8" y1="1.7" x2="1.8" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="1.8" y1="-1.7" x2="-1.7" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="-1.7" y1="-1.7" x2="-1.7" y2="1.7" width="0.127" layer="21"/>
+<circle x="-1.27" y="1.27" radius="0.254" width="0.127" layer="21"/>
+<text x="0" y="0" size="0.254" layer="21">MEAS</text>
+</package>
+</packages>
+<symbols>
+<symbol name="MS5637">
+<wire x1="-10.16" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<pin name="VDD" x="-15.24" y="2.54" length="middle"/>
+<pin name="SDA" x="-15.24" y="-5.08" length="middle"/>
+<pin name="GND" x="12.7" y="2.54" length="middle" rot="R180"/>
+<pin name="SCL" x="12.7" y="-5.08" length="middle" rot="R180"/>
+<text x="-10.16" y="-12.7" size="1.27" layer="94">MS5637</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MS5637" prefix="IC">
+<description>Le MS563702BA03-50 est un Micro Altimètre ultra compact optimisé pour des applications d'altimètre et de baromètre dans des téléphones portables et des tablettes.
+La résolution d'altitude au niveau de la mer est de 13cm d'air. Le module de capteur comprend un capteur de pression haute linéarité et un CAN &amp;Delta;Σ 24 bits ultra
+faible puissance avec des coefficients internes calibrés en usine. Il fournit une valeur numérique de pression et de température précise de 24 bits et différents modes
+de fonctionnement qui permettent à l'utilisateur d'optimiser la vitesse de conversion et la consommation de courant. La sortie de température à haute résolution permet
+la mise en œuvre d'une fonction altimètre / thermomètre sans capteur supplémentaire. Il peut être interfacé avec pratiquement tous les microcontrôleurs à interface I²C-bus.
+Le protocole de communication est simple, sans avoir à programmer des registres internes dans l'appareil. Faibles dimensions de 3 x 3 x 0.9mm³ pour une intégratio
+Module haute résolution, 13cm
+Capteur de pression numérique intégré (CAN ΔΣ 24 bits)
+Interface I²C
+Plage de pression étendue de 10 à 2000mbar
+Conversion rapide jusqu'à 0.5ms
+Faible consommation, 0.6µA (veille &lt;=0.1µA à 25°C)
+Aucun composant externe (oscillateur interne)</description>
+<gates>
+<gate name="G$1" symbol="MS5637" x="-7.62" y="10.16"/>
+</gates>
+<devices>
+<device name="" package="MS5637">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="VDD" pad="VDD"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TH" package="MS5637TH">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="VDD" pad="VDD"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="WIDE" package="MS5637WIDE">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="VDD" pad="VDD"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 <attribute name="DELETE" value="MF"/>
@@ -19443,6 +19547,7 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <part name="X3" library="con-lumberg" deviceset="1503_09" device=""/>
 <part name="U$8" library="lpatiny" deviceset="DS18B20" device="SMALL" value="DS18B20"/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="R0805" value="100"/>
+<part name="IC5" library="MS5637" deviceset="MS5637" device="WIDE"/>
 </parts>
 <sheets>
 <sheet>
@@ -19488,7 +19593,7 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="55.88" y1="233.68" x2="55.88" y2="198.12" width="1.524" layer="94"/>
 <wire x1="55.88" y1="198.12" x2="55.88" y2="129.54" width="1.524" layer="94"/>
 <wire x1="55.88" y1="198.12" x2="-15.24" y2="198.12" width="1.524" layer="94"/>
-<text x="347.98" y="96.52" size="5.08" layer="91">Microphone</text>
+<text x="330.2" y="119.38" size="5.08" layer="91">Barometric pressure</text>
 <text x="0" y="187.96" size="5.08" layer="91">MEMORY</text>
 <wire x1="327.66" y1="-2.54" x2="327.66" y2="233.68" width="1.27" layer="94"/>
 <wire x1="205.74" y1="233.68" x2="327.66" y2="233.68" width="1.27" layer="94"/>
@@ -19710,6 +19815,7 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <instance part="X3" gate="G$1" x="269.24" y="200.66" rot="MR180"/>
 <instance part="U$8" gate="G$1" x="281.94" y="180.34"/>
 <instance part="R2" gate="G$1" x="264.16" y="210.82" rot="MR90"/>
+<instance part="IC5" gate="G$1" x="365.76" y="83.82"/>
 </instances>
 <busses>
 </busses>
