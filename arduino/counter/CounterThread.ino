@@ -2,6 +2,7 @@
 
 
 byte current[16];
+byte difference[16];
 
 byte out[] = {1, 0, 7, 2, 6, 3, 5, 4, 8, 9, 15, 10, 14, 11, 13, 12};
 // byte out[] = {1, 0};
@@ -24,9 +25,11 @@ NIL_WORKING_AREA(waThreadCounter, 120);
 NIL_THREAD(ThreadCounter, arg) {
   initCounter();
   initMax();
+  initMin();
   while (true) {
     updateCounter();
     updateMax();
+    updateMin();
     updateTotal();
   }
 }
@@ -52,22 +55,25 @@ void updateCounter() {
     setOutput(out[i]);
     setInput(in[i]);
     nilThdSleepMilliseconds(1);
-    current[i] = analogRead(MUX) >> 2;
+    byte currentValue = analogRead(MUX) >> 2;
+    difference[i] = (byte)abs(current[i] - currentValue);
+    current[i] = currentValue;;
   }
+  nilThdSleepMilliseconds(40);
 }
 
 
 void printCounter(Print* output) {
   for (byte k = 0; k < getParameter(PARAM_DEBUG_REPEAT); k++) {
-    for (byte j = 0; j < 20; j++) {
-      for (byte i = 0; i < sizeof(out); i++) {
-        output->print(current[i], HEX);
-        output->print(" ");
-      }
-      nilThdSleepMilliseconds(500);
-      output->println();
+    for (byte i = 0; i < sizeof(out); i++) {
+      byte value = current[i];
+      if (value < 10) output->print(" ");
+      if (value < 100) output->print(" ");
+      output->print(value);
+      output->print(" ");
     }
-    output->println("-");
+    nilThdSleepMilliseconds(500);
+    output->println();
     nilThdSleepMilliseconds(getParameter(PARAM_DEBUG_DELAY));
   }
 }

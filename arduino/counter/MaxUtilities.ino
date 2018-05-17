@@ -1,4 +1,3 @@
-
 byte currentMax[16] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 byte maxHistory[16][5];
 byte currentMaxSlot = 0;
@@ -10,7 +9,6 @@ void initMax() {
     }
   }
 }
-
 
 void updateMax() {
   byte newMaxSlot = millis() % (MIN_MAX_RESET * 1000 * 5) / (MIN_MAX_RESET * 1000);
@@ -36,9 +34,7 @@ void updateMax() {
   }
 }
 
-
 void printMax(Print * output) {
-
   for (byte i = 0; i < 16; i++) {
     output->print(i);
     output->print(" ");
@@ -48,6 +44,4 @@ void printMax(Print * output) {
     }
     output->println(currentMax[i]);
   }
-
-
 }

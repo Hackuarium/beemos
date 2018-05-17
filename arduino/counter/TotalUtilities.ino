@@ -7,14 +7,15 @@ byte gateStatus[] = {0, 0, 0, 0, 0, 0, 0, 0};
 void updateTotal() {
   for (byte gate = 0; gate < 8; gate++) {
     byte parameterID = gate * 2 + FIRST_PARAM_FOR_GATE;
-    int inside = (int)currentMax[gate * 2] - (int) current[gate * 2];
-    int outside = (int) currentMax[gate * 2 + 1] - (int) current[gate * 2 + 1];
+    int inside = abs((int)currentMin[gate * 2] - (int) current[gate * 2]);
+    int outside = abs((int) currentMin[gate * 2 + 1] - (int) current[gate * 2 + 1]);
+
 
     if (gateStatus[gate] == 0) {
       if (inside > getParameter(PARAM_THRESHOLD)) {
         if (outside > getParameter(PARAM_THRESHOLD)) { // both at the same time
           gateStatus[gate] = 3;
-        } else { // from inside to ouside
+        } else { // from inside to outside
           gateStatus[gate] = 1;
           setParameter(parameterID, getParameter(parameterID) + 1);
         }
