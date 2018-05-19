@@ -63,6 +63,8 @@ void getTemperature(OneWire &ow, int parameter) {
 
       setParameter(parameter, celsius * 100);
     }
+  } else {
+    setParameter(parameter, INT_MAX_VALUE);
   }
 }
 

@@ -32,6 +32,7 @@
 // 100'000 * 300 * 24 (number of line of log) / 365 / 86400
 
 #define INT_MAX_VALUE       32767
+#define INT_MIN_VALUE       -32768
 #define LONG_MAX_VALUE      2147483647
 
 void resetParameters() { // turn all parameters to 0
