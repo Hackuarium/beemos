@@ -1,12 +1,12 @@
-#include <avr/eeprom.h>
 
-#define EE_START_PARAM           0 // We save the parameter from byte 0 of EEPROM
-#define EE_LAST_PARAM            (MAX_PARAM*2-1) // The last parameter is stored at byte 50-51
+/* The qualifier represents the card ID and is stored just after the last parameter */
+uint16_t getQualifier() {
+  return eeprom_read_word((uint16_t*)(EE_QUALIFIER));
+}
 
-#define EE_QUALIFIER             (MAX_PARAM*2)
-
-#define EEPROM_MIN_ADDR            0
-#define EEPROM_MAX_ADDR          1023
+void setQualifier(uint16_t value) {
+  eeprom_write_word((uint16_t*)(EE_QUALIFIER), value);
+}
 
 
 
@@ -42,5 +42,3 @@ void getStatusEEPROM(Print* output) {
     }
   }
 }
-
-

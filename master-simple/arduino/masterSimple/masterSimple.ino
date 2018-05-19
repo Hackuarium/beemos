@@ -5,9 +5,8 @@
 
 
 #define THR_SERIAL         1
-
-#define THR_WIRE_SLAVE 55  // specify the address of the i2c slave
-
+// #define WIRE_SLAVE 55  // specify the address of the i2c slave
+#define THR_WIRE_MASTER
 
 
 #include "lib/hack.h"

@@ -1,14 +1,17 @@
 // code taken from https://github.com/Hackuarium/simple-spectro/tree/master/arduino/SimpleSpectro. Thread allowing serail over usb communication.
 
-
-#define THR_SERIAL         1
-
 #ifdef THR_SERIAL
 
 #define SERIAL_BUFFER_LENGTH           32
 #define SERIAL_MAX_PARAM_VALUE_LENGTH  32
 char serialBuffer[SERIAL_BUFFER_LENGTH];
-byte serialBufferPosition = 0;
+uint8_t serialBufferPosition = 0;
+
+void printResult(char* data, Print* output);
+void printHelp(Print* output);
+void processSpecificCommand(char* data, char* paramValue, Print* output);
+void printSpecificHelp(Print * output);
+
 
 NIL_WORKING_AREA(waThreadSerial, 200); // minimum 128
 NIL_THREAD(ThreadSerial, arg) {
@@ -39,9 +42,6 @@ NIL_THREAD(ThreadSerial, arg) {
     nilThdSleepMilliseconds(1);
   }
 }
-
-#endif
-
 
 
 /* SerialEvent occurs whenever a new data comes in the
@@ -119,10 +119,13 @@ void printResult(char* data, Print* output) {
     }
   }
 
-  // we will process the commands, it means it starts with lowercase
+ // we will process the commands, it means it starts with lowercase
   switch (data[0]) {
     case 'h':
       printHelp(output);
+      break;
+      case 'i':
+      processWireCommand(data[1], paramValue, output);
       break;
     case 's':
       printParameters(output);
@@ -135,10 +138,15 @@ void printResult(char* data, Print* output) {
   }
   output->println("");
 }
+ 
 
 void printHelp(Print* output) {
   output->println(F("(h)elp"));
+  #ifdef THR_WIRE_MASTER
+  output->println(F("(i)2c"));
+  #endif
   output->println(F("(s)ettings"));
+  
   output->println(F("(u)tilities"));
 
 
@@ -146,35 +154,10 @@ void printHelp(Print* output) {
 }
 
 
-
-
 void noThread(Print* output) {
   output->println(F("No Thread"));
 }
 
 
-/* Fucntions to convert a number to hexadeciaml */
 
-const char hex[] = "0123456789ABCDEF";
-
-uint8_t toHex(Print* output, byte value) {
-  output->print(hex[value >> 4 & 15]);
-  output->print(hex[value >> 0 & 15]);
-  return value;
-}
-
-uint8_t toHex(Print* output, int value) {
-  byte checkDigit = toHex(output, (byte)(value >> 8 & 255));
-  checkDigit ^= toHex(output, (byte)(value >> 0 & 255));
-  return checkDigit;
-}
-
-uint8_t toHex(Print* output, long value) {
-  byte checkDigit = toHex(output, (int)(value >> 16 & 65535));
-  checkDigit ^= toHex(output, (int)(value >> 0 & 65535));
-  return checkDigit;
-}
-
-
-
-
+#endif

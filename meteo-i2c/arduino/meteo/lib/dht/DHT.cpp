@@ -138,12 +138,12 @@ boolean DHT::read(bool force) {
   // Go into high impedence state to let pull-up raise data line level and
   // start the reading process.
   digitalWrite(_pin, HIGH);
-  delay(250);
+  nilThdSleepMilliseconds(250);
 
   // First set data line low for 20 milliseconds.
   pinMode(_pin, OUTPUT);
   digitalWrite(_pin, LOW);
-  delay(20);
+  nilThdSleepMilliseconds(20);
 
   uint8_t cycles[80];
   {

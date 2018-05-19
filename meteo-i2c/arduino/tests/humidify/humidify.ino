@@ -1,10 +1,11 @@
+// The library DHT was changed to be compatible with nilRTOS
 
-#include "lib/DHT_U.h"
+#define nilThdSleepMilliseconds delay
 
+#include "lib/dht/DHT_U.h"
 
 
 #define DHTPIN            6         // Pin which is connected to the DHT sensor.
-
 #define DHTTYPE           DHT22     // DHT 22 (AM2302)
 
 
@@ -31,7 +32,7 @@ void loop() {
   dht.begin();
   delay(after * 1000);
   getHumidityTemperature();
-   Serial.println("");
+  Serial.println("");
   digitalWrite(7, LOW);
 
 
@@ -39,7 +40,7 @@ void loop() {
 
 
 void getHumidityTemperature() {
-  delay(2000); //  need 2s to get data.
+  nilThdSleepMilliseconds(2000); //  need 2s to get data.
 
   sensors_event_t event;
   dht.temperature().getEvent(&event);

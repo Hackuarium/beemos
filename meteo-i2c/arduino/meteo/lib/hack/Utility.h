@@ -1,13 +1,29 @@
-// code taken from https://github.com/Hackuarium/simple-spectro/tree/master/arduino/SimpleSpectro. Works as a library for multithreading an arduino.
 
-#define INT_MAX_VALUE       32767
-#define LONG_MAX_VALUE      2147483647
 
-// value that should not be taken into account
-// in case of error the parameter is set to this value
-#define ERROR_VALUE  -32768
 
-int parameters[MAX_PARAM];
+void print2Digits(Print* output, int number) {
+  // utility function for digital clock display: prints preceding colon and leading 0
+  if(number < 10) output->print('0');
+  output->print(number);
+}
+
+void epochToString(time_t time, Print* output) {
+  // digital clock display of the time
+  output->print(year(time)); 
+  output->print("-");
+  print2Digits(output,month(time));
+  output->print("-");
+  print2Digits(output,day(time));
+  output->print(" ");
+  print2Digits(output,hour(time));
+  output->print(":");
+  print2Digits(output,minute(time));
+  output->print(":");
+  print2Digits(output,second(time));
+  output->print(" ");
+}
+
+
 
 void setupParameters() {
   //We copy all the values in the parameters table
@@ -78,9 +94,6 @@ void printParameters(Print* output) {
   }
 }
 
-uint8_t printCompactParameters(Print* output) {
-  printCompactParameters(output, MAX_PARAM);
-}
 
 uint8_t printCompactParameters(Print* output, byte number) {
   if (number > MAX_PARAM) {
@@ -99,11 +112,6 @@ uint8_t printCompactParameters(Print* output, byte number) {
   output->println("");
 }
 
-/* The qualifier represents the card ID and is stored just after the last parameter */
-uint16_t getQualifier() {
-  return eeprom_read_word((uint16_t*)(EE_QUALIFIER));
-}
-
-void setQualifier(uint16_t value) {
-  eeprom_write_word((uint16_t*)(EE_QUALIFIER), value);
+uint8_t printCompactParameters(Print* output) {
+  printCompactParameters(output, MAX_PARAM);
 }

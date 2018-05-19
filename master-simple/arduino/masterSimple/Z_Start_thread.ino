@@ -29,11 +29,9 @@ NIL_THREADS_TABLE_ENTRY(NULL, ThreadSerial, NULL, waThreadSerial, sizeof(waThrea
 
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadLogger, NULL, waThreadLogger, sizeof(waThreadLogger))
 
-NIL_THREADS_TABLE_ENTRY(NULL, ThreadLuminosity, NULL, waThreadLuminosity, sizeof(waThreadLuminosity))
-
-NIL_THREADS_TABLE_ENTRY(NULL, ThreadTemperature, NULL, waThreadTemperature, sizeof(waThreadTemperature))
-
-NIL_THREADS_TABLE_ENTRY(NULL, ThreadHumidity, NULL, waThreadHumidity, sizeof(waThreadHumidity))
+#ifdef THR_WIRE_MASTER
+NIL_THREADS_TABLE_ENTRY(NULL, ThreadWireMaster, NULL, waThreadWireMaster, sizeof(waThreadWireMaster))
+#endif
 
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadMonitoring, NULL, waThreadMonitoring, sizeof(waThreadMonitoring))
 

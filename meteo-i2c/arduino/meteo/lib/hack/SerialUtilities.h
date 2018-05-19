@@ -1,5 +1,19 @@
 // code taken from https://github.com/Hackuarium/simple-spectro/tree/master/arduino/SimpleSpectro. Allows serial monitoring communication.
 
+void resetParameters();
+
+void printUtilitiesHelp(Print* output) {
+  output->println(F("(uc) Compact settings"));
+  output->println(F("(ue) Epoch"));
+  output->println(F("(uf) Free"));
+  output->println(F("(uq) Qualifier"));
+  output->println(F("(ur) Reset"));
+  output->println(F("(uz) eeprom"));
+}
+
+static void printFreeMemory(Print* output) {
+  nilPrintUnusedStack(output);
+}
 
 void processUtilitiesCommand(char command, char* paramValue, Print* output) { // char and char* ??
   switch (command) {
@@ -48,19 +62,3 @@ void processUtilitiesCommand(char command, char* paramValue, Print* output) { //
       printUtilitiesHelp(output);
   }
 }
-
-void printUtilitiesHelp(Print* output) {
-  output->println(F("(uc) Compact settings"));
-  output->println(F("(ue) Epoch"));
-  output->println(F("(uf) Free"));
-  output->println(F("(uq) Qualifier"));
-  output->println(F("(ur) Reset"));
-  output->println(F("(uz) eeprom"));
-}
-
-
-static void printFreeMemory(Print* output)
-{
-  nilPrintUnusedStack(output);
-}
-
