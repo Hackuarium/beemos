@@ -11,7 +11,7 @@ NIL_WORKING_AREA(waThreadHumidify, 128);
 NIL_THREAD(ThreadHumidify, arg) {
 
   nilThdSleepMilliseconds(1000);
-dht.begin();
+// dht.begin();
 
   pinMode(DHT_POWER, OUTPUT);
   digitalWrite(DHT_POWER, HIGH);

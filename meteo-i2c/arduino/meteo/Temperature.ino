@@ -1,5 +1,4 @@
-#include <OneWire.h>
-
+#include "lib/onewire/OneWire.cpp"
 
 #define TEMPERATURE_EXT      A2
 #define TEMPERATURE_IN       A3
