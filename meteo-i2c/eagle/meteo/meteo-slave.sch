@@ -15270,6 +15270,8 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <attribute name="LCSC" value="C17514"/>
 </part>
 <part name="R1" library="SparkFun" deviceset="PHOTOCELL" device="PTH"/>
+<part name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0805" value="10k"/>
+<part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U$1" library="Ava" deviceset="DS1820" device="TO92"/>
 <part name="R4" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0805" value="4.7k"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -15290,7 +15292,7 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <attribute name="ELECROW" value="C17514"/>
 <attribute name="LCSC" value="C17514"/>
 </part>
-<part name="R19" library="rcl" deviceset="R-EU_" device="R0805" value="100k">
+<part name="R19" library="rcl" deviceset="R-EU_" device="R0805" value="1M">
 <attribute name="ELECROW" value="C17514"/>
 <attribute name="LCSC" value="C17514"/>
 </part>
@@ -15300,7 +15302,6 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <attribute name="MPN" value="80-C1206C104K5R"/>
 </part>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15430,7 +15431,9 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <attribute name="ELECROW" x="124.46" y="99.06" size="1.778" layer="96" rot="MR90" display="off"/>
 <attribute name="LCSC" x="124.46" y="99.06" size="1.778" layer="96" rot="MR90" display="off"/>
 </instance>
-<instance part="R1" gate="G$1" x="193.04" y="22.86" rot="R90"/>
+<instance part="R1" gate="G$1" x="193.04" y="15.24" rot="R90"/>
+<instance part="R2" gate="G$1" x="193.04" y="38.1" rot="R90"/>
+<instance part="GND2" gate="1" x="195.58" y="45.72" rot="R90"/>
 <instance part="U$1" gate="G$1" x="160.02" y="35.56"/>
 <instance part="R4" gate="G$1" x="170.18" y="25.4" rot="R90"/>
 <instance part="GND4" gate="1" x="152.4" y="27.94"/>
@@ -15463,7 +15466,6 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <instance part="GND7" gate="1" x="256.54" y="142.24" smashed="yes">
 <attribute name="VALUE" x="254.635" y="140.335" size="1.27" layer="96"/>
 </instance>
-<instance part="GND9" gate="1" x="193.04" y="10.16"/>
 </instances>
 <busses>
 </busses>
@@ -15556,6 +15558,11 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <junction x="93.98" y="93.98"/>
 </segment>
 <segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<wire x1="193.04" y1="45.72" x2="193.04" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+<segment>
 <pinref part="U$1" gate="G$1" pin="GND"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="152.4" y1="30.48" x2="157.48" y2="30.48" width="0.1524" layer="91"/>
@@ -15587,12 +15594,6 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <wire x1="256.54" y1="147.32" x2="256.54" y2="144.78" width="0.1524" layer="91"/>
 <junction x="256.54" y="144.78"/>
 <pinref part="GND7" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R1" gate="G$1" pin="P$1"/>
-<wire x1="193.04" y1="12.7" x2="193.04" y2="15.24" width="0.1524" layer="91"/>
-<label x="193.04" y="12.7" size="1.778" layer="95"/>
-<pinref part="GND9" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -15808,9 +15809,12 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="P$2"/>
-<wire x1="193.04" y1="30.48" x2="193.04" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="35.56" x2="193.04" y2="35.56" width="0.1524" layer="91"/>
-<label x="185.42" y="35.56" size="1.778" layer="95" rot="R90"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="193.04" y1="22.86" x2="193.04" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="27.94" x2="193.04" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="27.94" x2="193.04" y2="27.94" width="0.1524" layer="91"/>
+<junction x="193.04" y="27.94"/>
+<label x="185.42" y="27.94" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="D2" class="0">
@@ -15839,6 +15843,11 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <wire x1="180.34" y1="96.52" x2="182.88" y2="96.52" width="0.1524" layer="91"/>
 <label x="182.88" y="96.52" size="1.27" layer="95"/>
 <pinref part="U1" gate="U1" pin="PD5(T1)"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="P$1"/>
+<wire x1="193.04" y1="5.08" x2="193.04" y2="7.62" width="0.1524" layer="91"/>
+<label x="193.04" y="5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D6" class="0">
