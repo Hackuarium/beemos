@@ -124,9 +124,11 @@ void printResult(char* data, Print* output) {
     case 'h':
       printHelp(output);
       break;
+    #ifdef THR_WIRE_MASTER
       case 'i':
       processWireCommand(data[1], paramValue, output);
       break;
+    #endif
     case 's':
       printParameters(output);
       break;

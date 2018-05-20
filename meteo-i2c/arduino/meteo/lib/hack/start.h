@@ -5,7 +5,7 @@ void start() {
   setupParameters();
   checkParameters(); // setup automatically the default parameter after install boot loader
   nilSysBegin();
-    #ifdef WIRE_SLAVE
+    #ifdef THR_WIRE_SLAVE
     startWireSlave();
     #endif
 }

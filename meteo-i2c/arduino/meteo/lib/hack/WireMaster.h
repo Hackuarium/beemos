@@ -25,7 +25,7 @@ NIL_THREAD(ThreadWireMaster, arg) {
   while (true) {
 
     if (wireEventStatus % 25 == 0) {
-      wireUpdateList();
+     // wireUpdateList();
     }
     wireEventStatus++;
 
@@ -161,7 +161,9 @@ void processWireCommand(char command, char* paramValue, Print* output) { // char
     case 'l':
       wireInfo(output);
       break;
-    
+    case 'u':
+      wireUpdateList();
+      break;
     default:
       printWireHelp(output);
   }

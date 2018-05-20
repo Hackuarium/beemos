@@ -19,7 +19,7 @@ void receiveEvent() {
 }
 
 void startWireSlave() {
-  Wire.begin(WIRE_SLAVE);       // join i2c bus with address #8
+  Wire.begin(THR_WIRE_SLAVE);       // join i2c bus with address #8
   Wire.onReceive(receiveEvent); // register event
   Wire.onRequest(requestEvent); // register event
 }
