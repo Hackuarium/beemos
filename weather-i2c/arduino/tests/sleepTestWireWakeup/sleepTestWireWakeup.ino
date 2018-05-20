@@ -5,9 +5,15 @@
 
 #include <Wire.h>
 
-void requestEvent() {}
+void requestEvent() {
+  Wire.write(random(0,255));
+}
 
-void receiveEvent() {}
+void receiveEvent() {
+  while (Wire.available()) { // loop through all but the last
+    Wire.read(); // receive byte as a character
+  }
+}
 
 void startWireSlave() {
   Wire.begin(55);       // join i2c bus with address #55
@@ -23,6 +29,7 @@ void enterSleep(void) {
   MCUCR = bit (BODS) | bit (BODSE);
   MCUCR = bit (BODS);
 
+  uint8_t analogStatus = ADCSRA & (1 << ADEN);
   ADCSRA &= ~(1 << ADEN); //Disable ADC: allows to win 80µA
 
   sleep_enable();
@@ -32,6 +39,8 @@ void enterSleep(void) {
 
   // First thing to do is disable sleep.
   sleep_disable();
+
+  ADCSRA |= analogStatus;
 }
 
 void setup() {
@@ -42,5 +51,5 @@ void setup() {
 }
 void loop() {
   enterSleep();
-  delay(5000);
+  delay(2);
 }
