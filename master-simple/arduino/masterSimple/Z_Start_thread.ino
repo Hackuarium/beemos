@@ -8,13 +8,13 @@ NIL_THREAD(ThreadMonitoring, arg) {
 
   pinMode(MONITORING_LED, OUTPUT);
 
- // wdt_enable(WDTO_8S);  //activate the watchdog
+  wdt_enable(WDTO_8S);  //activate the watchdog
   while (TRUE) {
     wdt_reset();//reset avoids automatic reboot
     digitalWrite(MONITORING_LED, HIGH);
-    nilThdSleepMilliseconds(500);
+    nilThdSleepMilliseconds(100);
     digitalWrite(MONITORING_LED, LOW);
-    nilThdSleepMilliseconds(500);
+    nilThdSleepMilliseconds(100);
   }
 }
 
