@@ -27,10 +27,14 @@ NIL_THREADS_TABLE_BEGIN()
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadSerial, NULL, waThreadSerial, sizeof(waThreadSerial))
 #endif
 
+
+NIL_THREADS_TABLE_ENTRY(NULL, ThreadWeather, NULL, waThreadWeather, sizeof(waThreadWeather))
+
+
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadLogger, NULL, waThreadLogger, sizeof(waThreadLogger))
 
 #ifdef THR_WIRE_MASTER
-NIL_THREADS_TABLE_ENTRY(NULL, ThreadWireMaster, NULL, waThreadWireMaster, sizeof(waThreadWireMaster))
+ NIL_THREADS_TABLE_ENTRY(NULL, ThreadWireMaster, NULL, waThreadWireMaster, sizeof(waThreadWireMaster))
 #endif
 
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadMonitoring, NULL, waThreadMonitoring, sizeof(waThreadMonitoring))

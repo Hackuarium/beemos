@@ -6,7 +6,9 @@
 
 #define THR_SERIAL         1
 // #define WIRE_SLAVE 55  // specify the address of the i2c slave
- #define THR_WIRE_MASTER
+
+#define THR_WIRE_MASTER
+// #define WIRE_MASTER_HOT_PLUG    1   // scan automatically the i2c port for new slaves and prevents SLEEP !!!
 
 
 #include "lib/hack.h"

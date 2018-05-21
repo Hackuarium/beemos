@@ -12,7 +12,6 @@
    in the EEPROM.
  *********************************************/
 
-
 #define PARAM_LOGID               0
 #define PARAM_SECONDS             1 // number of secodns since the last log
 #define PARAM_TEMPERATURE_EXT     2
@@ -45,6 +44,9 @@ void resetParameters() { // turn all parameters to 0
   formatLog();
   setQualifier(32767);
 }
+
+// This will be executed once on boot
+void initParameters() {}
 
 void checkParameters() {
   if (getParameter(PARAM_LOGGING_INTERVAL) < 0) {
