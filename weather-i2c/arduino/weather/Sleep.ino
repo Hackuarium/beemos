@@ -1,34 +1,48 @@
+#ifdef PARAM_SLEEP_DELAY
+
 #include <avr/sleep.h>
 
-void sleepNow () {
-  // more information about sleep: https://www.nongnu.org/avr-libc/user-manual/group__avr__sleep.html
+NIL_WORKING_AREA(waThreadSleep, 16);
 
-  noInterrupts ();          // make sure we don't get interrupted before we sleep
+NIL_THREAD(ThreadSleep, arg) {
+
+  nilThdSleepMilliseconds(10000);
+
+  uint32_t lastSleep = millis();
+
+  while (true) {
+    if (getParameter(PARAM_SLEEP_DELAY) > 0) {
+      if ((getParameter(PARAM_SLEEP_DELAY) * 1000) < (millis() - lastSleep)) {
+        lastSleep = millis();
+        sleepNow();
+      }
+    }
+    nilThdSleepMilliseconds(1000);
+  }
+}
+
+void sleepNow () {
+
+#ifdef WATCH_DOG
   wdt_disable();
-  sleep_enable ();          // enables the sleep bit in the mcucr register
- sleepBefore();
+#endif
+
   set_sleep_mode (SLEEP_MODE_PWR_DOWN);
 
-  nilThdSleepMilliseconds(2);  // smll debouncing
-  attachInterrupt (digitalPinToInterrupt (0), empty, CHANGE);
+  // turn off brown-out enable in software
+  MCUCR = bit (BODS) | bit (BODSE);
+  MCUCR = bit (BODS);
 
-  interrupts ();           // interrupts allowed now, next instruction WILL be executed
-  sleep_cpu ();            // here the device is put to sleep
+  uint8_t analogStatus = ADCSRA & (1 << ADEN);
+  ADCSRA &= ~(1 << ADEN); //Disable ADC: allows to win 80µA
 
-  sleep_disable ();         // first thing after waking from sleep:
- detachInterrupt (digitalPinToInterrupt (0));      // stop LOW interrupt on D2
-  wdt_enable(WDTO_8S);  //reactivate the watchdog
-  sleepAfter();
-}
+  sleep_mode ();            // here the device is put to sleep
 
-void empty() {}
-
-void sleepBefore() {
-  
-}
-
-void sleepAfter() {
-
+#ifdef WATCH_DOG
+  wdt_enable(WATCH_DOG);  //reactivate the watchdog
+#endif
 
 }
+
+#endif
 

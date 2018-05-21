@@ -1,3 +1,5 @@
+#ifdef THR_LOGGER
+
 // part of the EEPROM is for the log
 // we should be able to save and reload the log
 
@@ -129,6 +131,7 @@ void processLoggerCommand(char command, char* data, Print* output) {
   }
 }
 
+#endif
 
 
 

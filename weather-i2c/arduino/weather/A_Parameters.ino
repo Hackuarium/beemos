@@ -23,8 +23,8 @@
 #define PARAM_LUMINOSITY          7
 #define PARAM_PRESSURE            8
 
-
 #define PARAM_LOGGING_INTERVAL    24    // minimal 300s to prevent desctruction of EEPROM. Should last 22 years with 300s
+#define PARAM_SLEEP_DELAY         25
 
 // you may write in EEPROM max 100'000 times
 // 100'000 * 300 * 24 (number of line of log) / 365 / 86400
@@ -33,7 +33,9 @@
 void resetParameters() { // turn all parameters to 0
   setAndSaveParameter(PARAM_SECONDS, 0);
   setAndSaveParameter(PARAM_LOGGING_INTERVAL, 3600);
+  setAndSaveParameter(PARAM_SLEEP_DELAY, 10);
 
+  setAndSaveParameter(PARAM_PRESSURE, PARAM_SLEEP_DELAY);
   setAndSaveParameter(PARAM_TEMPERATURE_EXT, ERROR_VALUE);
   setAndSaveParameter(PARAM_TEMPERATURE_IN, ERROR_VALUE);
   setAndSaveParameter(PARAM_TEMPERATURE_BOARD, ERROR_VALUE);
@@ -42,8 +44,21 @@ void resetParameters() { // turn all parameters to 0
   setAndSaveParameter(PARAM_LUMINOSITY, ERROR_VALUE);
   setAndSaveParameter(PARAM_PRESSURE, ERROR_VALUE);
 
+#ifdef THR_LOGGER
   formatLog();
-  setQualifier(32767);
+#endif
+  setQualifier(ERROR_VALUE);
+}
+
+// This will be executed once on boot
+void initParameters() {
+  setParameter(PARAM_TEMPERATURE_EXT, ERROR_VALUE);
+  setParameter(PARAM_TEMPERATURE_IN, ERROR_VALUE);
+  setParameter(PARAM_TEMPERATURE_BOARD, ERROR_VALUE);
+  setParameter(PARAM_HUMIDITY, ERROR_VALUE);
+  setParameter(PARAM_HUMIDITY_TEMP, ERROR_VALUE);
+  setParameter(PARAM_LUMINOSITY, ERROR_VALUE);
+  setParameter(PARAM_PRESSURE, ERROR_VALUE);
 }
 
 void checkParameters() {

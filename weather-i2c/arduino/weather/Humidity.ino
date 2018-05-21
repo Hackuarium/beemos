@@ -7,7 +7,7 @@
 
 DHT_Unified dht(DHTPIN, DHTTYPE);
 
-NIL_WORKING_AREA(waThreadHumidity, 128);
+NIL_WORKING_AREA(waThreadHumidity, 160);
 
 NIL_THREAD(ThreadHumidity, arg) {
 

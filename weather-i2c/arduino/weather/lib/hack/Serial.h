@@ -122,7 +122,13 @@ void printResult(char* data, Print* output) {
             setAndSaveParameter(paramCurrent - 1, atoi(paramValue));
           }
         }
-        output->println(parameters[paramCurrent - 1]);
+        if (wireTargetAddress > 0) {
+            #ifdef THR_WIRE_MASTER
+              output->println(wireReadIntRegister(wireTargetAddress, paramCurrent - 1));
+            #endif
+          } else {
+            output->println(parameters[paramCurrent - 1]);
+          }
         if (paramCurrent <= MAX_PARAM) {
           paramCurrent++;
           paramValuePosition = 0;

@@ -24,9 +24,11 @@ NIL_THREAD(ThreadWireMaster, arg) {
 
   while (true) {
 
-    if (wireEventStatus % 25 == 0) {
-     // wireUpdateList();
-    }
+    #ifdef WIRE_MASTER_HOT_PLUG
+      if (wireEventStatus % 25 == 0) {
+        wireUpdateList();
+      }
+    #endif
     wireEventStatus++;
 
     nilThdSleepMilliseconds(200);
@@ -47,6 +49,11 @@ int wireReadInt(uint8_t address) {
   return data;
 }
 
+void wireWakeup(uint8_t address) {
+  Wire.beginTransmission(address);
+  Wire.endTransmission(); // Send data to I2C dev with option for a repeated start
+}
+
 void wireSetRegister(uint8_t address, uint8_t registerAddress) {
   Wire.beginTransmission(address);
   Wire.write(registerAddress);
@@ -54,8 +61,12 @@ void wireSetRegister(uint8_t address, uint8_t registerAddress) {
 }
 
 int wireReadIntRegister(uint8_t address, uint8_t registerAddress) {
-  wireSetRegister(address, regiwireWriteIntRegistersterAddress);
+  wireSetRegister(address, registerAddress);
   return wireReadInt(address);
+}
+
+int wireCopyParameter(uint8_t address, uint8_t registerAddress, uint8_t parameterID) {
+  setParameter(parameterID, wireReadIntRegister(address, registerAddress));
 }
 
 uint8_t wireWriteIntRegister(uint8_t address, uint8_t registerAddress, int value) {
@@ -66,7 +77,8 @@ uint8_t wireWriteIntRegister(uint8_t address, uint8_t registerAddress, int value
   return Wire.endTransmission(); // Send data to I2C dev with option for a repeated start
 }
 
-void wireInfo(Print* output) {
+void printWireInfo(Print* output) {
+  wireUpdateList();
   output->println("I2C");
 
   for (byte i = 0; i < numberI2CDevices; i++) {
@@ -82,7 +94,9 @@ void printWireDeviceParameter(Print* output, uint8_t wireID) {
   output->println(F("I2C device: "));
   output->println(wireID);
   for (byte i = 0; i < 26; i++) {
-    output->print(i, HEX);
+    output->print((char)(i+65));
+    output->print(" : ");
+    output->print(i);
     output->print(F(" - "));
     output->println(wireReadIntRegister(wireID, i));
   }
@@ -166,10 +180,7 @@ void processWireCommand(char command, char* paramValue, Print* output) { // char
       }
       break;
     case 'l':
-      wireInfo(output);
-      break;
-    case 'u':
-      wireUpdateList();
+      printWireInfo(output);
       break;
     default:
       printWireHelp(output);

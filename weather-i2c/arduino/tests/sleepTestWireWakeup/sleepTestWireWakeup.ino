@@ -32,13 +32,10 @@ void enterSleep(void) {
   uint8_t analogStatus = ADCSRA & (1 << ADEN);
   ADCSRA &= ~(1 << ADEN); //Disable ADC: allows to win 80µA
 
-  sleep_enable();
-
   // Now enter sleep mode.
   sleep_mode();
 
-  // First thing to do is disable sleep.
-  sleep_disable();
+
 
   ADCSRA |= analogStatus;
 }
@@ -51,5 +48,5 @@ void setup() {
 }
 void loop() {
   enterSleep();
-  delay(2);
+  delay(5);
 }
