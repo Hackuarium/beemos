@@ -50,14 +50,21 @@ int wireReadInt(uint8_t address) {
 void wireSetRegister(uint8_t address, uint8_t registerAddress) {
   Wire.beginTransmission(address);
   Wire.write(registerAddress);
-  Wire.endTransmission(false); // Send data to I2C dev with option for a repeated start
+  Wire.endTransmission(); // Send data to I2C dev with option for a repeated start
 }
 
 int wireReadIntRegister(uint8_t address, uint8_t registerAddress) {
-  wireSetRegister(address, registerAddress);
+  wireSetRegister(address, regiwireWriteIntRegistersterAddress);
   return wireReadInt(address);
 }
 
+uint8_t wireWriteIntRegister(uint8_t address, uint8_t registerAddress, int value) {
+  Wire.beginTransmission(address);
+  Wire.write(registerAddress);
+  if (value > 255 || value < 0) Wire.write(value >> 8);
+  Wire.write(value & 255);
+  return Wire.endTransmission(); // Send data to I2C dev with option for a repeated start
+}
 
 void wireInfo(Print* output) {
   output->println("I2C");

@@ -13,9 +13,18 @@ void requestEvent() {
 }
 
 void receiveEvent() {
-  while (Wire.available()) { // loop through all but the last
+  if (Wire.available()) {
     command = Wire.read(); // receive byte as a character
   }
+  if (Wire.available()) { // we need to set the value of a register
+    int value = 0;
+    while (Wire.available()) { // loop through all but the last 
+      value <<= 8;
+      value |= Wire.read();
+    }
+    setParameter(command, value);
+  }
+  
 }
 
 void startWireSlave() {

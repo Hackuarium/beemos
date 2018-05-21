@@ -28,8 +28,7 @@ NIL_THREAD(ThreadSerial, arg) {
         }
         serialBufferPosition = 0;
         serialBuffer[0] = '\0';
-      }
-      else {
+      } else {
         if (serialBufferPosition < SERIAL_BUFFER_LENGTH) {
           serialBuffer[serialBufferPosition] = inChar;
           serialBufferPosition++;
@@ -44,13 +43,13 @@ NIL_THREAD(ThreadSerial, arg) {
 }
 
 
-/* SerialEvent occurs whenever a new data comes in the
-  hardware serial RX.  This routine is run between each
-  time loop() runs, so using delay inside loop can delay
-  response.  Multiple bytes of data may be available.
+/*
+  SerialEvent occurs whenever a new data comes in the
+  hardware serial RX.
 
   This method will mainly set/read the parameters:
-  Uppercase + number + CR ((-) and 1 to 5 digit) store a parameter (0 to 25 depending the letter)
+  Uppercase + number + CR ('-' and 1 to 5 digit) store a parameter
+  (0 to 25 depending the letter, starting 26 using to letter like 'AA')
   example: A100, A-1
   -> Many parameters may be set at once
   example: C10,20,30,40,50
@@ -58,19 +57,27 @@ NIL_THREAD(ThreadSerial, arg) {
   example: A
   -> Many parameters may be read at once
   example: A,B,C,D
+
+  It is also possible to write some data to a specific I2C device using
+  nnnRRxxx where
+  * nnn : the I2C device number
+  * RR : the register to write as a letter: A for 0, B for 1, etc.
+  * xxx : a number 
+
   s : read all the parameters
   h : help
   l : show the log file
 */
 
 void printResult(char* data, Print* output) {
-  boolean theEnd = false;
-  byte paramCurrent = 0; // Which parameter are we defining
+  bool theEnd = false;
+  uint8_t paramCurrent = 0; // Which parameter are we defining
   char paramValue[SERIAL_MAX_PARAM_VALUE_LENGTH];
   paramValue[0] = '\0';
-  byte paramValuePosition = 0;
-  byte i = 0;
-  boolean inValue = false;
+  uint8_t paramValuePosition = 0;
+  uint8_t i = 0;
+  bool inValue = false;
+  uint8_t wireTargetAddress = 0; // used for the command like '55D123'
 
   while (!theEnd) {
     byte inChar = data[i];
@@ -78,8 +85,7 @@ void printResult(char* data, Print* output) {
     if (i == SERIAL_BUFFER_LENGTH) theEnd = true;
     if (inChar == '\0') {
       theEnd = true;
-    }
-    else if ((inChar > 47 && inChar < 58) || inChar == '-' || inValue) { // a number (could be negative)
+    } else if ((inChar > 47 && inChar < 58) || inChar == '-' || inValue) { // a number (could be negative)
       if (paramValuePosition < SERIAL_MAX_PARAM_VALUE_LENGTH) {
         paramValue[paramValuePosition] = inChar;
         paramValuePosition++;
@@ -87,26 +93,36 @@ void printResult(char* data, Print* output) {
           paramValue[paramValuePosition] = '\0';
         }
       }
-    }
-    else if (inChar > 64 && inChar < 92) { // an UPPERCASE character so we define the field
+    } else if (inChar > 64 && inChar < 92) { // an UPPERCASE character so we define the field
       // we extend however the code to allow 2 letters fields !!!
       if (paramCurrent > 0) {
         paramCurrent *= 26;
+      } else { // do we have a number before the uppercase ????
+        if (paramValuePosition > 0) {
+          // we have a target I2C device
+          wireTargetAddress = atoi(paramValue);
+          paramValuePosition = 0;
+          paramValue[paramValuePosition] = '\0';
+        }
       }
       paramCurrent += inChar - 64;
       if (paramCurrent > MAX_PARAM) {
         paramCurrent = 0;
       }
     }
+
     if (inChar == ',' || theEnd) { // store value and increment
       if (paramCurrent > 0) {
         if (paramValuePosition > 0) {
-          setAndSaveParameter(paramCurrent - 1, atoi(paramValue));
-          output->println(parameters[paramCurrent - 1]);
+          if (wireTargetAddress > 0) {
+            #ifdef THR_WIRE_MASTER
+              wireWriteIntRegister(wireTargetAddress, paramCurrent - 1, atoi(paramValue));
+            #endif
+          } else {
+            setAndSaveParameter(paramCurrent - 1, atoi(paramValue));
+          }
         }
-        else {
-          output->println(parameters[paramCurrent - 1]);
-        }
+        output->println(parameters[paramCurrent - 1]);
         if (paramCurrent <= MAX_PARAM) {
           paramCurrent++;
           paramValuePosition = 0;
@@ -114,7 +130,8 @@ void printResult(char* data, Print* output) {
         }
       }
     }
-    if (data[0] > 96 && data[0] < 123 && (i > 1 || data[1] < 97 || data[1] > 122)) { // we may have one or 2 lowercasee
+    // we may have one or 2 lowercasee
+    if (data[0] > 96 && data[0] < 123 && (i > 1 || data[1] < 97 || data[1] > 122)) {
       inValue = true;
     }
   }
