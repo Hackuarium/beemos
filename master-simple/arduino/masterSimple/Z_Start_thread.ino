@@ -27,9 +27,9 @@ NIL_THREADS_TABLE_BEGIN()
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadSerial, NULL, waThreadSerial, sizeof(waThreadSerial))
 #endif
 
-
+#ifdef THR_WEATHER
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadWeather, NULL, waThreadWeather, sizeof(waThreadWeather))
-
+#endif
 
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadLogger, NULL, waThreadLogger, sizeof(waThreadLogger))
 

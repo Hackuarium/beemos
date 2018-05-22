@@ -20838,6 +20838,9 @@ Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="R9" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="100"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="UART" library="SparkFun-Connectors" deviceset="M05" device="PTH"/>
+<part name="R10" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="4.7k"/>
+<part name="R12" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="4.7k"/>
+<part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -21016,6 +21019,17 @@ Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </instance>
 <instance part="GND6" gate="1" x="226.06" y="53.34"/>
 <instance part="UART" gate="G$1" x="228.6" y="20.32"/>
+<instance part="R10" gate="G$1" x="215.9" y="121.92" smashed="yes" rot="MR270">
+<attribute name="NAME" x="216.3064" y="123.19" size="1.016" layer="95" rot="MR270"/>
+<attribute name="VALUE" x="215.392" y="127" size="1.27" layer="96" rot="MR270"/>
+</instance>
+<instance part="R12" gate="G$1" x="208.28" y="121.92" smashed="yes" rot="MR270">
+<attribute name="NAME" x="208.6864" y="123.19" size="1.016" layer="95" rot="MR270"/>
+<attribute name="VALUE" x="207.772" y="127" size="1.27" layer="96" rot="MR270"/>
+</instance>
+<instance part="P+2" gate="G$1" x="208.28" y="134.62" smashed="yes">
+<attribute name="VALUE" x="207.645" y="135.255" size="1.27" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -21362,6 +21376,12 @@ Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="218.44" y1="109.22" x2="213.36" y2="109.22" width="0.1524" layer="91"/>
 <label x="213.36" y="109.22" size="1.778" layer="95"/>
+<wire x1="213.36" y1="109.22" x2="208.28" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="109.22" x2="205.74" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="109.22" x2="208.28" y2="109.22" width="0.1524" layer="91"/>
+<junction x="208.28" y="109.22"/>
+<pinref part="R12" gate="G$1" pin="2"/>
+<wire x1="208.28" y1="116.84" x2="208.28" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R9" gate="G$1" pin="2"/>
@@ -21382,8 +21402,12 @@ Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </segment>
 <segment>
 <pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="218.44" y1="114.3" x2="213.36" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="114.3" x2="215.9" y2="114.3" width="0.1524" layer="91"/>
 <label x="213.36" y="114.3" size="1.778" layer="95"/>
+<pinref part="R10" gate="G$1" pin="2"/>
+<wire x1="215.9" y1="114.3" x2="213.36" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="116.84" x2="215.9" y2="114.3" width="0.1524" layer="91"/>
+<junction x="215.9" y="114.3"/>
 </segment>
 <segment>
 <pinref part="R8" gate="G$1" pin="2"/>
@@ -21773,6 +21797,16 @@ Standard 5-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <pinref part="UART" gate="G$1" pin="2"/>
 <wire x1="236.22" y1="17.78" x2="246.38" y2="17.78" width="0.1524" layer="91"/>
 <label x="241.3" y="17.78" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="215.9" y1="127" x2="215.9" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="129.54" x2="208.28" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="P+2" gate="G$1" pin="+3V3"/>
+<wire x1="208.28" y1="129.54" x2="208.28" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="208.28" y1="129.54" x2="208.28" y2="127" width="0.1524" layer="91"/>
+<junction x="208.28" y="129.54"/>
 </segment>
 </net>
 </nets>

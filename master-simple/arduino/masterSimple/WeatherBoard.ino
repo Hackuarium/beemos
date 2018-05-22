@@ -1,6 +1,8 @@
 // This example shows how to copy parameters from a weather board
 // locally
 
+#ifdef THR_WEATHER
+
 #define WEATHER_I2C_ADDRESS         55
 
 #define WEATHER_TEMPERATURE_EXT     2
@@ -34,4 +36,7 @@ void copyFromWeather() {
   wireCopyParameter(WEATHER_I2C_ADDRESS, WEATHER_LUMINOSITY, PARAM_LUMINOSITY);
   wireCopyParameter(WEATHER_I2C_ADDRESS, WEATHER_PRESSURE, PARAM_PRESSURE);
 }
+
+#endif
+
 
