@@ -5,10 +5,10 @@ The goal of this project is to create a small board that contains many sensors a
 The following sensors are present:
 
 * On the board:
-    * DHT-22 for humidify
-    * DS18B20: one
+    * DHT-22 for humidity
+    * DS18B20 for temperature
     * Photoresistor for light
-    * 
+
 * External:
     * 2 DS18B20 to have to external temperature probe
 

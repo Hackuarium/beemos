@@ -13,7 +13,7 @@ byte wireDeviceID[WIRE_MAX_DEVICES];
 void wireUpdateList();
 
 
-NIL_WORKING_AREA(waThreadWireMaster, 250);
+NIL_WORKING_AREA(waThreadWireMaster, 300);
 NIL_THREAD(ThreadWireMaster, arg) {
 
   nilThdSleepMilliseconds(1000);
@@ -135,24 +135,18 @@ void wireUpdateList() {
   byte _data;
   byte currentPosition = 0;
   // I2C Module Scan, from_id ... to_id
-  for (byte i = 0; i <= 127; i++)
-  {
+  for (byte i = 0; i <= 127; i++) {
     Wire.beginTransmission(i);
     Wire.write(&_data, 0);
     // I2C Module found out!
-    if (Wire.endTransmission() == 0)
-    {
+    if (Wire.endTransmission() == 0) {
       // there is a device, we need to check if we should add or remove a previous device
       if (currentPosition < numberI2CDevices && wireDeviceID[currentPosition] == i) { // it is still the same device that is at the same position, nothing to do
         currentPosition++;
-      }
-      else if (currentPosition < numberI2CDevices && wireDeviceID[currentPosition] < i) { // some device(s) disappear, we need to delete them
+      } else if (currentPosition < numberI2CDevices && wireDeviceID[currentPosition] < i) { // some device(s) disappear, we need to delete them
         wireRemoveDevice(currentPosition);
         i--;
-      }
-      else if (currentPosition >= numberI2CDevices || wireDeviceID[currentPosition] > i) { // we need to add a device
-        //Serial.print("add: ");        DEBUG POUR CONNAITRE L'ADRESSE DE L'I2C !!!!!!!!
-        //Serial.println(i);
+      } else if (currentPosition >= numberI2CDevices || wireDeviceID[currentPosition] > i) { // we need to add a device
         wireInsertDevice(currentPosition, i);
         currentPosition++;
       }

@@ -3,36 +3,25 @@ View this project on [CADLAB.io](https://cadlab.io/project/1029).
 # Open beehive (under development)
 The BeeMoS project is an open source bee hive monitoring system developed at the open science lab Hackuarium, Renens, Switzerland. 
 
-# Objective: 
-Build and program an open source bee monitoring system consisting of the following components:
+# Objectives: 
+Build and program an open source bee monitoring system capable of the following objectives:
 
-* Counter: count how many bees enter and exit from a hive during a given time. 
-* Scale: Tracks changes in the hive's weight over time.
-* Meteo station: Measures environmental variables including temperature, humidity, light and atmospheric pressure.
-* Master board: Serves as an interface to communicate with other beemos components and sends the information.
+- [x] Track the activity of the hives to study the behaviour of bees and monitor their health. 
+- [ ] Track changes in the hive's weight over time to detect sudden and gradual changes (honey production,  swarming, ...).
+- [ ] Measures environmental variables including temperature, humidity, light and atmospheric pressure and study their effect on the bees.
+- [ ] Send the data to a remote server for analysis, visualization or to notify the user if something unusual happens.
 
-# Principle:
+# Modules:
+To achieve the above objective, the project follows a modular design with different hardware components.
 
-## Counter: 
-Using an Arduino based microcontroller, infrared (= IR) reflectance sensors are used to detect if a bee is present under the sensor, thereby modifying the reflected IR signal read by the microcontroller. Each gate consists of two IR reflectance sensors, each capable of emitting and receiving an IR signal. This allows to determine whether the bee is entering or exiting the hive by looking at which of the two sensors reacted first to the presence of the bee below it.
+**Counter**: Counts bees entering and exiting the hive over time using infrared sensors.
 
-### Results
+**Scale**: Weighs the hive periodically using 4 load cells..
 
-Scanning all 16 IR sensors: 3ms
-Current consumption: 27 mA
+**Meteo station**: Monitors temperature, humidity and luminosity outside the hives.
 
-## Scale:
+**Master boardi**: Communicates with all other devices over I2C and sends the data to a remote server using a SIM card module. Also tracks temperature inside the hive.
 
-## Meteo station:
-
-## Master board:
-Communicates with all other devices over I2C and sends the data to a remote server using a SIM card module.
-
-# Further details
-* x1 Microprocessor Atmel 32u4 (similar to Arduino Leonardo boards), 8Mhz, 3.3V
-* x16 QRE1113 IR reflectance sensors (x2 per gate)
-* x1 74HC154W demultiplexer used to switch on the IR led of one of the 16 IR reflectance sensors
-* x1 74HC4067 multiplexer used to read the value from one of the IR reflectance sensors (the one which has the IR led on)
 
 # State of the project
-We have ordered PCBs, all elements of one board were soldered and a Arduino code was written to count entering/exiting bees and make logs for all gates using multithreading. We are working on parallel on a laser cut enclosure which includes 8 individual gates that the bees will use to enter/exit the hive and an upper compartment for the board. We are getting close to test our first prototype in the field.
+We have ordered PCBs, all elements of one board were soldered and a Arduino code was written to count entering/exiting bees and make logs for all gates using multithreading. We also built a first prototype for a laser cut enclosure which includes 8 individual gates that the bees will use to enter/exit the hive and an upper compartment for the board. We are getting close to test our first prototype in the field.
