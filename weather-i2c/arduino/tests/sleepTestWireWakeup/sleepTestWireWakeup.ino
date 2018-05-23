@@ -35,8 +35,6 @@ void enterSleep(void) {
   // Now enter sleep mode.
   sleep_mode();
 
-
-
   ADCSRA |= analogStatus;
 }
 
