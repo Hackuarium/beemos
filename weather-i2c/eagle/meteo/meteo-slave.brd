@@ -45,7 +45,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="12" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
@@ -3302,6 +3302,7 @@
 <wire x1="49.53" y1="49.53" x2="0" y2="49.53" width="0.4064" layer="20"/>
 <wire x1="0" y1="49.53" x2="0" y2="0" width="0.4064" layer="20"/>
 <hole x="2.54" y="2.54" drill="3.2"/>
+<circle x="41.91" y="23.495" radius="0.635" width="0.1524" layer="51"/>
 </plain>
 <libraries>
 <library name="lpatiny">
