@@ -5,7 +5,7 @@
 
 
 #define THR_SERIAL     1
-// #define THR_LOGGER     1
+#define THR_LOGGER     1
 
 #define THR_WIRE_SLAVE  55        // specify the address of the i2c slave
 #define WATCH_DOG       WDTO_8S   // enable watch dog

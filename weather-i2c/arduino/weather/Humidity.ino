@@ -1,4 +1,4 @@
-#include "lib/dht/DHT_U.h"
+#include "lib/dht22/DHT_U.h"
 
 
 #define DHTPIN            6
@@ -7,7 +7,7 @@
 
 DHT_Unified dht(DHTPIN, DHTTYPE);
 
-NIL_WORKING_AREA(waThreadHumidity, 160);
+NIL_WORKING_AREA(waThreadHumidity, 40);
 
 NIL_THREAD(ThreadHumidity, arg) {
 
