@@ -13,7 +13,7 @@ byte wireDeviceID[WIRE_MAX_DEVICES];
 void wireUpdateList();
 
 
-NIL_WORKING_AREA(waThreadWireMaster, 300);
+NIL_WORKING_AREA(waThreadWireMaster, 200);
 NIL_THREAD(ThreadWireMaster, arg) {
 
   nilThdSleepMilliseconds(1000);

@@ -21,21 +21,13 @@ void setup() {
 int before, after;
 
 void loop() {
-  before = random(0, 10);
-  after = random(0, 10);
-  Serial.print("beforeOn: ");
-  Serial.print(before);
-  Serial.print("  afterOn: ");
-  Serial.print(after);
   delay(before * 1000);
   digitalWrite(7, HIGH);
   dht.begin();
-  delay(after * 1000);
+  delay(after * 100);
   getHumidityTemperature();
   Serial.println("");
   digitalWrite(7, LOW);
-
-
 }
 
 

@@ -22,6 +22,7 @@
 #define PARAM_HUMIDITY_TEMP       6
 #define PARAM_LUMINOSITY          7
 #define PARAM_PRESSURE            8
+#define PARAM_PRESSURE_TEMP       9
 
 #define PARAM_LOGGING_INTERVAL    24    // minimal 300s to prevent desctruction of EEPROM. Should last 22 years with 300s
 #define PARAM_SLEEP_DELAY         25
