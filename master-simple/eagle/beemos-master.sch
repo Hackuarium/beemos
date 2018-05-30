@@ -18146,6 +18146,7 @@ communication</text>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="R6" gate="G$1" pin="1"/>
 <wire x1="193.04" y1="142.24" x2="185.42" y2="142.24" width="0.1524" layer="91"/>
+<junction x="185.42" y="142.24"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="SCL"/>
@@ -18401,6 +18402,7 @@ communication</text>
 <wire x1="193.04" y1="152.4" x2="195.58" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="G$1" pin="VDD"/>
 <wire x1="195.58" y1="154.94" x2="195.58" y2="152.4" width="0.1524" layer="91"/>
+<junction x="193.04" y="152.4"/>
 </segment>
 </net>
 <net name="ISP+5V" class="0">
