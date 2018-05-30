@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.7.1">
+<eagle version="9.0.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -17304,17 +17304,17 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <attribute name="LCSC" value="C17407"/>
 <attribute name="MPN" value="RC1206FR-07100KL"/>
 </part>
-<part name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky">
+<part name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky||">
 <attribute name="LCSC" value="C82544"/>
 <attribute name="MPN" value="621-1N5819HW-F"/>
 </part>
 <part name="SUPPLY4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="U$2" library="MyPOW" deviceset="VUSB" device=""/>
-<part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky">
+<part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky||">
 <attribute name="LCSC" value="C82544"/>
 <attribute name="MPN" value="621-1N5819HW-F"/>
 </part>
-<part name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky">
+<part name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky||">
 <attribute name="LCSC" value="C82544"/>
 <attribute name="MPN" value="621-1N5819HW-F"/>
 </part>
@@ -17340,7 +17340,7 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <attribute name="LCSC" value="C17407"/>
 <attribute name="MPN" value="RC1206FR-07100KL"/>
 </part>
-<part name="CON1" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1E" device="" package3d_urn="urn:adsk.eagle:package:15455/1" value="BAT"/>
+<part name="CON1" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1E" device="" package3d_urn="urn:adsk.eagle:package:15455/1" value="BATTERY"/>
 <part name="R18" library="rcl" deviceset="R-EU_" device="R0805" value="1M">
 <attribute name="ELECROW" value="C17514"/>
 <attribute name="LCSC" value="C17514"/>
@@ -17398,7 +17398,7 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <part name="J3" library="lpatiny" deviceset="RJ12" device="STRAIGHT-I2C" value="RJ12STRAIGHT-I2C"/>
 <part name="J4" library="lpatiny" deviceset="RJ12" device="STRAIGHT-I2C" value="RJ12STRAIGHT-I2C"/>
 <part name="CON2" library="lpatiny" deviceset="JACK_DC_BARREL" device=""/>
-<part name="D4" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky">
+<part name="D4" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="||Schottky">
 <attribute name="LCSC" value="C82544"/>
 <attribute name="MPN" value="621-1N5819HW-F"/>
 </part>
@@ -17415,13 +17415,13 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <part name="RT1" library="resistor" deviceset="R-EU_" device="R0805" value="4.7k"/>
 <part name="R9" library="rcl" deviceset="R-EU_" device="R0805" value="1K"/>
 <part name="P+37" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="X3" library="con-lumberg" deviceset="1503_09" device=""/>
+<part name="X3" library="con-lumberg" deviceset="1503_09" device="" value=""/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="R0805" value="100"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="RT3" library="resistor" deviceset="R-EU_" device="R0805" value="4.7k"/>
 <part name="R7" library="rcl" deviceset="R-EU_" device="R0805" value="1K"/>
 <part name="P+5" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="X4" library="con-lumberg" deviceset="1503_09" device=""/>
+<part name="X4" library="con-lumberg" deviceset="1503_09" device="" value=""/>
 <part name="R13" library="rcl" deviceset="R-EU_" device="R0805" value="100"/>
 <part name="R14" library="rcl" deviceset="R-EU_" device="R0805" value="10k">
 <attribute name="ELECROW" value="C17513"/>
@@ -17436,7 +17436,7 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <part name="RT2" library="resistor" deviceset="R-EU_" device="R0805" value="4.7k"/>
 <part name="R8" library="rcl" deviceset="R-EU_" device="R0805" value="1K"/>
 <part name="P+6" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="X5" library="con-lumberg" deviceset="1503_09" device=""/>
+<part name="X5" library="con-lumberg" deviceset="1503_09" device="" value=""/>
 <part name="R10" library="rcl" deviceset="R-EU_" device="R0805" value="100"/>
 <part name="JP1" library="SparkFun" deviceset="M06" device="RA"/>
 </parts>
@@ -18606,9 +18606,6 @@ communication</text>
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,1,175.26,20.32,LCD,A,N$11,,,"/>
-<approved hash="104,1,175.26,17.78,LCD,K,GND,,,"/>
-<approved hash="104,1,175.26,55.88,LCD,VSS,GND,,,"/>
 <approved hash="106,1,160.02,165.1,RXLED,,,,,"/>
 <approved hash="106,1,160.02,154.94,TXLED,,,,,"/>
 </errors>

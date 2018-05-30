@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.7.1">
+<eagle version="9.0.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -19,8 +19,8 @@
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="6" visible="no" active="yes"/>
@@ -3336,9 +3336,13 @@
 <rectangle x1="82.7024" y1="28.8544" x2="84.9376" y2="28.9052" layer="201" rot="R180"/>
 <rectangle x1="82.9056" y1="28.9052" x2="84.7344" y2="28.956" layer="201" rot="R180"/>
 <rectangle x1="83.2104" y1="28.956" x2="84.4296" y2="29.0068" layer="201" rot="R180"/>
-<text x="18.63725" y="66.10985" size="0.6096" layer="27">GND</text>
+<text x="18.00225" y="65.47485" size="1.016" layer="27">GND</text>
 <text x="38.29685" y="69.23405" size="2.54" layer="27">+</text>
-<text x="97.155" y="21.59" size="2.1844" layer="1" font="vector" rot="R90">BeeMoS master v1.0</text>
+<text x="97.155" y="14.605" size="2.1844" layer="1" font="vector" rot="R90">BeeMoS I2C master v1.0</text>
+<text x="92.64015" y="9.11225" size="1.27" layer="27" rot="R90">SIM800L</text>
+<text x="54.54015" y="7.84225" size="1.27" layer="27" rot="R90">D7</text>
+<text x="14.67485" y="10.57275" size="1.27" layer="27" rot="R270">D11</text>
+<text x="37.24275" y="21.52015" size="1.27" layer="27" rot="R180">D10</text>
 </plain>
 <libraries>
 <library name="lpatiny">
@@ -5386,15 +5390,15 @@ design rules under a new name.</description>
 <element name="R4" library="rcl" package="R0805" value="22" x="15.875" y="35.56" smashed="yes" rot="R180">
 <attribute name="ELECROW" value="C17561" x="15.875" y="35.56" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="LCSC" value="C17561" x="15.875" y="35.56" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="18.556890625" y="36.7941625" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="17.032709375" y="34.0562875" size="1.27" layer="27" rot="R180"/>
+<attribute name="NAME" x="13.8766" y="36.6954" size="1.27" layer="25"/>
+<attribute name="VALUE" x="18.0137125" y="36.082709375" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="22" x="15.875" y="38.735" smashed="yes" rot="R180">
 <attribute name="ELECROW" value="C17561" x="15.875" y="38.735" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="LCSC" value="C17561" x="15.875" y="38.735" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="13.094346875" y="39.39859375" size="1.27" layer="25" rot="R180"/>
+<attribute name="NAME" x="13.8766" y="39.8704" size="1.27" layer="25"/>
 <attribute name="SPICEPREFIX" value="R" x="15.875" y="38.735" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="17.181590625" y="42.674859375" size="1.27" layer="27" rot="R180"/>
+<attribute name="VALUE" x="18.285140625" y="39.406590625" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C10" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="100nF" x="48.26" y="43.815" smashed="yes" rot="R180">
 <attribute name="ELECROW" value="C49678" x="48.26" y="43.815" size="1.778" layer="27" rot="R180" display="off"/>
@@ -5416,7 +5420,7 @@ design rules under a new name.</description>
 <attribute name="MPN" value="77-VJ1206A180JXXPBC" x="88.265" y="52.07" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="87.63" y="50.165" size="1.27" layer="25" rot="R270"/>
 <attribute name="SPICEPREFIX" value="C" x="88.265" y="52.07" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="87.813715625" y="57.69299375" size="1.27" layer="27" rot="R270"/>
+<attribute name="VALUE" x="88.35700625" y="54.158715625" size="1.27" layer="27"/>
 </element>
 <element name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="18pF" x="79.375" y="52.07" smashed="yes" rot="R90">
 <attribute name="ELECROW" value="C1797" x="79.375" y="52.07" size="1.778" layer="27" rot="R90" display="off"/>
@@ -5424,15 +5428,15 @@ design rules under a new name.</description>
 <attribute name="MPN" value="77-VJ1206A180JXXPBC" x="79.375" y="52.07" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="80.11000625" y="47.625" size="1.27" layer="25" rot="R90"/>
 <attribute name="SPICEPREFIX" value="C" x="79.375" y="52.07" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="80.0435875" y="54.07571875" size="1.27" layer="27" rot="R90"/>
+<attribute name="VALUE" x="80.54428125" y="55.2785875" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="100nF" x="60.6425" y="29.845" smashed="yes" rot="R90">
 <attribute name="ELECROW" value="C49678" x="60.6425" y="29.845" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="LCSC" value="C49678" x="60.6425" y="29.845" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="80-C1206C104K5R" x="60.6425" y="29.845" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="61.831028125" y="32.3949875" size="1.27" layer="25" rot="R270"/>
+<attribute name="NAME" x="59.477675" y="31.622" size="1.27" layer="25"/>
 <attribute name="SPICEPREFIX" value="C" x="60.6425" y="29.845" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="59.3725" y="27.305" size="1.27" layer="27" rot="R90"/>
+<attribute name="VALUE" x="63.5" y="32.7025" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="X1" library="lpatiny" package="NX6035" value="8MHz" x="82.55" y="52.07" smashed="yes" rot="R270">
 <attribute name="LCSC" value="C122522" x="82.55" y="52.07" size="1.778" layer="27" rot="R270" display="off"/>
@@ -5452,19 +5456,19 @@ design rules under a new name.</description>
 <attribute name="ELECROW" value="C17514" x="85.725" y="52.07" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="LCSC" value="C17514" x="85.725" y="52.07" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="87.09029375" y="47.159965625" size="1.27" layer="25" rot="R90"/>
-<attribute name="VALUE" x="86.29515625" y="54.143165625" size="1.27" layer="27" rot="R90"/>
+<attribute name="VALUE" x="86.826834375" y="55.18015625" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="IC2" library="microbuilder" package="SOT23-5" value="MCP73831T" x="22.225" y="57.785" smashed="yes" rot="R90">
 <attribute name="LCSC" value="C14879" x="22.225" y="57.785" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="579-MCP73831T-3ACIOT" x="22.225" y="57.785" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="22.225" y="59.563" size="0.8128" layer="25" ratio="18" rot="R90"/>
-<attribute name="VALUE" x="22.225" y="56.388" size="0.4064" layer="27" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="25.527" y="60.325" size="0.8128" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="R3" library="rcl" package="R0805" value="10k" x="22.225" y="53.34" smashed="yes">
 <attribute name="ELECROW" value="C17414" x="22.225" y="53.34" size="1.778" layer="27" display="off"/>
 <attribute name="LCSC" value="C17414" x="22.225" y="53.34" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="24.257" y="53.213" size="0.8128" layer="25" ratio="18"/>
-<attribute name="VALUE" x="21.082" y="51.308" size="1.016" layer="27" ratio="10"/>
+<attribute name="VALUE" x="21.082" y="54.483" size="1.016" layer="27" ratio="10"/>
 </element>
 <element name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="10u" x="29.21" y="36.195" smashed="yes">
 <attribute name="ELECROW" value="C15850" x="29.21" y="36.195" size="1.778" layer="27" display="off"/>
@@ -5472,79 +5476,86 @@ design rules under a new name.</description>
 <attribute name="MPN" value="77-VJ1206V106ZXQTBC" x="29.21" y="36.195" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="27.94" y="37.465" size="1.27" layer="25"/>
 <attribute name="SPICEPREFIX" value="C" x="29.21" y="36.195" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="27.305" y="33.655" size="1.27" layer="27"/>
+<attribute name="VALUE" x="27.94" y="37.465" size="1.27" layer="27"/>
 </element>
 <element name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="10u" x="35.56" y="36.195" smashed="yes" rot="R180">
 <attribute name="ELECROW" value="C15850" x="35.56" y="36.195" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="LCSC" value="C15850" x="35.56" y="36.195" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="77-VJ1206V106ZXQTBC" x="35.56" y="36.195" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="36.83" y="34.925" size="1.27" layer="25" rot="R180"/>
+<attribute name="NAME" x="33.91" y="37.122" size="1.27" layer="25"/>
 <attribute name="SPICEPREFIX" value="C" x="35.56" y="36.195" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="40.64" y="36.83" size="1.27" layer="27" rot="R180"/>
+<attribute name="VALUE" x="40.005" y="36.83" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="IC4" library="dp_devices" package="SOT-23" value="DMP1045U" x="23.495" y="40.005" smashed="yes">
 <attribute name="LCSC" value="C96613" x="23.495" y="40.005" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="621-DMP1045U-7" x="23.495" y="40.005" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="21.59" y="42.2275" size="1.27" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="18.415" y="37.1475" size="1.27" layer="27" font="vector" ratio="10"/>
+<attribute name="NAME" x="21.9964" y="41.932" size="1.27" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="19.05" y="41.5925" size="1.27" layer="27" font="vector" ratio="10"/>
 </element>
 <element name="R15" library="rcl" package="R0805" value="100k" x="10.16" y="66.675" smashed="yes" rot="R180">
 <attribute name="ELECROW" value="C17407" x="10.16" y="66.675" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="LCSC" value="C17407" x="10.16" y="66.675" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="RC1206FR-07100KL" x="10.16" y="66.675" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="8.128" y="66.802" size="0.8128" layer="25" ratio="18" rot="R180"/>
-<attribute name="VALUE" x="10.033" y="65.532" size="1.016" layer="27" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="11.938" y="68.707" size="1.016" layer="27" ratio="10" rot="R180"/>
 </element>
-<element name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" package="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky" x="23.495" y="36.195" smashed="yes" rot="R180">
+<element name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" package="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky||" x="23.495" y="36.195" smashed="yes" rot="R180">
 <attribute name="LCSC" value="C82544" x="23.495" y="36.195" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="621-1N5819HW-F" x="23.495" y="36.195" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="24.384" y="34.798" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="24.511" y="35.2298" size="0.4064" layer="27" rot="R180"/>
+<attribute name="NAME" x="20.895" y="37.149" size="0.4064" layer="25"/>
+<attribute name="VALUE" x="27.686" y="38.4048" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" package="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky" x="11.43" y="49.53" smashed="yes" rot="R180">
+<element name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" package="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky||" x="11.43" y="49.53" smashed="yes" rot="R180">
 <attribute name="LCSC" value="C82544" x="11.43" y="49.53" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="621-1N5819HW-F" x="11.43" y="49.53" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="12.319" y="48.133" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="12.446" y="51.308" size="0.4064" layer="27" rot="R180"/>
+<attribute name="VALUE" x="14.986" y="51.943" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" package="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky" x="6.985" y="60.96" smashed="yes" rot="R180">
+<element name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" package="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky||" x="6.985" y="60.96" smashed="yes" rot="R180">
 <attribute name="LCSC" value="C82544" x="6.985" y="60.96" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="621-1N5819HW-F" x="6.985" y="60.96" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="7.874" y="59.563" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="8.636" y="62.738" size="0.762" layer="27" rot="R180"/>
+<attribute name="VALUE" x="9.271" y="63.373" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="100nF" x="35.56" y="33.655" smashed="yes" rot="R180">
 <attribute name="ELECROW" value="C49678" x="35.56" y="33.655" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="LCSC" value="C49678" x="35.56" y="33.655" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="80-C1206C104K5R" x="35.56" y="33.655" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="36.83" y="32.385" size="1.27" layer="25" rot="R180"/>
+<attribute name="NAME" x="33.91" y="34.582" size="1.27" layer="25"/>
 <attribute name="SPICEPREFIX" value="C" x="35.56" y="33.655" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="43.18" y="34.29" size="1.27" layer="27" rot="R180"/>
+<attribute name="VALUE" x="36.83" y="33.02" size="1.27" layer="27"/>
 </element>
-<element name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100k" x="74.93" y="38.4429" rot="R90">
+<element name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100k" x="74.93" y="38.4429" smashed="yes" rot="R90">
 <attribute name="ELECROW" value="C17407" x="74.93" y="38.4429" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="LCSC" value="C17407" x="74.93" y="38.4429" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="RC1206FR-07100KL" x="74.93" y="38.4429" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="73.32780625" y="40.5683" size="1.27" layer="25"/>
 <attribute name="SPICEPREFIX" value="R" x="74.93" y="38.4429" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" x="76.4921" y="41.91" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="CON1" library="jumper" library_urn="urn:adsk.eagle:library:252" package="JP1" package3d_urn="urn:adsk.eagle:package:15455/1" value="BAT" x="23.495" y="67.945" rot="R90"/>
+<element name="CON1" library="jumper" library_urn="urn:adsk.eagle:library:252" package="JP1" package3d_urn="urn:adsk.eagle:package:15455/1" value="BATTERY" x="23.495" y="67.945" smashed="yes" rot="R90">
+<attribute name="NAME" x="20.964515625" y="69.5452" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="26.67" y="71.501" size="1.27" layer="27" ratio="10" rot="R180"/>
+</element>
 <element name="R18" library="rcl" package="R0805" value="1M" x="40.64" y="51.435" smashed="yes" rot="R180">
 <attribute name="ELECROW" value="C17514" x="40.64" y="51.435" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="LCSC" value="C17514" x="40.64" y="51.435" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="41.91" y="50.165" size="1.27" layer="25" rot="R180"/>
-<attribute name="VALUE" x="40.8813" y="53.6321" size="1.27" layer="27" rot="R180"/>
+<attribute name="VALUE" x="41.5163" y="53.6321" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R19" library="rcl" package="R0805" value="1M" x="45.085" y="51.435" smashed="yes">
 <attribute name="ELECROW" value="C17514" x="45.085" y="51.435" size="1.778" layer="27" display="off"/>
 <attribute name="LCSC" value="C17514" x="45.085" y="51.435" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="43.815" y="52.705" size="1.27" layer="25"/>
-<attribute name="VALUE" x="43.0784" y="52.29225" size="1.27" layer="27"/>
+<attribute name="VALUE" x="44.3484" y="52.29225" size="1.27" layer="27"/>
 </element>
-<element name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="10u" x="20.955" y="62.865">
+<element name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="10u" x="20.955" y="62.865" smashed="yes">
 <attribute name="ELECROW" value="C15850" x="20.955" y="62.865" size="1.778" layer="27" display="off"/>
 <attribute name="LCSC" value="C15850" x="20.955" y="62.865" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="77-VJ1206V106ZXQTBC" x="20.955" y="62.865" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="20.026709375" y="63.792" size="1.016" layer="25"/>
 <attribute name="SPICEPREFIX" value="C" x="20.955" y="62.865" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="19.955" y="64.14" size="1.016" layer="27"/>
 </element>
 <element name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="10u" x="21.59" y="49.53" rot="R180">
 <attribute name="ELECROW" value="C15850" x="21.59" y="49.53" size="1.778" layer="27" rot="R180" display="off"/>
@@ -5558,7 +5569,7 @@ design rules under a new name.</description>
 <attribute name="MPN" value="80-C1206C104K5R" x="53.34" y="51.435" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="56.245" y="53.735" size="1.016" layer="25" rot="R180"/>
 <attribute name="SPICEPREFIX" value="C" x="53.34" y="51.435" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="51.6923" y="49.3699" size="1.016" layer="27"/>
+<attribute name="VALUE" x="51.6923" y="52.5449" size="1.016" layer="27"/>
 </element>
 <element name="IC3" library="linear" library_urn="urn:adsk.eagle:library:262" package="SOT23" package3d_urn="urn:adsk.eagle:package:16489/2" value="MCP1703CB" x="31.115" y="42.545" smashed="yes" rot="R90">
 <attribute name="LCSC" value="C53352" x="31.115" y="42.545" size="1.778" layer="27" rot="R90" display="off"/>
@@ -5568,56 +5579,97 @@ design rules under a new name.</description>
 <element name="Z1" library="varistor" library_urn="urn:adsk.eagle:library:410" package="CT/CN0805" package3d_urn="urn:adsk.eagle:package:30598/1" value="VARISTOR" x="15.24" y="42.545" rot="R90">
 <attribute name="LCSC" value="C79709" x="15.24" y="42.545" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="Z2" library="varistor" library_urn="urn:adsk.eagle:library:410" package="CT/CN0805" package3d_urn="urn:adsk.eagle:package:30598/1" value="VARISTOR" x="15.24" y="31.75" rot="R90">
+<element name="Z2" library="varistor" library_urn="urn:adsk.eagle:library:410" package="CT/CN0805" package3d_urn="urn:adsk.eagle:package:30598/1" value="VARISTOR" x="15.24" y="31.75" smashed="yes" rot="R90">
 <attribute name="LCSC" value="C79709" x="15.24" y="31.75" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="14.54" y="33.577" size="1.016" layer="25"/>
+<attribute name="VALUE" x="17.24" y="25.17" size="1.016" layer="27" rot="R90"/>
 </element>
 <element name="J1" library="lpatiny" package="RJ12-STRAIGHT-I2C" value="RJ12STRAIGHT-I2C" x="85.09" y="67.945" rot="R180"/>
 <element name="J2" library="lpatiny" package="RJ12-STRAIGHT-I2C" value="RJ12STRAIGHT-I2C" x="68.58" y="67.945" rot="R180"/>
 <element name="J3" library="lpatiny" package="RJ12-STRAIGHT-I2C" value="RJ12STRAIGHT-I2C" x="52.07" y="67.945" rot="R180"/>
 <element name="J4" library="lpatiny" package="RJ12-STRAIGHT-I2C" value="RJ12STRAIGHT-I2C" x="35.56" y="67.945" rot="R180"/>
 <element name="CON2" library="lpatiny" package="DC_BARREL" value="JACK_DC_BARREL" x="-0.635" y="22.225" rot="R270"/>
-<element name="D4" library="diode" library_urn="urn:adsk.eagle:library:210" package="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky" x="23.495" y="31.115">
+<element name="D4" library="diode" library_urn="urn:adsk.eagle:library:210" package="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1" value="||Schottky" x="23.495" y="31.115" smashed="yes">
 <attribute name="LCSC" value="C82544" x="23.495" y="31.115" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="621-1N5819HW-F" x="23.495" y="31.115" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="20.895" y="32.069" size="1.27" layer="25"/>
+<attribute name="VALUE" x="19.855" y="31.99" size="1.27" layer="27"/>
 </element>
-<element name="U$1" library="lpatiny" package="SO8" value="M24512" x="85.09" y="45.72" rot="R90"/>
-<element name="R1" library="rcl" package="R0805" value="4.7k" x="93.98" y="62.865" rot="R90"/>
-<element name="R6" library="rcl" package="R0805" value="4.7k" x="97.155" y="62.865" rot="R90"/>
-<element name="RT1" library="resistor" package="R0805" value="4.7k" x="35.56" y="17.145"/>
-<element name="R9" library="rcl" package="R0805" value="1K" x="30.48" y="17.145"/>
-<element name="X3" library="con-lumberg" package="1503_09" value="1503_09" x="34.925" y="1.27" rot="R180">
+<element name="U$1" library="lpatiny" package="SO8" value="M24512" x="85.09" y="45.72" smashed="yes" rot="R90">
+<attribute name="NAME" x="83.4208625" y="46.5582" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="88.265" y="47.752" size="1.27" layer="27" ratio="10" rot="R180"/>
+</element>
+<element name="R1" library="rcl" package="R0805" value="4.7k" x="93.98" y="62.865" smashed="yes" rot="R90">
+<attribute name="NAME" x="92.815175" y="64.9904" size="1.27" layer="25"/>
+<attribute name="VALUE" x="95.885" y="60.325" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R6" library="rcl" package="R0805" value="4.7k" x="97.155" y="62.865" smashed="yes" rot="R90">
+<attribute name="NAME" x="95.990175" y="64.9904" size="1.27" layer="25"/>
+<attribute name="VALUE" x="98.425" y="66.675" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="RT1" library="resistor" package="R0805" value="4.7k" x="35.56" y="17.145" smashed="yes">
+<attribute name="NAME" x="33.5616" y="18.2804" size="1.27" layer="25"/>
+<attribute name="VALUE" x="34.29" y="18.415" size="1.27" layer="27"/>
+</element>
+<element name="R9" library="rcl" package="R0805" value="1K" x="30.48" y="17.145" smashed="yes">
+<attribute name="NAME" x="28.4816" y="18.2804" size="1.27" layer="25"/>
+<attribute name="VALUE" x="29.845" y="18.415" size="1.27" layer="27"/>
+</element>
+<element name="X3" library="con-lumberg" package="1503_09" value="" x="34.925" y="1.27" rot="R180">
 <attribute name="MF" value="" x="57.15" y="-3.175" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="57.15" y="-3.175" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_FARNELL" value="1243244" x="57.15" y="-3.175" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="57.15" y="-3.175" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R2" library="rcl" package="R0805" value="100" x="40.64" y="17.145"/>
-<element name="RT3" library="resistor" package="R0805" value="4.7k" x="25.4" y="17.145"/>
+<element name="R2" library="rcl" package="R0805" value="100" x="40.64" y="17.145" smashed="yes">
+<attribute name="NAME" x="38.6416" y="18.2804" size="1.27" layer="25"/>
+<attribute name="VALUE" x="39.37" y="18.415" size="1.27" layer="27"/>
+</element>
+<element name="RT3" library="resistor" package="R0805" value="4.7k" x="25.4" y="17.145" smashed="yes">
+<attribute name="NAME" x="23.4016" y="18.2804" size="1.27" layer="25"/>
+<attribute name="VALUE" x="24.13" y="18.415" size="1.27" layer="27"/>
+</element>
 <element name="R7" library="rcl" package="R0805" value="1K" x="64.77" y="24.13" rot="R180"/>
-<element name="X4" library="con-lumberg" package="1503_09" value="1503_09" x="22.225" y="1.27" rot="R180">
+<element name="X4" library="con-lumberg" package="1503_09" value="" x="22.225" y="1.27" rot="R180">
 <attribute name="MF" value="" x="44.45" y="-15.24" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="44.45" y="-15.24" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_FARNELL" value="1243244" x="44.45" y="-15.24" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="44.45" y="-15.24" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R13" library="rcl" package="R0805" value="100" x="19.685" y="17.145" rot="R180"/>
-<element name="R14" library="rcl" package="R0805" value="10k" x="33.02" y="29.845">
+<element name="R13" library="rcl" package="R0805" value="100" x="19.685" y="17.145" smashed="yes" rot="R180">
+<attribute name="NAME" x="17.6866" y="18.2804" size="1.27" layer="25"/>
+<attribute name="VALUE" x="18.3216" y="18.2804" size="1.27" layer="27"/>
+</element>
+<element name="R14" library="rcl" package="R0805" value="10k" x="33.02" y="29.845" smashed="yes">
 <attribute name="ELECROW" value="C17513" x="33.02" y="29.845" size="1.778" layer="27" display="off"/>
 <attribute name="LCSC" value="C17513" x="33.02" y="29.845" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="31.0216" y="30.9804" size="1.27" layer="25"/>
+<attribute name="VALUE" x="31.75" y="31.115" size="1.27" layer="27"/>
 </element>
-<element name="R16" library="rcl" package="R0805" value="10k" x="38.735" y="29.845">
+<element name="R16" library="rcl" package="R0805" value="10k" x="38.735" y="29.845" smashed="yes">
 <attribute name="ELECROW" value="C17513" x="38.735" y="29.845" size="1.778" layer="27" display="off"/>
 <attribute name="LCSC" value="C17513" x="38.735" y="29.845" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="36.7366" y="30.9804" size="1.27" layer="25"/>
+<attribute name="VALUE" x="37.465" y="30.48" size="1.27" layer="27"/>
 </element>
-<element name="RT2" library="resistor" package="R0805" value="4.7k" x="62.23" y="10.16" rot="R90"/>
-<element name="R8" library="rcl" package="R0805" value="1K" x="58.42" y="12.7"/>
-<element name="X5" library="con-lumberg" package="1503_09" value="1503_09" x="47.625" y="1.27" rot="R180">
+<element name="RT2" library="resistor" package="R0805" value="4.7k" x="62.23" y="10.16" smashed="yes" rot="R90">
+<attribute name="NAME" x="61.2216" y="12.2854" size="1.27" layer="25"/>
+<attribute name="VALUE" x="64.77" y="8.89" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R8" library="rcl" package="R0805" value="1K" x="58.42" y="12.7" smashed="yes">
+<attribute name="NAME" x="56.4216" y="13.8354" size="1.27" layer="25"/>
+<attribute name="VALUE" x="57.15" y="13.97" size="1.27" layer="27"/>
+</element>
+<element name="X5" library="con-lumberg" package="1503_09" value="" x="47.625" y="1.27" rot="R180">
 <attribute name="MF" value="" x="69.85" y="-15.875" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="69.85" y="-15.875" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_FARNELL" value="1243244" x="69.85" y="-15.875" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="69.85" y="-15.875" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R10" library="rcl" package="R0805" value="100" x="58.42" y="7.62"/>
+<element name="R10" library="rcl" package="R0805" value="100" x="58.42" y="7.62" smashed="yes">
+<attribute name="NAME" x="56.4216" y="8.7554" size="1.27" layer="25"/>
+<attribute name="VALUE" x="57.15" y="8.89" size="1.27" layer="27"/>
+</element>
 <element name="JP1" library="SparkFun" package="MOLEX-1X6-RA" value="" x="89.535" y="6.35" rot="R90"/>
 </elements>
 <signals>
