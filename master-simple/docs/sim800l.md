@@ -4,16 +4,19 @@ sim800l can be connected to an Arduino in order to transmit data on GPRS.
 
 The library 'TinyGSMClient' seems really good and works with LilyPad USB.
 
-We nee to take care about the sim card so that the cutted edge point towards
+We need to take care about the sim card so that the cutted edge point towards
 outside of the holder !!!!
 
 We should provide power between 3.4 and 4.4v. LiPo battery is of course optimal.
+Here is the description of the connection between a master-simple and the sim800l.
+
+<img src='sim800l.jpg' />
 
 sim800l seems not to provide HTTPS. 
 
-We have created a simple test link: http://www.cheminfo.org/hello.txt
+We have created a simple test link: http://www.cheminfo.org/hello.txt that allows to check the connection.
 
-We still need to create a webservice to add data in the database
+We still need to create a webservice to add data in the database and we didn't try yet MQTT.
 
 ## testing sim800l
 
