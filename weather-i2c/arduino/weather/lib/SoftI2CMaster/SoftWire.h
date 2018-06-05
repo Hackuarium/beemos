@@ -20,7 +20,7 @@
 #ifndef _SoftWire_h
 #define _SoftWire_h
 
-#include <SoftI2CMaster.h>
+#include "SoftI2CMaster.h"
 #include <inttypes.h>
 #include "Stream.h"
 
