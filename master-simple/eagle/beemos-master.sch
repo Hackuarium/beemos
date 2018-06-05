@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.0">
+<eagle version="8.7.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -17664,8 +17664,8 @@ communication</text>
 <instance part="GND2" gate="1" x="0" y="170.18" rot="R180"/>
 <instance part="GND7" gate="1" x="45.72" y="167.64" rot="R180"/>
 <instance part="P+2" gate="G$1" x="73.66" y="215.9"/>
-<instance part="R1" gate="G$1" x="185.42" y="147.32" rot="R90"/>
-<instance part="R6" gate="G$1" x="193.04" y="147.32" rot="R90"/>
+<instance part="R1" gate="G$1" x="185.42" y="152.4" rot="R90"/>
+<instance part="R6" gate="G$1" x="193.04" y="152.4" rot="R90"/>
 <instance part="P+3" gate="G$1" x="96.52" y="200.66"/>
 <instance part="P+4" gate="G$1" x="106.68" y="205.74"/>
 <instance part="GND11" gate="1" x="241.3" y="195.58" rot="R270"/>
@@ -17688,7 +17688,7 @@ communication</text>
 <attribute name="LCSC" x="66.04" y="91.44" size="1.778" layer="96" display="off"/>
 <attribute name="ELECROW" x="66.04" y="91.44" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="SUPPLY1" gate="G$1" x="195.58" y="157.48"/>
+<instance part="SUPPLY1" gate="G$1" x="195.58" y="162.56"/>
 <instance part="GND3" gate="1" x="238.76" y="86.36" rot="R270"/>
 <instance part="RT2" gate="G$1" x="236.22" y="96.52" rot="R180"/>
 <instance part="R8" gate="G$1" x="220.98" y="91.44" rot="MR180"/>
@@ -18000,6 +18000,7 @@ communication</text>
 <pinref part="IC1" gate="G$1" pin="PF5(ADC5/TMS)"/>
 <wire x1="160.02" y1="208.28" x2="175.26" y2="208.28" width="0.1524" layer="91"/>
 <label x="170.18" y="208.28" size="1.778" layer="95"/>
+<junction x="160.02" y="208.28"/>
 </segment>
 </net>
 <net name="A3" class="0">
@@ -18007,6 +18008,7 @@ communication</text>
 <pinref part="IC1" gate="G$1" pin="PF4(ADC4/TCK)"/>
 <wire x1="160.02" y1="210.82" x2="175.26" y2="210.82" width="0.1524" layer="91"/>
 <label x="170.18" y="210.82" size="1.778" layer="95"/>
+<junction x="160.02" y="210.82"/>
 </segment>
 </net>
 <net name="A4" class="0">
@@ -18014,6 +18016,7 @@ communication</text>
 <pinref part="IC1" gate="G$1" pin="PF1(ADC1)"/>
 <wire x1="160.02" y1="213.36" x2="175.26" y2="213.36" width="0.1524" layer="91"/>
 <label x="170.18" y="213.36" size="1.778" layer="95"/>
+<junction x="160.02" y="213.36"/>
 </segment>
 </net>
 <net name="A5" class="0">
@@ -18021,6 +18024,7 @@ communication</text>
 <pinref part="IC1" gate="G$1" pin="PF0(ADC0)"/>
 <wire x1="160.02" y1="215.9" x2="175.26" y2="215.9" width="0.1524" layer="91"/>
 <label x="170.18" y="215.9" size="1.778" layer="95"/>
+<junction x="160.02" y="215.9"/>
 </segment>
 <segment>
 <pinref part="R14" gate="G$1" pin="2"/>
@@ -18036,6 +18040,7 @@ communication</text>
 <pinref part="IC1" gate="G$1" pin="PF6(ADC6/TDO)"/>
 <wire x1="160.02" y1="205.74" x2="175.26" y2="205.74" width="0.1524" layer="91"/>
 <label x="170.18" y="205.74" size="1.778" layer="95"/>
+<junction x="160.02" y="205.74"/>
 </segment>
 </net>
 <net name="D5" class="0">
@@ -18109,8 +18114,10 @@ communication</text>
 <net name="SDA" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PD1(INT1/SDA)"/>
-<wire x1="160.02" y1="144.78" x2="175.26" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="144.78" x2="185.42" y2="144.78" width="0.1524" layer="91"/>
 <label x="170.18" y="144.78" size="1.778" layer="95"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="185.42" y1="147.32" x2="185.42" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="SDA"/>
@@ -18140,15 +18147,6 @@ communication</text>
 </net>
 <net name="SCL" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="PD0(INT0/OC0B/SCL)"/>
-<wire x1="160.02" y1="142.24" x2="185.42" y2="142.24" width="0.1524" layer="91"/>
-<label x="170.18" y="142.24" size="1.778" layer="95"/>
-<pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="193.04" y1="142.24" x2="185.42" y2="142.24" width="0.1524" layer="91"/>
-<junction x="185.42" y="142.24"/>
-</segment>
-<segment>
 <pinref part="U$1" gate="G$1" pin="SCL"/>
 <wire x1="27.94" y1="162.56" x2="45.72" y2="162.56" width="0.1524" layer="91"/>
 <label x="44.958" y="164.338" size="1.016" layer="95" rot="R180"/>
@@ -18172,6 +18170,13 @@ communication</text>
 <pinref part="J3" gate="G$1" pin="2"/>
 <wire x1="101.6" y1="27.94" x2="91.44" y2="27.94" width="0.1524" layer="91"/>
 <label x="91.44" y="27.94" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="PD0(INT0/OC0B/SCL)"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="160.02" y1="142.24" x2="193.04" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="142.24" x2="193.04" y2="147.32" width="0.1524" layer="91"/>
+<label x="170.18" y="142.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TX" class="0">
@@ -18203,6 +18208,7 @@ communication</text>
 <pinref part="IC1" gate="G$1" pin="PE6(INT.6/AIN0)"/>
 <wire x1="160.02" y1="195.58" x2="175.26" y2="195.58" width="0.1524" layer="91"/>
 <label x="170.18" y="195.58" size="1.778" layer="95"/>
+<junction x="160.02" y="195.58"/>
 </segment>
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
@@ -18244,6 +18250,7 @@ communication</text>
 <pinref part="IC1" gate="G$1" pin="PF7(ADC7(TDI)"/>
 <wire x1="160.02" y1="203.2" x2="175.26" y2="203.2" width="0.1524" layer="91"/>
 <label x="170.18" y="203.2" size="1.778" layer="95"/>
+<junction x="160.02" y="203.2"/>
 </segment>
 </net>
 <net name="D12" class="0">
@@ -18286,6 +18293,7 @@ communication</text>
 <pinref part="IC1" gate="G$1" pin="PE2(!HWB)"/>
 <wire x1="160.02" y1="198.12" x2="175.26" y2="198.12" width="0.1524" layer="91"/>
 <label x="170.18" y="198.12" size="1.778" layer="95"/>
+<junction x="160.02" y="198.12"/>
 </segment>
 </net>
 <net name="N$42" class="0">
@@ -18398,11 +18406,11 @@ communication</text>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="185.42" y1="152.4" x2="193.04" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="152.4" x2="195.58" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="157.48" x2="193.04" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="157.48" x2="195.58" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="G$1" pin="VDD"/>
-<wire x1="195.58" y1="154.94" x2="195.58" y2="152.4" width="0.1524" layer="91"/>
-<junction x="193.04" y="152.4"/>
+<wire x1="195.58" y1="160.02" x2="195.58" y2="157.48" width="0.1524" layer="91"/>
+<junction x="193.04" y="157.48"/>
 </segment>
 </net>
 <net name="ISP+5V" class="0">
@@ -18580,6 +18588,8 @@ communication</text>
 <segment>
 <pinref part="R16" gate="G$1" pin="2"/>
 <wire x1="71.12" y1="91.44" x2="73.66" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="STAT"/>
+<junction x="73.66" y="91.44"/>
 </segment>
 </net>
 <net name="N$8" class="1">
