@@ -1,3 +1,4 @@
+ 
 #define SDA_PORT PORTB
 #define SDA_PIN 1
 #define SCL_PORT PORTB
@@ -40,5 +41,4 @@ void getPressureTemperature() {
   }
 
 }
-
 

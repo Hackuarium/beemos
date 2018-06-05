@@ -8,9 +8,9 @@ NIL_THREAD(ThreadMonitoring, arg) {
 
   pinMode(MONITORING_LED, OUTPUT);
 
-  #ifdef WATCH_DOG
-    wdt_enable(WATCH_DOG);  //activate the watchdog
-  #endif
+#ifdef WATCH_DOG
+  wdt_enable(WATCH_DOG);  //activate the watchdog
+#endif
   while (TRUE) {
     wdt_reset();//reset avoids automatic reboot
     digitalWrite(MONITORING_LED, HIGH);
@@ -25,22 +25,22 @@ NIL_THREADS_TABLE_BEGIN()
 // the order should be exact, Acquisition has the higher priority ...
 
 
- NIL_THREADS_TABLE_ENTRY(NULL, ThreadTemperature, NULL, waThreadTemperature, sizeof(waThreadTemperature))
+NIL_THREADS_TABLE_ENTRY(NULL, ThreadTemperature, NULL, waThreadTemperature, sizeof(waThreadTemperature))
 
- NIL_THREADS_TABLE_ENTRY(NULL, ThreadHumidity, NULL, waThreadHumidity, sizeof(waThreadHumidity))
+NIL_THREADS_TABLE_ENTRY(NULL, ThreadHumidity, NULL, waThreadHumidity, sizeof(waThreadHumidity))
 
 #ifdef THR_SERIAL
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadSerial, NULL, waThreadSerial, sizeof(waThreadSerial))
 #endif
 
 #ifdef THR_LOGGER
- NIL_THREADS_TABLE_ENTRY(NULL, ThreadLogger, NULL, waThreadLogger, sizeof(waThreadLogger))
+NIL_THREADS_TABLE_ENTRY(NULL, ThreadLogger, NULL, waThreadLogger, sizeof(waThreadLogger))
 #endif
 
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadLuminosity, NULL, waThreadLuminosity, sizeof(waThreadLuminosity))
 
 
-NIL_THREADS_TABLE_ENTRY(NULL, ThreadPressure, NULL, waThreadPressure, sizeof(waThreadPressure))
+ NIL_THREADS_TABLE_ENTRY(NULL, ThreadPressure, NULL, waThreadPressure, sizeof(waThreadPressure))
 
 #ifdef PARAM_SLEEP_DELAY
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadSleep, NULL, waThreadSleep, sizeof(waThreadSleep))

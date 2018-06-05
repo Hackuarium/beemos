@@ -14,7 +14,7 @@ void getTemperature(OneWire &ow, int parameter);
 void startTemperatureAcquisition(OneWire &ow);
 
 
-NIL_WORKING_AREA(waThreadTemperature, 160);
+NIL_WORKING_AREA(waThreadTemperature, 80);
 
 NIL_THREAD(ThreadTemperature, arg) {
 

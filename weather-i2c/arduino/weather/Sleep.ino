@@ -2,7 +2,7 @@
 
 #include <avr/sleep.h>
 
-NIL_WORKING_AREA(waThreadSleep, 16);
+NIL_WORKING_AREA(waThreadSleep, 0);
 
 NIL_THREAD(ThreadSleep, arg) {
 
