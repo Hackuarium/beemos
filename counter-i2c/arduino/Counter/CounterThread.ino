@@ -2,6 +2,7 @@
 
 
 byte current[16];
+byte background[16];
 byte difference[16];
 
 byte out[] = {1, 0, 7, 2, 6, 3, 5, 4, 8, 9, 15, 10, 14, 11, 13, 12};
@@ -24,12 +25,10 @@ byte in[] = {6, 7, 0, 5, 1, 4, 2, 3, 8, 9, 14, 15, 12, 13, 10, 11};
 NIL_WORKING_AREA(waThreadCounter, 120);
 NIL_THREAD(ThreadCounter, arg) {
   initCounter();
-  initMax();
-  initMin();
+  initBackground();
   while (true) {
     updateCounter();
-    updateMax();
-    updateMin();
+    updateBackground();
     updateTotal();
   }
 }
@@ -51,6 +50,12 @@ void initCounter() {
 
 
 void updateCounter() {
+  // this warming up is required in order to have the correct value for the first receiver
+  for (byte i = 0; i < sizeof(out); i++) {
+    setOutput(out[i]);
+    setInput(in[i]);
+    nilThdSleepMilliseconds(1);
+  }
   for (byte i = 0; i < sizeof(out); i++) {
     setOutput(out[i]);
     setInput(in[i]);
@@ -59,7 +64,7 @@ void updateCounter() {
     difference[i] = (byte)abs(current[i] - currentValue);
     current[i] = currentValue;;
   }
-  nilThdSleepMilliseconds(40);
+  nilThdSleepMilliseconds(10);
 }
 
 
@@ -77,6 +82,35 @@ void printCounter(Print* output) {
     nilThdSleepMilliseconds(getParameter(PARAM_DEBUG_DELAY));
   }
 }
+
+/**
+   We will show if we are over or under the threshold
+*/
+void printGateInfo(Print* output) {
+  int diff1 = 0;
+  int diff2 = 0;
+  output->println("Start gate monitoring");
+  for (byte k = 0; k < getParameter(PARAM_DEBUG_REPEAT); k++) {
+    for (byte i = 0; i < sizeof(out); i = i + 2) {
+      diff1 = background[i] - current[i];
+      diff2 = background[i + 1] - current[i + 1];
+      if ((abs(diff1) >=  getParameter(PARAM_THRESHOLD)) || (abs(diff2) >=  getParameter(PARAM_THRESHOLD))) {
+        output->print("Gate ");
+        output->print(i / 2 + 1);
+        output->print(" - Inside: ");
+        output->print(diff1);
+        if (diff1 < 10) output->print(" ");
+        output->print(" - Outside: ");
+        output->print(diff2);
+        if (diff2 < 10) output->print(" ");
+        output->println("");
+      }
+    }
+    nilThdSleepMilliseconds(getParameter(PARAM_DEBUG_DELAY));
+  }
+  output->println("End gate monitoring");
+}
+
 
 
 // Enable Output pins based on binary value of input i.

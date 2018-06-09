@@ -41,6 +41,7 @@
 #define PARAM_DEBUG_REPEAT        22
 #define PARAM_DEBUG_DELAY         23
 #define PARAM_LOGGING_INTERVAL    24    // minimal 300s to prevent desctruction of EEPROM. Should last 22 years with 300s
+#define PARAM_DEBUG_PRINT         25
 
 // you may write in EEPROM max 100'000 times
 // 100'000 * 300 * 24 (number of line of log) / 365 / 86400
@@ -50,12 +51,12 @@
 
 void resetParameters() { // turn all parameters to 0
   setAndSaveParameter(PARAM_SECONDS, 0);
-  setAndSaveParameter(PARAM_THRESHOLD, 20);
-  setAndSaveParameter(PARAM_THRESHOLD_RESET, 10);
-  setAndSaveParameter(PARAM_DEBUG_REPEAT, 20);
+  setAndSaveParameter(PARAM_THRESHOLD, 5);
+  setAndSaveParameter(PARAM_THRESHOLD_RESET, 2);
+  setAndSaveParameter(PARAM_DEBUG_REPEAT, 50);
   setAndSaveParameter(PARAM_DEBUG_DELAY, 500);
   setAndSaveParameter(PARAM_LOGGING_INTERVAL, 3600);
-
+  setAndSaveParameter(PARAM_DEBUG_PRINT, 0);
 
   formatLog();
   setQualifier(32767);

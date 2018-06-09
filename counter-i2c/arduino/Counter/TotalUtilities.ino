@@ -5,24 +5,35 @@ byte gateStatus[] = {0, 0, 0, 0, 0, 0, 0, 0};
 #define FIRST_PARAM_FOR_GATE 2
 
 void updateTotal() {
+  boolean debug = getParameter(PARAM_DEBUG_PRINT) == 1 ? true : false;
   for (byte gate = 0; gate < 8; gate++) {
     byte parameterID = gate * 2 + FIRST_PARAM_FOR_GATE;
-    int inside = abs((int)currentMin[gate * 2] - (int) current[gate * 2]);
-    int outside = abs((int) currentMin[gate * 2 + 1] - (int) current[gate * 2 + 1]);
+    int inside = abs((int)background[gate * 2] - (int) current[gate * 2]);
+    int outside = abs((int) background[gate * 2 + 1] - (int) current[gate * 2 + 1]);
 
 
     if (gateStatus[gate] == 0) {
       if (inside > getParameter(PARAM_THRESHOLD)) {
         if (outside > getParameter(PARAM_THRESHOLD)) { // both at the same time
           gateStatus[gate] = 3;
-        } else { // from inside to outside
+        } else { // from outside to inside
           gateStatus[gate] = 1;
           setParameter(parameterID, getParameter(parameterID) + 1);
+          if (debug) {
+            Serial.print("Gate ");
+            Serial.print(gate + 1);
+            Serial.println(": IN");
+          }
         }
       } else {
-        if (outside > getParameter(PARAM_THRESHOLD)) { // from outside to inside
+        if (outside > getParameter(PARAM_THRESHOLD)) { // from inside to outside
           gateStatus[gate] = 2;
           setParameter(parameterID + 1, getParameter(parameterID + 1) + 1);
+          if (debug) {
+            Serial.print("Gate ");
+            Serial.print(gate + 1);
+            Serial.println(": OUT");
+          }
         }
       }
     } else {
