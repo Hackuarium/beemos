@@ -1,12 +1,12 @@
 /**************************************************************
- *
- * To run this tool you need StreamDebugger library:
- *   https://github.com/vshymanskyy/StreamDebugger
- *   or from http://librarymanager/all#StreamDebugger
- *
- * TinyGSM Getting Started guide:
- *   http://tiny.cc/tiny-gsm-readme
- *
+
+   To run this tool you need StreamDebugger library:
+     https://github.com/vshymanskyy/StreamDebugger
+     or from http://librarymanager/all#StreamDebugger
+
+   TinyGSM Getting Started guide:
+     http://tiny.cc/tiny-gsm-readme
+
  **************************************************************/
 
 // Select your modem:
@@ -48,7 +48,7 @@ void setup() {
 void loop() {
   // Restart takes quite some time
   // To skip it, call init() instead of restart()
-  SerialMon.print("Initializing modem...");
+  SerialMon.println("Initializing modem...");
   if (!modem.restart()) {
     delay(10000);
   }
@@ -56,7 +56,7 @@ void loop() {
     delay(10000);
     return;
   }
-  
+
   if (!modem.gprsConnect(apn, user, pass)) {
     delay(10000);
     return;
@@ -72,6 +72,8 @@ void loop() {
   client.print(String("GET ") + resource + " HTTP/1.0\r\n");
   client.print(String("Host: ") + server + "\r\n");
   client.print("Connection: close\r\n\r\n");
+
+  delay(10); // the skip all headers fails without this delay
 
   // Skip all headers
   client.find("\r\n\r\n");

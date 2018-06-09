@@ -1,12 +1,12 @@
 /**************************************************************
- *
- * TinyGSM Getting Started guide:
- *   http://tiny.cc/tiny-gsm-readme
- *
- * NOTE:
- * Some of the functions may be unavailable for your modem.
- * Just comment them out.
- *
+
+   TinyGSM Getting Started guide:
+     http://tiny.cc/tiny-gsm-readme
+
+   NOTE:
+   Some of the functions may be unavailable for your modem.
+   Just comment them out.
+
  **************************************************************/
 
 // Select your modem:
@@ -32,24 +32,20 @@
 //#define DUMP_AT_COMMANDS
 #define TINY_GSM_DEBUG SerialMon
 
-// Set phone numbers, if you want to test SMS and Calls
-//#define SMS_TARGET  "+380xxxxxxxxx"
-//#define CALL_TARGET "+380xxxxxxxxx"
-
 // Your GPRS credentials
 // Leave empty, if missing user or pass
-const char apn[]  = "sunrise";
+const char apn[]  = "gprs.swisscom.ch"; // gprs.swisscom.ch or sunrise
 const char user[] = "";
 const char pass[] = "";
 
 #include <TinyGsmClient.h>
 
 #ifdef DUMP_AT_COMMANDS
-  #include <StreamDebugger.h>
-  StreamDebugger debugger(SerialAT, SerialMon);
-  TinyGsm modem(debugger);
+#include <StreamDebugger.h>
+StreamDebugger debugger(SerialAT, SerialMon);
+TinyGsm modem(debugger);
 #else
-  TinyGsm modem(SerialAT);
+TinyGsm modem(SerialAT);
 #endif
 
 void setup() {
@@ -57,12 +53,10 @@ void setup() {
   SerialMon.begin(19200);
   delay(10);
 
-  // Set your reset, enable, power pins here
-
+  SerialAT.begin(19200);
+  TinyGsm modem(SerialAT);
   delay(3000);
 
-  // Set GSM module baud rate
-  TinyGsmAutoBaud(SerialAT);
 }
 
 void loop() {
@@ -107,7 +101,7 @@ void loop() {
 
   String cop = modem.getOperator();
   DBG("Operator:", cop);
-  
+
   IPAddress local = modem.localIP();
   DBG("Local IP:", local);
 
@@ -162,7 +156,7 @@ void loop() {
     modem.dtmfSend('A', 1000);
 
     // Play DTMF 0..4, default duration (100ms)
-    for (char tone='0'; tone<='4'; tone++) {
+    for (char tone = '0'; tone <= '4'; tone++) {
       modem.dtmfSend(tone);
     }
 

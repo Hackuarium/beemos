@@ -1,12 +1,12 @@
 /**************************************************************
- *
- * To run this tool you need StreamDebugger library:
- *   https://github.com/vshymanskyy/StreamDebugger
- *   or from http://librarymanager/all#StreamDebugger
- *
- * TinyGSM Getting Started guide:
- *   http://tiny.cc/tiny-gsm-readme
- *
+
+   To run this tool you need StreamDebugger library:
+     https://github.com/vshymanskyy/StreamDebugger
+     or from http://librarymanager/all#StreamDebugger
+
+   TinyGSM Getting Started guide:
+     http://tiny.cc/tiny-gsm-readme
+
  **************************************************************/
 
 // Select your modem:
@@ -18,11 +18,10 @@
 
 #include <TinyGsmClient.h>
 
-const char apn[]  = "sunrise";
+const char apn[]  = "gprs.swisscom.ch";  // sunrise or gprs.swisscom.ch
 const char user[] = "";
 const char pass[] = "";
 
-// Set serial for debug console (to the Serial Monitor, speed 115200)
 #define SerialMon Serial
 
 // Set serial for AT commands (to the module)
@@ -34,38 +33,47 @@ TinyGsm modem(SerialAT);
 TinyGsmClient client(modem);
 
 const char server[] = "www.cheminfo.org";
-const char resource[] = "/hello.txt";
+const char resource[] = "/hello.txt?a=ABCDEFGHIJKLMNOPQRSTUVWXYZ&b=ABCDEFGHIJKLMNOPQRSTUVWXYZ&c=ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+int success = 0;
+int trial = 0;
 
 void setup() {
   SerialMon.begin(19200);
   delay(10);
 
-  // Set GSM module baud rate
   SerialAT.begin(19200);
   delay(3000);
 }
 
 void loop() {
+  delay(10000);
+  trial++;
+  long start = millis();
   // Restart takes quite some time
   // To skip it, call init() instead of restart()
   SerialMon.println("Initializing modem...");
   if (!modem.restart()) {
-    delay(10000);
+    SerialMon.println("Could not restart");
+    return;
   }
+
   SerialMon.println("Restarted");
   if (!modem.waitForNetwork()) {
-    delay(10000);
+    SerialMon.println("Could not join network");
     return;
   }
-    SerialMon.println("On network");
+
+  SerialMon.println("On network");
   if (!modem.gprsConnect(apn, user, pass)) {
-    delay(10000);
+    SerialMon.println("Could not connect to GPRS");
     return;
   }
+
   SerialMon.println("GPRS connected");
+  delay(5000);
   if (!client.connect(server, 80)) {
-    SerialMon.println(" fail");
-    delay(10000);
+    SerialMon.println("Could not connect to server");
     return;
   }
 
@@ -77,8 +85,10 @@ void loop() {
   client.println(server);
   client.println("");
 
+  delay(20);
+
   // Skip all headers
-  client.find("\r\n\r\n");
+  //client.find("\r\n\r\n");
 
   // Read data
   unsigned long timeout = millis();
@@ -91,13 +101,22 @@ void loop() {
       timeout = millis();
     }
   }
-
+  if (bytesReceived == 13) {
+    success++;
+  }
+  SerialMon.println(bytesReceived);
   client.stop();
   modem.gprsDisconnect();
   SerialMon.println("GPRS disconnected");
 
+  SerialMon.print("TOTAL TIME: ");
+  SerialMon.print((millis() - start) / 1000);
+  SerialMon.println(" s");
+  SerialMon.print("Nb success: ");
+  SerialMon.println(success);
+  SerialMon.print("Nb failure: ");
+  SerialMon.println(trial - success);
 
 
-    delay(10000);
 }
 
