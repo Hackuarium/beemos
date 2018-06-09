@@ -19488,7 +19488,8 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="55.88" y1="198.12" x2="-15.24" y2="198.12" width="1.524" layer="94"/>
 <text x="0" y="187.96" size="5.08" layer="91">MEMORY</text>
 <wire x1="205.74" y1="233.68" x2="292.1" y2="233.68" width="1.27" layer="94"/>
-<wire x1="205.74" y1="7.62" x2="292.1" y2="7.62" width="1.27" layer="94"/>
+<wire x1="205.74" y1="7.62" x2="246.38" y2="7.62" width="1.27" layer="94"/>
+<wire x1="246.38" y1="7.62" x2="292.1" y2="7.62" width="1.27" layer="94"/>
 <wire x1="292.1" y1="7.62" x2="292.1" y2="129.54" width="1.27" layer="94"/>
 <wire x1="292.1" y1="129.54" x2="292.1" y2="233.68" width="1.27" layer="94"/>
 <wire x1="205.74" y1="129.54" x2="292.1" y2="129.54" width="1.27" layer="94"/>
@@ -19496,8 +19497,12 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 communication</text>
 <text x="213.36" y="119.38" size="5.08" layer="91">Humidity</text>
 <wire x1="142.24" y1="7.62" x2="142.24" y2="68.58" width="1.27" layer="94"/>
-<wire x1="142.24" y1="68.58" x2="292.1" y2="68.58" width="1.27" layer="94"/>
+<wire x1="142.24" y1="68.58" x2="246.38" y2="68.58" width="1.27" layer="94"/>
 <text x="210.82" y="60.96" size="5.08" layer="91">Extra pins</text>
+<wire x1="246.38" y1="68.58" x2="292.1" y2="68.58" width="1.27" layer="94"/>
+<wire x1="246.38" y1="7.62" x2="246.38" y2="68.58" width="1.27" layer="94"/>
+<text x="248.92" y="53.34" size="5.08" layer="91">Power &amp; com 
+LEDs</text>
 </plain>
 <instances>
 <instance part="CON3" gate="G$1" x="17.78" y="210.82"/>
@@ -19709,13 +19714,13 @@ communication</text>
 <instance part="X6" gate="-6" x="223.52" y="33.02"/>
 <instance part="X6" gate="-7" x="223.52" y="30.48"/>
 <instance part="X6" gate="-8" x="223.52" y="27.94"/>
-<instance part="R17" gate="G$1" x="259.08" y="35.56" rot="R90"/>
-<instance part="LED1" gate="G$1" x="259.08" y="25.4"/>
-<instance part="P+7" gate="G$1" x="259.08" y="43.18"/>
-<instance part="GND4" gate="1" x="259.08" y="15.24"/>
-<instance part="R20" gate="G$1" x="274.32" y="35.56" rot="R90"/>
-<instance part="LED2" gate="G$1" x="274.32" y="25.4"/>
-<instance part="GND6" gate="1" x="274.32" y="15.24"/>
+<instance part="R17" gate="G$1" x="256.54" y="35.56" rot="R90"/>
+<instance part="LED1" gate="G$1" x="256.54" y="25.4"/>
+<instance part="P+7" gate="G$1" x="256.54" y="43.18"/>
+<instance part="GND4" gate="1" x="256.54" y="15.24"/>
+<instance part="R20" gate="G$1" x="281.94" y="38.1" rot="R90"/>
+<instance part="LED2" gate="G$1" x="281.94" y="27.94"/>
+<instance part="GND6" gate="1" x="281.94" y="17.78"/>
 </instances>
 <busses>
 </busses>
@@ -19938,12 +19943,12 @@ communication</text>
 <segment>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="259.08" y1="20.32" x2="259.08" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="20.32" x2="256.54" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED2" gate="G$1" pin="C"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="274.32" y1="20.32" x2="274.32" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="22.86" x2="281.94" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -20498,8 +20503,8 @@ communication</text>
 </segment>
 <segment>
 <pinref part="R20" gate="G$1" pin="2"/>
-<wire x1="274.32" y1="40.64" x2="274.32" y2="43.18" width="0.1524" layer="91"/>
-<label x="274.32" y="43.18" size="1.778" layer="95"/>
+<wire x1="281.94" y1="43.18" x2="281.94" y2="45.72" width="0.1524" layer="91"/>
+<label x="281.94" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D8" class="0">
@@ -20579,7 +20584,7 @@ communication</text>
 <segment>
 <pinref part="R17" gate="G$1" pin="2"/>
 <pinref part="P+7" gate="G$1" pin="3.3V"/>
-<wire x1="259.08" y1="40.64" x2="259.08" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="40.64" x2="256.54" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$21" class="1">
@@ -20698,14 +20703,14 @@ communication</text>
 <segment>
 <pinref part="LED1" gate="G$1" pin="A"/>
 <pinref part="R17" gate="G$1" pin="1"/>
-<wire x1="259.08" y1="27.94" x2="259.08" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="27.94" x2="256.54" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
 <pinref part="LED2" gate="G$1" pin="A"/>
 <pinref part="R20" gate="G$1" pin="1"/>
-<wire x1="274.32" y1="27.94" x2="274.32" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="30.48" x2="281.94" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
