@@ -9,7 +9,7 @@ void processSpecificCommand(char* data, char* paramValue, Print* output) {
     case 'c':
       printCounter(output);
       break;
-    case 'e':
+    case 'g':
       printGateInfo(output);
       break;
     case 'l':
@@ -24,7 +24,7 @@ void processSpecificCommand(char* data, char* paramValue, Print* output) {
 void printSpecificHelp(Print * output) {
   output->println(F("(b)ackground"));
   output->println(F("(c)ounter"));
-  output->println(F("(e) gate debug bg"));
+  output->println(F("(g)ate debug bg"));
   output->println(F("(l)og"));
 }
 

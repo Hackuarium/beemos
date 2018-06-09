@@ -89,6 +89,7 @@ void printCounter(Print* output) {
 void printGateInfo(Print* output) {
   int diff1 = 0;
   int diff2 = 0;
+  output->println("Start gate monitoring");
   for (byte k = 0; k < getParameter(PARAM_DEBUG_REPEAT); k++) {
     for (byte i = 0; i < sizeof(out); i = i + 2) {
       diff1 = background[i] - current[i];
@@ -96,19 +97,18 @@ void printGateInfo(Print* output) {
       if ((abs(diff1) >=  getParameter(PARAM_THRESHOLD)) || (abs(diff2) >=  getParameter(PARAM_THRESHOLD))) {
         output->print("Gate ");
         output->print(i / 2 + 1);
-        output->print(": ");
-        output->print("from bg ");
+        output->print(" - Inside: ");
+        output->print(diff1);
+        if (diff1 < 10) output->print(" ");
+        output->print(" - Outside: ");
+        output->print(diff2);
+        if (diff2 < 10) output->print(" ");
+        output->println("");
       }
-      output->print(diff1);
-      if (diff1 < 10) output->print(" ");
-      output->print(" ");
-      output->print(diff2);
-      if (diff2 < 10) output->print(" ");
-      output->println("");
     }
+    nilThdSleepMilliseconds(getParameter(PARAM_DEBUG_DELAY));
   }
-  nilThdSleepMilliseconds(200);
-  nilThdSleepMilliseconds(getParameter(PARAM_DEBUG_DELAY));
+  output->println("End gate monitoring");
 }
 
 
