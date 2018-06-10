@@ -18,7 +18,6 @@ written by Adafruit Industries
 
 // Define where debug output will be printed.
 #define DEBUG_PRINTER Serial
-
 // Setup debug printing macros.
 #ifdef DHT_DEBUG
   #define DEBUG_PRINT(...) { DEBUG_PRINTER.print(__VA_ARGS__); }
@@ -37,7 +36,7 @@ written by Adafruit Industries
 
 class DHT {
   public:
-   DHT(uint8_t pin, uint8_t type, uint8_t count=6);
+   DHT(uint8_t pin, uint8_t count=6);
    void begin(void);
    float readTemperature(bool force=false);
    float readHumidity(bool force=false);
@@ -45,7 +44,7 @@ class DHT {
 
  private:
   uint8_t data[5];
-  uint8_t _pin, _type;
+  uint8_t _pin;
   #ifdef __AVR
     // Use direct GPIO access on an 8-bit AVR so keep track of the port and bitmask
     // for the digital pin connected to the DHT.  Other platforms will use digitalRead.

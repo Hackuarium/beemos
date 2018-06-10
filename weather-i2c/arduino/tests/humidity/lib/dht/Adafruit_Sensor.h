@@ -16,7 +16,7 @@
 
 /* Update by K. Townsend (Adafruit Industries) for lighter typedefs, and
  * extended sensor support to include color, voltage and current */
- 
+
 #ifndef _ADAFRUIT_SENSOR_H
 #define _ADAFRUIT_SENSOR_H
 
@@ -42,6 +42,7 @@
 #define SENSORS_GAUSS_TO_MICROTESLA       (100)                   /**< Gauss to micro-Tesla multiplier */
 
 /** Sensor types */
+/*
 typedef enum
 {
   SENSOR_TYPE_LIGHT                 = (5),
@@ -49,7 +50,7 @@ typedef enum
   SENSOR_TYPE_RELATIVE_HUMIDITY     = (12),
   SENSOR_TYPE_AMBIENT_TEMPERATURE   = (13)
 } sensors_type_t;
-
+*/
 
 /* Sensor event (36 bytes) */
 /** struct sensor_event_s is used to provide a single sensor event in a common format. */
@@ -77,8 +78,8 @@ typedef struct
 {
     char     name[12];                        /**< sensor name */
     int32_t  version;                         /**< version of the hardware + driver */
-    int32_t  sensor_id;                       /**< unique sensor identifier */
-    int32_t  type;                            /**< this sensor's type (ex. SENSOR_TYPE_LIGHT) */
+    int32_t  sensor_id;
+		int32_t  type;                     /**< unique sensor identifier */
     float    max_value;                       /**< maximum value of this sensor's value in SI units */
     float    min_value;                       /**< minimum value of this sensor's value in SI units */
     float    resolution;                      /**< smallest difference between two values reported by this sensor */

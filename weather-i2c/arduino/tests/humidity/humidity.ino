@@ -6,10 +6,9 @@
 
 
 #define DHTPIN            6         // Pin which is connected to the DHT sensor.
-#define DHTTYPE           DHT22     // DHT 22 (AM2302)
 
 
-DHT_Unified dht(DHTPIN, DHTTYPE);
+DHT_Unified dht(DHTPIN);
 
 void setup() {
   pinMode(7, OUTPUT);
@@ -21,10 +20,8 @@ void setup() {
 int before, after;
 
 void loop() {
-  delay(before * 1000);
   digitalWrite(7, HIGH);
   dht.begin();
-  delay(after * 100);
   getHumidityTemperature();
   Serial.println("");
   digitalWrite(7, LOW);
