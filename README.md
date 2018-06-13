@@ -16,12 +16,14 @@ To achieve the above objective, the project follows a modular design with differ
 
 **Counter**: Counts bees entering and exiting the hive over time using infrared sensors.
 
-**Scale**: Weighs the hive periodically using 4 load cells..
+**Scale**: Weighs the hive periodically using 4 load cells.
 
-**Meteo station**: Monitors temperature, humidity and luminosity outside the hives.
+**Weather station**: Monitors temperature, humidity and luminosity outside the hives.
 
-**Master boardi**: Communicates with all other devices over I2C and sends the data to a remote server using a SIM card module. Also tracks temperature inside the hive.
+**Master board**: Communicates with all other devices over I2C and sends the data to a remote server using a SIM card module. Also tracks temperature inside the hive.
 
 
 # State of the project
-We have ordered PCBs, all elements of one board were soldered and a Arduino code was written to count entering/exiting bees and make logs for all gates using multithreading. We also built a first prototype for a laser cut enclosure which includes 8 individual gates that the bees will use to enter/exit the hive and an upper compartment for the board. We are getting close to test our first prototype in the field.
+We have designed and ordered the PCBs for the bee counter, weather station, scale and master boards. All elements of one board were soldered for the weather station and for the bee counter. We are waiting for the PCBs from the scale and master boards to arrive in the next few days. The Arduino code was written to count entering/exiting bees and make logs for all gates using multithreading. We also built laser cut enclosure which contains the bee counter PCB. It includes 8 individual gates that the bees use to enter/exit the hive and an upper compartment for the board so that sensor are on top of entering bees.  A few field trials were launched to assess the accuracy of the bee counter (more on that soon) but we still need to fix some things in the hardware and software to get it working.
+The weather station board was also assembled and programmed. It can now show temperature, humidity, atmospheric pressure and relative light intensity. 
+The next steps will be to get the bee counter to work and solder elements to the scale and master boards before programming them.
