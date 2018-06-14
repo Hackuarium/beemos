@@ -1,9 +1,9 @@
 <p align="center">
   <img width="400" height="400" src="common/images/logoBeeMoS.svg">
-  
+</p>
 # BeeMoS - honey Bee Monitoring System 
 # (under development)
-</p>
+
 The BeeMoS project is an open source bee hive monitoring system developed at the open science lab Hackuarium, Renens, Switzerland. 
 
 # Objectives 
