@@ -1,11 +1,12 @@
 <p align="center">
   <img width="400" height="400" src="common/images/logoBeeMoS.png">
-</p> 
-
-# BeeMoS - honey Bee Monitoring System (under development)
+  
+# BeeMoS - honey Bee Monitoring System 
+# (under development)
+</p>
 The BeeMoS project is an open source bee hive monitoring system developed at the open science lab Hackuarium, Renens, Switzerland. 
 
-# Objectives: 
+# Objectives 
 Build and program an open source bee monitoring system capable of the following objectives:
 
 - [x] Track the activity of the hives to study the behaviour of bees and monitor their health. 
@@ -13,7 +14,7 @@ Build and program an open source bee monitoring system capable of the following 
 - [ ] Measures environmental variables including temperature, humidity, light and atmospheric pressure and study their effect on the bees.
 - [ ] Send the data to a remote server for analysis, visualization or to notify the user if something unusual happens.
 
-# Modules:
+# Modules
 To achieve the above objectives, the project follows a modular design with different hardware components.
 
 **Counter**: Counts bees entering and exiting the hive over time using infrared sensors.
@@ -30,7 +31,7 @@ We have designed and ordered the PCBs for the bee counter, weather station, scal
 The weather station board was also assembled and programmed. It can now show temperature, humidity, atmospheric pressure and relative light intensity. 
 The next steps will be to get the bee counter to work and solder elements to the scale and master boards before programming them.
 
-# Further resources: 
+# Further resources 
 
 All codes, PCB board and schematic files and documentation can be found on the [BeeMoS github repository](https://github.com/Hackuarium/beemos) (in english only)
 
