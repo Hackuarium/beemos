@@ -1,6 +1,6 @@
 View this project on [CADLAB.io](https://cadlab.io/project/1029). 
 
-# Open beehive (under development)
+# BeeMoS - honey Bee Monitoring System (under development)
 The BeeMoS project is an open source bee hive monitoring system developed at the open science lab Hackuarium, Renens, Switzerland. 
 
 # Objectives: 
@@ -12,7 +12,7 @@ Build and program an open source bee monitoring system capable of the following 
 - [ ] Send the data to a remote server for analysis, visualization or to notify the user if something unusual happens.
 
 # Modules:
-To achieve the above objective, the project follows a modular design with different hardware components.
+To achieve the above objectives, the project follows a modular design with different hardware components.
 
 **Counter**: Counts bees entering and exiting the hive over time using infrared sensors.
 
