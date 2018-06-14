@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="400" height="400" src="common/images/logoBeeMoS.png">
+  <img width="400" height="400" src="common/images/logoBeeMoS.svg">
   
 # BeeMoS - honey Bee Monitoring System 
 # (under development)
