@@ -1,5 +1,5 @@
 <a href="https://hackuarium.github.io/beemos/">
-<img border="0" alt="beemos" src="../common/logoBeeMoS.svg" width="100">
+<img border="0" alt="beemos" src="common/logoBeeMoS.svg" width="100">
 </a>
 
 # Bee-counter i2c
