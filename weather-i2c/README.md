@@ -1,4 +1,10 @@
-#  Meteo station I2C
+<p align="center">
+<a href="https://hackuarium.github.io/beemos/">
+<img border="0" alt="beemos" src="https://github.com/Hackuarium/beemos/raw/master/common/images/logoBeeMoS.png" width="100">
+</a>
+</p>
+
+# Meteo station I2C
 
 The goal of this project is to create a small board that contains many sensors and that can be used as a meteo station.
 

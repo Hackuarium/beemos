@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://hackuarium.github.io/beemos/">
-<img border="0" alt="beemos" src="https://github.com/Hackuarium/beemos/raw/master/common/images/logoBeeMoS.svg" width="100">
+<img border="0" alt="beemos" src="https://github.com/Hackuarium/beemos/raw/master/common/images/logoBeeMoS.png" width="100">
 </a>
 </p>
 
