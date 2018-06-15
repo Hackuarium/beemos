@@ -2,8 +2,7 @@
   <img width="400" height="400" src="common/images/logoBeeMoS.svg">
 </p>
 
-# BeeMoS - Système de monitorage d'abeilles
-# (En développement)
+# BeeMoS - Système de monitorage d'abeilles<br/> (En développement)
 
 *[Read this in english](README.md)*
 
