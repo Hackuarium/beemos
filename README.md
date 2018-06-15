@@ -21,10 +21,18 @@ To achieve the above objectives, the project follows a modular design with diffe
 
 **Counter**: Counts bees entering and exiting the hive over time using infrared sensors. [_(Specifications)_](counter-i2c/README.md)
 
+<p align="center">
+  <img width="800" src="docs/BeeCounter/Images/PCMsoldering.jpg">
+</p>
+
 **Scale**: Weighs the hive periodically using 4 load cells.
 
 **Weather station**: Monitors temperature, humidity and luminosity outside the hives. [_(Specifications)_](weather-i2c/README.md)
 
+<p align="center">
+  <img width="400" src="docs/weather-i2c/images/PCB_front">
+  <img width="400" src="docs/weather-i2c/images/PCB_back">
+</p>
 
 **Master board**: Communicates with all other devices over I2C and sends the data to a remote server using a SIM card module. Also tracks temperature inside the hive. [_(Specifications)_](master-simple/README.md)
 
