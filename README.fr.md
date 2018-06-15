@@ -21,9 +21,18 @@ Pour parvenir aux objectifs ci-dessus, le projet respecte une architecture modul
 
 **Compteur**: Compte les abeilles qui entrent et sortent de la ruche au cours du temps en utilisant des senseurs infrarouge. [_(Détails techniques_)](counter-i2c/README.md)
 
+<p align="center">
+  <img width="800" src="docs/BeeCounter/Images/PCBsoldering.jpg">
+</p>
+
 **Balance**: Pèse la ruche périodiquement en utilisant 4 cellules de charge.
 
 **Station météo**: Enregistre la température, l'humidité, la luminosité et la pression atmosphérique à l'extérieur des ruches. [_(Détails techniques)_](weather-i2c/README.md)
+
+<p align="center">
+  <img width="200" src="docs/weather-i2c/images/PCB_front.jpg">
+  <img width="200" src="docs/weather-i2c/images/PCB_back.jpg">
+</p>
 
 **Carte maître**: Communique avec tous les autres appareils par I2C et envoie les données de la ruche à un serveur à distance. La communication à distance est effectuée par un module à carte SIM. Mesure aussi la température et l'humidité à l'intérieur de la ruche. [_(Détails techniques)_](master-simple/README.md)
 
