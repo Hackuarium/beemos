@@ -2,38 +2,47 @@
   <img width="400" height="400" src="common/images/logoBeeMoS.svg">
 </p>
 
-# BeeMoS - honey Bee Monitoring System 
-# (under development)
+# BeeMoS - Système de monitorage d'abeilles
+# (En développement)
 
-The BeeMoS project is an open source bee hive monitoring system developed at the open science lab Hackuarium, Renens, Switzerland. 
+*[Read this in english](README.md)*
 
-# Objectives 
-Build and program an open source bee monitoring system capable of the following objectives:
+Le projet BeeMos est un système de monitorage de ruches développé au laboratoire d'open science Hackuarium, à Renens, Suisse.
 
-- [x] Track the activity of the hives to study the behaviour of bees and monitor their health. 
-- [ ] Track changes in the hive's weight over time to detect sudden and gradual changes (swarming, honey production ...).
-- [ ] Measures environmental variables including temperature, humidity, light and atmospheric pressure and study their effect on the bees.
-- [ ] Send the data to a remote server for analysis, visualization or to notify the user if something unusual happens.
+# Objectifs 
+Construire et programmer un système open source de monitorage d'abeilles avec les objectifs suivants:
+
+- [x] Suivre l'activité des ruches pour étudier le comportement des abeilles et surveiller leur santé.
+- [ ] Détecter les changements instantanés et progressifs dans le poids de la ruche au cours du temps (essaimage, production de miel, ...).
+- [ ] Mesurer des variables environnemntales dont l'humidité, la température, la lumière et la pression atmosphérique pour comprendre leur effet sur les abeilles.
+- [ ] Envoyer les données à un serveur à distance pour les analyser, visualiser et avertir l'utilisateur si quelque chose d'anormal se produit.
 
 # Modules
-To achieve the above objectives, the project follows a modular design with different hardware components.
+Pour parvenir aux objectifs ci-dessus, le projet respecte une architecture modulaire avec différents composants physiques:
 
-**Counter**: Counts bees entering and exiting the hive over time using infrared sensors.
+**Compteur**: Compte les abeilles qui entrent et sortent de la ruche au cours du temps en utilisant des senseurs infrarouge. [_(Détails techniques_)](counter-i2c/README.md)
 
-**Scale**: Weighs the hive periodically using 4 load cells.
+**Balance**: Pèse la ruche périodiquement en utilisant 4 cellules de charge.
 
-**Weather station**: Monitors temperature, humidity and luminosity outside the hives.
+**Station météo**: Enregistre la température, l'humidité, la luminosité et la pression atmosphérique à l'extérieur des ruches. [_(Détails techniques)_](weather-i2c/README.md)
 
-**Master board**: Communicates with all other devices over I2C and sends the data to a remote server using a SIM card module. Also tracks temperature inside the hive.
+**Carte maître**: Communique avec tous les autres appareils par I2C et envoie les données de la ruche à un serveur à distance. La communication à distance est effectuée par un module à carte SIM. Mesure aussi la température et l'humidité à l'intérieur de la ruche. [_(Détails techniques)_](master-simple/README.md)
 
 
-# State of the project
-We have designed and ordered the PCBs for the bee counter, weather station, scale and master boards. All elements of one board were soldered for the weather station and for the bee counter. We are waiting for the PCBs from the scale and master boards to arrive in the next few days. The Arduino code was written to count entering/exiting bees and make logs for all gates using multithreading. We also built a laser cut wooden enclosure which contains the bee counter PCB. It includes 8 individual gates that the bees use to enter/exit the hive and an upper compartment for the board so that sensor are on top of entering bees.  A few field trials were launched to assess the accuracy of the bee counter (more on that soon) but we still need to fix some things in the hardware and software to get it working.
-The weather station board was also assembled and programmed. It can now show temperature, humidity, atmospheric pressure and relative light intensity. 
-The next steps will be to get the bee counter to work and solder elements to the scale and master boards before programming them.
+# Etat du projet
+Nous avons conçu et commandé les circuits imprimés pour le compteur d'abeilles, la station météo, la balance et la carte maître. Tous les éléments de la station météo et du compteur sont soudés. Nous devrions recevoir les circuits imprimés pour la balance et la carte maître dans quelques jours. Le code Arduino est écrit pour compter les abeilles qui entrent et sortent de la ruche et les enregistrer pour toutes les portes en utilisant du multithreading. En utilisant une découpeuse laser, nous avons aussi construit un boîtier en bois qui sert à contenir le circuit imprimé du compteur d'abeilles. Ce boîtier comprend 8 portes individuelles que les abeilles peuvent emprunter pour transiter entre l'intérieur et l'extérieur de la ruche. Nous avons effectué quelques essais sur le terrain pour évaluer la précision du compteur (Plus de détails bientôt) mais nous devons encore effectuer quelquec calibration physiques et logicielles pour le faire fonctionner.
 
-# Further resources 
+<p align="center">
+  <img width="800" src="common/images/CounterFieldTest.jpg">
+</p>
 
-All codes, PCB board and schematic files and documentation can be found on the [BeeMoS github repository](https://github.com/Hackuarium/beemos) (in english only)
 
-View this project on [CADLAB.io](https://cadlab.io/project/1029)
+La station météo est aussi assemblée et programmée. Elle peut maintenant afficher la température, l'humidité, la pression atmosphérique et la luminosité relative. 
+
+La prochaine étape sera de faire fonctionner et calibrer le compteur d'abeille ainsi que de souder les éléments de la balance et de la carte maître avant de les programmer.
+
+# Ressources additionnelles 
+
+Tous les codes, spécifications et schémas des circuits imprimés ainsi que la documentation sont disponible sur le [répertoire github BeeMoS](https://github.com/Hackuarium/beemos) (uniquement en anglais)
+
+Voir ce projet sur [CADLAB.io](https://cadlab.io/project/1029)

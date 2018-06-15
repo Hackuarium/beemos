@@ -2,4 +2,5 @@
 **/*.s#*
 **/*.l#*
 .DS_Store
+.directory
 **/node_modules/
