@@ -17,9 +17,9 @@ Construire et programmer un système open source de monitorage d'abeilles avec l
 - [ ] Envoyer les données à un serveur à distance pour les analyser, visualiser et avertir l'utilisateur si quelque chose d'anormal se produit.
 
 # Modules
-Pour parvenir aux objectifs ci-dessus, le projet respecte une architecture modulaire avec différents composants physiques:
+Pour parvenir aux objectifs ci-dessus, le projet est subdivisé en plusieurs modules:
 
-**Compteur**: Compte les abeilles qui entrent et sortent de la ruche au cours du temps en utilisant des senseurs infrarouge. [_(Détails techniques_)](counter-i2c/README.md)
+**Compteur**: Compte les abeilles qui entrent et sortent de la ruche au cours du temps en utilisant des capteurs infrarouge. [_(Détails techniques_)](counter-i2c/README.md)
 
 <p align="center">
   <img width="800" src="docs/BeeCounter/Images/PCBsoldering.jpg">
@@ -51,6 +51,6 @@ La prochaine étape sera de faire fonctionner et calibrer le compteur d'abeille 
 
 # Ressources additionnelles 
 
-Tous les codes, spécifications et schémas des circuits imprimés ainsi que la documentation sont disponible sur le [répertoire github BeeMoS](https://github.com/Hackuarium/beemos) (uniquement en anglais)
+Tous les codes, spécifications et schémas des circuits imprimés ainsi que la documentation sont disponibles sur le [répertoire github BeeMoS](https://github.com/Hackuarium/beemos) (uniquement en anglais)
 
 Voir ce projet sur [CADLAB.io](https://cadlab.io/project/1029)
