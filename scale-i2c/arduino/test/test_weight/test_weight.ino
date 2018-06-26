@@ -1,4 +1,4 @@
-#include "HX711.h"
+#include "../../lib/HX711/HX711.h"
 #define WEIGHT_DATA        22
 #define WEIGHT_CLK         23
 
