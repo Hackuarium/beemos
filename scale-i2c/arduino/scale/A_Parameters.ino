@@ -22,9 +22,9 @@
 #define PARAM_WEIGHT_MIN          6
 #define PARAM_WEIGHT_MAX          7
 
-#define PARAM_POWER_5V            23
-#define PARAM_LOGGING_INTERVAL    24    // minimal 300s to prevent desctruction of EEPROM. Should last 22 years with 300s
-#define PARAM_SLEEP_DELAY         25
+#define PARAM_POWER_5V            13
+#define PARAM_LOGGING_INTERVAL    14    // minimal 300s to prevent desctruction of EEPROM. Should last 22 years with 300s
+#define PARAM_SLEEP_DELAY         15
 
 // you may write in EEPROM max 100'000 times
 // 100'000 * 300 * 24 (number of line of log) / 365 / 86400

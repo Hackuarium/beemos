@@ -23,14 +23,40 @@ Connectors:
 
 - 2X RJ12 to connect other boards via I2C
 
-## I2C commands
+## I2C registers
 
 This device appears like a I2C slave at the address XXX and allows the following commands
+
+| Register address | Description                    | R/W |
+| ---------------- | ------------------------------ | --- |
+| 0: A             | Log ID                         | R   |
+| 1: B             | Seconds since last log         | R   |
+| 2: C             | Weight (internal unit)         | R   |
+| 3: D             | Weight (g)                     | R   |
+| 4: E             | Offset (internal unit)         | R   |
+| 5: F             | Factor (internal unit)         | R   |
+| 6: G             | Minimal weight (internal unit) | R   |
+| 7: H             | Maximal weight (internal unit) | R   |
+| 13: N            | Power supply (in mV)           | R   |
+| 14: O            | Logging interval               | R/W |
+| 15: P            | Delay before going to sleep    | R/W |
+
+### Actions
+
+Those actions allows to calibrate the scale. Please take care that you need to weight
+at least 5s so that the scale stabilize.
+
+| Register address | Description                            | R/W |
+| ---------------- | -------------------------------------- | --- |
+| 16: Q            | Define empty level                     | W   |
+| 17: R            | Define the weight one kg over the tare | W   |
+| 18: S            | Define low level                       | W   |
+| 19: T            | Define high level                      | W   |
 
 ## Performances
 
 - Consumption in sleep mode:
-- Consumtpion awake:
+- Consumption awake:
 
 ## Making
 

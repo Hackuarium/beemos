@@ -5,12 +5,10 @@
 
 HX711 scale(WEIGHT_DATA, WEIGHT_CLK);
 
-NIL_WORKING_AREA(waThreadWeight, 96);
+NIL_WORKING_AREA(waThreadWeight, 256);
 
 NIL_THREAD(ThreadWeight, arg) {
   nilThdSleepMilliseconds(1000); // wait a little bit not everything starts at once
-
-  int weight;
 
   while (true) {
     nilThdSleepMilliseconds(1000);

@@ -13,7 +13,7 @@ NIL_THREAD(ThreadPower, arg) {
   analogReference(INTERNAL); // internal reference is 1.1V on ATMEGA328p
 
   while (true) {
-    setParameter(PARAM_POWER_5V, (double)analogRead(POWER_SUPPY) *100 / 1024 * 1.1 / RESISTOR_REF_5V_1 * (RESISTOR_REF_5V_1 + RESISTOR_REF_5V_2) );
+    setParameter(PARAM_POWER_5V, (double)analogRead(POWER_SUPPY) * 1000 / 1024 * 1.1 / RESISTOR_REF_5V_1 * (RESISTOR_REF_5V_1 + RESISTOR_REF_5V_2) );
     nilThdSleepMilliseconds(1000);
   }
 }
