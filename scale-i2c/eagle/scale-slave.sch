@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.1">
+<eagle version="9.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -162,12 +162,6 @@
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
-<symbol name="VCC" urn="urn:adsk.eagle:symbol:26928/1" library_version="1">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 <symbol name="+12V" urn="urn:adsk.eagle:symbol:26931/1" library_version="1">
 <wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
@@ -182,19 +176,6 @@
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="VCC" urn="urn:adsk.eagle:component:26957/1" prefix="P+" library_version="1">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="VCC" symbol="VCC" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -14363,7 +14344,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="LCSC" value="C15850"/>
 <attribute name="MPN" value="77-VJ1206V106ZXQTBC"/>
 </part>
-<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="100nF">
 <attribute name="ELECROW" value="C49678"/>
 <attribute name="LCSC" value="C49678"/>
@@ -14373,7 +14353,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="LCSC" value="C53352"/>
 </part>
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
-<part name="P+11" library="SparkFun" deviceset="3.3V" device="" value="VCC"/>
+<part name="P+11" library="SparkFun" deviceset="3.3V" device="" value="3.3V"/>
 <part name="P+2" library="SparkFun" deviceset="3.3V" device="" value="VCC"/>
 <part name="GND5" library="SparkFun" deviceset="GND" device=""/>
 <part name="JP1" library="SparkFun" deviceset="ARDUINO_SERIAL_PROGRAM" device="PTH" value="FTDI Basic"/>
@@ -14405,7 +14385,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="LCSC" value="C49678"/>
 <attribute name="MPN" value="80-C1206C104K5R"/>
 </part>
-<part name="P+3" library="SparkFun" deviceset="3.3V" device="" value="VCC"/>
+<part name="P+3" library="SparkFun" deviceset="3.3V" device="" value="3.3V"/>
 <part name="R3" library="rcl" deviceset="R-EU_" device="R0805" value="10k">
 <attribute name="ELECROW" value="C17513"/>
 <attribute name="LCSC" value="C17513"/>
@@ -14462,12 +14442,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="SJ3" library="jumper" deviceset="SJ" device=""/>
 <part name="SJ4" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NC_BY_TRACE" device="" value=""/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="P+30" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="P+31" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="P+32" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="P+33" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="P+34" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="P+35" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="R18" library="rcl" deviceset="R-EU_" device="R0805" value="1M">
 <attribute name="ELECROW" value="C17514"/>
 <attribute name="LCSC" value="C17514"/>
@@ -14482,6 +14456,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="MPN" value="80-C1206C104K5R"/>
 </part>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="P+1" library="SparkFun" deviceset="3.3V" device="" value="3.3v"/>
+<part name="P+4" library="SparkFun" deviceset="3.3V" device="" value="3.3v"/>
+<part name="P+6" library="SparkFun" deviceset="3.3V" device="" value="3.3v"/>
+<part name="P+7" library="SparkFun" deviceset="3.3V" device="" value="3.3v"/>
+<part name="P+8" library="SparkFun" deviceset="3.3V" device="" value="VCC"/>
+<part name="P+9" library="SparkFun" deviceset="3.3V" device="" value="3.3v"/>
+<part name="P+12" library="SparkFun" deviceset="3.3V" device="" value="3.3V"/>
 </parts>
 <sheets>
 <sheet>
@@ -14544,7 +14525,6 @@ Increases noise per read</text>
 <attribute name="LCSC" x="127" y="127" size="1.778" layer="96" display="off"/>
 <attribute name="ELECROW" x="127" y="127" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="P+1" gate="VCC" x="127" y="142.24"/>
 <instance part="C4" gate="G$1" x="134.62" y="127">
 <attribute name="MPN" x="134.62" y="127" size="1.778" layer="96" display="off"/>
 <attribute name="LCSC" x="134.62" y="127" size="1.778" layer="96" display="off"/>
@@ -14646,12 +14626,6 @@ Increases noise per read</text>
 <instance part="SJ3" gate="1" x="381" y="76.2" rot="R270"/>
 <instance part="SJ4" gate="G$1" x="241.3" y="33.02" rot="R90"/>
 <instance part="GND1" gate="1" x="241.3" y="25.4"/>
-<instance part="P+30" gate="G$1" x="381" y="99.06"/>
-<instance part="P+31" gate="G$1" x="320.04" y="96.52"/>
-<instance part="P+32" gate="G$1" x="337.82" y="86.36"/>
-<instance part="P+33" gate="G$1" x="370.84" y="83.82"/>
-<instance part="P+34" gate="G$1" x="254" y="43.18"/>
-<instance part="P+35" gate="G$1" x="269.24" y="43.18"/>
 <instance part="R18" gate="G$1" x="243.84" y="137.16" rot="R90">
 <attribute name="LCSC" x="243.84" y="137.16" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="ELECROW" x="243.84" y="137.16" size="1.778" layer="96" rot="R90" display="off"/>
@@ -14668,6 +14642,13 @@ Increases noise per read</text>
 <instance part="GND7" gate="1" x="238.76" y="116.84" smashed="yes">
 <attribute name="VALUE" x="236.855" y="114.935" size="1.27" layer="96"/>
 </instance>
+<instance part="P+1" gate="G$1" x="254" y="43.18"/>
+<instance part="P+4" gate="G$1" x="269.24" y="43.18"/>
+<instance part="P+6" gate="G$1" x="381" y="99.06"/>
+<instance part="P+7" gate="G$1" x="320.04" y="96.52"/>
+<instance part="P+8" gate="G$1" x="337.82" y="86.36"/>
+<instance part="P+9" gate="G$1" x="370.84" y="83.82"/>
+<instance part="P+12" gate="G$1" x="127" y="139.7"/>
 </instances>
 <busses>
 </busses>
@@ -14894,40 +14875,6 @@ Increases noise per read</text>
 <junction x="114.3" y="71.12"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="U1" gate="U1" pin="PC6(/RESET)"/>
-</segment>
-</net>
-<net name="VCC" class="0">
-<segment>
-<wire x1="127" y1="134.62" x2="127" y2="129.54" width="0.1524" layer="91"/>
-<junction x="127" y="134.62"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<pinref part="P+1" gate="VCC" pin="VCC"/>
-<wire x1="127" y1="134.62" x2="127" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="134.62" y1="129.54" x2="134.62" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="127" y1="134.62" x2="134.62" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="VO"/>
-<wire x1="121.92" y1="134.62" x2="127" y2="134.62" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="106.68" y1="86.36" x2="106.68" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="P+11" gate="G$1" pin="3.3V"/>
-<pinref part="R3" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<wire x1="129.54" y1="66.04" x2="124.46" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="63.5" x2="129.54" y2="66.04" width="0.1524" layer="91"/>
-<junction x="129.54" y="66.04"/>
-<pinref part="P+2" gate="G$1" pin="3.3V"/>
-<pinref part="U1" gate="U1" pin="VCC"/>
-<wire x1="137.16" y1="63.5" x2="129.54" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="U1" gate="U1" pin="AVCC"/>
-<wire x1="129.54" y1="66.04" x2="137.16" y2="66.04" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C5" gate="G$1" pin="1"/>
-<pinref part="P+3" gate="G$1" pin="3.3V"/>
-<wire x1="121.92" y1="20.32" x2="121.92" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="AREF" class="0">
@@ -15214,36 +15161,69 @@ Increases noise per read</text>
 </net>
 <net name="3.3V" class="1">
 <segment>
+<wire x1="381" y1="96.52" x2="381" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="RK5" gate="G$1" pin="2"/>
+<pinref part="P+6" gate="G$1" pin="3.3V"/>
+</segment>
+<segment>
 <pinref part="BJ1" gate="G$1" pin="E"/>
 <wire x1="320.04" y1="96.52" x2="320.04" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="P+31" gate="G$1" pin="3.3V"/>
+<pinref part="P+7" gate="G$1" pin="3.3V"/>
+</segment>
+<segment>
+<wire x1="127" y1="134.62" x2="127" y2="129.54" width="0.1524" layer="91"/>
+<junction x="127" y="134.62"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="127" y1="134.62" x2="127" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="134.62" y1="129.54" x2="134.62" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="127" y1="134.62" x2="134.62" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="VO"/>
+<wire x1="121.92" y1="134.62" x2="127" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="P+12" gate="G$1" pin="3.3V"/>
+<junction x="127" y="139.7"/>
+</segment>
+<segment>
+<wire x1="106.68" y1="86.36" x2="106.68" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="P+11" gate="G$1" pin="3.3V"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<wire x1="129.54" y1="66.04" x2="124.46" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="63.5" x2="129.54" y2="66.04" width="0.1524" layer="91"/>
+<junction x="129.54" y="66.04"/>
+<pinref part="P+2" gate="G$1" pin="3.3V"/>
+<pinref part="U1" gate="U1" pin="VCC"/>
+<wire x1="137.16" y1="63.5" x2="129.54" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="U1" gate="U1" pin="AVCC"/>
+<wire x1="129.54" y1="66.04" x2="137.16" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C5" gate="G$1" pin="1"/>
+<pinref part="P+3" gate="G$1" pin="3.3V"/>
+<wire x1="121.92" y1="20.32" x2="121.92" y2="22.86" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C9" gate="G$1" pin="1"/>
+<wire x1="254" y1="38.1" x2="254" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="P+1" gate="G$1" pin="3.3V"/>
+</segment>
+<segment>
+<pinref part="CU1" gate="G$1" pin="1"/>
+<wire x1="269.24" y1="38.1" x2="269.24" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="P+4" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
 <pinref part="U2" gate="U1" pin="VSUP"/>
 <wire x1="337.82" y1="81.28" x2="340.36" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="337.82" y1="86.36" x2="337.82" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="P+32" gate="G$1" pin="3.3V"/>
+<pinref part="P+8" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
 <pinref part="U2" gate="U1" pin="DVDD"/>
 <wire x1="368.3" y1="81.28" x2="370.84" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="370.84" y1="81.28" x2="370.84" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="P+33" gate="G$1" pin="3.3V"/>
-</segment>
-<segment>
-<wire x1="381" y1="96.52" x2="381" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="RK5" gate="G$1" pin="2"/>
-<pinref part="P+30" gate="G$1" pin="3.3V"/>
-</segment>
-<segment>
-<pinref part="C9" gate="G$1" pin="1"/>
-<pinref part="P+34" gate="G$1" pin="3.3V"/>
-<wire x1="254" y1="38.1" x2="254" y2="43.18" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="CU1" gate="G$1" pin="1"/>
-<pinref part="P+35" gate="G$1" pin="3.3V"/>
-<wire x1="269.24" y1="38.1" x2="269.24" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="P+9" gate="G$1" pin="3.3V"/>
 </segment>
 </net>
 <net name="N$38" class="0">
