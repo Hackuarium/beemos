@@ -1,6 +1,6 @@
-#include "HX711.h"
-#define WEIGHT_DATA        22
-#define WEIGHT_CLK         23
+#include "lib/HX711/HX711.cpp"
+#define WEIGHT_DATA        A0
+#define WEIGHT_CLK         A1
 
 HX711 scale(WEIGHT_DATA, WEIGHT_CLK);
 
