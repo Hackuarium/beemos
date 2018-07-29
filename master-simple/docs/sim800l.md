@@ -10,7 +10,7 @@ outside of the holder !!!!
 We should provide power between 3.4 and 4.4v. LiPo battery is of course optimal.
 Here is the description of the connection between a master-simple and the sim800l.
 
-<img src='sim800l.jpg' />
+<img src='sim800l.jpg'>
 
 sim800l seems not to provide HTTPS. 
 

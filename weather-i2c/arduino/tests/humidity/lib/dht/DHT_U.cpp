@@ -21,9 +21,8 @@
 // SOFTWARE.
 #include "DHT_U.h"
 
-DHT_Unified::DHT_Unified(uint8_t pin, uint8_t type, uint8_t count, int32_t tempSensorId, int32_t humiditySensorId):
-  _dht(pin, type, count),
-  _type(type),
+DHT_Unified::DHT_Unified(uint8_t pin, uint8_t count, int32_t tempSensorId, int32_t humiditySensorId):
+  _dht(pin, count),
   _temp(this, tempSensorId),
   _humidity(this, humiditySensorId)
 {}
@@ -52,10 +51,10 @@ bool DHT_Unified::Temperature::getEvent(sensors_event_t* event) {
   // Populate sensor reading values.
   event->version     = sizeof(sensors_event_t);
   event->sensor_id   = _id;
-  event->type        = SENSOR_TYPE_AMBIENT_TEMPERATURE;
+  event->type        = 13;
   event->timestamp   = millis();
   event->temperature = _parent->_dht.readTemperature();
-  
+
   return true;
 }
 
@@ -68,7 +67,7 @@ void DHT_Unified::Temperature::getSensor(sensor_t* sensor) {
   sensor->version         = DHT_SENSOR_VERSION;
   sensor->sensor_id       = _id;
   // Set type and characteristics.
-  sensor->type            = SENSOR_TYPE_AMBIENT_TEMPERATURE;
+  sensor->type            = 13;
   _parent->setMinDelay(sensor);
   sensor->max_value   = 125.0F;
   sensor->min_value   = -40.0F;
@@ -86,10 +85,10 @@ bool DHT_Unified::Humidity::getEvent(sensors_event_t* event) {
   // Populate sensor reading values.
   event->version           = sizeof(sensors_event_t);
   event->sensor_id         = _id;
-  event->type              = SENSOR_TYPE_RELATIVE_HUMIDITY;
+  event->type              = 12;
   event->timestamp         = millis();
   event->relative_humidity = _parent->_dht.readHumidity();
-  
+
   return true;
 }
 
@@ -102,7 +101,7 @@ void DHT_Unified::Humidity::getSensor(sensor_t* sensor) {
   sensor->version         = DHT_SENSOR_VERSION;
   sensor->sensor_id       = _id;
   // Set type and characteristics.
-  sensor->type            = SENSOR_TYPE_RELATIVE_HUMIDITY;
+  sensor->type            = 12;
   _parent->setMinDelay(sensor);
   sensor->max_value   = 100.0F;
   sensor->min_value   = 0.0F;
