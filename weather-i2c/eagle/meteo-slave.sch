@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.0">
+<eagle version="9.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -16613,7 +16613,7 @@ Source: http://www.lumberg.com/Produkte/PDFs/1503_09.pdf</description>
 <attribute name="ELECROW" value="C17514"/>
 <attribute name="LCSC" value="C17514"/>
 </part>
-<part name="R19" library="rcl" deviceset="R-EU_" device="R0805" value="1M">
+<part name="R19" library="rcl" deviceset="R-EU_" device="R0805" value="220k">
 <attribute name="ELECROW" value="C17514"/>
 <attribute name="LCSC" value="C17514"/>
 </part>
