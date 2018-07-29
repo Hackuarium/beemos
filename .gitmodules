@@ -1,6 +1,6 @@
-[submodule "weather-i2c/arduino/weather/hackino"]
-	path = weather-i2c/arduino/weather/hackino
-	url = git://github.com/Hackuarium/hackino.git
 [submodule "weather-i2c/arduino/weather/libino"]
 	path = weather-i2c/arduino/weather/libino
+	url = git://github.com/Hackuarium/libino.git
+[submodule "master-simple/arduino/masterSimple/libino"]
+	path = master-simple/arduino/masterSimple/libino
 	url = git://github.com/Hackuarium/libino.git

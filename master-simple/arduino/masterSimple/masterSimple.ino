@@ -11,7 +11,7 @@
 // #define WIRE_MASTER_HOT_PLUG    1   // scan automatically the i2c port for new slaves and prevents SLEEP !!!
 
 
-#include "lib/hack.h"
+#include "libino/hack.h"
 
 
 void setup() {
