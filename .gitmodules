@@ -4,3 +4,6 @@
 [submodule "master-simple/arduino/masterSimple/libino"]
 	path = master-simple/arduino/masterSimple/libino
 	url = git://github.com/Hackuarium/libino.git
+[submodule "scale-i2c/arduino/scale/libino"]
+	path = scale-i2c/arduino/scale/libino
+	url = git@github.com:hackuarium/libino.git

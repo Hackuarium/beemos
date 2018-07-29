@@ -15,14 +15,12 @@
 
 #define PARAM_LOGID               0
 #define PARAM_SECONDS             1 // number of secodns since the last log
-#define PARAM_TEMPERATURE_EXT     2
-#define PARAM_TEMPERATURE_IN      3
-#define PARAM_TEMPERATURE_BOARD   4
-#define PARAM_HUMIDITY            5
-#define PARAM_HUMIDITY_TEMP       6
-#define PARAM_LUMINOSITY          7
-#define PARAM_PRESSURE            8
-#define PARAM_PRESSURE_TEMP       9
+#define PARAM_WEIGHT              2
+#define PARAM_WEIGHT_G            3
+#define PARAM_WEIGHT_OFFSET       4
+#define PARAM_WEIGHT_FACTOR       5
+#define PARAM_WEIGHT_MIN          6
+#define PARAM_WEIGHT_MAX          7
 
 #define PARAM_POWER_5V            23
 #define PARAM_LOGGING_INTERVAL    24    // minimal 300s to prevent desctruction of EEPROM. Should last 22 years with 300s
@@ -37,14 +35,13 @@ void resetParameters() { // turn all parameters to 0
   setAndSaveParameter(PARAM_LOGGING_INTERVAL, 3600);
   setAndSaveParameter(PARAM_SLEEP_DELAY, 10);
 
-  setAndSaveParameter(PARAM_PRESSURE, PARAM_SLEEP_DELAY);
-  setAndSaveParameter(PARAM_TEMPERATURE_EXT, ERROR_VALUE);
-  setAndSaveParameter(PARAM_TEMPERATURE_IN, ERROR_VALUE);
-  setAndSaveParameter(PARAM_TEMPERATURE_BOARD, ERROR_VALUE);
-  setAndSaveParameter(PARAM_HUMIDITY, ERROR_VALUE);
-  setAndSaveParameter(PARAM_HUMIDITY_TEMP, ERROR_VALUE);
-  setAndSaveParameter(PARAM_LUMINOSITY, ERROR_VALUE);
-  setAndSaveParameter(PARAM_PRESSURE, ERROR_VALUE);
+  setAndSaveParameter(PARAM_WEIGHT, PARAM_SLEEP_DELAY);
+  setAndSaveParameter(PARAM_WEIGHT_G, ERROR_VALUE);
+  setAndSaveParameter(PARAM_WEIGHT_OFFSET, ERROR_VALUE);
+  setAndSaveParameter(PARAM_WEIGHT_FACTOR, ERROR_VALUE);
+  setAndSaveParameter(PARAM_WEIGHT_MIN, ERROR_VALUE);
+  setAndSaveParameter(PARAM_WEIGHT_MAX, ERROR_VALUE);
+  setAndSaveParameter(PARAM_POWER_5V, ERROR_VALUE);
 
 #ifdef THR_LOGGER
   formatLog();
@@ -52,15 +49,8 @@ void resetParameters() { // turn all parameters to 0
   setQualifier(ERROR_VALUE);
 }
 
-// This will be executed once on boot
 void initParameters() {
-  setParameter(PARAM_TEMPERATURE_EXT, ERROR_VALUE);
-  setParameter(PARAM_TEMPERATURE_IN, ERROR_VALUE);
-  setParameter(PARAM_TEMPERATURE_BOARD, ERROR_VALUE);
-  setParameter(PARAM_HUMIDITY, ERROR_VALUE);
-  setParameter(PARAM_HUMIDITY_TEMP, ERROR_VALUE);
-  setParameter(PARAM_LUMINOSITY, ERROR_VALUE);
-  setParameter(PARAM_PRESSURE, ERROR_VALUE);
+  
 }
 
 void checkParameters() {
@@ -68,4 +58,5 @@ void checkParameters() {
     resetParameters();
   }
 }
+
 
