@@ -14446,7 +14446,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="ELECROW" value="C17514"/>
 <attribute name="LCSC" value="C17514"/>
 </part>
-<part name="R19" library="rcl" deviceset="R-EU_" device="R0805" value="1M">
+<part name="R19" library="rcl" deviceset="R-EU_" device="R0805" value="220k">
 <attribute name="ELECROW" value="C17514"/>
 <attribute name="LCSC" value="C17514"/>
 </part>
