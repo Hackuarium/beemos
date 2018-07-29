@@ -49,9 +49,7 @@ void resetParameters() { // turn all parameters to 0
   setQualifier(ERROR_VALUE);
 }
 
-void initParameters() {
-  
-}
+void initParameters() {}
 
 void checkParameters() {
   if (getParameter(PARAM_LOGGING_INTERVAL) < 0) {

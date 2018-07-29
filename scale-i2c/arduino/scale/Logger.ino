@@ -4,13 +4,13 @@
 // we should be able to save and reload the log
 
 
-// log is saved in the format ID / in1 / out1 / ... / in8 / out8
+// log is saved in the format ID ...
 // ID is a sequential number
 // We expect to add an entry every hour
 
-#define NUMBER_PARAMETERS_TO_LOG  10
+#define NUMBER_PARAMETERS_TO_LOG  6
 #define LOG_ENTRY_LENGTH          NUMBER_PARAMETERS_TO_LOG*2
-#define NUMBER_LOGS               48
+#define NUMBER_LOGS               72
 
 #define FIRST_ADDRESS   1024-LOG_ENTRY_LENGTH*NUMBER_LOGS
 #define LAST_ADDRESS   1023
@@ -26,9 +26,6 @@ void loggerInit() {
       setParameter(PARAM_LOGID, entryID);
     }
   }
-  for (byte i = 1; i < NUMBER_PARAMETERS_TO_LOG; i++) { // on boot counter is equal to 0
-    setParameter(i, 0);
-  }
   setParameter(PARAM_LOGID, getParameter(PARAM_LOGID) + 1);
   setParameter(PARAM_SECONDS, 0);
 }
@@ -38,7 +35,6 @@ void writeLog() {
   int firstAddress = getFirstAddress(getParameter(PARAM_LOGID));
   for (byte i = 0; i < NUMBER_PARAMETERS_TO_LOG; i++) {
     eeprom_write_word((uint16_t*)  (firstAddress + i * 2), getParameter(i));
-    if (i > 0) setParameter(i, 0);
   }
   setParameter(PARAM_LOGID, getParameter(PARAM_LOGID) + 1);
   lastLog = millis();

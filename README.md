@@ -59,7 +59,7 @@ In order to clone use:
 
 To update the submodules
 
-`git submodule update`
+`git submodule update --recursive --remote`
 
 # Further resources
 

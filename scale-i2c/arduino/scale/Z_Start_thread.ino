@@ -35,7 +35,7 @@ NIL_THREADS_TABLE_ENTRY(NULL, ThreadLogger, NULL, waThreadLogger, sizeof(waThrea
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadWeight, NULL, waThreadWeight, sizeof(waThreadWeight))
 
 
- NIL_THREADS_TABLE_ENTRY(NULL, ThreadPower, NULL, waThreadPower, sizeof(waThreadPower))
+NIL_THREADS_TABLE_ENTRY(NULL, ThreadPower, NULL, waThreadPower, sizeof(waThreadPower))
 
 #ifdef PARAM_SLEEP_DELAY
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadSleep, NULL, waThreadSleep, sizeof(waThreadSleep))
