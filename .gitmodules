@@ -7,3 +7,6 @@
 [submodule "scale-i2c/arduino/scale/libino"]
 	path = scale-i2c/arduino/scale/libino
 	url = https://github.com/Hackuarium/libino.git
+[submodule "master/arduino/master/libino"]
+	path = master/arduino/master/libino
+	url = https://github.com/Hackuarium/libino.git
