@@ -26,6 +26,14 @@
 #define PARAM_TEMPERATURE_2       10
 #define PARAM_TEMPERATURE_3       11   
 
+#define PARAM_WEIGHT              12
+#define PARAM_WEIGHT_G            13
+#define PARAM_WEIGHT_OFFSET       14
+#define PARAM_WEIGHT_FACTOR       15
+
+
+#define PARAM_BATTERY             22
+#define PARAM_CHARGING            23 
 #define PARAM_LOGGING_INTERVAL    24    // minimal 300s to prevent desctruction of EEPROM. Should last 22 years with 300s
 
 // you may write in EEPROM max 100'000 times

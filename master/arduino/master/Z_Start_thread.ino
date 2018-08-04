@@ -29,14 +29,20 @@ NIL_THREADS_TABLE_ENTRY(NULL, ThreadSerial, NULL, waThreadSerial, sizeof(waThrea
 
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadTemperature, NULL, waThreadTemperature, sizeof(waThreadTemperature))
 
-#ifdef WEATHER_I2C_ADDRESS
-NIL_THREADS_TABLE_ENTRY(NULL, ThreadWeather, NULL, waThreadWeather, sizeof(waThreadWeather))
+#if defined(WEATHER_I2C_ADDRESS) || defined(SCALE_I2C_ADDRESS) 
+NIL_THREADS_TABLE_ENTRY(NULL, ThreadCopySlave, NULL, waThreadCopySlave, sizeof(waThreadCopySlave))
 #endif
+
+//NIL_THREADS_TABLE_ENTRY(NULL, ThreadGSM, NULL, waThreadGSM, sizeof(waThreadGSM))
 
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadLogger, NULL, waThreadLogger, sizeof(waThreadLogger))
 
 #ifdef THR_WIRE_MASTER
- NIL_THREADS_TABLE_ENTRY(NULL, ThreadWireMaster, NULL, waThreadWireMaster, sizeof(waThreadWireMaster))
+NIL_THREADS_TABLE_ENTRY(NULL, ThreadWireMaster, NULL, waThreadWireMaster, sizeof(waThreadWireMaster))
+#endif
+
+#ifdef BATTERY
+NIL_THREADS_TABLE_ENTRY(NULL, ThreadBattery, NULL, waThreadBattery, sizeof(waThreadBattery))
 #endif
 
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadMonitoring, NULL, waThreadMonitoring, sizeof(waThreadMonitoring))

@@ -12,11 +12,11 @@
 
 
 #define SIZE_MEMORY         65536       // M24512, 512 Kbits = 64Kbytes
-#define MAX_MULTI_LOG       10          // only used to retrieve multilog
+#define MAX_MULTI_LOG       50          // only used to retrieve multilog
 
 #define ENTRY_SIZE_LOGS     64          // Each log take 32 bytes
 #define NB_PARAMETERS_LOGS  26
-#define LOGGING_INTERVAL    15 * 60 * 1000
+#define LOGGING_INTERVAL    15 * 1000 * 60
 
 #define NB_MAX_ENTRIES      (SIZE_MEMORY / ENTRY_SIZE_LOGS)  // parenthesis are required because it is substituted in the code
 
@@ -261,7 +261,7 @@ void formatLog(Print* output) {
 /*************************************
    I2C EEPROM THREAD
  **************************************/
-NIL_WORKING_AREA(waThreadLogger, 200);
+NIL_WORKING_AREA(waThreadLogger, 100);
 NIL_THREAD(ThreadLogger, arg) {
 
   //Wait for the Wire thread to be ready before to start

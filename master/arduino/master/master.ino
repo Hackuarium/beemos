@@ -5,7 +5,7 @@
 
 #define LOGGER_I2C_EEPROM  80  // I2C address of M24512 eeprom
 
-
+#define SCALE_I2C_ADDRESS           16
 #define WEATHER_I2C_ADDRESS         55
 
 #define THR_SERIAL    1
@@ -13,6 +13,8 @@
 #define THR_WIRE_MASTER
 // #define WIRE_MASTER_HOT_PLUG    1   // scan automatically the i2c port for new slaves and prevents SLEEP !!!
 
+#define BATTERY               A6  // if battery we have also the temperature sensor
+#define BATTERY_CHARGING      A5
 
 #include "libino/hack.h"
 
