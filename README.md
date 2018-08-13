@@ -21,22 +21,22 @@ Build and program an open source bee monitoring system capable of the following 
 
 To achieve the above objectives, the project follows a modular design with different hardware components.
 
-**Counter**: Counts bees entering and exiting the hive over time using infrared sensors. [_(Specifications)_](counter-i2c/README.md)
+[**Counter**](counter-i2c/README.md): Counts bees entering and exiting the hive over time using infrared sensors.
 
 <p align="center">
   <img width="800" src="docs/BeeCounter/Images/PCBsoldering.jpg">
 </p>
 
-**Scale**: Weighs the hive periodically using 4 load cells.
+[**Scale**](scale-i2c/README.md): Weighs the hive periodically using 4 load cells.
 
-**Weather station**: Monitors temperature, humidity and luminosity outside the hives. [_(Specifications)_](weather-i2c/README.md)
+[**Weather station**](weather-i2c/README.md): Monitors temperature, humidity and luminosity outside the hives.
 
 <p align="center">
   <img width="200" src="docs/weather-i2c/images/PCB_front.jpg">
   <img width="200" src="docs/weather-i2c/images/PCB_back.jpg">
 </p>
 
-**Master board**: Communicates with all other devices over I2C and sends the data to a remote server using a SIM card module. Also tracks temperature inside the hive. [_(Specifications)_](master-simple/README.md)
+[**Master board**](master-simple/README.md): Communicates with all other devices over I2C, log data in memory and sends the data to a remote server using a SIM card module. May also tracks temperature inside the hive.
 
 # State of the project
 

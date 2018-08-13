@@ -6,7 +6,7 @@
 
 # Scale
 
-The purpose of this board is to measure the weight of the hive periodically. This allows to detect honey production and swarming.
+The purpose of this board is to measure the weight of the hive periodically. This allows to detect honey production and swarming. It is an I2C slave that includes a HX711 for weight measurement.
 
 ## Hardware components
 
@@ -22,6 +22,22 @@ Sensors:
 Connectors:
 
 - 2X RJ12 to connect other boards via I2C
+
+## Programming
+
+After soldering the device you need to add a bootloader.
+This device is based on an ATmega328 at 8MHz (3.3v). It is compatible
+with an Arduino Fio.
+
+To install the bootloader we are using as cable the tag-connect as well as
+a TinyISP module.
+
+<img src="docs/TC2030-IDC-NL.jpg" />
+
+Once the bootloader has been flashed you may program using a serial
+adaptator like the FT232RL.
+
+<img src="docs/FT232RL.jpg" />
 
 ## I2C registers
 
@@ -60,7 +76,10 @@ at least 5s so that the scale stabilize.
 
 ## Making
 
-Version 1.0.0 has 2 small bugs. A small cable has to be soldered as show in the following picture and the resistor in the red circle should be 220k instead of 1m.
+Version 1.0.0 has 2 small bugs:
+
+- small cable has to be soldered as show in the following picture
+- the resistor in the red circle should be 220k instead of 1m
 
 <img src="docs/board100.jpg" />
 
