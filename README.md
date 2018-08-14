@@ -38,6 +38,8 @@ To achieve the above objectives, the project follows a modular design with diffe
 
 [**Master board**](master/README.md): Communicates with all other devices over I2C, log data in memory and sends the data to a remote server using a SIM card module. May also tracks temperature inside the hive.
 
+  <img width="600" src="common/images/master.jpg">
+
 [**Simple master**](master-simple/README.md): A simple master board with I2C RJ-12 socket to
 make some tests.
 
