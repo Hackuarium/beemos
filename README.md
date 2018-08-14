@@ -36,7 +36,10 @@ To achieve the above objectives, the project follows a modular design with diffe
   <img width="200" src="docs/weather-i2c/images/PCB_back.jpg">
 </p>
 
-[**Master board**](master-simple/README.md): Communicates with all other devices over I2C, log data in memory and sends the data to a remote server using a SIM card module. May also tracks temperature inside the hive.
+[**Master board**](master/README.md): Communicates with all other devices over I2C, log data in memory and sends the data to a remote server using a SIM card module. May also tracks temperature inside the hive.
+
+[**Simple master**](master-simple/README.md): A simple master board with I2C RJ-12 socket to
+make some tests.
 
 # State of the project
 
