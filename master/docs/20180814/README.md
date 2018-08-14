@@ -13,9 +13,7 @@ In this first experiment we left the master outside during 10 days hoping to get
 If you connect by Serial to the master you can retrieve all the log using the
 command `lm`.
 
-This file can be analysed on the web page:
-
-https://www.cheminfo.org/?viewURL=https%3A%2F%2Fcouch.cheminfo.org%2Fcheminfo-public%2Fbb7b86e3d495e0dbc3bb827fd1ca1456%2Fview.json&loadversion=true&fillsearch=Parse+Arduino+multilog+format
+This file can be analysed [on this webpage](https://www.cheminfo.org/?viewURL=https%3A%2F%2Fcouch.cheminfo.org%2Fcheminfo-public%2Fbb7b86e3d495e0dbc3bb827fd1ca1456%2Fview.json&loadversion=true&fillsearch=Parse+Arduino+multilog+format).
 
 The results of this experiment can be found [here](20180814.txt).
 
