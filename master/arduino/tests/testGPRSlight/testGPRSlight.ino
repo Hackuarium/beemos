@@ -16,7 +16,7 @@
 // Increase the buffer
 #define TINY_GSM_RX_BUFFER 64
 
-#include <TinyGsmClient.h>
+#include "TinyGSM/TinyGsmClient.h"
 
 const char apn[]  = "gprs.swisscom.ch";  // sunrise or gprs.swisscom.ch
 const char user[] = "";

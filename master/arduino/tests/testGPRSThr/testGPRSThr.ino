@@ -25,6 +25,8 @@ const char user[] = "";
 const char pass[] = "";
 
 
+#define SerialMon Serial
+
 TinyGsm modem(Serial1);
 TinyGsmClient client(modem);
 
@@ -35,41 +37,45 @@ int success = 0;
 int trial = 0;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(19200);
   nilSysBegin();
 }
 
 void loop() {}
 
-NIL_WORKING_AREA(waThreadGSM, 1000);
+NIL_WORKING_AREA(waThreadGSM, 1400);
 NIL_THREAD(ThreadGSM, arg) {
   Serial1.begin(19200);
   nilThdSleepMilliseconds(6000);
 
 
   while (TRUE) {
-    Serial.print("Start");
-    nilThdSleepMilliseconds(3000);
     trial++;
     long start = millis();
-    Serial.print(1);
+    // Restart takes quite some time
+    // To skip it, call init() instead of restart()
+    SerialMon.println("Initializing modem...");
     if (!modem.restart()) {
-      Serial.print(0);
+      SerialMon.println("Could not restart");
       return;
     }
-    Serial.print(2);
+
+    SerialMon.println("Restarted");
     if (!modem.waitForNetwork()) {
-      Serial.print(0);
+      SerialMon.println("Could not join network");
       return;
     }
 
-    Serial.println("On network");
+    SerialMon.println("On network");
     if (!modem.gprsConnect(apn, user, pass)) {
+      SerialMon.println("Could not connect to GPRS");
       return;
     }
 
-    nilThdSleepMilliseconds(5000);
+    SerialMon.println("GPRS connected");
+    delay(5000);
     if (!client.connect(server, 80)) {
+      SerialMon.println("Could not connect to server");
       return;
     }
 
@@ -81,7 +87,7 @@ NIL_THREAD(ThreadGSM, arg) {
     client.println(server);
     client.println("");
 
-    nilThdSleepMilliseconds(10);
+    delay(10);
 
     boolean inHeader = true;
     int headerCounter = 0;
@@ -99,7 +105,7 @@ NIL_THREAD(ThreadGSM, arg) {
           }
           else headerCounter = 0;
         } else {
-          Serial.print(c);
+          SerialMon.print(c);
           bytesReceived += 1;
           timeout = millis();
         }
@@ -108,17 +114,18 @@ NIL_THREAD(ThreadGSM, arg) {
     if (bytesReceived == 13) {
       success++;
     }
-    Serial.println(bytesReceived);
+    SerialMon.println(bytesReceived);
     client.stop();
     modem.gprsDisconnect();
+    SerialMon.println("GPRS disconnected");
 
-    Serial.print("TOTAL TIME: ");
-    Serial.print((millis() - start) / 1000);
-    Serial.println(" s");
-    Serial.print(F("Nb success: "));
-    Serial.println(success);
-    Serial.print(F("Nb failure: "));
-    Serial.println(trial - success);
+    SerialMon.print("TOTAL TIME: ");
+    SerialMon.print((millis() - start) / 1000);
+    SerialMon.println(" s");
+    SerialMon.print("Nb success: ");
+    SerialMon.println(success);
+    SerialMon.print("Nb failure: ");
+    SerialMon.println(trial - success);
   }
 }
 

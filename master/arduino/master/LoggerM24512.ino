@@ -16,10 +16,10 @@
 
 #define ENTRY_SIZE_LOGS     64          // Each log take 32 bytes
 #define NB_PARAMETERS_LOGS  26
-#define LOGGING_INTERVAL    15 * 1000 * 60
+#define LOGGING_INTERVAL    15 * 60 // logging interval in seconds
 
 #define NB_MAX_ENTRIES      (SIZE_MEMORY / ENTRY_SIZE_LOGS)  // parenthesis are required because it is substituted in the code
-
+#define MAX_MULTI_LOG       1024          // only used to retrieve multilog
 
 //#define DEBUG_FLAG 1
 
@@ -280,7 +280,9 @@ NIL_THREAD(ThreadLogger, arg) {
   writeLog(EVENT_ARDUINO_BOOT, 0x0000);
 
   while (TRUE) {
-    nilThdSleepMilliseconds(LOGGING_INTERVAL);
+    for (int i = 0; i < LOGGING_INTERVAL; i++) {
+      nilThdSleepMilliseconds(1000);
+    }
     writeLog();
   }
 }
@@ -307,14 +309,16 @@ void processLoggerCommand(char command, char* data, Print* output) {
     case 'm':
       if (data[0] != '\0') {
         long currentValueLong = atol(data);
-        byte endValue = MAX_MULTI_LOG;
+        int endValue = MAX_MULTI_LOG;
         if (currentValueLong >= nextEntryID) {
           endValue = 0;
+        } else if (( nextEntryID - currentValueLong ) > NB_MAX_ENTRIES) {
+          currentValueLong = nextEntryID - NB_MAX_ENTRIES;
         }
-        else if (( nextEntryID - currentValueLong ) < MAX_MULTI_LOG) {
+        if (( nextEntryID - currentValueLong ) < MAX_MULTI_LOG) {
           endValue = nextEntryID - currentValueLong;
         }
-        for (byte i = 0; i < endValue; i++) {
+        for (int i = 0; i < endValue; i++) {
           printLogN(output, currentValueLong + i);
           nilThdSleepMilliseconds(25);
         }
