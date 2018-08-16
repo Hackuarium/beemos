@@ -45,14 +45,13 @@ make some tests.
 
 # State of the project
 
-We have designed and ordered the PCBs for the bee counter, weather station, scale and master boards. All elements of the weather station and bee counter were soldered. We are waiting for the PCBs from the scale and master boards to arrive in the next few days. The Arduino code was written to count entering/exiting bees and make logs for all gates using multithreading. We also built a laser cut wooden enclosure which contains the bee counter PCB. It includes 8 individual gates that the bees use to enter/exit the hive and an upper compartment for the board so that sensor are on top of entering bees. A few field trials were launched to assess the accuracy of the bee counter (more on that soon) but we still need to fix some things in the hardware and software to get it working.
+We have designed and ordered the PCBs for the bee counter, weather station, scale and master boards. These four boards have been assembled and programmed. We also built a laser cut wooden enclosure which contains the bee counter PCB. It includes 8 individual gates that the bees use to enter/exit the hive and an upper compartment for the board so that sensor are on top of entering bees. A few field trials were launched to assess the accuracy of the bee counter but we still need to fix some things in the hardware and software to get it working. To solve these issues, Clara has joined the BeeMoS team to make some tests of the bee counter in a controlled setting with live bees (transparent box with the beecounter inside and a camera to record video of entering/exiting bees that will be compared to the readings from the board). 
 
 <p align="center">
   <img width="800" src="common/images/CounterFieldTest.jpg">
 </p>
 
-The weather station board was also assembled and programmed. It can now show temperature, humidity, atmospheric pressure and relative light intensity.
-The next steps will be to get the bee counter to work and solder elements to the scale and master boards before programming them.
+The weather board can now show temperature, humidity, atmospheric pressure and relative light intensity. The scale board v1.0 has been soldered, a minor fix was needed to get it to work. The next steps will be to get the bee counter to work accurately by performing controlled tests, to assess the accuracy of the scale over time and to be able to send data wireless, integrate it to a database and plot it in an attractive way.
 
 # Cloning the project
 
