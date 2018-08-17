@@ -27,29 +27,29 @@ The box consists in a laser cut wooden enclosure, which contains the bee counter
 
 ## Parameters
 There are 26 parameters:
-0 - the log ID
-1 - the number of seconds since the last log
-2-17 - parameters for the 16 IR reflectance sensors
-18 - the luminosity
-19 - the temperature (it is possible to connect a temperature sensor to the board)
-20 - the threshold of absorbance to reach to conclude there is a bee crossing the gate
-21 - the threshold of absorbance to conclude that the event is finished
-22 - the duration of the gate monitoring
-23 - the delay between two successive displays 
-24 - the time interval between two logs
-25 - a boolean to enable the debug mode
+* 0 - the log ID
+* 1 - the number of seconds since the last log
+* 2-17 - parameters for the 16 IR reflectance sensors
+* 18 - the luminosity
+* 19 - the temperature (it is possible to connect a temperature sensor to the board)
+* 20 - the threshold of absorbance to reach to conclude there is a bee crossing the gate
+* 21 - the threshold of absorbance to conclude that the event is finished
+* 22 - the duration of the gate monitoring
+* 23 - the delay between two successive displays 
+* 24 - the time interval between two logs
+* 25 - a boolean to enable the debug mode
 
 
 ## Menu and commands
 Here is the actual menu, accessible by typing "h" + enter.
 
-| (h)elp
-| (s)ettings
-| (u)tilities
-| (b)ackground 
-| (c)ounter
-| (g)ate debug bg  
-| (l)og
+* (h)elp
+* (s)ettings
+* (u)tilities
+* (b)ackground 
+* (c)ounter
+* (g)ate debug bg  
+* (l)og
 
 "Settings" gives acces to the current values of the settings. To change the value of a setting, just type the letter of the setting (A-Z) and the new value of the setting in the chat box and press enter.
 "Gate debug mode" activates the real-time monitoring system. Each time a bee pass through a tunnel, the time, the number of the gate, the absorbance values of the two sensors and the number of bees outside is displayed. 
