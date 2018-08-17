@@ -90,7 +90,7 @@ void printGateInfo(Print* output) {
   int diff1 = 0;
   int diff2 = 0;
   output->println("Start gate monitoring");
-  for (byte k = 0; k < getParameter(PARAM_DEBUG_REPEAT); k++) {
+  for (int k = 0; k < getParameter(PARAM_DEBUG_REPEAT); k++) {
     for (byte i = 0; i < sizeof(out); i = i + 2) {
       diff1 = background[i] - current[i];
       diff2 = background[i + 1] - current[i + 1];
