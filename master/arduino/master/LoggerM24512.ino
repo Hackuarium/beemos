@@ -91,7 +91,7 @@ void find_lastEntry()
 }
 
 
-uint32_t printLogN(Print* output, uint32_t entryN) {
+uint32_t printLogN(Print* output, uint32_t entryN, bool relative ) {
   // Asking for an entry that is not yet on the card
   if (entryN >= nextEntryID || nextEntryID == 0) {
     return;
@@ -119,7 +119,7 @@ uint32_t printLogN(Print* output, uint32_t entryN) {
 }
 
 void printLastLog(Print* output) {
-  printLogN(output, nextEntryID - 1);
+  printLogN(output, nextEntryID - 1, false);
 }
 
 
@@ -302,11 +302,12 @@ void processLoggerCommand(char command, char* data, Print* output) {
       break;
     case 'l':
       if (data[0] != '\0')
-        printLogN(output, atol(data));
+        printLogN(output, atol(data), false);
       else
         printLastLog(output);
       break;
     case 'm':
+    case 'r':
       if (data[0] != '\0') {
         long currentValueLong = atol(data);
         int endValue = MAX_MULTI_LOG;
@@ -319,7 +320,7 @@ void processLoggerCommand(char command, char* data, Print* output) {
           endValue = nextEntryID - currentValueLong;
         }
         for (int i = 0; i < endValue; i++) {
-          printLogN(output, currentValueLong + i);
+          printLogN(output, currentValueLong + i, (command=='r'));
           nilThdSleepMilliseconds(25);
         }
       }
@@ -340,7 +341,8 @@ void printLoggerHelp(Print * output) {
   output->println(F("(ld) Dump"));
   output->println(F("(lf) Format"));
   output->println(F("(ll) Current log"));
-  output->println(F("(lm) Multiple log"));
+  output->println(F("(lm) Multiple logs"));
+  output->println(F("(lr) Relative logs"));
   output->println(F("(lw) Write log"));
 }
 
