@@ -10,3 +10,6 @@
 [submodule "master/arduino/master/libino"]
 	path = master/arduino/master/libino
 	url = https://github.com/Hackuarium/libino.git
+[submodule "counter-i2c/arduino/Counter/libino"]
+	path = counter-i2c/arduino/Counter/libino
+	url = https://github.com/Hackuarium/libino.git

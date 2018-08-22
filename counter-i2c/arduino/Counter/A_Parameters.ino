@@ -33,8 +33,6 @@
 #define PARAM_GATE7_OUT     15
 #define PARAM_GATE8_IN      16
 #define PARAM_GATE8_OUT     17
-#define PARAM_LUMINOSITY    18
-#define PARAM_TEMPERATURE   19
 
 #define PARAM_THRESHOLD           20
 #define PARAM_THRESHOLD_RESET     21
@@ -61,6 +59,8 @@ void resetParameters() { // turn all parameters to 0
   formatLog();
   setQualifier(32767);
 }
+
+void initParameters() {}
 
 void checkParameters() {
   if (getParameter(PARAM_DEBUG_REPEAT) < 0) {
