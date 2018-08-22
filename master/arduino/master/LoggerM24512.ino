@@ -255,6 +255,7 @@ void formatLog(Print* output) {
   wdt_reset();
   nextEntryID = 0;
   unprotectThread();
+    writeLog();
 }
 
 
@@ -265,7 +266,10 @@ NIL_WORKING_AREA(waThreadLogger, 100);
 NIL_THREAD(ThreadLogger, arg) {
 
   //Wait for the Wire thread to be ready before to start
-  nilThdSleepMilliseconds(6000);
+  for (int i=0; i<1000; i++) {
+      nilThdSleepMilliseconds(1000);
+  }
+
 
 
   Wire.begin();
