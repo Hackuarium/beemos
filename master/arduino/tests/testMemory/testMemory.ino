@@ -8,45 +8,57 @@
 
 void setup() {
 
-  
+
   Wire.begin();
- 
+
   Serial.begin(9600);
 
   // set memory power pin
   pinMode(9, OUTPUT);
-
+  digitalWrite(9, HIGH); // power on memory
+  delay(100);
 
 }
 
-uint8_t data;
+uint32_t address = 0;
+uint8_t data = 0;
+uint8_t dataRead = 0;
 
 void loop() {
-  digitalWrite(9, HIGH); // power on memory
-  delay(100);
-  
+  address++;
+  data++;
+
   Wire.beginTransmission(M24512_ADDR);
   // Select write address register
-  Wire.write(0x00);
-  Wire.write(0x01);
+  Wire.write(address >> 8);
+  Wire.write(address & 255);
   // Write the data
-  Wire.write(0x30);
+  Wire.write(data);
   // End I2C transmission
   Wire.endTransmission();
-  delay(300);
 
+  delay(10); // some delay is necessary !!!!!!!
+  address = address & 65535;
 
+  Wire.beginTransmission(M24512_ADDR);
+  Wire.write(address >> 8);
+  Wire.write(address & 255);
+  Wire.endTransmission();
   // Request 1 byte of data
   Wire.requestFrom(M24512_ADDR, 1);
 
   // Read 1 byte of data
   if (Wire.available() == 1) {
-    data = Wire.read();
+    dataRead = Wire.read();
   }
 
   // Output data to serial monitor
-  Serial.print("Input data : ");
-  Serial.println(data);
-  delay(1000);
+  Serial.print("Address: ");
+  Serial.print(address);
+  Serial.print(" - Write: ");
+  Serial.print(data);
+  Serial.print(" - Read: ");
+  Serial.println(dataRead);
+  delay(10);
 }
 
