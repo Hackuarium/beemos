@@ -16,7 +16,7 @@
 #define PARAM_EXT_HUMIDITY        1
 #define PARAM_LUMINOSITY          2
 #define PARAM_PRESSURE            3
-#define PARAM_INT_TEMPERATURE     6
+#define PARAM_INT_TEMPERATURE     4
 #define PARAM_INT_HUMIDITY        5
 #define PARAM_INT_TEMPERATURE_A   6
 #define PARAM_INT_TEMPERATURE_B   7

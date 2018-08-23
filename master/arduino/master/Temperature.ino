@@ -54,6 +54,7 @@ void getTemperature(OneWire &ow, int parameter)
     data[i] = ow.read();
   }
 
+
   if (OneWire::crc8(data, 8) == data[8])
   {
     // Convert the data to actual temperature
@@ -61,9 +62,7 @@ void getTemperature(OneWire &ow, int parameter)
     celsius = (float)raw / 16.0;
 
     setParameter(parameter, celsius * 100);
-  }
-  else
-  {
+  } else {
     setParameter(parameter, ERROR_VALUE);
   }
 }

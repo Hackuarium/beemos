@@ -42,7 +42,7 @@
 #define COUNTER_PARAM_GATE8_OUT     17
 #endif
 
-NIL_WORKING_AREA(waThreadCopySlave, 140);
+NIL_WORKING_AREA(waThreadCopySlave, 200);
 
 NIL_THREAD(ThreadCopySlave, arg) {
 
@@ -55,9 +55,9 @@ NIL_THREAD(ThreadCopySlave, arg) {
 #ifdef SCALE_I2C_ADDRESS
     wireWakeup(SCALE_I2C_ADDRESS);
 #endif
-    nilThdSleepMilliseconds(5000);
+    nilThdSleepMilliseconds(5000); // wait time to wakre up
     copyFromSlave();
-    nilThdSleepMilliseconds(20000);
+  //  nilThdSleepMilliseconds(20000);
   }
 }
 
