@@ -88,6 +88,10 @@ This value is expressed in decagram (unit of 10g). By default it is
 
 ## Making
 
+Wiring the 4 load cells in Wheatstone bridge configuration:
+
+<img src="docs/loadCellsWiring.png" />
+
 Version 1.0.0 has 2 small bugs:
 
 - small cable has to be soldered as show in the following picture
