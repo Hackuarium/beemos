@@ -46,6 +46,7 @@
 
 #define PARAM_CHARGING            29
 #define PARAM_LOGGING_INTERVAL    30    // minimal 300s to prevent desctruction of EEPROM. Should last 22 years with 300s
+#define PARAM_INT_TEMPERATURE_C   31
 
 // you may write in EEPROM max 100'000 times
 // 100'000 * 300 * 24 (number of line of log) / 365 / 86400
@@ -61,7 +62,7 @@ void resetParameters() { // turn all parameters to 0
   }
 
 //  formatLog(&Serial);
-  setQualifier(32767);
+  setQualifier(16961);
 }
 
 // This will be executed once on boot

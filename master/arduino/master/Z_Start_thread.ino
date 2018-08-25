@@ -9,7 +9,7 @@ NIL_THREAD(ThreadMonitoring, arg) {
   pinMode(MONITORING_LED, OUTPUT);
 
   wdt_enable(WDTO_8S);  //activate the watchdog
-  while (TRUE) {
+  while (true) {
     wdt_reset();//reset avoids automatic reboot
     digitalWrite(MONITORING_LED, HIGH);
     nilThdSleepMilliseconds(100);
@@ -34,6 +34,9 @@ NIL_THREADS_TABLE_ENTRY(NULL, ThreadCopySlave, NULL, waThreadCopySlave, sizeof(w
 #endif
 
 //NIL_THREADS_TABLE_ENTRY(NULL, ThreadGSM, NULL, waThreadGSM, sizeof(waThreadGSM))
+
+NIL_THREADS_TABLE_ENTRY(NULL, ThreadSi7021, NULL, waThreadSi7021, sizeof(waThreadSi7021))
+
 
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadLogger, NULL, waThreadLogger, sizeof(waThreadLogger))
 

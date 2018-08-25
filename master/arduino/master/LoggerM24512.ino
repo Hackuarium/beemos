@@ -80,9 +80,9 @@ void find_lastEntry()
 {
   nextEntryID = i2c_eeprom_read_uint32(0);
   uint32_t nextID;
-  for (int i = 1; i < NB_MAX_ENTRIES; i++) {
+  for (int i = 0; i < NB_MAX_ENTRIES; i++) {
     nextID = i2c_eeprom_read_uint32(ENTRY_SIZE_LOGS * i);
-    if ((nextID == 0xFFFFFFFF) || (nextID < nextEntryID)) {
+    if ((nextID > 0x0FFFFFFF) || (nextID < nextEntryID)) {
       return;
     }
     nextEntryID = nextID;
@@ -255,7 +255,7 @@ void formatLog(Print* output) {
   wdt_reset();
   nextEntryID = 0;
   unprotectThread();
-    writeLog();
+  writeLog();
 }
 
 
@@ -265,12 +265,7 @@ void formatLog(Print* output) {
 NIL_WORKING_AREA(waThreadLogger, 100);
 NIL_THREAD(ThreadLogger, arg) {
 
-  //Wait for the Wire thread to be ready before to start
-  for (int i=0; i<1000; i++) {
-      nilThdSleepMilliseconds(1000);
-  }
-
-
+  nilThdSleepMilliseconds(5000);
 
   Wire.begin();
 
@@ -324,7 +319,7 @@ void processLoggerCommand(char command, char* data, Print* output) {
           endValue = nextEntryID - currentValueLong;
         }
         for (int i = 0; i < endValue; i++) {
-          printLogN(output, currentValueLong + i, (command=='r'));
+          printLogN(output, currentValueLong + i, (command == 'r'));
           nilThdSleepMilliseconds(25);
         }
       }

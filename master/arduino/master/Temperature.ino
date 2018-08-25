@@ -25,7 +25,7 @@ NIL_THREAD(ThreadTemperature, arg)
     startTemperatureAcquisition(oneWire2);
     startTemperatureAcquisition(oneWire3);
     nilThdSleepMilliseconds(1000);
-    getTemperature(oneWire1, PARAM_INT_TEMPERATURE);
+    getTemperature(oneWire1, PARAM_INT_TEMPERATURE_C);
     getTemperature(oneWire2, PARAM_INT_TEMPERATURE_A);
     getTemperature(oneWire3, PARAM_INT_TEMPERATURE_B);
     nilThdSleepMilliseconds(1000);
