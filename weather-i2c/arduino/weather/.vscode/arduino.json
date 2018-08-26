@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:fio",
+    "sketch": "weather.ino",
+    "port": "/dev/ttyUSB0"
+}
