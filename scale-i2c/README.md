@@ -67,10 +67,10 @@ at least 5s so that the scale stabilize.
 
 | Register address | Description                            | R/W |
 | ---------------- | -------------------------------------- | --- |
-| 16: Q            | Define empty level                     | W   |
-| 17: R            | Define the weight one kg over the tare | W   |
-| 18: S            | Define low level                       | W   |
-| 19: T            | Define high level                      | W   |
+| 52: BA           | Define empty level                     | W   |
+| 53: BB           | Define the weight one kg over the tare | W   |
+| 54: BC           | Define low level                       | W   |
+| 55: BD           | Define high level                      | W   |
 
 ### Reference
 

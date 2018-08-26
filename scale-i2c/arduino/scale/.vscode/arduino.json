@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:fio",
+    "sketch": "scale.ino",
+    "port": "/dev/ttyUSB0"
+}
