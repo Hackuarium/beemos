@@ -15,6 +15,9 @@ void processSpecificCommand(char* data, char* paramValue, Print* output) {
     case 'l':
       processLoggerCommand(data[1], paramValue, output);
       break;
+    case 'r':
+      resetCounter();
+      break;
     case 't':
       printTotal(output);
       break;

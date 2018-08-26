@@ -48,7 +48,12 @@ void initCounter() {
   digitalWrite(IN_EN, LOW);
 }
 
-
+void resetCounter() {
+   for (byte i=2; i<18; i++) {
+     setParameter(i,0);
+   }
+ }
+ 
 void updateCounter() {
   // this warming up is required in order to have the correct value for the first receiver
   for (byte i = 0; i < sizeof(out); i++) {

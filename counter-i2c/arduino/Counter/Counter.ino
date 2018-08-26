@@ -1,6 +1,7 @@
 // including libraries, defining main pins used and setting up general setup and loop.
 
-#define THR_WIRE_SLAVE 59  // specify the address of the i2c slave
+#define THR_WIRE_SLAVE 59         // specify the address of the i2c slave
+#define WIRE_SLAVE_COMMAND    1   // we have some specific wire commands
 
 #define MAX_PARAM 26
 
