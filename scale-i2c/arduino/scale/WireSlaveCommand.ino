@@ -1,6 +1,3 @@
-char commandString[16];
-char valueString[16];
-
 int wireSlaveCommand(uint8_t command, long value) {
   int weight = getParameter(PARAM_WEIGHT);
   switch (command) {
