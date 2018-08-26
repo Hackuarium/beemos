@@ -21,15 +21,16 @@
 #define NB_MAX_ENTRIES      (SIZE_MEMORY / ENTRY_SIZE_LOGS)  // parenthesis are required because it is substituted in the code
 #define MAX_MULTI_LOG       1024          // only used to retrieve multilog
 
-//#define DEBUG_FLAG 1
+
+void afterLogging() {
+#ifdef COUNTER_I2C_ADDRESS
+int result=wireReadIntRegister(COUNTER_I2C_ADDRESS,52);
+#endif
+}
 
 
 // on 4 bytes, define the log number and log local time
 uint32_t nextEntryID = 0;
-
-
-static byte Sensor_Acq = 0;
-
 
 /********************
    Fonction for the Log
@@ -40,6 +41,7 @@ static byte Sensor_Acq = 0;
 //default write log with event code 0 and parameter event 0
 void writeLog() {
   writeLog(0x0000, 0x0000);
+  afterLogging();
 }
 
 // The fonction log the parameters in the eeprom by block of 64bytes
