@@ -12,14 +12,12 @@
 
 
 #define SIZE_MEMORY         65536       // M24512, 512 Kbits = 64Kbytes
-#define MAX_MULTI_LOG       50          // only used to retrieve multilog
 
 #define ENTRY_SIZE_LOGS     64          // Each log take 32 bytes
 #define NB_PARAMETERS_LOGS  26
-#define LOGGING_INTERVAL    15 * 60 // logging interval in seconds
 
 #define NB_MAX_ENTRIES      (SIZE_MEMORY / ENTRY_SIZE_LOGS)  // parenthesis are required because it is substituted in the code
-#define MAX_MULTI_LOG       1024          // only used to retrieve multilog
+#define MAX_MULTI_LOG       10          // only used to retrieve multilog
 
 
 void afterLogging() {
@@ -281,7 +279,7 @@ NIL_THREAD(ThreadLogger, arg) {
   writeLog(EVENT_ARDUINO_BOOT, 0x0000);
 
   while (TRUE) {
-    for (int i = 0; i < LOGGING_INTERVAL; i++) {
+    for (int i = 0; i < getParameter(PARAM_LOGGING_INTERVAL); i++) {
       nilThdSleepMilliseconds(1000);
     }
     writeLog();

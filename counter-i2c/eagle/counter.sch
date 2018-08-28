@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.0">
+<eagle version="9.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -16172,12 +16172,12 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <instance part="IC2" gate="A" x="307.34" y="200.66"/>
 <instance part="IC3" gate="A" x="91.44" y="208.28"/>
 <instance part="IC2" gate="P" x="337.82" y="195.58"/>
-<instance part="IC3" gate="P" x="68.58" y="195.58"/>
-<instance part="P+9" gate="G$1" x="68.58" y="203.2"/>
-<instance part="GND20" gate="1" x="68.58" y="182.88"/>
+<instance part="IC3" gate="P" x="53.34" y="193.04"/>
+<instance part="P+9" gate="G$1" x="53.34" y="200.66"/>
+<instance part="GND20" gate="1" x="53.34" y="180.34"/>
 <instance part="GND25" gate="1" x="337.82" y="185.42"/>
 <instance part="P+21" gate="G$1" x="337.82" y="203.2"/>
-<instance part="GND12" gate="1" x="78.74" y="180.34"/>
+<instance part="GND12" gate="1" x="73.66" y="180.34"/>
 <instance part="O3" gate="G$1" x="157.48" y="266.7" rot="R270"/>
 <instance part="RK5" gate="G$1" x="170.18" y="261.62" rot="R180"/>
 <instance part="P+13" gate="G$1" x="177.8" y="261.62"/>
@@ -16359,7 +16359,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <segment>
 <pinref part="IC3" gate="P" pin="GND"/>
 <pinref part="GND20" gate="1" pin="GND"/>
-<wire x1="68.58" y1="185.42" x2="68.58" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="182.88" x2="53.34" y2="185.42" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="P" pin="VSS"/>
@@ -16367,11 +16367,9 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </segment>
 <segment>
 <pinref part="IC3" gate="A" pin="G1"/>
-<pinref part="IC3" gate="A" pin="G2"/>
-<wire x1="78.74" y1="190.5" x2="78.74" y2="187.96" width="0.1524" layer="91"/>
 <pinref part="GND12" gate="1" pin="GND"/>
-<wire x1="78.74" y1="182.88" x2="78.74" y2="187.96" width="0.1524" layer="91"/>
-<junction x="78.74" y="187.96"/>
+<wire x1="78.74" y1="190.5" x2="73.66" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="190.5" x2="73.66" y2="182.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND16" gate="1" pin="GND"/>
@@ -16574,6 +16572,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="32U4" gate="G$1" pin="PF0(ADC0)"/>
 <wire x1="469.9" y1="175.26" x2="485.14" y2="175.26" width="0.1524" layer="91"/>
 <label x="480.06" y="175.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC3" gate="A" pin="G2"/>
+<wire x1="78.74" y1="187.96" x2="76.2" y2="187.96" width="0.1524" layer="91"/>
+<label x="76.2" y="187.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="A1" class="0">
@@ -17675,6 +17678,9 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="204,1,218.44,312.42,J1,1,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
