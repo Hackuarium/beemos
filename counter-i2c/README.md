@@ -60,11 +60,11 @@ In order to assume the precision of the bee counter, we set an experiment as fol
 We built inside a transparent tupperware two hermetic compartiments, one with sugared water, the other one with pollen. The bees can only pass from one compartment to another through the box containing the tunnels with the IR reflectance sensors. With a camera, we filmed the tupperware to then compare the results of the gate monitoring debug system with the footage of the camera.
 
 <p align="center">
-  <img width="800" src="docs/BeeCounter/Images/Tupperware design.jpg">
+  ![Alt text](/docs/BeeCounter/Images/Tupperware design.jpg?raw=true)
 </p>
 
 <p align="center">
-  <img width="800" src="docs/BeeCounter/Images/Tupperware experiment setup.jpg">
+  ![Alt text](/docs/BeeCounter/Images/Tupperware experiment setup.jpg?raw=true)
 </p>
 
 ## Results
