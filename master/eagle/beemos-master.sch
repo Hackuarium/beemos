@@ -195,12 +195,6 @@
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
-<symbol name="VCC" urn="urn:adsk.eagle:symbol:26928/1" library_version="1">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 <symbol name="VDD" urn="urn:adsk.eagle:symbol:26943/1" library_version="1">
 <wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
@@ -215,19 +209,6 @@
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="VCC" urn="urn:adsk.eagle:component:26957/1" prefix="P+" library_version="1">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="VCC" symbol="VCC" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -19283,7 +19264,6 @@ Source: www.kingbright.com</description>
 <attribute name="MPN" value="77-VJ1206V106ZXQTBC"/>
 </part>
 <part name="SUPPLY3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
-<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="IC4" library="dp_devices" deviceset="TRANSISTOR_FET_TSM2301CX" device="" value="DMP1045U">
 <attribute name="LCSC" value="C96613"/>
 <attribute name="MPN" value="621-DMP1045U-7"/>
@@ -19299,11 +19279,11 @@ Source: www.kingbright.com</description>
 </part>
 <part name="SUPPLY4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="U$2" library="MyPOW" deviceset="VUSB" device=""/>
-<part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky||">
+<part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky">
 <attribute name="LCSC" value="C82544"/>
 <attribute name="MPN" value="621-1N5819HW-F"/>
 </part>
-<part name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky||">
+<part name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky">
 <attribute name="LCSC" value="C82544"/>
 <attribute name="MPN" value="621-1N5819HW-F"/>
 </part>
@@ -19387,7 +19367,7 @@ Source: www.kingbright.com</description>
 <part name="J3" library="lpatiny" deviceset="RJ12" device="STRAIGHT-I2C" value="RJ12STRAIGHT-I2C"/>
 <part name="J4" library="lpatiny" deviceset="RJ12" device="STRAIGHT-I2C" value="RJ12STRAIGHT-I2C"/>
 <part name="CON2" library="lpatiny" deviceset="JACK_DC_BARREL" device=""/>
-<part name="D4" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky||">
+<part name="D4" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky">
 <attribute name="LCSC" value="C82544"/>
 <attribute name="MPN" value="621-1N5819HW-F"/>
 </part>
@@ -19478,6 +19458,7 @@ Source: www.kingbright.com</description>
 <attribute name="MPN" value="80-C1206C104K5R"/>
 </part>
 <part name="IC5" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="MCP1703" device="CB" package3d_urn="urn:adsk.eagle:package:16489/2" value="MCP1703-50"/>
+<part name="P+1" library="SparkFun" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -19620,7 +19601,6 @@ LEDs</text>
 <attribute name="ELECROW" x="25.4" y="38.1" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="SUPPLY3" gate="G$1" x="-7.62" y="53.34"/>
-<instance part="P+1" gate="VCC" x="25.4" y="53.34"/>
 <instance part="IC4" gate="G$1" x="157.48" y="104.14" rot="MR270">
 <attribute name="MPN" x="157.48" y="104.14" size="1.778" layer="96" rot="MR270" display="off"/>
 <attribute name="LCSC" x="157.48" y="104.14" size="1.778" layer="96" rot="MR270" display="off"/>
@@ -19773,6 +19753,7 @@ LEDs</text>
 <attribute name="ELECROW" x="-22.86" y="99.06" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="IC5" gate="G$1" x="-45.72" y="106.68"/>
+<instance part="P+1" gate="G$1" x="25.4" y="50.8"/>
 </instances>
 <busses>
 </busses>
@@ -20584,13 +20565,13 @@ LEDs</text>
 <wire x1="25.4" y1="45.72" x2="25.4" y2="40.64" width="0.1524" layer="91"/>
 <junction x="25.4" y="45.72"/>
 <pinref part="C6" gate="G$1" pin="1"/>
-<pinref part="P+1" gate="VCC" pin="VCC"/>
 <wire x1="25.4" y1="45.72" x2="25.4" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="1"/>
 <wire x1="33.02" y1="40.64" x2="33.02" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="45.72" x2="33.02" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="VO"/>
 <wire x1="20.32" y1="45.72" x2="25.4" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="P+1" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="VCC1"/>
@@ -20811,6 +20792,7 @@ LEDs</text>
 <pinref part="CON2" gate="G$1" pin="V+"/>
 <wire x1="-73.152" y1="106.68" x2="-63.5" y2="106.68" width="0.1524" layer="91"/>
 <junction x="-73.152" y="106.68"/>
+<junction x="-63.5" y="106.68"/>
 </segment>
 </net>
 <net name="N$3" class="0">
