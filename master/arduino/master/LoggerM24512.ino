@@ -8,7 +8,6 @@
     Date: 13/08/2014
 */
 #include <avr/interrupt.h>
-#include <Wire.h> //I2C library
 
 
 #define SIZE_MEMORY         65536       // M24512, 512 Kbits = 64Kbytes
