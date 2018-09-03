@@ -7,19 +7,20 @@ byte difference[16];
 
 byte out[] = {1, 0, 7, 2, 6, 3, 5, 4, 8, 9, 15, 10, 14, 11, 13, 12};
 // byte out[] = {1, 0};
-#define OUT0 A0
-#define OUT1 A1
-#define OUT2 A2
-#define OUT3 A3
+#define OUT0   A0
+#define OUT1   A1
+#define OUT2   A2
+#define OUT3   A3
+#define OUT_EN A5
 
 byte in[] = {6, 7, 0, 5, 1, 4, 2, 3, 8, 9, 14, 15, 12, 13, 10, 11};
 
-#define IN0 5
-#define IN1 9
-#define IN2 8
-#define IN3 6
+#define IN0    5
+#define IN1    9
+#define IN2    8
+#define IN3    6
 #define IN_EN 10
-#define MUX A4
+#define MUX   A4
 
 
 NIL_WORKING_AREA(waThreadCounter, 120);
@@ -44,23 +45,28 @@ void initCounter() {
   pinMode(OUT2, OUTPUT);
   pinMode(OUT3, OUTPUT);
   pinMode(MUX, INPUT_PULLUP);
+  pinMode(OUT_EN, OUTPUT);
+  digitalWrite(OUT_EN, HIGH);
   pinMode(IN_EN, OUTPUT);
   digitalWrite(IN_EN, LOW);
 }
 
 void resetCounter() {
-   for (byte i=2; i<18; i++) {
-     setParameter(i,0);
-   }
- }
- 
+  for (byte i = 2; i < 18; i++) {
+    setParameter(i, 0);
+  }
+}
+
 void updateCounter() {
   // this warming up is required in order to have the correct value for the first receiver
-  for (byte i = 0; i < sizeof(out); i++) {
+  /*
+    for (byte i = 0; i < sizeof(out); i++) {
     setOutput(out[i]);
     setInput(in[i]);
     nilThdSleepMilliseconds(1);
-  }
+    }
+  */
+  digitalWrite(OUT_EN, LOW);
   for (byte i = 0; i < sizeof(out); i++) {
     setOutput(out[i]);
     setInput(in[i]);
@@ -69,7 +75,8 @@ void updateCounter() {
     difference[i] = (byte)abs(current[i] - currentValue);
     current[i] = currentValue;;
   }
-  nilThdSleepMilliseconds(10);
+  digitalWrite(OUT_EN, HIGH);
+  nilThdSleepMilliseconds(30);
 }
 
 
