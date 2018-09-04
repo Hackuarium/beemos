@@ -27,6 +27,11 @@ To achieve the above objectives, the project follows a modular design with diffe
   <img width="800" src="docs/BeeCounter/Images/PCBsoldering.jpg">
 </p>
 
+Here is the orientation of the IR sensors at the back of the PCB. Be careful, the orientation of the Eagle file is seen by the top.
+<p align="center">
+  <img width="800" src="docs/BeeCounter/Images/counterBoardIRSensorsOrientation.jpg">
+</p>
+
 [**Scale**](scale-i2c/README.md): Weighs the hive periodically using 4 load cells.
 
 [**Weather station**](weather-i2c/README.md): Monitors temperature, humidity and luminosity outside the hives.
