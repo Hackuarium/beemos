@@ -81,6 +81,7 @@ void find_lastEntry()
   uint32_t nextID;
   for (int i = 0; i < NB_MAX_ENTRIES; i++) {
     nextID = i2c_eeprom_read_uint32(ENTRY_SIZE_LOGS * i);
+
     if ((nextID > 0x0FFFFFFF) || (nextID < nextEntryID)) {
       return;
     }

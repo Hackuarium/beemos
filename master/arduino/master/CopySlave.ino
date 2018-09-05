@@ -98,7 +98,6 @@ void copyFromSlave() {
   wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE8_OUT,  PARAM_GATE8_OUT);
 #endif
 
-
 }
 
 #endif

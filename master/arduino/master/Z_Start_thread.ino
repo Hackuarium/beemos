@@ -30,7 +30,7 @@ NIL_THREADS_TABLE_ENTRY(NULL, ThreadSerial, NULL, waThreadSerial, sizeof(waThrea
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadTemperature, NULL, waThreadTemperature, sizeof(waThreadTemperature))
 
 #if defined(WEATHER_I2C_ADDRESS) || defined(SCALE_I2C_ADDRESS) 
-NIL_THREADS_TABLE_ENTRY(NULL, ThreadCopySlave, NULL, waThreadCopySlave, sizeof(waThreadCopySlave))
+ NIL_THREADS_TABLE_ENTRY(NULL, ThreadCopySlave, NULL, waThreadCopySlave, sizeof(waThreadCopySlave))
 #endif
 
 //NIL_THREADS_TABLE_ENTRY(NULL, ThreadGSM, NULL, waThreadGSM, sizeof(waThreadGSM))
