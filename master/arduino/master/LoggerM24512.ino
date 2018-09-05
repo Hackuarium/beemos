@@ -46,7 +46,7 @@ void writeLog() {
 // the variable nextEntryID indicate the number of the log
 void  writeLog (uint16_t event_number, uint16_t parameter_value) {
 
-  protectThread();
+  nilSemWait(&lockTimeCriticalZone);
 
   unsigned int logStartAddress = ENTRY_SIZE_LOGS * (nextEntryID % NB_MAX_ENTRIES);
 
@@ -67,7 +67,7 @@ void  writeLog (uint16_t event_number, uint16_t parameter_value) {
   // LOGGING THE ID at the end so in case of crash this entry will be rewritten
   i2c_eeprom_write_uint32(logStartAddress, nextEntryID);
 
-  unprotectThread();
+  nilSemSignal(&lockTimeCriticalZone);
 
   nextEntryID++;
 }
@@ -97,7 +97,7 @@ uint32_t printLogN(Print* output, uint32_t entryN, bool relative ) {
     return;
   }
 
-  protectThread();
+  nilSemWait(&lockTimeCriticalZone);
 
   // Are we asking for a log entry that is not on the card anymore ? Then we just start with the first that is on the card
   if ((nextEntryID >= NB_MAX_ENTRIES) && (entryN <= (nextEntryID - NB_MAX_ENTRIES))) {
@@ -113,7 +113,7 @@ uint32_t printLogN(Print* output, uint32_t entryN, bool relative ) {
   checkDigit ^= toHex(output, (int)getQualifier());
   toHex(output, checkDigit);
   output->println("");
-  unprotectThread();
+  nilSemSignal(&lockTimeCriticalZone);
   return entryN;
 
 }
@@ -129,7 +129,7 @@ void printLastLog(Print* output) {
 
 
 void print_logs_debug(Print* output) {
-  protectThread();
+  nilSemWait(&lockTimeCriticalZone);
   wdt_disable();
   int logStartAddress;
   for (int i = 0; i < NB_MAX_ENTRIES; i++) {
@@ -158,7 +158,7 @@ void print_logs_debug(Print* output) {
 #endif
     output->println("");
   }
-  unprotectThread();
+  nilSemSignal(&lockTimeCriticalZone);
   wdt_enable(WDTO_8S);
   wdt_reset();
 }
@@ -232,7 +232,7 @@ uint32_t i2c_eeprom_read_uint32(unsigned int eeaddress ) {
 
 void formatLog(Print* output) {
   // We may write per block and internal Wire buffer is 32 bytes
-  protectThread();
+  nilSemWait(&lockTimeCriticalZone);
   wdt_disable();
   output->println(F("Formatting flash"));
   for (unsigned int i = 0; i < (SIZE_MEMORY / 16); i++) {
@@ -254,7 +254,7 @@ void formatLog(Print* output) {
   wdt_enable(WDTO_8S);
   wdt_reset();
   nextEntryID = 0;
-  unprotectThread();
+  nilSemSignal(&lockTimeCriticalZone);
   writeLog();
 }
 
@@ -270,11 +270,11 @@ NIL_THREAD(ThreadLogger, arg) {
   Wire.begin();
 
   // reading last entry and
-  protectThread();
+  nilSemWait(&lockTimeCriticalZone);
   find_lastEntry();
   //set time to last recorded
   setTime(i2c_eeprom_read_uint32( ENTRY_SIZE_LOGS * (nextEntryID % NB_MAX_ENTRIES) + 4));
-  unprotectThread();
+  nilSemSignal(&lockTimeCriticalZone);
 
   writeLog(EVENT_ARDUINO_BOOT, 0x0000);
 

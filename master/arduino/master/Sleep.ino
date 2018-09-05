@@ -3,7 +3,7 @@
 void sleepNow () {
   // more information about sleep: https://www.nongnu.org/avr-libc/user-manual/group__avr__sleep.html
 
-  protectThread ();          // make sure we don't get interrupted before we sleep
+  nilSemWait(&lockTimeCriticalZone);         // make sure we don't get interrupted before we sleep
   wdt_disable();
   sleep_enable ();          // enables the sleep bit in the mcucr register
   sleepBefore();
@@ -12,7 +12,7 @@ void sleepNow () {
   nilThdSleepMilliseconds(2);  // smll debouncing
   attachInterrupt (digitalPinToInterrupt (0), empty, CHANGE);
 
-  unprotectThread ();           // unprotectThread allowed now, next instruction WILL be executed
+  nilSemSignal(&lockTimeCriticalZone);      // unprotectThread allowed now, next instruction WILL be executed
   sleep_cpu ();            // here the device is put to sleep
 
   sleep_disable ();         // first thing after waking from sleep:
