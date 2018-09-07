@@ -17,6 +17,18 @@ Build and program an open source bee monitoring system capable of the following 
 - [ ] Measures environmental variables including temperature, humidity, light and atmospheric pressure and study their effect on the bees.
 - [ ] Send the data to a remote server for analysis, visualization or to notify the user if something unusual happens.
 
+# Cloning the project
+
+This project uses SUBMODULES
+
+In order to clone use:
+
+`git clone --recurse-submodules https://github.com/hackuarium/beemos`
+
+To update the submodules
+
+`git submodule update --recursive --remote`
+
 # Modules
 
 To achieve the above objectives, the project follows a modular design with different hardware components.
@@ -58,17 +70,26 @@ We have designed and ordered the PCBs for the bee counter, weather station, scal
 
 The weather board can now show temperature, humidity, atmospheric pressure and relative light intensity. The scale board v1.0 has been soldered, a minor fix was needed to get it to work. The next steps will be to get the bee counter to work accurately by performing controlled tests, to assess the accuracy of the scale over time and to be able to send data wireless, integrate it to a database and plot it in an attractive way.
 
-# Cloning the project
+We have assembled a completed kit, containing:
+- 1 master board
+- 1 counter board
+- 1 scale board
+- 1 weather board
+- 1 Si7021 humidity captor
+- 1 solar panel
+- 2 temperature captors (one wire DS18B20)
+- 3 cables
+- 1 battery 3.7V, 6600mA/h
+- 1 wooden counter box
+- 1 plastic box (to contain the master, scale and weather boards)
+Here is what the kit actually look like:
+<p align="center">
+  <img width="800" src="common/images/kitComplet.jpg">
+</p>
 
-This project uses SUBMODULES
+We already have assembled and tested some parts of it (the master, weight and weather boards in particular), but on an empty hive. The master board seems to log correctly and we are able to read the logs afterwards. Some things need to be fixed, for example sometimes the master board stops recording for long periods of time.
 
-In order to clone use:
-
-`git clone --recurse-submodules https://github.com/hackuarium/beemos`
-
-To update the submodules
-
-`git submodule update --recursive --remote`
+We will now procede to a complete test with the full kit on a real hive.
 
 # Further resources
 
