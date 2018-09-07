@@ -16,7 +16,7 @@
 #define NB_PARAMETERS_LOGS  26
 
 #define NB_MAX_ENTRIES      (SIZE_MEMORY / ENTRY_SIZE_LOGS)  // parenthesis are required because it is substituted in the code
-#define MAX_MULTI_LOG       10          // only used to retrieve multilog
+#define MAX_MULTI_LOG       1024          // only used to retrieve multilog
 
 
 void afterLogging() {
