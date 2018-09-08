@@ -1,5 +1,6 @@
 #define HISTORY_SIZE 15
 
+
 byte history[16][HISTORY_SIZE];
 
 
@@ -55,3 +56,6 @@ void printBackground(Print * output) {
     output->println(background[i]);
   }
 }
+
+
+

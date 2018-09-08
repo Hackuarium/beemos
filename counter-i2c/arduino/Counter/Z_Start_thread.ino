@@ -29,7 +29,9 @@ NIL_THREADS_TABLE_ENTRY(NULL, ThreadSerial, NULL, waThreadSerial, sizeof(waThrea
 
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadCounter, NULL, waThreadCounter, sizeof(waThreadCounter))
 
+#ifdef LOGGER
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadLogger, NULL, waThreadLogger, sizeof(waThreadLogger))
+#endif
 
 NIL_THREADS_TABLE_ENTRY(NULL, ThreadMonitoring, NULL, waThreadMonitoring, sizeof(waThreadMonitoring))
 

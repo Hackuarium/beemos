@@ -1,6 +1,8 @@
 // part of the EEPROM is for the log
 // we should be able to save and reload the log
 
+#ifdef LOGGER
+
 
 #define DATA_SIZE 960
 #define DATA_TYPE 0  // LONG
@@ -39,7 +41,7 @@ void writeLog() {
   int firstAddress = getFirstAddress(getParameter(PARAM_LOGID));
   for (byte i = 0; i < NUMBER_PARAMETERS_TO_LOG; i++) {
     eeprom_write_word((uint16_t*)  (firstAddress + i * 2), getParameter(i));
-    if (i > 0) setParameter(i, 0);
+    if (i > 1) setParameter(i, 0);
   }
   setParameter(PARAM_LOGID, getParameter(PARAM_LOGID) + 1);
   lastLog = millis();
@@ -81,10 +83,10 @@ NIL_THREAD(ThreadLogger, arg) {
   loggerInit();
   while (true) {
     nilThdSleepMilliseconds(1000);
-    
+
     // This should deal correctly with the overflow that happens after 49.7 days
     setParameter(PARAM_SECONDS, (millis() - lastLog) / 1000);
-    
+
 
     int delayBetweenLog = getParameter(PARAM_LOGGING_INTERVAL);
     if (delayBetweenLog < 300) delayBetweenLog = 300;
@@ -133,5 +135,5 @@ void processLoggerCommand(char command, char* data, Print* output) {
 }
 
 
-
+#endif
 

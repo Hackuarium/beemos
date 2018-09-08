@@ -55,8 +55,9 @@ void resetParameters() { // turn all parameters to 0
   setAndSaveParameter(PARAM_DEBUG_DELAY, 500);
   setAndSaveParameter(PARAM_LOGGING_INTERVAL, 3600);
   setAndSaveParameter(PARAM_DEBUG_PRINT, 0);
-
+#ifdef LOGGER
   formatLog();
+#endif
   setQualifier(32767);
 }
 

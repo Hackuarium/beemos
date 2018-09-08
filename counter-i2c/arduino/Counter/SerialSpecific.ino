@@ -12,9 +12,11 @@ void processSpecificCommand(char* data, char* paramValue, Print* output) {
     case 'g':
       printGateInfo(output);
       break;
+#ifdef LOGGER
     case 'l':
       processLoggerCommand(data[1], paramValue, output);
       break;
+#endif
     case 'r':
       resetCounter();
       break;
@@ -28,6 +30,8 @@ void printSpecificHelp(Print * output) {
   output->println(F("(b)ackground"));
   output->println(F("(c)ounter"));
   output->println(F("(g)ate debug bg"));
+#ifdef LOGGER
   output->println(F("(l)og"));
+#endif
 }
 
