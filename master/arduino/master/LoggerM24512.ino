@@ -21,7 +21,7 @@
 
 void afterLogging() {
 #ifdef COUNTER_I2C_ADDRESS
-int result=wireReadIntRegister(COUNTER_I2C_ADDRESS,52);
+  int result = wireReadIntRegister(COUNTER_I2C_ADDRESS, 52);
 #endif
 }
 
