@@ -84,14 +84,13 @@ NIL_THREAD(ThreadLogger, arg) {
   while (true) {
     nilThdSleepMilliseconds(1000);
 
-    // This should deal correctly with the overflow that happens after 49.7 days
-    setParameter(PARAM_SECONDS, (millis() - lastLog) / 1000);
+    int counter = 0;
+    while (counter < getParameter(PARAM_LOGGING_INTERVAL)) {
+      nilThdSleepMilliseconds(1000);
+      counter++;
+    }
 
-
-    int delayBetweenLog = getParameter(PARAM_LOGGING_INTERVAL);
-    if (delayBetweenLog < 300) delayBetweenLog = 300;
-
-    if (getParameter(PARAM_SECONDS) >= delayBetweenLog) {
+    if (getParameter(PARAM_LOGGING_INTERVAL) >= 300) {
       writeLog();
     }
   }
