@@ -87,7 +87,7 @@ is really 3.3v and if it is the case we could think about a high resistor value 
 
 You can easily check the background values using the option `b`.
 
-## Gate validation
+## Gate validation (tested with USB and MCP1703-50)
 
 In order to validate the board it is practical to use a Q-tip and to use the `gate debug bg`
 menu item (`g`).
@@ -127,7 +127,30 @@ Gate 4 - Inside: 8  - Outside: 11
 Gate 4 - Inside: 2  - Outside: 7
 ```
 
-## Studying the background
+If we look at the background values (`b`) we obtain:
+
+```
+0 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 25
+1 3B 3B 3C 3C 3C 3C 3C 3C 3C 3C 3C 3C 3C 3C 3C 60
+2 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 35
+3 20 1F 20 20 20 20 20 20 20 20 20 20 20 20 20 32
+4 22 22 22 22 22 22 21 22 22 22 22 22 22 22 21 34
+5 18 18 17 17 18 17 18 17 17 17 18 17 18 17 17 23
+6 1D 1D 1D 1D 1D 1D 1D 1D 1D 1D 1D 1D 1D 1D 1D 29
+7 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 32
+8 3B 3B 3B 3B 3B 3B 3B 3B 3B 3B 3B 3B 3B 3B 3B 59
+9 1A 1A 1A 1A 1A 1A 1A 1A 1A 1A 1A 1A 1A 1A 1A 26
+10 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 41
+11 20 20 21 21 21 21 21 21 21 21 21 21 21 21 21 33
+12 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 35
+13 27 27 27 27 27 27 27 27 27 27 27 27 28 27 27 39
+14 2D 2C 2C 2D 2C 2D 2D 2D 2D 2D 2D 2D 2C 2D 2C 45
+15 1B 1B 1B 1B 1B 1C 1B 1B 1C 1B 1B 1B 1B 1B 1B 27
+```
+
+The variation between the values are huge and the origin is currently unknown.
+
+## Studying the background (MCP1703-50)
 
 Conditions:
 
