@@ -129,6 +129,11 @@ Gate 4 - Inside: 2  - Outside: 7
 
 ## Studying the background
 
+Conditions:
+
+- power supply is USB
+- convert is MCP1703-50 !!! (5v) so the voltage should be close to 4.7 !
+
 We did various tests to get the average value depending the surface and the distance. In order
 to make the measurement we use a very simple setup in which we control the distance between the
 PCB and the surface.
