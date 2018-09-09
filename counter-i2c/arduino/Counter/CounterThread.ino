@@ -66,16 +66,18 @@ void updateCounter() {
     nilThdSleepMilliseconds(1);
     }
   */
-  digitalWrite(OUT_EN, LOW);
+
   for (byte i = 0; i < sizeof(out); i++) {
     setOutput(out[i]);
     setInput(in[i]);
+    digitalWrite(OUT_EN, LOW);
     nilThdSleepMilliseconds(1);
     byte currentValue = analogRead(MUX) >> 2;
+    digitalWrite(OUT_EN, HIGH);
     difference[i] = (byte)abs(current[i] - currentValue);
     current[i] = currentValue;;
   }
-  digitalWrite(OUT_EN, HIGH);
+
   nilThdSleepMilliseconds(30);
 }
 
