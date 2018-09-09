@@ -4,7 +4,7 @@ byte gateStatus[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
 #define FIRST_PARAM_FOR_GATE 2
 
-long debugCounter=0;
+long debugCounter = 0;
 
 void updateTotal() {
   boolean debug = getParameter(PARAM_DEBUG_PRINT) == 1 ? true : false;
@@ -21,11 +21,11 @@ void updateTotal() {
         } else { // from outside to inside
           gateStatus[gate] = 1;
           setParameter(parameterID, getParameter(parameterID) + 1);
-         
+
           if (debug) {
-             debugCounter++;
-             Serial.print(millis()+10000000);
-             Serial.print(" - ");
+            debugCounter++;
+            Serial.print(millis() + 10000000);
+            Serial.print(" - ");
             Serial.print("Gate ");
             Serial.print(gate + 1);
             Serial.print(": IN --> ");
@@ -38,13 +38,13 @@ void updateTotal() {
           setParameter(parameterID + 1, getParameter(parameterID + 1) + 1);
           if (debug) {
             debugCounter--;
-                 Serial.print(millis()+10000000);
-             Serial.print(" - ");
+            Serial.print(millis() + 10000000);
+            Serial.print(" - ");
             Serial.print("Gate ");
             Serial.print(gate + 1);
             Serial.print(": OUT --> ");
             Serial.println(debugCounter);
-            
+
           }
         }
       }
