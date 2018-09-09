@@ -162,6 +162,32 @@ paper is ok but the distance is critical.
 
 The analysis of the background log (obtained with `b`) can be processed [online on this webpage](https://www.cheminfo.org/?viewURL=https%3A%2F%2Fcouch.cheminfo.org%2Fcheminfo-public%2F608afa37a31ea499b118ba1d74ee5f8c%2Fview.json&loadversion=true&fillsearch=Beemos+background+analysis).
 
+What we observe is that when we have around 5mm the SD is huge. Nevertherless as shown with the values the stability is really good.
+
+We find here the 16 detectors with for each of them 15 values in hexadecimal that corresponds
+to the A/D convertion of the received signal. The acquisition is done every second during
+15 seconds. The last value (in decimal), used for the statistics,
+is the median of the 15 other values.
+
+```
+0 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 48
+1 35 35 35 35 35 35 35 35 35 35 35 35 35 35 35 53
+2 76 76 76 76 76 76 76 76 76 76 76 76 76 76 76 118
+3 4F 50 4F 4F 50 4F 50 4F 4F 4F 4F 50 4F 4F 50 79
+4 7B 7A 7A 7A 7A 7A 7A 7A 7A 7A 7A 7A 7A 7B 7A 122
+5 45 45 46 45 45 45 45 45 45 45 45 45 45 45 45 69
+6 76 76 76 76 76 76 76 76 76 76 76 76 76 76 76 118
+7 54 54 54 54 54 54 54 54 54 54 54 54 54 54 54 84
+8 84 84 83 83 84 83 84 83 83 83 84 83 84 84 83 131
+9 4E 4F 4F 4F 4F 4E 4F 4E 4F 4F 4F 4E 4F 4F 4E 79
+10 76 76 76 76 76 76 76 76 75 76 76 76 76 76 76 118
+11 52 52 52 52 52 52 52 52 52 52 52 52 52 52 52 82
+12 74 74 74 74 74 74 74 74 74 75 74 74 74 75 74 116
+13 57 58 57 58 57 57 58 57 57 57 58 57 57 57 57 87
+14 6F 6F 6F 6F 6F 6F 6F 6F 6F 6F 6F 6F 6F 6F 6F 111
+15 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 78
+```
+
 ## Experiments
 
 In order to assume the precision of the bee counter, we set an experiment as follows:
