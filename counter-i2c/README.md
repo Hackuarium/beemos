@@ -165,20 +165,27 @@ PCB and the surface.
 
 | Surface     | Distance [mm] | Value | SD    |
 | ----------- | ------------- | ----- | ----- |
-| Black wood  | 2             | 199   | 14.40 |
-| Black wood  | 4             | 243   | 1.86  |
-| Black wood  | 6             | 249   | 3.48  |
-| Black wood  | 8             | 251   | 5.43  |
-| MDF         | 2             | 19    | 0.00  |
-| MDF         | 4             | 23    | 8.96  |
-| MDF         | 5             | 84    | 25.91 |
-| MDF         | 6             | 134   | 16.23 |
-| MDF         | 8             | 174   | 14.01 |
-| White paper | 2             | 19    | 0.00  |
-| White paper | 4             | 28    | 7.75  |
-| White paper | 5             | 99    | 12.15 |
-| White paper | 6             | 147   | 10.70 |
-| White paper | 8             | 195   | 9.72  |
+| Black wood  | 2             | 157   | 16.51 |
+| Black wood  | 4.5           | 234   | 2.94  |
+| Black wood  | 5.3           | 239   | 3.32  |
+| Black wood  | 6             | 245   | 3.32  |
+| Black wood  | 8.5           | 249   | 3.86  |
+| Black wood  | 10            | 250   | 4.96  |
+| Black wood  | 12            | 251   | 5.59  |
+| MDF         | 2             | 18    | 0.50  |
+| MDF         | 4.5           | 20    | 0.62  |
+| MDF         | 5.3           | 21    | 0.48  |
+| MDF         | 6             | 26    | 7.84  |
+| MDF         | 8.5           | 104   | 14.38 |
+| MDF         | 10            | 144   | 9.58  |
+| MDF         | 12            | 169   | 12.44 |
+| White paper | 2             | 18    | 0.45  |
+| White paper | 4.5           | 20    | 0.50  |
+| White paper | 5.3           | 22    | 0.45  |
+| White paper | 6             | 26    | 4.27  |
+| White paper | 8.5           | 119   | 19.22 |
+| White paper | 10            | 141   | 10.87 |
+| White paper | 12            | 182   | 11.61 |
 
 We observe that it is barely possible to measure anything on black surface. MDF or white
 paper is ok but the distance is critical.
