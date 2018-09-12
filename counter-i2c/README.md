@@ -218,6 +218,32 @@ is the median of the 15 other values.
 15 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 78
 ```
 
+## Studying the background (MCP1703-33)
+
+Conditions:
+
+- power supply is USB
+- convert is MCP1703-33
+
+| Surface     | Distance [mm] | Value | SD    |
+| ----------- | ------------- | ----- | ----- |
+| MDF         | 2             | 23    | 0.45  |
+| MDF         | 4.5           | 26    | 1.24  |
+| MDF         | 5.3           | 44    | 17.91 |
+| MDF         | 6             | 77    | 26.16 |
+| MDF         | 8.5           | 163   | 15.92 |
+| MDF         | 10            | 186   | 15.04 |
+| MDF         | 12            | 207   | 17.59 |
+| White paper | 2             | 24    | 43.37 |
+| White paper | 4.5           | 25    | 1.09  |
+| White paper | 5.3           | 31    | 18.74 |
+| White paper | 6             | 42    | 26.62 |
+| White paper | 8.5           | 161   | 24.23 |
+| White paper | 10            | 173   | 23.97 |
+| White paper | 12            | 188   | 13.31 |
+
+The results are very heterogenous for this board, as it is possible to see with the standard errors.
+
 ## Experiments
 
 In order to assume the precision of the bee counter, we set an experiment as follows:
