@@ -165,19 +165,6 @@ PCB and the surface.
 
 | Surface     | Distance [mm] | Value | SD    |
 | ----------- | ------------- | ----- | ----- |
-<< HEAD
-| Black wood  | 4             | 243   | 1.86  |
-| Black wood  | 6             | 249   | 3.48  |
-| Black wood  | 8             | 251   | 5.43  |
-| MDF         | 4             | 23    | 8.96  |
-| MDF         | 5             | 84    | 25.91 |
-| MDF         | 6             | 134   | 16.23 |
-| MDF         | 8             | 174   | 14.01 |
-| White paper | 4             | 28    | 7.75  |
-| White paper | 5             | 99    | 12.15 |
-| White paper | 6             | 147   | 10.70 |
-| White paper | 8             | 195   | 9.72  |
-==
 | Black wood  | 2             | 157   | 16.51 |
 | Black wood  | 4.5           | 234   | 2.94  |
 | Black wood  | 5.3           | 239   | 3.32  |
@@ -199,15 +186,6 @@ PCB and the surface.
 | White paper | 8.5           | 119   | 19.22 |
 | White paper | 10            | 141   | 10.87 |
 | White paper | 12            | 182   | 11.61 |
->> ca56897238def8ea866f5b23a6c0e58cf227afb8
-
-| Black wood | 3 | 199 | 14.40 |
-| Black wood | 8.5 | 248 | 2.09 |
-| Black wood | 16 | 253 | 7.60 |
-| MDF | 3 | 19 | 0.00 |
-| MDF | 10 | 162 | 14.09 |
-| White paper | 3 | 19 | 0.00 |
-| White paper | 16 | 218 | 7.40 |
 
 We observe that it is barely possible to measure anything on black surface. MDF or white
 paper is ok but the distance is critical.
@@ -249,26 +227,12 @@ Conditions:
 
 | Surface     | Distance [mm] | Value | SD    |
 | ----------- | ------------- | ----- | ----- |
-<< HEAD
 | Black wood  | 3             | 212   | 8.43  |
 | Black wood  | 6             | 243   | 10.37 |
 | Black wood  | 8.5           | 251   | 15.68 |
 | Black wood  | 9             | 252   | 18.66 |
 | Black wood  | 13            | 253   | 13.19 |
 | Black wood  | 16            | 254   | 33.96 |
-| MDF         | 3             | 24    | 0.54  |
-| MDF         | 6             | 89    | 19.40 |
-| MDF         | 8.5           | 170   | 11.34 |
-| MDF         | 9             | 192   | 9.61  |
-| MDF         | 13            | 219   | 6.58  |
-| MDF         | 16            | 233   | 16.19 |
-| White paper | 3             | 24    | 0.48  |
-| White paper | 6             | 104   | 20.71 |
-| White paper | 8.5           | 174   | 18.76 |
-| White paper | 9             | 192   | 13.50 |
-| White paper | 13            | 220   | 15.60 |
-| White paper | 16            | 232   | 12.69 |
-==
 | MDF         | 2             | 23    | 0.45  |
 | MDF         | 4.5           | 26    | 1.24  |
 | MDF         | 5.3           | 44    | 17.91 |
@@ -285,7 +249,6 @@ Conditions:
 | White paper | 12            | 188   | 13.31 |
 
 The results are very heterogenous for this board, as it is possible to see with the standard errors.
->> ca56897238def8ea866f5b23a6c0e58cf227afb8
 
 ## Experiments
 
