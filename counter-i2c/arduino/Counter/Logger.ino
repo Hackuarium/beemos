@@ -4,7 +4,7 @@
 #ifdef LOGGER
 
 
-#define DATA_SIZE 960
+#define DATA_SIZE 920
 #define DATA_TYPE 0  // LONG
 
 // log is saved in the format ID / in1 / out1 / ... / in8 / out8
@@ -13,7 +13,7 @@
 
 #define NUMBER_PARAMETERS_TO_LOG  20
 #define LOG_ENTRY_LENGTH          NUMBER_PARAMETERS_TO_LOG*2
-#define NUMBER_LOGS               24
+#define NUMBER_LOGS               DATA_SIZE/LOG_ENTRY_LENGTH
 
 #define FIRST_ADDRESS   1024-LOG_ENTRY_LENGTH*NUMBER_LOGS
 #define LAST_ADDRESS   1023

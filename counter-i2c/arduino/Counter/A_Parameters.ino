@@ -13,7 +13,7 @@
  *********************************************/
 
 
-#define MAX_PARAM 26   // If the MAX_PARAM change you need to change the pointer in the EEPROM
+
 
 #define PARAM_LOGID         0
 #define PARAM_SECONDS       1 // number of secodns since the last log
@@ -42,11 +42,23 @@
 // disable if less than 300
 #define PARAM_DEBUG_PRINT         25
 
-// you may write in EEPROM max 100'000 times
-// 100'000 * 300 * 24 (number of line of log) / 365 / 86400
+#define PARAM_GATE1_BG_IN      26
+#define PARAM_GATE1_BG_OUT     27
+#define PARAM_GATE2_BG_IN      28
+#define PARAM_GATE2_BG_OUT     29
+#define PARAM_GATE3_BG_IN      30
+#define PARAM_GATE3_BG_OUT     31
+#define PARAM_GATE4_BG_IN      32
+#define PARAM_GATE4_BG_OUT     33
+#define PARAM_GATE5_BG_IN      34
+#define PARAM_GATE5_BG_OUT     35
+#define PARAM_GATE6_BG_IN      36
+#define PARAM_GATE6_BG_OUT     37
+#define PARAM_GATE7_BG_IN      38
+#define PARAM_GATE7_BG_OUT     39
+#define PARAM_GATE8_BG_IN      40
+#define PARAM_GATE8_BG_OUT     41
 
-#define INT_MAX_VALUE       32767
-#define LONG_MAX_VALUE      2147483647
 
 void resetParameters() { // turn all parameters to 0
   for (byte i = 0; i < 18; i++) {

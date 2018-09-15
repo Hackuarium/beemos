@@ -42,6 +42,7 @@ void updateBackground() {
 
   for (byte i = 0; i < 16; i++) {
     background[i] = getMedian(i);
+    setParameter(26+i, background[i]);
   }
 }
 

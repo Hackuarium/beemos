@@ -5,7 +5,7 @@
 
 // #define LOGGER 1
 
-#define MAX_PARAM 26
+#define MAX_PARAM 52
 
 #define THR_SERIAL    1
 
