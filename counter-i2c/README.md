@@ -165,6 +165,7 @@ PCB and the surface.
 
 | Surface     | Distance [mm] | Value | SD    |
 | ----------- | ------------- | ----- | ----- |
+<< HEAD
 | Black wood  | 4             | 243   | 1.86  |
 | Black wood  | 6             | 249   | 3.48  |
 | Black wood  | 8             | 251   | 5.43  |
@@ -176,6 +177,29 @@ PCB and the surface.
 | White paper | 5             | 99    | 12.15 |
 | White paper | 6             | 147   | 10.70 |
 | White paper | 8             | 195   | 9.72  |
+==
+| Black wood  | 2             | 157   | 16.51 |
+| Black wood  | 4.5           | 234   | 2.94  |
+| Black wood  | 5.3           | 239   | 3.32  |
+| Black wood  | 6             | 245   | 3.32  |
+| Black wood  | 8.5           | 249   | 3.86  |
+| Black wood  | 10            | 250   | 4.96  |
+| Black wood  | 12            | 251   | 5.59  |
+| MDF         | 2             | 18    | 0.50  |
+| MDF         | 4.5           | 20    | 0.62  |
+| MDF         | 5.3           | 21    | 0.48  |
+| MDF         | 6             | 26    | 7.84  |
+| MDF         | 8.5           | 104   | 14.38 |
+| MDF         | 10            | 144   | 9.58  |
+| MDF         | 12            | 169   | 12.44 |
+| White paper | 2             | 18    | 0.45  |
+| White paper | 4.5           | 20    | 0.50  |
+| White paper | 5.3           | 22    | 0.45  |
+| White paper | 6             | 26    | 4.27  |
+| White paper | 8.5           | 119   | 19.22 |
+| White paper | 10            | 141   | 10.87 |
+| White paper | 12            | 182   | 11.61 |
+>> ca56897238def8ea866f5b23a6c0e58cf227afb8
 
 | Black wood | 3 | 199 | 14.40 |
 | Black wood | 8.5 | 248 | 2.09 |
@@ -225,6 +249,7 @@ Conditions:
 
 | Surface     | Distance [mm] | Value | SD    |
 | ----------- | ------------- | ----- | ----- |
+<< HEAD
 | Black wood  | 3             | 212   | 8.43  |
 | Black wood  | 6             | 243   | 10.37 |
 | Black wood  | 8.5           | 251   | 15.68 |
@@ -243,6 +268,24 @@ Conditions:
 | White paper | 9             | 192   | 13.50 |
 | White paper | 13            | 220   | 15.60 |
 | White paper | 16            | 232   | 12.69 |
+==
+| MDF         | 2             | 23    | 0.45  |
+| MDF         | 4.5           | 26    | 1.24  |
+| MDF         | 5.3           | 44    | 17.91 |
+| MDF         | 6             | 77    | 26.16 |
+| MDF         | 8.5           | 163   | 15.92 |
+| MDF         | 10            | 186   | 15.04 |
+| MDF         | 12            | 207   | 17.59 |
+| White paper | 2             | 24    | 43.37 |
+| White paper | 4.5           | 25    | 1.09  |
+| White paper | 5.3           | 31    | 18.74 |
+| White paper | 6             | 42    | 26.62 |
+| White paper | 8.5           | 161   | 24.23 |
+| White paper | 10            | 173   | 23.97 |
+| White paper | 12            | 188   | 13.31 |
+
+The results are very heterogenous for this board, as it is possible to see with the standard errors.
+>> ca56897238def8ea866f5b23a6c0e58cf227afb8
 
 ## Experiments
 
