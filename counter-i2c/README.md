@@ -165,30 +165,35 @@ PCB and the surface.
 
 | Surface     | Distance [mm] | Value | SD    |
 | ----------- | ------------- | ----- | ----- |
-| Black wood  | 2             | 199   | 14.40 |
 | Black wood  | 4             | 243   | 1.86  |
 | Black wood  | 6             | 249   | 3.48  |
 | Black wood  | 8             | 251   | 5.43  |
-| MDF         | 2             | 19    | 0.00  |
 | MDF         | 4             | 23    | 8.96  |
 | MDF         | 5             | 84    | 25.91 |
 | MDF         | 6             | 134   | 16.23 |
 | MDF         | 8             | 174   | 14.01 |
-| White paper | 2             | 19    | 0.00  |
 | White paper | 4             | 28    | 7.75  |
 | White paper | 5             | 99    | 12.15 |
 | White paper | 6             | 147   | 10.70 |
 | White paper | 8             | 195   | 9.72  |
+
+| Black wood | 3 | 199 | 14.40 |
+| Black wood | 8.5 | 248 | 2.09 |
+| Black wood | 16 | 253 | 7.60 |
+| MDF | 3 | 19 | 0.00 |
+| MDF | 10 | 162 | 14.09 |
+| White paper | 3 | 19 | 0.00 |
+| White paper | 16 | 218 | 7.40 |
 
 We observe that it is barely possible to measure anything on black surface. MDF or white
 paper is ok but the distance is critical.
 
 The analysis of the background log (obtained with `b`) can be processed [online on this webpage](https://www.cheminfo.org/?viewURL=https%3A%2F%2Fcouch.cheminfo.org%2Fcheminfo-public%2F608afa37a31ea499b118ba1d74ee5f8c%2Fview.json&loadversion=true&fillsearch=Beemos+background+analysis).
 
-What we observe is that when we have around 5mm the SD is huge. Nevertherless as shown with the values the stability is really good.
+What we observe is that when we have around 5mm the SD is huge. Nevertheless as shown with the values the stability is really good.
 
 We find here the 16 detectors with for each of them 15 values in hexadecimal that corresponds
-to the A/D convertion of the received signal. The acquisition is done every second during
+to the A/D conversion of the received signal. The acquisition is done every second during
 15 seconds. The last value (in decimal), used for the statistics,
 is the median of the 15 other values.
 
@@ -211,10 +216,38 @@ is the median of the 15 other values.
 15 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 4E 78
 ```
 
+## Studying the background (MCP1703-33)
+
+Conditions:
+
+- power supply is USB
+- convert is MCP1703-33
+
+| Surface     | Distance [mm] | Value | SD    |
+| ----------- | ------------- | ----- | ----- |
+| Black wood  | 3             | 212   | 8.43  |
+| Black wood  | 6             | 243   | 10.37 |
+| Black wood  | 8.5           | 251   | 15.68 |
+| Black wood  | 9             | 252   | 18.66 |
+| Black wood  | 13            | 253   | 13.19 |
+| Black wood  | 16            | 254   | 33.96 |
+| MDF         | 3             | 24    | 0.54  |
+| MDF         | 6             | 89    | 19.40 |
+| MDF         | 8.5           | 170   | 11.34 |
+| MDF         | 9             | 192   | 9.61  |
+| MDF         | 13            | 219   | 6.58  |
+| MDF         | 16            | 233   | 16.19 |
+| White paper | 3             | 24    | 0.48  |
+| White paper | 6             | 104   | 20.71 |
+| White paper | 8.5           | 174   | 18.76 |
+| White paper | 9             | 192   | 13.50 |
+| White paper | 13            | 220   | 15.60 |
+| White paper | 16            | 232   | 12.69 |
+
 ## Experiments
 
 In order to assume the precision of the bee counter, we set an experiment as follows:
-We built inside a transparent tupperware two hermetic compartiments, one with sugared water, the other one with pollen. The bees can only pass from one compartment to another through the box containing the tunnels with the IR reflectance sensors. With a camera, we filmed the tupperware to then compare the results of the gate monitoring debug system with the footage of the camera.
+We built inside a transparent tupperware two hermetic compartments, one with sugared water, the other one with pollen. The bees can only pass from one compartment to another through the box containing the tunnels with the IR reflectance sensors. With a camera, we filmed the tupperware to then compare the results of the gate monitoring debug system with the footage of the camera.
 
 ![Alt text](/docs/BeeCounter/Images/tupperwareDesign.jpg?raw=true 'Tupperware Design')
 
