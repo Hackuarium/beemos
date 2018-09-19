@@ -46,14 +46,14 @@ Here is the orientation of the IR sensors at the back of the PCB. Be careful, th
 
 [**Scale**](scale-i2c/README.md): Weighs the hive periodically using 4 load cells.
 
-[**Weather station**](weather-i2c/README.md): Monitors temperature, humidity and luminosity outside the hives.
+[**Weather station**](weather-i2c/README.md): Monitors temperature, humidity, atmospheric pressure and luminosity outside the hives.
 
 <p align="center">
   <img width="200" src="docs/weather-i2c/images/PCB_front.jpg">
   <img width="200" src="docs/weather-i2c/images/PCB_back.jpg">
 </p>
 
-[**Master board**](master/README.md): Communicates with all other devices over I2C, log data in memory and sends the data to a remote server using a SIM card module. May also tracks temperature inside the hive.
+[**Master board**](master/README.md): Communicates with all other devices over I2C, log data in memory and sends the data to a remote server using a SIM card module. May also track temperature inside the hive.
 
   <img width="600" src="common/images/master.jpg">
 
