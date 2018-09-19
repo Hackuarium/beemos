@@ -13,8 +13,8 @@ The BeeMoS project is an open source bee hive monitoring system developed at the
 Build and program an open source bee monitoring system capable of the following objectives:
 
 - [x] Track the activity of the hives to study the behaviour of bees and monitor their health.
-- [ ] Track changes in the hive's weight over time to detect sudden and gradual changes (swarming, honey production ...).
-- [ ] Measures environmental variables including temperature, humidity, light and atmospheric pressure and study their effect on the bees.
+- [x] Track changes in the hive's weight over time to detect sudden and gradual changes (swarming, honey production ...).
+- [x] Measures environmental variables including temperature, humidity, light and atmospheric pressure and study their effect on the bees.
 - [ ] Send the data to a remote server for analysis, visualization or to notify the user if something unusual happens.
 
 # Cloning the project
@@ -39,7 +39,7 @@ To achieve the above objectives, the project follows a modular design with diffe
   <img width="800" src="docs/BeeCounter/Images/PCBsoldering.jpg">
 </p>
 
-Here is the orientation of the IR sensors at the back of the PCB. Be careful, the orientation of the Eagle file is seen by the top.
+Here is the orientation of the IR sensors at the back of the PCB. Be careful, the orientation of the Eagle file is seen from the top.
 <p align="center">
   <img width="800" src="docs/BeeCounter/Images/counterBoardIRSensorsOrientation.jpg">
 </p>
