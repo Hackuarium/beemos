@@ -6,7 +6,9 @@
 
 _[Lire en français](README.fr.md)_
 
-The BeeMoS project is an open source bee hive monitoring system developed at the open science lab Hackuarium, Renens, Switzerland.
+The BeeMoS project is an open source bee hive monitoring system developed at the open science lab [Hackuarium](http://www.hackuarium.ch), Renens, Switzerland.
+
+Please fee free to [contact us](https://form.jotformeu.com/71600609780354) if you would like more information.
 
 # Objectives
 
