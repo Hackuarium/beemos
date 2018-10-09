@@ -41,7 +41,7 @@ To achieve the above objectives, the project follows a modular design with diffe
   <img width="800" src="docs/BeeCounter/Images/PCBsoldering.jpg">
 </p>
 
-Here is the orientation of the IR sensors at the back of the PCB. Be careful, the orientation of the Eagle file is seen from the top.
+Here is the orientation of the IR sensors at the back of the PCB. Be careful, the orientation of the Eagle file is seen from the top of the PCB.
 <p align="center">
   <img width="800" src="docs/BeeCounter/Images/counterBoardIRSensorsOrientation.jpg">
 </p>
@@ -70,20 +70,20 @@ We have designed and ordered the PCBs for the bee counter, weather station, scal
   <img width="800" src="common/images/CounterFieldTest.jpg">
 </p>
 
-The weather board can now show temperature, humidity, atmospheric pressure and relative light intensity. The scale board v1.0 has been soldered, a minor fix was needed to get it to work. The next steps will be to get the bee counter to work accurately by performing controlled tests, to assess the accuracy of the scale over time and to be able to send data wireless, integrate it to a database and plot it in an attractive way.
+The weather board can now show temperature, humidity, atmospheric pressure and relative light intensity. The scale board v1.0 has been soldered, a minor fix was needed to get it to work. The next steps will be to get the bee counter to work accurately by performing controlled tests, to assess the accuracy of the scale over time and to be able to send data wirelessly, integrate them to a database and plot them in an attractive way.
 
 We have assembled a completed kit, containing:
 - 1 master board
 - 1 counter board
 - 1 scale board
-- 1 weather board
-- 1 Si7021 humidity captor
+- 1 weather board (to be protected from rain in a transparent container that lets the light through as well as an entry for the humidity to be accurately measured)
+- 1 Si7021 humidity sensor
 - 1 solar panel
-- 2 temperature captors (one wire DS18B20)
-- 3 cables
+- 2 temperature sensors (one wire DS18B20)
+- 3 cables (RJ11 connectors)
 - 1 battery 3.7V, 6600mA/h
 - 1 wooden counter box
-- 1 plastic box (to contain the master, scale and weather boards)
+- 1 plastic box (to protect the master and scale boards from rain)
 Here is what the kit actually look like:
 <p align="center">
   <img width="800" src="common/images/kitComplet.jpg">
