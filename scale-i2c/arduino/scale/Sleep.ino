@@ -21,28 +21,28 @@ NIL_THREAD(ThreadSleep, arg) {
   }
 }
 
-void sleepNow () {
+void sleepNow() {
 
 #ifdef WATCH_DOG
   wdt_disable();
 #endif
 
-  set_sleep_mode (SLEEP_MODE_PWR_DOWN);
+  set_sleep_mode(SLEEP_MODE_PWR_DOWN);
 
   // turn off brown-out enable in software
-  MCUCR = bit (BODS) | bit (BODSE);
-  MCUCR = bit (BODS);
+  MCUCR = bit(BODS) | bit(BODSE);
+  MCUCR = bit(BODS);
 
   uint8_t analogStatus = ADCSRA & (1 << ADEN);
-  ADCSRA &= ~(1 << ADEN); //Disable ADC: allows to win 80µA
+  ADCSRA &= ~(1 << ADEN); // Disable ADC: allows to win 80µA
 
-  sleep_mode ();            // here the device is put to sleep
+  sleep_mode(); // here the device is put to sleep
 
 #ifdef WATCH_DOG
-  wdt_enable(WATCH_DOG);  //reactivate the watchdog
+  wdt_enable(WATCH_DOG); // reactivate the watchdog
 #endif
 
+  ADCSRA |= analogStatus;
 }
 
 #endif
-

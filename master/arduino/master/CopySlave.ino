@@ -72,9 +72,9 @@ NIL_THREAD(ThreadCopySlave, arg) {
 #ifdef SCALE_I2C_ADDRESS
     wireWakeup(SCALE_I2C_ADDRESS);
 #endif
-    nilThdSleepMilliseconds(5000); // wait time to wakre up
+    nilThdSleepMilliseconds(5000); // wait time to wake up
     copyFromSlave();
-    //  nilThdSleepMilliseconds(20000);
+      nilThdSleepMilliseconds(60*1000);
   }
 }
 
@@ -111,8 +111,8 @@ void copyFromSlave() {
   wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE6_OUT,  PARAM_GATE6_OUT);
   wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE7_IN,  PARAM_GATE7_IN);
   wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE7_OUT,  PARAM_GATE7_OUT);
-  wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE8_IN,  PARAM_GATE8_IN);
-  wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE8_OUT,  PARAM_GATE8_OUT);
+  wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE1_BG_IN,  PARAM_GATE8_IN);
+  wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE1_BG_OUT,  PARAM_GATE8_OUT);
 #endif
 
 }

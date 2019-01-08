@@ -14,10 +14,12 @@ void setup () {
   pinMode (LED, OUTPUT);
 }
 
-void loop () {  
+void loop () {
+
   digitalWrite (LED, HIGH);
   delay (50);
   digitalWrite (LED, LOW);
+
 
   // disable ADC
   byte adconfig = ADCSRA;
