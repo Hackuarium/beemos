@@ -9,8 +9,11 @@ NIL_THREAD(ThreadSi7021, arg) {
   sensor.begin();
 
   while (true) {
-    setParameter(PARAM_INT_HUMIDITY,sensor.getRH()*100);
-    setParameter(PARAM_INT_TEMPERATURE,sensor.getTemp()*100);
+    setParameter(PARAM_INT_HUMIDITY,sensor.getRH());
+    setParameter(PARAM_INT_TEMPERATURE,sensor.getTemp());
+    if (getParameter(PARAM_INT_HUMIDITY)!=ERROR_VALUE && getParameter(PARAM_INT_TEMPERATURE)!=ERROR_VALUE) {
+        nilThdSleepMilliseconds(60000);
+    }
     nilThdSleepMilliseconds(1000);
   }
 }
