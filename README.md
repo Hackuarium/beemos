@@ -6,7 +6,7 @@
 
 _[Lire en français](README.fr.md)_
 
-The BeeMoS project is an open source bee hive monitoring system developed at the open science lab [Hackuarium](http://www.hackuarium.ch), Renens, Switzerland.
+The BeeMoS project is an open source bee hive monitoring system developed at the open science lab [Hackuarium](http://www.hackuarium.ch), Route de Crochy 20, Ecublens, Switzerland.
 
 Please fee free to [contact us](https://form.jotformeu.com/71600609780354) if you would like more information.
 
@@ -46,9 +46,9 @@ Here is the orientation of the IR sensors at the back of the PCB. Be careful, th
   <img width="800" src="docs/BeeCounter/Images/counterBoardIRSensorsOrientation.jpg">
 </p>
 
-[**Scale**](scale-i2c/README.md): Weighs the hive periodically using 4 load cells.
+[**Scale**](scale-i2c/README.md): Weighs the hive periodically using 4 load cells in Wheatstone bridge configuration.
 
-[**Weather station**](weather-i2c/README.md): Monitors temperature, humidity, atmospheric pressure and luminosity outside the hives.
+[**Weather station**](weather-i2c/README.md): Monitors temperature, humidity, atmospheric pressure and luminosity outside of the hives.
 
 <p align="center">
   <img width="200" src="docs/weather-i2c/images/PCB_front.jpg">
@@ -64,13 +64,13 @@ make some tests.
 
 # State of the project
 
-We have designed and ordered the PCBs for the bee counter, weather station, scale and master boards. These four boards have been assembled and programmed. We also built a laser cut wooden enclosure which contains the bee counter PCB. It includes 8 individual gates that the bees use to enter/exit the hive and an upper compartment for the board so that sensor are on top of entering bees. A few field trials were launched to assess the accuracy of the bee counter but we still need to fix some things in the hardware and software to get it working. To solve these issues, Clara has joined the BeeMoS team to make some tests of the bee counter in a controlled setting with live bees (transparent box with the beecounter inside and a camera to record video of entering/exiting bees that will be compared to the readings from the board). 
+We have designed and ordered PCBs for the bee counter, weather station, scale and master boards. These four boards have been assembled and programmed. We also built a laser cut wooden enclosure which contains the bee counter PCB. It includes 8 individual gates that the bees use to enter/exit the hive and an upper compartment for the board so that sensor are on top of entering bees. A few field trials were launched to assess the accuracy of the bee counter but we still need to fix some things in the hardware and software to get it working (we detect false positives at the beginning and the end of sunny days, possibly due to sun beams entering and being counted as a passing bee). Clara has joined the BeeMoS team in the summer of 2018 to make some tests of the bee counter in a controlled setting with live bees (transparent box with the beecounter inside and a camera to record video of entering/exiting bees that was compared to the readings from the board) and also participated in building a hive scale. 
 
 <p align="center">
   <img width="800" src="common/images/CounterFieldTest.jpg">
 </p>
 
-The weather board can now show temperature, humidity, atmospheric pressure and relative light intensity. The scale board v1.0 has been soldered, a minor fix was needed to get it to work. The next steps will be to get the bee counter to work accurately by performing controlled tests, to assess the accuracy of the scale over time and to be able to send data wirelessly, integrate them to a database and plot them in an attractive way.
+The weather board can now show temperature, humidity, atmospheric pressure and relative light intensity. The scale board v1.0 has been soldered, a minor fix was needed to get it to work. The next steps will be to get the bee counter to work accurately by performing controlled tests, to assess the accuracy of the scale over time and to be able to send data wirelessly, integrate them to a database and plot them in an attractive way. 
 
 We have assembled a completed kit, containing:
 - 1 master board
@@ -89,9 +89,8 @@ Here is what the kit actually look like:
   <img width="800" src="common/images/kitComplet.jpg">
 </p>
 
-We already have assembled and tested some parts of it (the master, weight and weather boards in particular), but on an empty hive. The master board seems to log correctly and we are able to read the logs afterwards. Some things need to be fixed, for example sometimes the master board stops recording for long periods of time.
+We already have assembled and tested some parts of it (the master, weight and weather boards in particular), but on an empty hive. The master board seems to log correctly and we are able to read the logs afterwards. Some things need to be fixed, for example sometimes the master board stops recording for long periods of time. It seems that this happens when the cables between boards (I2C interface) are too long. Since the 2G network will soon disappear in Switzerland, the SIM800L module will become useless (does not work with 3G and above). We are now considering to design a new master board based on the ESP32 in order to be less limited in programming it (less memory limitations than for Atmega32u4-based boards) and also to have integrated WiFi and Bluetooth and possibly LoRa too for wireless communications. Since all the other boards are based on I2C communication, they should be easy to integrate with the new master board.
 
-We will now procede to a complete test with the full kit on a real hive.
 
 # Further resources
 
