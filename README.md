@@ -72,7 +72,7 @@ We have designed and ordered PCBs for the bee counter, weather station, scale an
 
 The weather board can now show temperature, humidity, atmospheric pressure and relative light intensity. The scale board v1.0 has been soldered, a minor fix was needed to get it to work. The next steps will be to get the bee counter to work accurately by performing controlled tests, to assess the accuracy of the scale over time and to be able to send data wirelessly, integrate them to a database and plot them in an attractive way. 
 
-We have assembled a completed kit, containing:
+We have assembled a complete kit, containing:
 - 1 master board
 - 1 counter board
 - 1 scale board
@@ -84,7 +84,7 @@ We have assembled a completed kit, containing:
 - 1 battery 3.7V, 6600mA/h
 - 1 wooden counter box
 - 1 plastic box (to protect the master and scale boards from rain)
-Here is what the kit actually look like:
+Here is what the kit actually looks like:
 <p align="center">
   <img width="800" src="common/images/kitComplet.jpg">
 </p>
