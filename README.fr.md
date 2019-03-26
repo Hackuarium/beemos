@@ -38,8 +38,8 @@ Pour parvenir aux objectifs ci-dessus, le projet est subdivisé en plusieurs mod
 
 
 # Etat du projet
-Nous avons conçu, commandé et recu les circuits imprimés pour le compteur d'abeilles, la station météo, la balance et la carte maître. Tous les éléments de ces cartes sont désormais soudés. Les codes Arduino des différentes cartes ont été écrits et les cartes programmées, notamment pour compter les abeilles qui entrent et sortent de la ruche et les enregistrer pour toutes les portes en utilisant du multithreading. En utilisant une découpeuse laser, nous avons aussi construit un boîtier en bois (MDF 3mm) qui sert à contenir le circuit imprimé du compteur d'abeilles. Ce boîtier comprend 8 portes individuelles que les abeilles peuvent emprunter pour transiter entre l'intérieur et l'extérieur de la ruche. Nous avons effectué quelques essais sur le terrain pour évaluer la précision du compteur mais nous devons encore effectuer quelques calibrations physiques et logicielles pour le faire fonctionner correctement. En effet, nous avons remarqué qu'il y avait de faux positifs en début et en fin de journées ensoleillées (il est possible que les rayons du soleil à ces moments font croire au compteur qu'une abeille passe alors qu'il n'y en a pas).
-Etant donné que le réseau 2G va bientôt disparaître de Suisse, le module SIM800L ne pourra pas fonctionner. Nous sommes en train de considérer de migrer notre carte maître sur un ESP32 afin d'être moins limités dans sa programmation (plus de mémoire disponible que pour les cartes basées sur l'Atmega32u4). De plus, l'ESP32 a le WiFi et Bluetooth intégrés et la possibilité d'utiliser LoRa assez facilement pour les communications sans fil. Etant donné que nos autres cartes sont basées sur le protocole I2C, elles devraient pouvoir être utilisées avec la nouvelle carte facilement.
+Nous avons conçu, commandé et recu les circuits imprimés pour le compteur d'abeilles, la station météo, la balance et la carte maître. Tous les éléments de ces cartes sont désormais soudés. Les codes Arduino des différentes cartes ont été écrits et les cartes programmées, notamment pour compter les abeilles qui entrent et sortent de la ruche et les enregistrer pour toutes les portes en utilisant du multithreading. En utilisant une découpeuse laser, nous avons aussi construit un boîtier en bois (MDF 3mm) qui sert à contenir le circuit imprimé du compteur d'abeilles. Ce boîtier comprend 8 portes individuelles que les abeilles peuvent emprunter pour transiter entre l'intérieur et l'extérieur de la ruche. Nous avons effectué quelques essais sur le terrain pour évaluer la précision du compteur mais nous devons encore effectuer quelques calibrations physiques et logicielles pour le faire fonctionner correctement. 
+Clara a rejoint l'équipe de BeeMoS pendant l'été 2018 pour tester le compteur d'abeilles sous conditions contrôlées avec des abeilles (boîte transparente avec le compteur d'abeille à l'intérieur et une caméra pour enregistrer les vidéos d'abeilles entrant/sortant et comparer aux comptages par la carte) et a également participé à la construction d'une balance à ruche. 
 
 <p align="center">
   <img width="800" src="common/images/CounterFieldTest.jpg">
@@ -47,6 +47,26 @@ Etant donné que le réseau 2G va bientôt disparaître de Suisse, le module SIM
 
 La station météo peut maintenant afficher la température, l'humidité, la pression atmosphérique et la luminosité relative. 
 La prochaine étape sera de faire fonctionner et calibrer le compteur d'abeilles ainsi que de s'assurer de la stabilité de la balance au fil du temps. 
+
+Nous avons assemblé un kit complet comprenant:
+- 1 carte maître
+- 1 carte compteur
+- 1 carte balance
+- 1 carte météo (à protéger de la pluie dans un récipient transparent laissant passer la lumière ainsi qu'une ouverture pour mesurer l'humidité)
+- 1 Si7021 capteur de température et humidité
+- 1 panneau solaire
+- 2 sondes de température (one wire DS18B20)
+- 3 cables (connecteurs RJ11)
+- 1 batterie 3.7V, 6600mAh
+- 1 boîte en bois (MDF) pour le compteur
+- 1 boîte en plastique (pour protéger la carte maître et celle de la balance de la pluie)
+Voici à quoi ressemble le kit complet:
+<p align="center">
+  <img width="800" src="common/images/kitComplet.jpg">
+</p>
+
+Nous avons assemblé et tester certaines parties du système (en particulier la carte maître, la carte balance et la carte météo) mais sur une ruche vide. La carte maître semble enregistrer les données correctement et nous avons pu récupérer les logs par la suite. Il reste encore des choses à régler, par exemple des fois la carte maître arrête d'enregistrer les données et semble bloquée. Il semble que ceci arrive lorsque les cables reliant les différentes cartes (interface I2C) sont trop longs.
+Alors que les tests du compteur d'abeilles en conditions contrôlées ont été concluants, nous avons remarqué qu'il y avait de faux positifs en début et en fin de journées ensoleillées (il est possible que les rayons du soleil à ces moments font croire au compteur qu'une abeille passe alors qu'il n'y en a pas). Etant donné que le réseau 2G va bientôt disparaître de Suisse, le module SIM800L ne pourra pas fonctionner. Nous sommes en train de considérer de migrer notre carte maître sur un ESP32 afin d'être moins limités dans sa programmation (plus de mémoire disponible que pour les cartes basées sur l'Atmega32u4). De plus, l'ESP32 a le WiFi et Bluetooth intégrés et la possibilité d'utiliser LoRa assez facilement pour les communications sans fil. Etant donné que nos autres cartes sont basées sur le protocole I2C, elles devraient pouvoir être utilisées avec la nouvelle carte facilement.
 
 # Ressources additionnelles 
 
