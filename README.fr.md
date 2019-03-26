@@ -6,7 +6,7 @@
 
 *[Read this in english](README.md)*
 
-Le projet BeeMos est un système de monitorage de ruches développé au laboratoire d'open science Hackuarium, à Renens, Suisse.
+Le projet BeeMos est un système de monitorage de ruches développé au laboratoire d'open science Hackuarium, Route de Crochy 20, Ecublens, Suisse.
 
 # Objectifs 
 Construire et programmer un système open source de monitorage d'abeilles avec les objectifs suivants:
@@ -38,15 +38,15 @@ Pour parvenir aux objectifs ci-dessus, le projet est subdivisé en plusieurs mod
 
 
 # Etat du projet
-Nous avons conçu, commandé et recu les circuits imprimés pour le compteur d'abeilles, la station météo, la balance et la carte maître. Tous les éléments de ces cartes sont désormais soudés. Les codes Arduino des différentes cartes ont été écrits et les cartes programmées, notamment pour compter les abeilles qui entrent et sortent de la ruche et les enregistrer pour toutes les portes en utilisant du multithreading. En utilisant une découpeuse laser, nous avons aussi construit un boîtier en bois (MDF 3mm) qui sert à contenir le circuit imprimé du compteur d'abeilles. Ce boîtier comprend 8 portes individuelles que les abeilles peuvent emprunter pour transiter entre l'intérieur et l'extérieur de la ruche. Nous avons effectué quelques essais sur le terrain pour évaluer la précision du compteur mais nous devons encore effectuer quelques calibrations physiques et logicielles pour le faire fonctionner correctement.
+Nous avons conçu, commandé et recu les circuits imprimés pour le compteur d'abeilles, la station météo, la balance et la carte maître. Tous les éléments de ces cartes sont désormais soudés. Les codes Arduino des différentes cartes ont été écrits et les cartes programmées, notamment pour compter les abeilles qui entrent et sortent de la ruche et les enregistrer pour toutes les portes en utilisant du multithreading. En utilisant une découpeuse laser, nous avons aussi construit un boîtier en bois (MDF 3mm) qui sert à contenir le circuit imprimé du compteur d'abeilles. Ce boîtier comprend 8 portes individuelles que les abeilles peuvent emprunter pour transiter entre l'intérieur et l'extérieur de la ruche. Nous avons effectué quelques essais sur le terrain pour évaluer la précision du compteur mais nous devons encore effectuer quelques calibrations physiques et logicielles pour le faire fonctionner correctement. En effet, nous avons remarqué qu'il y avait de faux positifs en début et en fin de journées ensoleillées (il est possible que les rayons du soleil à ces moments font croire au compteur qu'une abeille passe alors qu'il n'y en a pas).
+Etant donné que le réseau 2G va bientôt disparaître de Suisse, le module SIM800L ne pourra pas fonctionner. Nous sommes en train de considérer de migrer notre carte maître sur un ESP32 afin d'être moins limités dans sa programmation (plus de mémoire disponible que pour les cartes basées sur l'Atmega32u4). De plus, l'ESP32 a le WiFi et Bluetooth intégrés et la possibilité d'utiliser LoRa assez facilement pour les communications sans fil. Etant donné que nos autres cartes sont basées sur le protocole I2C, elles devraient pouvoir être utilisées avec la nouvelle carte facilement.
 
 <p align="center">
   <img width="800" src="common/images/CounterFieldTest.jpg">
 </p>
 
 La station météo peut maintenant afficher la température, l'humidité, la pression atmosphérique et la luminosité relative. 
-
-La prochaine étape sera de faire fonctionner et calibrer le compteur d'abeilles ainsi que de s'assurer de la stabilité de la balance au fil du temps.
+La prochaine étape sera de faire fonctionner et calibrer le compteur d'abeilles ainsi que de s'assurer de la stabilité de la balance au fil du temps. 
 
 # Ressources additionnelles 
 
