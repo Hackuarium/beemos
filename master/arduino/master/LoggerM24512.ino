@@ -170,63 +170,63 @@ void print_logs_debug(Print* output) {
 
 void i2c_eeprom_write_byte(unsigned int eeaddress, byte data ) {
   int rdata = data;
-  Wire.beginTransmission(LOGGER_I2C_EEPROM);
-  Wire.write((byte)(eeaddress >> 8)); // MSB
-  Wire.write((byte)(eeaddress & 0xFF)); // LSB
-  Wire.write(rdata);
-  Wire.endTransmission();
+  WireM.beginTransmission(LOGGER_I2C_EEPROM);
+  WireM.write((byte)(eeaddress >> 8)); // MSB
+  WireM.write((byte)(eeaddress & 0xFF)); // LSB
+  WireM.write(rdata);
+  WireM.endTransmission();
   nilThdSleepMilliseconds(5); // specifications required 5ms
 }
 
 byte i2c_eeprom_read_byte(unsigned int eeaddress ) {
   byte rdata = 0xFF;
-  Wire.beginTransmission(LOGGER_I2C_EEPROM);
-  Wire.write((byte)(eeaddress >> 8)); // MSB
-  Wire.write((byte)(eeaddress & 0xFF)); // LSB
-  Wire.endTransmission();
-  Wire.requestFrom(LOGGER_I2C_EEPROM, 1);
-  if (Wire.available()) rdata = Wire.read();
+  WireM.beginTransmission(LOGGER_I2C_EEPROM);
+  WireM.write((byte)(eeaddress >> 8)); // MSB
+  WireM.write((byte)(eeaddress & 0xFF)); // LSB
+  WireM.endTransmission();
+  WireM.requestFrom(LOGGER_I2C_EEPROM, 1);
+  if (WireM.available()) rdata = WireM.read();
   return rdata;
 }
 
 void i2c_eeprom_write_int(unsigned int eeaddress, int data ) {
-  Wire.beginTransmission(LOGGER_I2C_EEPROM);
-  Wire.write((byte)(eeaddress >> 8)); // MSB
-  Wire.write((byte)(eeaddress & 0xFF)); // LSB
-  Wire.write((byte)((data >> 8) & 0xFF));
-  Wire.write((byte)((data >> 0) & 0xFF));
-  Wire.endTransmission();
+  WireM.beginTransmission(LOGGER_I2C_EEPROM);
+  WireM.write((byte)(eeaddress >> 8)); // MSB
+  WireM.write((byte)(eeaddress & 0xFF)); // LSB
+  WireM.write((byte)((data >> 8) & 0xFF));
+  WireM.write((byte)((data >> 0) & 0xFF));
+  WireM.endTransmission();
   nilThdSleepMilliseconds(5); // specifications required 5ms
 }
 
 int i2c_eeprom_read_int(unsigned int eeaddress ) {
-  Wire.beginTransmission(LOGGER_I2C_EEPROM);
-  Wire.write((byte)(eeaddress >> 8)); // MSB
-  Wire.write((byte)(eeaddress & 0xFF)); // LSB
-  Wire.endTransmission();
-  Wire.requestFrom(LOGGER_I2C_EEPROM, 2);
-  return (Wire.read() << 8) + (Wire.read() << 0);
+  WireM.beginTransmission(LOGGER_I2C_EEPROM);
+  WireM.write((byte)(eeaddress >> 8)); // MSB
+  WireM.write((byte)(eeaddress & 0xFF)); // LSB
+  WireM.endTransmission();
+  WireM.requestFrom(LOGGER_I2C_EEPROM, 2);
+  return (WireM.read() << 8) + (WireM.read() << 0);
 }
 
 void i2c_eeprom_write_uint32(unsigned int eeaddress, uint32_t data ) {
-  Wire.beginTransmission(LOGGER_I2C_EEPROM);
-  Wire.write((byte)(eeaddress >> 8)); // MSB
-  Wire.write((byte)(eeaddress & 0xFF)); // LSB
-  Wire.write((byte)((data >> 24) & 0xFF));
-  Wire.write((byte)((data >> 16) & 0xFF));
-  Wire.write((byte)((data >> 8) & 0xFF));
-  Wire.write((byte)((data >> 0) & 0xFF));;
-  Wire.endTransmission();
+  WireM.beginTransmission(LOGGER_I2C_EEPROM);
+  WireM.write((byte)(eeaddress >> 8)); // MSB
+  WireM.write((byte)(eeaddress & 0xFF)); // LSB
+  WireM.write((byte)((data >> 24) & 0xFF));
+  WireM.write((byte)((data >> 16) & 0xFF));
+  WireM.write((byte)((data >> 8) & 0xFF));
+  WireM.write((byte)((data >> 0) & 0xFF));;
+  WireM.endTransmission();
   nilThdSleepMilliseconds(5); // specifications required 5ms
 }
 
 uint32_t i2c_eeprom_read_uint32(unsigned int eeaddress ) {
-  Wire.beginTransmission(LOGGER_I2C_EEPROM);
-  Wire.write((byte)(eeaddress >> 8)); // MSB
-  Wire.write((byte)(eeaddress & 0xFF)); // LSB
-  Wire.endTransmission();
-  Wire.requestFrom(LOGGER_I2C_EEPROM, 4);
-  return (((uint32_t)Wire.read()) << 24) + (((uint32_t)Wire.read()) << 16) + (((uint32_t)Wire.read()) << 8) + (((uint32_t)Wire.read()) << 0);
+  WireM.beginTransmission(LOGGER_I2C_EEPROM);
+  WireM.write((byte)(eeaddress >> 8)); // MSB
+  WireM.write((byte)(eeaddress & 0xFF)); // LSB
+  WireM.endTransmission();
+  WireM.requestFrom(LOGGER_I2C_EEPROM, 4);
+  return (((uint32_t)WireM.read()) << 24) + (((uint32_t)WireM.read()) << 16) + (((uint32_t)WireM.read()) << 8) + (((uint32_t)WireM.read()) << 0);
 }
 
 
@@ -236,13 +236,13 @@ void formatLog(Print* output) {
   wdt_disable();
   output->println(F("Formatting flash"));
   for (unsigned int i = 0; i < (SIZE_MEMORY / 16); i++) {
-    Wire.beginTransmission(LOGGER_I2C_EEPROM);
-    Wire.write((int)((i * 16) >> 8)); // MSB
-    Wire.write((int)((i * 16) & 0xFF)); // LSB
+    WireM.beginTransmission(LOGGER_I2C_EEPROM);
+    WireM.write((int)((i * 16) >> 8)); // MSB
+    WireM.write((int)((i * 16) & 0xFF)); // LSB
     for (byte j = 0; j < 16; j++) {
-      Wire.write(0xFF);
+      WireM.write(0xFF);
     }
-    Wire.endTransmission();
+    WireM.endTransmission();
     nilThdSleepMilliseconds(5); // no thread should work while formatting - specifications required 5ms
     if (!(i % 256)) {
       output->print( i * 16 );
@@ -267,7 +267,6 @@ NIL_THREAD(ThreadLogger, arg) {
 
   nilThdSleepMilliseconds(5000);
 
-  Wire.begin();
 
   // reading last entry and
   nilSemWait(&lockTimeCriticalZone);
@@ -346,6 +345,3 @@ void printLoggerHelp(Print * output) {
 }
 
 #endif
-
-
-
