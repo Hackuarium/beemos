@@ -74,11 +74,11 @@ NIL_THREAD(ThreadCopySlave, arg) {
 #endif
     nilThdSleepMilliseconds(5000); // wait time to wake up
     copyFromSlave();
-      nilThdSleepMilliseconds(60*1000);
+    nilThdSleepMilliseconds(60 * 1000);
   }
 }
 
-void copyFromSlave() {  
+void copyFromSlave() {
 #ifdef WEATHER_I2C_ADDRESS
   // wireCopyParameter(WEATHER_I2C_ADDRESS, WEATHER_TEMPERATURE_EXT, PARAM_EXT_TEMPERATURE);
   // wireCopyParameter(WEATHER_I2C_ADDRESS, WEATHER_TEMPERATURE_IN, PARAM_TEMPERATURE_IN);
@@ -111,12 +111,10 @@ void copyFromSlave() {
   wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE6_OUT,  PARAM_GATE6_OUT);
   wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE7_IN,  PARAM_GATE7_IN);
   wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE7_OUT,  PARAM_GATE7_OUT);
-  wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE1_BG_IN,  PARAM_GATE8_IN);
-  wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE1_BG_OUT,  PARAM_GATE8_OUT);
+  wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE8_IN,  PARAM_GATE8_IN);
+  wireCopyParameter(COUNTER_I2C_ADDRESS, COUNTER_PARAM_GATE8_OUT,  PARAM_GATE8_OUT);
 #endif
 
 }
 
 #endif
-
-
