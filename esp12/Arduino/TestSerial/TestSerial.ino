@@ -21,6 +21,5 @@ void loop() {
 }
 
 
-void resetParameters() {}
 void printSpecificHelp(Print* output) {}
 void processSpecificCommand(char* data, char* paramValue, Print* output)  {}
