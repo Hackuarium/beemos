@@ -109,7 +109,7 @@ Final global view:
 
 ## Creation of the stand
 
-To create a base for the load cells, we assembled two wood boards together and glued the load cells between them. We carved a hole under each load cell to allow them to be pressed. On the first scale metallic hinges were added to fix the two boards together. On the second and third scales, wooden pins were fixed on the underboard and complementary holes were created in the upperboard. In both cases, the scale can still be dismantled and movement is permitted in the vertical direction. A rectangular hole was made in the center of the boards because as the bees go in and out of the hive, wax and pollen can fall from them and must not build up on the boards.
+To create a base for the load cells, we assembled two wood boards together and glued the load cells between them. We carved a hole under each load cell to allow them to be pressed. On the first scale metallic hinges were added to fix the two boards together. On the second and third scales, wooden pins were fixed on the underboard and complementary holes were created in the upperboard. In both cases, the scale can still be dismantled and movement is permitted in the vertical direction. Newborn bees chew on the wax cap to emerge from the brood frame which produces wax debris that fall. In order to avoid accumulation of these debris on the wood board, a rectangular hole was made in the center of the two boards.
 <img src="docs/balance2Planed.jpg" />
 
 Here is the inside of the first scale built:
