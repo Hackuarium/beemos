@@ -27,7 +27,7 @@ In order to clone use:
 
 `git clone --recurse-submodules https://github.com/hackuarium/beemos`
 
-To update the submodules
+To update the submodules, enter the folder you created and use:
 
 `git submodule update --recursive --remote`
 
