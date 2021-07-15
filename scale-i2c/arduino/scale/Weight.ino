@@ -14,8 +14,7 @@ NIL_THREAD(ThreadWeight, arg) {
     nilThdSleepMilliseconds(1000);
     int weight = getWeight(); //sensor read, better to have a higher value if the weight increase
     setParameter(PARAM_WEIGHT, weight);
-    setParameter(PARAM_WEIGHT_G, convertWeightToG(weight));
-
+    setParameter(PARAM_WEIGHT_G, convertWeightToG(weight)/10);
   }
 }
 
